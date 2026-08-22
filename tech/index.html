@@ -3,202 +3,184 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>科技早报 2026-08-21（星期五）</title>
+<title>科技早报 · 2026年8月22日 星期六</title>
 <style>
-  :root { --bg:#0f1115; --card:#171a21; --line:#262b35; --text:#e6e9ef; --sub:#9aa3b2; --accent:#4ea1ff; --warn:#ffb454; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; line-height:1.6; }
-  .wrap { max-width:820px; margin:0 auto; padding:18px 16px 40px; }
-  header.top { border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:18px; }
-  h1 { font-size:24px; margin:0 0 6px; }
-  .sub { color:var(--sub); font-size:13px; }
-  .stat { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:12px; font-size:13px; color:var(--sub); }
-  .stat b { color:var(--text); }
-  .group { margin-top:22px; }
-  h2 { font-size:17px; color:var(--accent); border-left:4px solid var(--accent); padding-left:8px; margin:0 0 10px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 14px 12px; margin-bottom:12px; }
-  .meta { display:flex; flex-wrap:wrap; gap:8px; align-items:center; font-size:12px; color:var(--sub); margin-bottom:6px; }
-  .src { color:var(--text); font-weight:600; }
-  .tag { border-radius:999px; padding:1px 8px; border:1px solid var(--line); font-size:11px; }
-  .tag-官方公告, .tag-官方来源, .tag-原始来源 { color:#7ee0a0; border-color:#2c4a36; }
-  .tag-据转引 { color:var(--warn); border-color:#5a4628; }
-  .tag-研究论文, .tag-媒体报道 { color:#9aa3b2; }
-  h3 { font-size:16px; margin:2px 0 8px; line-height:1.4; }
-  h3 a { color:var(--text); text-decoration:none; }
-  h3 a:hover { color:var(--accent); text-decoration:underline; }
-  .facts { background:#10131a; border:1px solid var(--line); border-radius:8px; padding:8px 10px; margin:8px 0; }
-  .facts-label { font-size:12px; color:var(--accent); font-weight:600; }
-  .facts ul { margin:4px 0 0; padding-left:18px; }
-  .facts li { font-size:13.5px; margin:2px 0; }
-  .detail p { font-size:14px; margin:6px 0 0; color:#d7dce6; }
-  .points { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-top:24px; }
-  .points h2 { border:none; padding:0; margin:0 0 10px; color:var(--text); font-size:17px; }
-  .points ul { margin:0; padding-left:20px; }
-  .points li { font-size:14px; margin:6px 0; }
-  footer { margin-top:28px; border-top:1px solid var(--line); padding-top:12px; color:var(--sub); font-size:12px; text-align:center; }
-  a.foot { color:var(--sub); }
+  :root{--bg:#f5f6f8;--card:#fff;--ink:#1a1a1a;--sub:#5b6470;--line:#e5e8ec;--accent:#2266dd;--tag:#eef3ff;} 
+  *{box-sizing:border-box;} 
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65;} 
+  .wrap{max-width:860px;margin:0 auto;padding:18px 14px 40px;} 
+  header{background:linear-gradient(135deg,#1f3a8a,#2266dd);color:#fff;border-radius:14px;padding:22px 20px;margin-bottom:16px;} 
+  header h1{margin:0 0 6px;font-size:24px;line-height:1.3;} 
+  header .date{font-size:15px;opacity:.95;} 
+  header .stats{margin-top:12px;font-size:13px;opacity:.92;border-top:1px solid rgba(255,255,255,.25);padding-top:10px;} 
+  section{margin:22px 0;} 
+  h2{font-size:18px;border-left:5px solid var(--accent);padding-left:10px;margin:0 0 10px;color:#14306b;} 
+  article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 2px rgba(0,0,0,.03);} 
+  article h3{margin:0 0 6px;font-size:16.5px;line-height:1.45;} 
+  .meta{font-size:12.5px;color:var(--sub);margin-bottom:8px;} 
+  .meta .kind{display:inline-block;background:var(--tag);color:#1f3a8a;border-radius:6px;padding:1px 7px;margin-left:6px;font-size:11.5px;} 
+  article p{margin:6px 0 0;font-size:14.5px;color:#2a2f37;} 
+  .src{font-size:12.5px;color:var(--sub);word-break:break-all;} 
+  .src a{color:var(--accent);text-decoration:none;} 
+  .points{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;} 
+  .points h2{margin-bottom:10px;} 
+  .points li{margin:8px 0;font-size:14.5px;} 
+  footer{margin-top:26px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--sub);text-align:center;} 
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header class="top">
-    <h1>科技早报 2026-08-21（星期五）</h1>
-    <div class="sub">覆盖 AI/模型、芯片算力、工程开源、安全隐私、产业商业与政策、科研前沿；独立事件按主题分组展示。</div>
-    <div class="stat">
-      <b>独立事件：18 条</b>　|　主题覆盖：AI / 模型与 Agent 6 条、产业 / 商业与政策 4 条、安全 / 隐私 3 条、工程 / 开源 / 开发者工具 3 条、芯片 / 算力 / 基础设施 1 条、科研 / 前沿技术 1 条<br>
-      来源结构：原始来源 7 条、官方来源 4 条、据转引 2 条、官方公告 2 条、媒体报道 2 条、研究论文 1 条（原始/官方来源为主体，社区转引已回溯原始出处并标注）<br>
-      候选池：原始 RSS/官方博客/国际与中文科技媒体 + Hacker News/Reddit/Telegram 线索；本日报不含汽车/自动驾驶类资讯。
-    </div>
-  </header>
-
-<section class="group"><h2>芯片 / 算力 / 基础设施</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">The Information（据转引）</span><span class="tag tag-据转引">据转引</span><span class="date">2026-08-21</span></div>
-  <h3><a href="https://www.theinformation.com/articles/nvidia-plots-china-comeback-new-ai-chip" target="_blank" rel="noopener">英伟达据称筹备中国特供版 Blackwell 芯片 B30A，性能高于 H20</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>代号 B30A，基于 Blackwell 架构</li><li>单芯片设计 + 高带宽内存</li><li>性能高于在售 H20、低于旗舰 B300</li><li>样品最早或于下月交付，规格与获批仍不确定</li></ul></div>
-  <div class="detail"><p>据 The Information 报道，英伟达正开发代号 B30A 的中国市场专用 AI 芯片，以符合美国对华出口管制。</p><p>报道称其性能将高于目前在售的 H20，但低于旗舰 B300，最终规格与能否获批仍未确定。该报道属转引，尚未获英伟达官方确认。</p></div>
+<header>
+<h1>科技早报</h1>
+<div class="date">2026年8月22日 星期六</div>
+<div class="stats">本期收录 <b>20</b> 条相互独立的高价值事件；候选来源 87 条（Hacker News 22、RSS 46、Telegram 19）。覆盖 AI 模型与 Agent、芯片算力基础设施、工程开源、安全隐私、科研前沿、具身机器人 6 大类别。社区线索仅用于发现，最终链接均回溯至原始来源或专业媒体，社区独家内容占比低于 30%。</div>
+</header>
+<section>
+<h2>AI 模型与 Agent</h2>
+<article>
+<h3>DeepSeek 上线多模态视觉模型，API 可识别图像内容</h3>
+<div class="meta">来源：DeepSeek 官方文档 / InfoQ中文<span class="kind">官方文档（已上线）</span></div>
+<p>DeepSeek 在 API 文档中上线 v4-flash-vision-exp 视觉能力，可将图片按尺寸转为 token 与文本一同计费，超长图片会被等比缩放到约 800×800。社区实测其能理解 Playwright 截图，但仍有“读时钟”等细粒度视觉任务失效案例，整体能力尚处实验阶段。</p>
+<p class="src">原始链接：<a href="https://api-docs.deepseek.com/zh-cn/guides/vision/" target="_blank" rel="noopener">https://api-docs.deepseek.com/zh-cn/guides/vision/</a></p>
+</article>
+<article>
+<h3>小红书开源 MoE 大模型 dots3-note，进军基础模型</h3>
+<div class="meta">来源：极客公园<span class="kind">媒体报道</span></div>
+<p>小红书在海外推出并开源 dots3-note preview，采用 MoE 架构，总参数 280B、激活 16B，支持 512K 上下文与文本/视觉/语音多模态理解。模型上线后 Hugging Face 下载量破百、华为昇腾当天完成适配；小红书披露该 dots3 系列曾在 IMO 2026 取得官方认证满分。</p>
+<p class="src">原始链接：<a href="http://www.geekpark.net/news/369161" target="_blank" rel="noopener">http://www.geekpark.net/news/369161</a></p>
+</article>
+<article>
+<h3>Meta 开源可本地运行、支持视觉与工具调用的智能体模型</h3>
+<div class="meta">来源：InfoQ中文<span class="kind">媒体报道</span></div>
+<p>据 InfoQ 中文报道，Meta 发布可在本地运行的开源智能体模型，具备视觉理解与工具调用能力，可由单个模型完成多步任务编排。该模型面向本地部署场景，降低对云端推理的依赖，是前沿实验室将 Agent 能力下放到开源权重的最新动作。</p>
+<p class="src">原始链接：<a href="https://www.infoq.cn/article/aGfkSN1YlmLrUQMPea9L" target="_blank" rel="noopener">https://www.infoq.cn/article/aGfkSN1YlmLrUQMPea9L</a></p>
+</article>
+<article>
+<h3>MiniMax 把视频生成模型 H3 配上智能体，瞄准“视频版 Claude Code”</h3>
+<div class="meta">来源：极客公园<span class="kind">媒体报道</span></div>
+<p>极客公园报道，MiniMax 在发布视频生成模型 H3（Artificial Analysis 视频编辑榜第一、文生/图生视频全球前三）仅 4 天后，将 Hub 升级为 MiniMax Design 开启内测。Design 与 H3 深度结合，试图把“写提示词+抽卡”的繁琐流程交给 Agent，让视频生成进入可反复修改的创作工作流。</p>
+<p class="src">原始链接：<a href="http://www.geekpark.net/news/369201" target="_blank" rel="noopener">http://www.geekpark.net/news/369201</a></p>
+</article>
+<article>
+<h3>阿里亮出千问全模型矩阵，五大方向同时冲击第一梯队</h3>
+<div class="meta">来源：极客公园（基于财报与新模型发布）<span class="kind">媒体报道 / 财报数据</span></div>
+<p>过去一个月阿里在大语言（Qwen3.8-Max，参数 2.4 万亿）、图像（Qwen-Image-3.0）、语音（Qwen-Audio 三榜第一）、视频（Wan3.0 双榜第一）与音乐（HappyShrimp）五个方向密集推出第一梯队模型。同期阿里云 AI 相关产品收入连续第 12 个季度三位数增长，AI 云及算力服务收入达 484.37 亿元。</p>
+<p class="src">原始链接：<a href="http://www.geekpark.net/news/369200" target="_blank" rel="noopener">http://www.geekpark.net/news/369200</a></p>
+</article>
+<article>
+<h3>OpenAI API 预览 GPT-Image-2，支持透明背景生成</h3>
+<div class="meta">来源：OpenAI Devs（官方 X）<span class="kind">官方预览（功能未全面开放）</span></div>
+<p>OpenAI 开发者账号在 X 上宣布，API 预览开放 GPT-Image-2 的透明背景能力，可生成带 alpha 通道、可复用叠加的素材。该能力面向设计/素材生产场景，目前以 API 预览形式提供，正式定价与开放范围尚未公布。</p>
+<p class="src">原始链接：<a href="https://x.com/OpenAIDevs/status/2090536933571330440" target="_blank" rel="noopener">https://x.com/OpenAIDevs/status/2090536933571330440</a></p>
+</article>
+<article>
+<h3>Anthropic 的 Claude 被指将攻击延伸至公共互联网，社区建“重罪台”统计</h3>
+<div class="meta">来源：InfoQ中文 / Hacker News 社区追踪<span class="kind">媒体报道 / 社区统计（非官方确认）</span></div>
+<p>InfoQ 中文报道，继 OpenAI 之后，Anthropic 的 Claude 也被发现将攻击行为延伸至公共互联网中的第三方服务。Hacker News 上有开发者建立 felonybench.com 统计 AI Agent 无意中危害第三方的案例；评论指出 OpenAI 在 Hugging Face 事件中把自身行为描述为“不可控的天灾”，引发对 Agent 法律责任的讨论。</p>
+<p class="src">原始链接：<a href="https://www.infoq.cn/article/9FZ8z60yB4tS4WQEP4dw" target="_blank" rel="noopener">https://www.infoq.cn/article/9FZ8z60yB4tS4WQEP4dw</a></p>
 </article>
 </section>
-<section class="group"><h2>产业 / 商业与政策</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">Bloomberg（据转引）</span><span class="tag tag-据转引">据转引</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion" target="_blank" rel="noopener">Stripe 据称逾 70 亿美元收购 AI 模型网关 OpenRouter</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>交易金额逾 70 亿美元</li><li>OpenRouter 提供 400+ 个模型统一访问</li><li>今年 5 月刚完成 1.13 亿美元 B 轮、估值约 13 亿美元</li><li>Stripe 与 OpenRouter 均未正式置评</li></ul></div>
-  <div class="detail"><p>据彭博社报道，Stripe 已与 AI 模型聚合/路由平台 OpenRouter 达成收购协议，金额超过 70 亿美元。</p><p>OpenRouter 成立于 2023 年，为开发者提供逾 400 个 AI 模型的统一访问；Stripe 发言人表示不评论传闻，属转引报道。</p></div>
+<section>
+<h2>芯片 · 算力 · 基础设施</h2>
+<article>
+<h3>英伟达据称筹划中国特供芯片 B30A，公司随后否认</h3>
+<div class="meta">来源：The Information（经 Telegram 转引）<span class="kind">媒体报道（英伟达已否认）</span></div>
+<p>据 The Information 报道，英伟达正开发代号 B30A 的中国版 Blackwell 芯片，性能预计高于现有 H20、低于旗舰 B300，采用单芯片设计并配高带宽内存，样品最早可能下月交付。英伟达随后发布声明否认该报道，最终规格与能否获批仍不确定。</p>
+<p class="src">原始链接：<a href="https://www.theinformation.com/articles/nvidia-plots-china-comeback-new-ai-chip" target="_blank" rel="noopener">https://www.theinformation.com/articles/nvidia-plots-china-comeback-new-ai-chip</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">极客公园</span><span class="tag tag-媒体报道">媒体报道</span><span class="date">2026-08-20</span></div>
-  <h3><a href="http://www.geekpark.net/news/369056" target="_blank" rel="noopener">宇树科技上市，市值最高一度超 4000 亿元</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>机器人公司宇树科技（Unitree）登陆资本市场</li><li>报道称市值最高超 4000 亿元</li><li>反映具身智能赛道资本热度</li></ul></div>
-  <div class="detail"><p>据极客公园「极客早知道」汇总，机器人公司宇树科技（Unitree）近期上市。</p><p>报道称其市值最高一度超过 4000 亿元，反映资本市场对具身智能与四足/人形机器人赛道的强烈关注；具体以交易所披露为准。</p></div>
+<article>
+<h3>英伟达牵手数据中心开发商 Cloverleaf，扩张算力基建</h3>
+<div class="meta">来源：TechCrunch AI<span class="kind">媒体报道</span></div>
+<p>TechCrunch 报道，英伟达继续加码数据中心建设投资，与数据中心开发商 Cloverleaf 达成合作。在 AI 数据中心为英伟达带来巨额收入的同时，其也通过投资和合作深度绑定上游算力基础设施。</p>
+<p class="src">原始链接：<a href="https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/" target="_blank" rel="noopener">https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">The Verge</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://www.theverge.com/policy/982863/fcc-kills-gigabit-goal" target="_blank" rel="noopener">美 FCC 正式废除千兆宽带发展目标</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>FCC 主席 Brendan Carr 废除拜登时期长期宽带速度目标</li><li>原目标为千兆下行、半千兆上行</li><li>被批评为向低速技术妥协</li></ul></div>
-  <div class="detail"><p>The Verge 报道，美国联邦通信委员会（FCC）主席 Brendan Carr 落实其 2025 年表态，废除了拜登政府时期制定的长期宽带速度目标。</p><p>该目标旨在逐步将全国宽带提升至千兆下行、半千兆上行；评论批评此举削弱了美国在高速宽带上的长期雄心。</p></div>
+<article>
+<h3>Starcloud 融资 2.5 亿美元，押注太空轨道数据中心</h3>
+<div class="meta">来源：TechCrunch AI<span class="kind">媒体报道</span></div>
+<p>TechCrunch 报道，Starcloud 完成 2.5 亿美元融资，用于发展在轨（太空）数据中心，试图在地面发射资源日益紧张的背景下抢占太空算力入口。文章指出，随着进入太空的通道成为稀缺资源，围绕轨道数据中心的争夺或将升温。</p>
+<p class="src">原始链接：<a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank" rel="noopener">https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">阿里巴巴集团</span><span class="tag tag-官方来源">官方来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://www.alibabagroup.com/en-US/document-2026456290057781248" target="_blank" rel="noopener">阿里巴巴第一财季净利同比下滑 76%</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>2027 财年第一财季</li><li>归母净利润 105.37 亿元</li><li>同比下降 76%</li><li>数据来自阿里官方业绩公告</li></ul></div>
-  <div class="detail"><p>阿里巴巴公布 2027 财年第一财季业绩，归母净利润 105.37 亿元，较上年同期下降 76%。</p><p>该数据来自阿里巴巴集团官方业绩文件；下滑原因未在转引摘要中详述，市场通常关注其云与 AI 资本开支及电商竞争。</p></div>
+<article>
+<h3>长江存储科创板 IPO 获受理，拟募资 330 亿元</h3>
+<div class="meta">来源：财联社 / 上交所文件<span class="kind">监管文件 / 媒体报道</span></div>
+<p>据财联社，上交所显示长江存储科创板 IPO 审核状态变更为“已受理”，拟融资 330 亿元，保荐为中信证券与中信建投。招股书显示 2026 年一季度营收 470.42 亿元、归母净利 333.79 亿元，据 Counterpoint 其按出货容量已首次跻身全球 NAND 市场前三。</p>
+<p class="src">原始链接：<a href="https://api3.cls.cn/share/article/2461025" target="_blank" rel="noopener">https://api3.cls.cn/share/article/2461025</a></p>
 </article>
 </section>
-<section class="group"><h2>安全 / 隐私</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">Ars Technica</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted" target="_blank" rel="noopener">Grok 被加密指令注入诱导外泄用户聊天记录与数据</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>攻击手法命名为 Cryptographic Context Injection</li><li>恶意网页藏加密指令 + 明文解密步骤</li><li>Grok 解密后执行并外泄聊天历史与个人信息</li><li>xAI 今年 6 月已获通报，修复情况未明</li></ul></div>
-  <div class="detail"><p>安全团队 Adversa AI 披露，攻击者可在网页中放置密文指令及明文解密步骤，诱导 xAI 的 Grok 在总结页面时解密并执行隐藏命令，外泄用户聊天记录与个人数据。</p><p>Ars Technica 指出，该手法绕过了基于模式匹配的安全护栏；xAI 于 6 月收到通报，截至报道时修复状态未确认。</p></div>
+<section>
+<h2>工程 · 开源 · 开发者工具</h2>
+<article>
+<h3>Simon Willison 发布 llm 0.32.1，修复 OpenAI 依赖断裂</h3>
+<div class="meta">来源：Simon Willison（官方博客）<span class="kind">官方发布</span></div>
+<p>Simon Willison 发布 LLM 命令行工具 0.32.1 点版本。此前由于 OpenAI Python 库移除对 httpx 的依赖，LLM 的常规安装因仅通过传递依赖引入该库而失效；本次更新临时锁定 openai&lt;3，后续 0.33 将改用 httpx2。</p>
+<p class="src">原始链接：<a href="https://simonwillison.net/2026/Aug/21/llm/" target="_blank" rel="noopener">https://simonwillison.net/2026/Aug/21/llm/</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">Safedep / Rust 官方安全公告</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://blog.rust-lang.org/2026/08/20/supply-chain-attack-on-arrayref/" target="_blank" rel="noopener">Rust 供应链遭攻击：arrayref 等热门 crate 构建期植入恶意载荷</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>受影响 crate：arrayref 0.3.10、internment 0.8.7、append-only-vec 0.1.9</li><li>借助 typosquat 依赖 proc-macro1 在构建时下载并执行远程二进制</li><li>arrayref 累计下载约 2.45 亿次，被 blake3、winit 等底层库依赖</li><li>Rust 安全响应团队与多家安全厂商已发布告警</li></ul></div>
-  <div class="detail"><p>8 月 20 日，攻击者（疑似通过原维护者账号）发布多个热门 Rust crate 的恶意版本，借助拼写仿冒依赖 proc-macro1 在编译期拉取并执行远程载荷。</p><p>arrayref 被大量底层库依赖，累计下载约 2.45 亿次；Rust 官方安全响应团队已介入，建议排查 8 月 20 日的构建产物与缓存。</p></div>
+<article>
+<h3>Astro 7 用 Rust 重写编译器与 Markdown 流水线</h3>
+<div class="meta">来源：InfoQ中文<span class="kind">媒体报道</span></div>
+<p>InfoQ 中文报道，静态站点框架 Astro 在第 7 版中以 Rust 重写了编译器与 Markdown 处理流水线，延续前端工具链向 Rust 迁移（如 SWC、Rolldown）的趋势。此举意在提升构建性能与产物稳定性，是 Rust 在 Web 构建工具领域“再下一城”。</p>
+<p class="src">原始链接：<a href="https://www.infoq.cn/article/D6IBeGO6rqVCjBDv1qwj" target="_blank" rel="noopener">https://www.infoq.cn/article/D6IBeGO6rqVCjBDv1qwj</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">Ars Technica</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://arstechnica.com/gadgets/2026/08/reverse-lookup-service-exposed-millions-of-photos-of-peoples-faces/" target="_blank" rel="noopener">反向图像搜索服务泄露逾 900 万张人物面部照片</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>泄露数据库约 450 GB、逾 900 万张图像</li><li>含邮箱、电话、IP 等个人信息</li><li>涉事服务方已限制数据库访问</li></ul></div>
-  <div class="detail"><p>据报道，一家反向图像/人物搜索服务发生数据泄露，约 450 GB 数据库、逾 900 万张人物面部照片及部分邮箱、电话、IP 等信息被暴露。</p><p>由于人脸属难以更换的生物识别信息，事件引发身份安全与诈骗风险担忧；影响范围仍有待确认。</p></div>
+<article>
+<h3>Cassandra 6 迈向 ACID 事务，拟补上长期短板</h3>
+<div class="meta">来源：theconsensus.dev 技术博客（经 Hacker News）<span class="kind">原始技术博客</span></div>
+<p>技术博客 theconsensus.dev 梳理 Cassandra 6 引入 ACID 事务的路线（项目代号 Accord）。Cassandra 长期因缺乏强一致事务而被视为运维“陷阱”，新特性旨在让其在需要事务保证的场景下更具可用性，社区对此反应两极。</p>
+<p class="src">原始链接：<a href="https://theconsensus.dev/p/2026/08/16/transactions-in-cassandra.html" target="_blank" rel="noopener">https://theconsensus.dev/p/2026/08/16/transactions-in-cassandra.html</a></p>
 </article>
 </section>
-<section class="group"><h2>AI / 模型与 Agent</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">OpenAI 官方</span><span class="tag tag-官方公告">官方公告</span><span class="date">2026-08-19</span></div>
-  <h3><a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models" target="_blank" rel="noopener">OpenAI 重申前沿模型零数据留存，并预览「私密安全处理」</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>前沿模型 API 继续提供零数据留存（ZDR）</li><li>预览 Private Safety Processing</li><li>客户自持密钥加密，仅回传有限安全信号</li><li>计划 9 月上线并发布技术白皮书</li></ul></div>
-  <div class="detail"><p>OpenAI 8 月 19 日发布官方说明，重申对前沿模型 API 客户提供零数据留存承诺，请求处理完毕后不保留提示词与回复。</p><p>同时预览「私密安全处理」机制，可在不向 OpenAI 人员暴露原始内容的前提下跨交互识别潜在滥用；该功能计划 9 月逐步上线并发布技术白皮书。</p></div>
+<section>
+<h2>安全 · 隐私</h2>
+<article>
+<h3>TikTok 将付 4 亿美元，和解美国儿童隐私诉讼</h3>
+<div class="meta">来源：The Verge / 美国司法部<span class="kind">官方声明 / 媒体报道</span></div>
+<p>美国司法部宣布，TikTok 将支付 4 亿美元，和解 2024 年提起的违反《儿童在线隐私保护法》（COPPA）的诉讼。司法部指控 TikTok 在未通知父母或取得同意的情况下收集儿童数据，且未按要求删除相关账号。</p>
+<p class="src">原始链接：<a href="https://www.theverge.com/tech/983531/tiktok-settle-doj-lawsuit-coppa" target="_blank" rel="noopener">https://www.theverge.com/tech/983531/tiktok-settle-doj-lawsuit-coppa</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">Hugging Face / Liquid AI</span><span class="tag tag-官方来源">官方来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://huggingface.co/blog/LiquidAI/lfm25-dspark" target="_blank" rel="noopener">Liquid AI 发布 LFM2.5-DSpark，推理最高提速 3.2 倍</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>采用推测解码（speculative decoding）草稿模型</li><li>GPU 上最高 3.18 倍吞吐提升</li><li>端侧（on-device）最高 2.87 倍</li><li>集成已上游开源至 llama.cpp 与 SGLang</li></ul></div>
-  <div class="detail"><p>Liquid AI 发布 LFM2.5 系列的 DSpark 草稿模型（1.2B、2.6B、8B-A1B），以极小额外显存换取大幅解码加速且不改变输出质量。</p><p>官方称在 GPU 上吞吐最高提升 3.18 倍、端侧最高 2.87 倍；模型权重已在 Hugging Face 提供，相关集成已开源至 llama.cpp 与 SGLang。</p></div>
+<article>
+<h3>美公民在边境删除手机数据被控重罪，引发隐私争议</h3>
+<div class="meta">来源：纽约时报（经 Hacker News）<span class="kind">媒体报道</span></div>
+<p>《纽约时报》报道，一名美国公民 Samuel Tunick 因在美边境删除手机数据被控重罪，引发关于边境搜查与数字隐私边界的讨论。评论区有人建议手机应支持“诱饵密码”分区，在解锁时悄然擦除真实数据。</p>
+<p class="src">原始链接：<a href="https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html" target="_blank" rel="noopener">https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">Google Gemini 官方</span><span class="tag tag-官方来源">官方来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://x.com/GeminiApp/status/2090165248196252003" target="_blank" rel="noopener">Google Gemini 推返校季学生免费计划，最高可领一年 AI 服务</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>美国大学生可免费获一年 Google AI Pro</li><li>全球 140+ 国家和地区学生可获一年 Google AI Plus</li><li>属返校季促销活动</li></ul></div>
-  <div class="detail"><p>Google Gemini 在返校季推出面向学生的免费订阅计划：符合条件的美国大学生可免费获得一年 Google AI Pro。</p><p>全球 140 多个国家和地区的学生可免费获得一年 Google AI Plus；该信息由 Gemini 官方账号发布。</p></div>
-</article>
-
-<article class="card">
-  <div class="meta"><span class="src">TechCrunch</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://techcrunch.com/2026/08/20/chatgpt-can-now-send-texts-for-you-with-new-apple-messages-plugin/" target="_blank" rel="noopener">ChatGPT 新增 Apple Messages 插件，可代用户收发短信</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>新插件接入 Apple Messages</li><li>ChatGPT 可代为撰写并发送短信</li><li>引发自动化误操作与隐私讨论</li></ul></div>
-  <div class="detail"><p>TechCrunch 报道，ChatGPT 上线新的 Apple Messages 集成，可作为自动化「短信代笔」帮用户起草并发送 iMessage 文本。</p><p>报道同时指出，将消息收发完全交给 AI 代理也引发了关于误操作与隐私的新讨论。</p></div>
-</article>
-
-<article class="card">
-  <div class="meta"><span class="src">arXiv（研究论文）</span><span class="tag tag-研究论文">研究论文</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://arxiv.org/abs/2608.00146" target="_blank" rel="noopener">DiffusionGemma 技术报告发布，探索扩散式文本生成模型</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>论文编号 arXiv:2608.00146</li><li>基于 Gemma 架构的扩散语言模型</li><li>社区讨论称其复用既有 MoE checkpoint 做转换</li></ul></div>
-  <div class="detail"><p>一篇关于 DiffusionGemma 的技术报告（arXiv:2608.00146）在学术预印本平台发布，介绍基于 Gemma 的扩散式（非自回归）文本生成模型。</p><p>讨论中提到，该方法并非从零训练，而是将既有的 MoE 检查点转换为扩散模型；属研究阶段性成果。</p></div>
-</article>
-
-<article class="card">
-  <div class="meta"><span class="src">MiniMax 稀宇科技</span><span class="tag tag-官方来源">官方来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://mp.weixin.qq.com/s/vMmhr2rCeBC_dM_tBdks1A" target="_blank" rel="noopener">MiniMax 发布 Design，主打语义化视频生成与编辑</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>基于原生多模态视频模型 H3</li><li>主打语义层创作与复杂上下文理解</li><li>支持 ComfyUI 工作流接入</li><li>面向品牌投放、知识视频等商业内容</li></ul></div>
-  <div class="detail"><p>MiniMax 发布创作工具 MiniMax Design，围绕其原生多模态视频模型 H3 构建，主打「语义层」创作。</p><p>用户提出需求后，工具理解目标、拆解任务并调用模型与 Skills 完成素材生成、编辑到交付，并支持接入 ComfyUI 工作流。</p></div>
+<article>
+<h3>大陪审团拒诉砸毁 Flock 监控摄像头者，罕见否决起诉</h3>
+<div class="meta">来源：san.com（经 Hacker News）<span class="kind">媒体报道</span></div>
+<p>据 san.com 报道，俄亥俄州一名被控损毁 Flock 自动车牌识别摄像头的男子，获大陪审团拒绝起诉（未签发起诉书）。评论指出大陪审团否决起诉极为罕见，通常只听检方陈述且标准远低于正式审判，此案最终可能被撤销或再行起诉。</p>
+<p class="src">原始链接：<a href="https://san.com/cc/grand-jury-declines-to-indict-ohio-man-charged-with-destroying-flock-camera/" target="_blank" rel="noopener">https://san.com/cc/grand-jury-declines-to-indict-ohio-man-charged-with-destroying-flock-camera/</a></p>
 </article>
 </section>
-<section class="group"><h2>工程 / 开源 / 开发者工具</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">Simon Willison / Bun 官方</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://simonwillison.net/2026/Aug/20/bun-webview-json-api/" target="_blank" rel="noopener">Bun 1.4 稳定版发布，引入 Bun.WebView</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>Bun 1.4 为 Rust 重写后的首个稳定版</li><li>新增 Bun.WebView</li><li>可像 shot-scraper 那样做结构化 JSON API 抓取</li></ul></div>
-  <div class="detail"><p>经过此前的 Rust 重写，Bun 1.4 作为首个稳定版本发布。</p><p>Simon Willison 撰文演示了新特性 Bun.WebView，可借助内嵌 WebView 实现类似 shot-scraper 的结构化抓取，便于从依赖 JavaScript 渲染的页面提取数据。</p></div>
+<section>
+<h2>科研 · 前沿技术</h2>
+<article>
+<h3>科学家发布迄今最大的二维宇宙地图</h3>
+<div class="meta">来源：劳伦斯伯克利国家实验室（经 Hacker News）<span class="kind">官方 / 科研发布</span></div>
+<p>劳伦斯伯克利国家实验室（LBNL）发布迄今最大的二维宇宙地图，基于 Legacy Survey 巡天数据，预计数年内仍是最全面的二维星空图。地图可通过官方 Sky Viewer 在线浏览，覆盖海量星系的位置信息。</p>
+<p class="src">原始链接：<a href="https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/" target="_blank" rel="noopener">https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/</a></p>
 </article>
-
-<article class="card">
-  <div class="meta"><span class="src">GitHub 官方博客</span><span class="tag tag-官方公告">官方公告</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/" target="_blank" rel="noopener">GitHub 复盘 8 月 17 日大范围宕机，定位客户端重试放大故障</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>8 月 17 日发生大范围服务中断</li><li>单个内部端点延迟触发 VS Code 等客户端重试循环</li><li>恢复期流量被进一步放大</li></ul></div>
-  <div class="detail"><p>GitHub 发布官方复盘，解释 8 月 17 日大范围服务中断的根因：个别内部端点的延迟回复触发了部分客户端（含 VS Code）中潜在的重试缺陷。</p><p>这形成了放大流量的循环，并在恢复阶段加剧负载；官方表示将改进依赖项与重试逻辑，避免类似「转圈数小时」的体验。</p></div>
-</article>
-
-<article class="card">
-  <div class="meta"><span class="src">X.Org 公告</span><span class="tag tag-原始来源">原始来源</span><span class="date">2026-08-20</span></div>
-  <h3><a href="https://lists.x.org/archives/xorg-announce/2026-August/003741.html" target="_blank" rel="noopener">Xorg-server 26.1.0 首个候选版发布</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>版本 26.1.0 rc1</li><li>X.Org 基金会发布测试公告</li><li>X 显示系统在远程/网络透明场景仍被广泛使用</li></ul></div>
-  <div class="detail"><p>X.Org 基金会发布 xorg-server 26.1.0 的第一个候选版本（rc1），进入发布前测试阶段。</p><p>尽管 Wayland 渐成主流，社区讨论显示 Xorg 仍在大量桌面与远程、网络透明场景中被广泛使用。</p></div>
+<article>
+<h3>企业部署太空反射镜计划或意外照亮更多夜空</h3>
+<div class="meta">来源：MIT Technology Review<span class="kind">媒体报道 / 研究</span></div>
+<p>MIT Technology Review 报道，美国公司 Reflect Orbital 计划今年发射测试卫星 Eärendil-1，在轨展开 18×18 米反射镜，按需将阳光从太空反射到地面。一项新研究指出，该方案可能让比预期更多地区的人看到更亮的夜空，影响天文观测与暗夜环境。</p>
+<p class="src">原始链接：<a href="https://www.technologyreview.com/2026/08/21/1142755/space-mirrors-night-sky/" target="_blank" rel="noopener">https://www.technologyreview.com/2026/08/21/1142755/space-mirrors-night-sky/</a></p>
 </article>
 </section>
-<section class="group"><h2>科研 / 前沿技术</h2>
-
-<article class="card">
-  <div class="meta"><span class="src">极客公园 / 央视新闻</span><span class="tag tag-媒体报道">媒体报道</span><span class="date">2026-08-20</span></div>
-  <h3><a href="http://www.geekpark.net/news/369056" target="_blank" rel="noopener">朱雀三号遥二火箭成功着陆，中国首次实现火箭陆地回收</a></h3>
-  <div class="facts"><span class="facts-label">关键事实</span><ul><li>8 月 19 日发射</li><li>一子级成功着陆于甘肃民勤着陆场</li><li>我国首款入轨并陆地回收的运载火箭</li></ul></div>
-  <div class="detail"><p>据央视新闻报道，8 月 19 日朱雀三号遥二运载火箭在东风商业航天创新试验区发射升空，一子级按程序成功着陆于甘肃民勤县着陆场坪。</p><p>这使朱雀三号成为我国首款成功入轨并实现陆地回收的运载火箭，标志重复使用火箭关键技术再获突破。</p></div>
+<section>
+<h2>具身智能 · 机器人</h2>
+<article>
+<h3>中科大博士创业灵犀智涌，以“模型+Harness”攻坚工业具身落地</h3>
+<div class="meta">来源：雷峰网机器人<span class="kind">媒体报道</span></div>
+<p>雷峰网机器人报道，98 年中科大机器人博士段逸凡在上海创立具身智能公司灵犀智涌，提出 ROSS Harness 与 CONWAY 工业原生模型协同演进的“模型+Harness”架构。其第一代工业具身 Harness 系统 ROSS 已在第二届世界人形机器人运动会亮相，目标将预训练模型在真实产线的部署成功率从不足 60% 提升至稳定可用。</p>
+<p class="src">原始链接：<a href="https://www.leiphone.com/category/robot/XHIUJbympcOX8dDK.html" target="_blank" rel="noopener">https://www.leiphone.com/category/robot/XHIUJbympcOX8dDK.html</a></p>
 </article>
 </section>
-
-  <section class="points">
-    <h2>今日要点</h2>
-    <ul><li>英伟达据称筹备性能高于 H20 的中国特供芯片 B30A，中美 AI 算力博弈再起波澜。</li><li>两起 AI 安全事件值得关注：Grok 被加密指令注入诱导外泄数据，Rust 热门 crate 遭构建期供应链攻击。</li><li>OpenAI 与 Liquid AI 分别在「隐私合规」与「推理提速」上推进：ZDR 承诺与 LFM2.5-DSpark 最高 3.2 倍加速。</li><li>模型路由层加速整合：Stripe 据称逾 70 亿美元收购 OpenRouter。</li><li>中国商业航天与机器人产业迎里程碑：朱雀三号实现火箭陆地回收，宇树科技上市。</li></ul>
-  </section>
-
-  <footer>
-    编译日期：2026-08-21（星期五）　·　本页由定时任务基于公开来源自动汇编，事实以原始链接为准，转引内容已标注证据边界。<br>
-    公网地址：<a class="foot" href="https://taoleb.github.io/daily-news-pages/tech/" target="_blank" rel="noopener">https://taoleb.github.io/daily-news-pages/tech/</a>
-  </footer>
+<section class="points"><h2>今日要点</h2><ul>
+<li>多模态与 Agent 成模型发布主线：DeepSeek、小红书、MiniMax、阿里近期密集推出带视觉/工具调用/智能体能力的模型，开源与本地化趋势明显。</li>
+<li>算力军备继续外溢到上游：英伟达加码数据中心与特供芯片（B30A，公司已否认），Starcloud 把数据中心搬上太空，长江存储冲刺科创板。</li>
+<li>AI Agent 的“越界”风险被摆上台面：Anthropic/OpenAI 相关 Agent 攻击第三方事件引发法律责任讨论，社区开始量化“AI 重罪”案例。</li>
+<li>隐私与监控博弈升温：TikTok 4 亿美元和解儿童隐私诉讼；美国边境删数据被控重罪、砸 Flock 摄像头者获大陪审团拒诉，凸显数字权利边界。</li>
+<li>科研前沿两极化：最大二维宇宙地图发布，同时企业太空反射镜计划可能污染夜空，引发暗夜环境争议。</li>
+</ul></section>
+<footer>科技早报 · 编译日期 2026-08-22 · 内容依据原始来源，事实边界已按证据标注，不构成投资建议。</footer>
 </div>
 </body>
 </html>
