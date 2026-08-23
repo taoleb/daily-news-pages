@@ -1,112 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>知识库回顾 · 2026-08-22</title>
-  <style>
-    :root{--ink:#18212f;--muted:#64748b;--line:#dbe3ee;--paper:#fff;--bg:#f4f7fb;--accent:#0f766e;--note:#fefce8}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-    .wrap{max-width:920px;margin:auto;padding:40px 20px 64px}
-    header{padding:30px 32px;background:linear-gradient(130deg,#0f766e,#155e75);color:#fff;border-radius:18px;box-shadow:0 12px 30px #0f172a22}
-    h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.25;margin:0 0 10px}
-    .sub{margin:0;color:#d9f3ed}
-    .meta{font-size:.92rem;color:var(--muted);margin:22px 2px}
-    .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-top:18px;box-shadow:0 2px 8px #0f172a08}
-    h2{font-size:1.22rem;margin:0 0 14px;color:#0f4c5c;border-left:4px solid var(--accent);padding-left:12px}
-    h3{font-size:1.02rem;margin:18px 0 6px;color:#134e4a}
-    p{margin:8px 0}
-    ul{margin:8px 0;padding-left:1.4em}
-    li{margin:6px 0}
-    .tag{display:inline-block;padding:3px 11px;border-radius:99px;background:#e6fffa;color:#0f766e;font-size:.82rem;font-weight:600;margin:0 6px 6px 0}
-    .src{font-size:.85rem;color:var(--muted);margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
-    .empty{background:var(--note);border-color:#fde68a}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:6px}
-    .box{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-    .box b{color:#0f4c5c}
-    @media(max-width:560px){.wrap{padding:20px 13px 40px}header,.card{padding:22px 19px;border-radius:12px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知识库回顾 · 2026-08-23（覆盖窗口 08-21 至 08-23）</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1c2029; --ink:#e8eaed; --muted:#9aa3ad;
+    --line:#2a2f3a; --accent:#6ea8fe; --accent2:#7ee0c0; --warn:#f0a868; --danger:#f0728a;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:linear-gradient(180deg,#0c0e12,#0f1115 240px); color:var(--ink);
+    font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.75; font-size:16px;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:28px 18px 64px}
+  header{
+    border:1px solid var(--line); border-radius:var(--radius); padding:22px 22px 18px;
+    background:radial-gradient(120% 120% at 0% 0%,rgba(110,168,254,.12),transparent 60%),var(--panel);
+    margin-bottom:22px;
+  }
+  h1{margin:.1em 0 .25em; font-size:clamp(1.5rem,4.4vw,2.1rem); letter-spacing:.5px}
+  .sub{color:var(--muted); font-size:.95rem}
+  .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+  .chip{font-size:.78rem; color:var(--muted); border:1px solid var(--line); background:var(--panel2);
+    padding:4px 10px; border-radius:999px}
+  .chip b{color:var(--ink); font-weight:600}
+  nav.toc{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 6px}
+  nav.toc a{color:var(--accent); text-decoration:none; font-size:.88rem; border:1px solid var(--line);
+    padding:6px 12px; border-radius:10px; background:var(--panel2)}
+  nav.toc a:hover{border-color:var(--accent)}
+  section{margin:26px 0}
+  h2{font-size:1.25rem; margin:0 0 12px; padding-left:12px; border-left:4px solid var(--accent);
+    line-height:1.3}
+  h3{font-size:1.05rem; margin:18px 0 8px; color:var(--accent2)}
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px}
+  .theme{border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; margin:14px 0;
+    background:linear-gradient(180deg,var(--panel),#14171d)}
+  .theme h3{margin-top:0}
+  .tag{display:inline-block; font-size:.72rem; color:#0f1115; background:var(--accent2);
+    padding:2px 8px; border-radius:6px; margin-right:6px; font-weight:700; vertical-align:middle}
+  ul{margin:.4em 0; padding-left:1.2em}
+  li{margin:.45em 0}
+  .kbd{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.86em; background:var(--panel2);
+    border:1px solid var(--line); border-radius:6px; padding:1px 6px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px}
+  .card{background:var(--panel2); border:1px solid var(--line); border-radius:12px; padding:14px 16px}
+  .card .h{font-weight:700; color:var(--accent); margin-bottom:8px; font-size:.98rem}
+  .tension{border-left:4px solid var(--warn)}
+  .change{border-left:4px solid var(--accent2)}
+  .open{border-left:4px solid var(--danger)}
+  .note{font-size:.85rem; color:var(--muted); border-top:1px dashed var(--line); margin-top:18px; padding-top:12px}
+  footer{color:var(--muted); font-size:.82rem; text-align:center; margin-top:34px}
+  @media (max-width:560px){ .wrap{padding:18px 12px 48px} .panel{padding:14px} }
+</style>
 </head>
 <body>
-<main class="wrap">
+<div class="wrap">
   <header>
-    <h1>知识库回顾 · 2026-08-22</h1>
-    <p class="sub">覆盖窗口：2026-08-20 至 2026-08-22（最近三天）</p>
+    <h1>知识库回顾 · 2026-08-23</h1>
+    <div class="sub">个人知识库每日回顾 · 按主题聚合 · 核心认知 / 关键张力 / 认知变化 / 待思考问题</div>
+    <div class="meta">
+      <span class="chip">覆盖窗口：<b>2026-08-21 → 2026-08-23</b></span>
+      <span class="chip">扫描目录：<b>D:/个人知识库/daily/</b></span>
+      <span class="chip">命中 Markdown：<b>2 篇</b></span>
+      <span class="chip">日期缺口：<b>08-22、08-23 暂无记录</b></span>
+    </div>
+    <nav class="toc">
+      <a href="#themes">主题聚合</a>
+      <a href="#insights">核心认知</a>
+      <a href="#tensions">关键张力</a>
+      <a href="#changes">认知变化</a>
+      <a href="#open">待思考问题</a>
+    </nav>
   </header>
-  <p class="meta">生成时间：2026-08-22 13:10（本地任务时间） · 范围：D:/个人知识库/daily/ · 命中文件：3 篇（08-20×1、08-21×2）</p>
 
-  <section class="card">
-    <h2>本期结论</h2>
-    <p>本期命中 3 篇，分布在 08-20（1 篇，赛道周期研判）与 08-21（2 篇，分别为 AI 前沿全景扫描、汽车自进化 harness 白空间判断）。三篇并非孤立：08-21 的两篇从“产业全景扫描”与“具体立项白空间”两侧，恰好与 08-20 的赛道周期研判形成<strong>互相印证与向下延伸</strong>。核心收敛有两点：① 具身/汽车赛道的终局壁垒不在算法强度，而在“责任边界”的兜底与合规能力；② 无论 Agent 还是汽车，长期自进化的前提是一个<strong>“可验证、可回滚、可审计”的语义权力平面（Harness / Agent OS）</strong>，而非把概率模型直接外挂。一句话：从“谁能兜底”走向“用什么机制持续兜底且可被审计”。</p>
-  </section>
+  <section id="themes">
+    <h2>一、主题聚合</h2>
+    <p class="sub" style="margin-top:-4px">本窗口 2 篇笔记高度互文：一篇为 AI 前沿趋势综述，一篇为汽车自进化 harness 战略研判；二者共享同一套分析框架（Agent OS / 语义权力 / 责任边界=市场壁垒 / 可验证自进化 / Physical Token）。按主题归并如下。</p>
 
-  <section class="card">
-    <h2>主题聚合</h2>
+    <div class="theme">
+      <h3><span class="tag">治理层</span>Agent 治理层与语义权力架构</h3>
+      <ul>
+        <li><b>治理层正从概念走向产业落地</b>：Agent OS（阶跃 StepAOS 等）告别"大模型外挂工具"，原生支撑"感知-规划-执行-校验-自省"闭环。</li>
+        <li><b>接口标准化</b>：MCP 被称为 AI 的 "TCP/IP"，统一智能体↔工具、智能体↔智能体；配套 A2A 做协同分工、任务委派、分歧仲裁。</li>
+        <li><b>记忆与可观测</b>：三级持久记忆（工作/短期/长期）突破上下文窗口；OTel GenAI 原生追踪循环轮次、工具调用、自省记录、Token 计量、幻觉拦截。</li>
+        <li><b>可信安全三平面</b>：控制/数据/信任分离，TEE 托管密钥审计脱敏、意图防火墙、轻量 AI 沙箱；Gartner 新增"智能体 AI 安全"赛道。</li>
+      </ul>
+    </div>
 
-    <p><span class="tag">具身智能</span><span class="tag">产业周期</span><span class="tag">Agent治理</span><span class="tag">语义权力</span><span class="tag">责任边界</span><span class="tag">自进化</span></p>
+    <div class="theme">
+      <h3><span class="tag">白空间</span>汽车安全攸关系统的自进化 Harness</h3>
+      <ul>
+        <li><b>白空间必须收窄</b>：harness 与车用 OS 各自都有人提；真正的空白是"汽车 × 安全攸关 × 自进化 harness 的协同演进路径"。</li>
+        <li><b>难度高一个量级</b>：ASIL-D 功能安全 + 信息安全的责任链（非工程护栏，而是法律与生命责任边界）；智驾/座舱/车控/云端四域跨域耦合；OTA 受监管/召回/可追溯约束；模型快速迭代但车不能重训。</li>
+        <li><b>立项目标口径</b>：面向汽车安全攸关、跨域、长生命周期系统的「自进化 harness 架构」——语义权力边界定义、跨域调度、可验证自进化与合规回滚。</li>
+      </ul>
+    </div>
 
-    <h3>主题一 · 具身智能与机器人：从概念普惠转向强分化与量产拐点</h3>
-    <p><b>08-20 赛道研判：</b>赛道并非资本冰河期，而是“头部吸水、尾部断流”的强分化淘汰赛初期；三年窗口期——2026 下工程幻灭与微闭环死斗 → 2027 中基座模型统一/硬件白菜化（整机降至 10–15 万）→ 2028 巨头收割与工业规模化上岗、窗口关闭；底层逻辑“责任边界 = 市场壁垒”。</p>
-    <p><b>08-21 综合扫描：</b>具身“去表演化、走向工业量产”，NSP 世界模型打通仿真–机器人，量产级全直驱灵巧手（灵心巧手 O30，20 自由度/30kg，“灵巧手组装灵巧手”全自动产线）。这与 08-20 的“窄场景微闭环/退守真实工位”互为表里——量产拐点正把“台前演示”逼成“产线工位”。</p>
+    <div class="theme">
+      <h3><span class="tag">具身</span>世界模型、原生多模态与具身量产拐点</h3>
+      <ul>
+        <li><b>NSP 状态预测范式</b>：从"预测下一文字"升级为"预测物理世界下一状态"，学重力/碰撞/时序因果，打通仿真与机器人（悟道·寰宇、Matrix-Game 3.5、FSD V12）。</li>
+        <li><b>原生统一多模态基座</b>：底层统一表征文本/图像/音频/视频/3D（商汤 SenseNova U1 Pro、Meta Muse Spark）。</li>
+        <li><b>量产去表演化</b>：仓储/产线/巡检；人形全球出货占比 88.7%（作者口径，待核验）；2026 目标产量 10 万台；大脑-小脑-神经端到端闭环；全直驱灵巧手全自动产线。</li>
+      </ul>
+    </div>
 
-    <h3>主题二 · Agent 治理层：从“外挂工具”到“语义权力平面”</h3>
-    <p><b>08-21 综合扫描：</b>Agent OS 告别“大模型外挂工具”，原生支撑感知–规划–执行–校验–自省闭环；MCP/A2A 被称为 AI 的 “TCP/IP” 与跨主体仲裁；三级持久记忆（工作/短期/长期）突破上下文窗口；OTel 可观测规范追踪全链路与自省；三平面可信安全（控制/数据/信任）。</p>
-    <p><b>08-21 harness 判断：</b>把“治理层”收敛到汽车这一安全攸关场景——Harness 是“AI 的语义权力平面”（Authority / Commit / Runtime Boundary），而非控制平面的车用 OS；白空间不在“harness”或“车用 OS”本身，而在“<strong>汽车 × 安全攸关 × 自进化 harness 的协同演进路径</strong>”这一具体靶点。</p>
-
-    <h3>主题三 · 底层逻辑收敛：责任边界技术化 + 可验证自进化</h3>
-    <p>三篇共同指向同一母框架：责任边界 = 市场壁垒（08-20 总纲）→ 车的 harness 即责任边界的<strong>技术化与法律化</strong>（08-21 harness）→ 长期自进化必须可验证、可回滚、可审计（change contract；对应 08-21 综合的 OTel 可观测 + 三级记忆 + 自省闭环）。即从“谁能兜底”升级为“用什么机制持续兜底且可审计”，形成可复用的分析透镜。</p>
-
-    <div class="src">来源：
-      · 2026-08-20《具身智能赛道周期与 2026_2028 窗口期研判_summary.md》（标签：具身智能, 人形机器人, 产业周期, 智驾人才迁徙, 窗口期演变, 责任边界）
-      · 2026-08-21《2127_汽车自进化harness架构_白空间判断.md》（战略研判笔记，含对用户表述的实证修正）
-      · 2026-08-21《人工智能前沿技术与迭代趋势_综合记录.md》（行业趋势综述，作者盘点口径、未逐一核验）
+    <div class="theme">
+      <h3><span class="tag">底座</span>模型底层架构与算力超节点</h3>
+      <ul>
+        <li><b>MoE 成标配</b>：动态路由分域专家，推理成本最高降 60%（作者口径）；长上下文动态稀疏注意力 O(n²)→O(n log n)，百万 Token 算力约 1/10。</li>
+        <li><b>慢思考与并行生成</b>：CoVe 链式校验降幻觉；SSM 低延迟 + 文本扩散并行生成打破逐词自回归。</li>
+        <li><b>竞争升级为超节点集群</b>：华为昇腾 950 超节点 1024 张 NPU / 1 EFLOPS FP8；曙光 8000 十万卡级；WAIC 2026 发布超节点白皮书。</li>
+      </ul>
     </div>
   </section>
 
-  <section class="card">
-    <h2>核心认知</h2>
-    <ul>
-      <li><b>终局壁垒是“制度 + 物理”而非纯算法。</b>通用基座开源会塌缩纯算法壁垒，但私有力控数据、责任兜底与合规闭环无法被复制——壁垒从“软”转向“硬 + 制度”。</li>
-      <li><b>治理平面才是 AI 落地的真正新增层。</b>Agent OS / Harness 不是“又一个 OS”，而是让概率模型在车/工厂里“被授权、被约束、被追溯”执行的语义权力平面。</li>
-      <li><b>自进化与可追溯是绑定命题。</b>汽车 OTA 受监管/召回约束，自进化必须可验证、可回滚、可审计（change contract），比工业数据飞轮多一层合规闭环。</li>
-      <li><b>白空间的准确边界必须被收窄。</b>行业已在提 harness 与车用 OS，空白在“安全攸关 + 跨域 + 长生命周期 + 自进化”的统一协同路径；向高管/评委表述若用笼统版，会被懂行者一击破。</li>
-      <li><b>认知/产业节奏同构。</b>从“模型即能力”转向“模型是租的、harness/Skill 是自有 IP”，与“下一项能力边际成本持续下降”的 Physical Token 经济学同构。</li>
-    </ul>
+  <section id="insights">
+    <h2>二、核心认知</h2>
+    <div class="grid">
+      <div class="card"><div class="h">1. 治理层已落地雏形</div>
+        MCP/A2A/三级记忆/OTel/三平面安全，正是 Agent OS"Authority、Memory Boundary、Commit、Runtime Boundary"的产业落地雏形；前篇讲"为何需要治理"，本篇讲"产业往哪填"。</div>
+      <div class="card"><div class="h">2. 白空间须精确收窄</div>
+        harness 与车用 OS 都不是空白；空白在"汽车×安全攸关×自进化 harness 的协同演进路径"。向高管表述必须用收窄版，否则被懂行者一击破。</div>
+      <div class="card"><div class="h">3. 责任边界=市场壁垒（硬约束版）</div>
+        谁定义车的行为边界、谁承担事故/召回责任；harness 即"责任边界"的技术化，是车上的法律与生命边界，而非工程护栏。</div>
+      <div class="card"><div class="h">4. 可验证环境是进化前提</div>
+        车的"异常→识别→回退→替代 Skill→重规划→人工接管"，是延迟反馈 + 过程记录的硬实时版；无此层则长期 Agent 会自发篡改目标/记忆。</div>
+      <div class="card"><div class="h">5. 模型是租的、harness 是自有</div>
+        模型抽象 + Skill 资产化是车厂对抗"模型绑定"的关键 IP，与"下一项能力边际成本持续下降"的 Physical Token 经济学同构。</div>
+      <div class="card"><div class="h">6. 趋势综述≠理论原创</div>
+        前沿综论价值在"扫得全、归类清"，引用须按"趋势综述"处理，厂商指标（88.7%、10 万台、60%、1024 张/1 EFLOPS）均属作者口径，需注明出处、留待核验。</div>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>关键张力</h2>
-    <ul>
-      <li><b>叙事 vs 现实：</b>综合文“覆盖广、往哪填”的乐观全景，与 08-20“尾部断流、谁先死”的结构性分化相互拉扯——一个讲建设，一个讲淘汰，需同时持有。</li>
-      <li><b>算法平民化 vs 责任不可平民化：</b>开源基座使纯算法壁垒快速塌缩，但兜责体系与合规闭环更难复制，壁垒重心从软实力转向硬实力 + 制度。</li>
-      <li><b>治理层“新” vs “只是 OS 重述”：</b>评委必问“这不就是整车 OS / SOA 吗”——必须区分控制平面（确定性功能怎么跑）与语义权力平面（概率 AI 怎么被治理）。</li>
-      <li><b>自进化的诱惑 vs 召回合规的硬约束：</b>车敢不敢“现场自改”受 ISO 26262 / 21448 SOTIF 约束，白空间能否成立的前提，可能正是其最大约束。</li>
-      <li><b>单篇综述的“事实边界”：</b>综合文各项指标（88.7% 出货、10 万台目标、60% 降本、1024 张 NPU/1 EFLOPS）均为作者口径未核验，须按“趋势综述”而非“实证”引用。</li>
-    </ul>
+  <section id="tensions">
+    <h2>三、关键张力</h2>
+    <div class="grid">
+      <div class="card tension"><div class="h">A. OS 重复 vs 新增语义平面</div>
+        "这不就是整车 OS / SOA 吗？"——传统 OS 解决"确定性功能怎么跑"（控制平面）；harness 解决"概率 AI 怎么被授权、约束、追溯地跑"（语义权力平面）。是新的一层，非重复造 OS。</div>
+      <div class="card tension"><div class="h">B. 自进化 vs 召回合规</div>
+        ISO 26262 / 21448 SOTIF 对自适应系统的边界，是否允许 model/harness 现场自改，是白空间能否成立的前提，也可能是最大约束。</div>
+      <div class="card tension"><div class="h">C. 基础研究 vs 工程架构</div>
+        2127 定位"基础技术研究"：harness 偏工程还是基础技术？建议口径"面向安全攸关系统的自进化系统架构基础研究"，上接控制论/形式化验证。</div>
+      <div class="card tension"><div class="h">D. 追热点 vs 补基础层</div>
+        harness 是"模型之上、可交付之下"那一层，符合 2127 调性；需避免被误读为追 AI 热点。</div>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>认知变化</h2>
-    <ul>
-      <li>从 08-20 单点赛道研判，到 08-21 把“责任边界 = 市场壁垒”成功外推至汽车 harness 与 Agent OS 语义权力平面，形成可复用的分析母框架。</li>
-      <li>新增“治理层 / 语义权力平面”作为独立分析维度：不再仅看模型/数据/算力，而是看“谁定义授权与追溯边界”。</li>
-      <li>对“白空间”的判定方法升级——从笼统“行业没提”修正为“具体靶点没被系统提出”，先核验再收窄，方法论更严谨。</li>
-      <li>对量产拐点的理解从概念层下沉到工程约束：具身“去表演化”与 08-20“窄场景微闭环”互为印证，演示与工位开始并轨。</li>
-    </ul>
+  <section id="changes">
+    <h2>四、认知变化</h2>
+    <div class="grid">
+      <div class="card change"><div class="h">从"无人提出"到"偏大不成立"</div>
+        用户原判断"行业没有在如此复杂系统上的概念提出与路径"被实证修正：通用 harness、车用 AIOS 均已活跃；收敛为准确的白空间边界。</div>
+      <div class="card change"><div class="h">从"为何治理"到"往哪填"</div>
+        两篇合并理解——治理必要性（Agent OS 篇）+ 产业落地方向（综合记录篇），框架从"问题"补全为"问题+路径"。</div>
+      <div class="card change"><div class="h">从"模型能力"到"自有资产"</div>
+        明确模型抽象 + Skill 资产化是车厂对抗模型绑定、构筑长期边际成本优势的核心 IP 抓手。</div>
+    </div>
   </section>
 
-  <section class="card">
-    <h2>待思考问题</h2>
-    <ul>
-      <li>08-20 的“窄场景微闭环”与综合文的“量产拐点”，哪个时间锚更可信？汽车总装/电力巡检/3C 装配中谁先稳定 &gt;95% 连续执行成功率？</li>
-      <li>车用 OS 厂商（东软 NeuSAR、AutoCore、SONATUS）是否已悄悄在做“AI 语义权力平面”？2026-09 AI 定义汽车论坛会否抢先定义白空间？</li>
-      <li>“自进化 + 召回合规”在 ISO 26262 / 21448 下是否允许模型/harness 现场自改？这是白空间成立的前提，也是最大风险。</li>
-      <li>Agent 六层框架里，哪层最该是 2127 前瞻院卡位点？结合“基础技术研究”定位，harness 偏工程架构还是基础技术需在立项时辨析。</li>
-      <li>综合文把模型能力与 Agent 能力混叙、厂商指标未核验——如何把“引用即标注口径”做成常态化纪律，避免误读外推？</li>
-      <li>治理层母框架（责任边界 = 市场壁垒 + 可验证自进化）可否作为后续新材料的默认分析透镜，跨周期追踪而非在单篇内回答？</li>
-    </ul>
+  <section id="open">
+    <h2>五、待思考问题</h2>
+    <div class="grid">
+      <div class="card open"><div class="h">Q1</div>这六层里，哪层是长安前瞻院最该卡位的？（结合 2127"基础技术研究"定位）</div>
+      <div class="card open"><div class="h">Q2</div>Agent OS 与 MCP/A2A 关系：标准是"连接器"、OS 是"治理层"，二者是否被文章有意区分？</div>
+      <div class="card open"><div class="h">Q3</div>世界模型 NSP 与具身量产，哪个更接近"100 年后基础技术"的苗头？</div>
+      <div class="card open"><div class="h">Q4</div>车用 OS 厂商（东软 NeuSAR、AutoCore、SONATUS）是否已做"AI 语义权力平面"？需跟踪 2026-09 AI 定义汽车论坛与佐思报告。</div>
+      <div class="card open"><div class="h">Q5</div>自进化 + 召回合规在监管上是否允许 model/harness 现场自改？这是白空间成立的前提，也是最大不确定项。</div>
+    </div>
+    <p class="note">说明：本回顾覆盖窗口为 2026-08-21 至 2026-08-23；其中 08-22、08-23 知识库目录暂无新增记录，实际命中笔记均来自 2026-08-21（2 篇）。厂商指标均为原文综述口径，引用时已标注"据该文"，未经原始来源逐一核验。</p>
   </section>
-</main>
+
+  <footer>知识库每日回顾 · 由 Hermes 自动生成 · 2026-08-23 · GitHub Pages 部署</footer>
+</div>
 </body>
 </html>
