@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026-08-23（覆盖窗口 08-21 至 08-23）</title>
+<title>知识库回顾 · 2026-08-24（最近有记录日顺延覆盖 08-17 至 08-21）</title>
 <style>
   :root{
     --bg:#0f1115; --panel:#171a21; --panel2:#1c2029; --ink:#e8eaed; --muted:#9aa3ad;
@@ -29,6 +29,7 @@
   .chip{font-size:.78rem; color:var(--muted); border:1px solid var(--line); background:var(--panel2);
     padding:4px 10px; border-radius:999px}
   .chip b{color:var(--ink); font-weight:600}
+  .chip.warn{border-color:var(--warn); color:var(--warn)}
   nav.toc{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 6px}
   nav.toc a{color:var(--accent); text-decoration:none; font-size:.88rem; border:1px solid var(--line);
     padding:6px 12px; border-radius:10px; background:var(--panel2)}
@@ -61,13 +62,13 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>知识库回顾 · 2026-08-23</h1>
+    <h1>知识库回顾 · 2026-08-24</h1>
     <div class="sub">个人知识库每日回顾 · 按主题聚合 · 核心认知 / 关键张力 / 认知变化 / 待思考问题</div>
     <div class="meta">
-      <span class="chip">覆盖窗口：<b>2026-08-21 → 2026-08-23</b></span>
+      <span class="chip">严格扫描窗口：<b>2026-08-22 → 2026-08-24</b></span>
+      <span class="chip warn">该窗口无新增 Markdown</span>
+      <span class="chip">顺延覆盖：<b>08-17 / 08-20 / 08-21（4 篇）</b></span>
       <span class="chip">扫描目录：<b>D:/个人知识库/daily/</b></span>
-      <span class="chip">命中 Markdown：<b>2 篇</b></span>
-      <span class="chip">日期缺口：<b>08-22、08-23 暂无记录</b></span>
     </div>
     <nav class="toc">
       <a href="#themes">主题聚合</a>
@@ -80,42 +81,52 @@
 
   <section id="themes">
     <h2>一、主题聚合</h2>
-    <p class="sub" style="margin-top:-4px">本窗口 2 篇笔记高度互文：一篇为 AI 前沿趋势综述，一篇为汽车自进化 harness 战略研判；二者共享同一套分析框架（Agent OS / 语义权力 / 责任边界=市场壁垒 / 可验证自进化 / Physical Token）。按主题归并如下。</p>
+    <p class="sub" style="margin-top:-4px">严格 3 日窗口（08-22→08-24）知识库无新增记录；最近有实质内容的三个日期为 08-17、08-20、08-21，共 4 篇笔记。四篇互文成一条主线：<b>Harness / 治理层</b> 正从概念走向产业落地与垂直卡位，并以 <b>责任边界 = 市场壁垒</b> 与 <b>可验证自进化</b> 两条硬约束贯穿具身与汽车场景。按主题归并如下。</p>
 
     <div class="theme">
-      <h3><span class="tag">治理层</span>Agent 治理层与语义权力架构</h3>
+      <h3><span class="tag">治理层</span>Harness 作为 AI 控制平面 / 语义权力层</h3>
       <ul>
-        <li><b>治理层正从概念走向产业落地</b>：Agent OS（阶跃 StepAOS 等）告别"大模型外挂工具"，原生支撑"感知-规划-执行-校验-自省"闭环。</li>
-        <li><b>接口标准化</b>：MCP 被称为 AI 的 "TCP/IP"，统一智能体↔工具、智能体↔智能体；配套 A2A 做协同分工、任务委派、分歧仲裁。</li>
-        <li><b>记忆与可观测</b>：三级持久记忆（工作/短期/长期）突破上下文窗口；OTel GenAI 原生追踪循环轮次、工具调用、自省记录、Token 计量、幻觉拦截。</li>
-        <li><b>可信安全三平面</b>：控制/数据/信任分离，TEE 托管密钥审计脱敏、意图防火墙、轻量 AI 沙箱；Gartner 新增"智能体 AI 安全"赛道。</li>
+        <li><b>黑鲸独立品牌，控制点下沉</b>：DeepSeek 将 Harness 从"模型权重"中分拆为独立团队（黑色鲸鱼 vs 蓝色鲸鱼），开源边界延伸到 Agent 运行基础设施——决定长程任务成败的核心变量从基座智能转向上下文控制、工具效率、状态管理与可观测（08-17）。</li>
+        <li><b>三级分层清晰化</b>：MCP（连接层，解决"怎么连"）≠ Harness（控制层，解决"怎么跑"：调度时机/权限/持久化/重试/子任务派生/循环终止）≠ Agent OS（治理层，解决"怎么被授权、约束、追溯地跑"）。后二者即车的"AI 语义权力平面"（08-17、08-21）。</li>
+        <li><b>"一切皆插件"的 Cordis 实践</b>：模型适配器、工具注册表、上下文、会话存储、甚至 Agent Loop 本身均可插拔；时空可组合（依赖动态重组 + 卸载完全回滚），底层预留自进化接口（08-17）。</li>
+        <li><b>产业落地雏形</b>：前沿综述中 MCP/A2A、三级持久记忆、OTel GenAI 可观测、三平面可信安全，正是 Agent OS 治理层（Authority / Memory Boundary / Commit / Runtime Boundary）的产业填空（08-21 综合记录）。</li>
       </ul>
     </div>
 
     <div class="theme">
-      <h3><span class="tag">白空间</span>汽车安全攸关系统的自进化 Harness</h3>
+      <h3><span class="tag">责任</span>责任边界 = 市场壁垒（硬约束版）</h3>
       <ul>
-        <li><b>白空间必须收窄</b>：harness 与车用 OS 各自都有人提；真正的空白是"汽车 × 安全攸关 × 自进化 harness 的协同演进路径"。</li>
-        <li><b>难度高一个量级</b>：ASIL-D 功能安全 + 信息安全的责任链（非工程护栏，而是法律与生命责任边界）；智驾/座舱/车控/云端四域跨域耦合；OTA 受监管/召回/可追溯约束；模型快速迭代但车不能重训。</li>
-        <li><b>立项目标口径</b>：面向汽车安全攸关、跨域、长生命周期系统的「自进化 harness 架构」——语义权力边界定义、跨域调度、可验证自进化与合规回滚。</li>
+        <li><b>具身终局是责任而非软件</b>：谁能对机器人进入工厂/社会后的物理破坏、质量波动与安全事故承担终极兜底责任，谁才拥有万亿级市场定义权；2028 终局回归制造/生态/责任闭环（08-20）。</li>
+        <li><b>车上的法律与生命边界</b>：汽车责任边界 = 事故/召回责任，harness 即责任边界技术化，不是工程护栏而是 ASIL-D 功能安全 + 信息安全 + 人机共驾责任链（08-21 2127）。</li>
+        <li><b>可信安全从外挂变一等抽象</b>：三平面分离（控制/数据/信任）、TEE 托管、意图防火墙、AI 沙箱，对应"责任边界技术化"（08-21 综合记录）。</li>
       </ul>
     </div>
 
     <div class="theme">
-      <h3><span class="tag">具身</span>世界模型、原生多模态与具身量产拐点</h3>
+      <h3><span class="tag">自进化</span>自进化必须有可验证闭环</h3>
       <ul>
-        <li><b>NSP 状态预测范式</b>：从"预测下一文字"升级为"预测物理世界下一状态"，学重力/碰撞/时序因果，打通仿真与机器人（悟道·寰宇、Matrix-Game 3.5、FSD V12）。</li>
-        <li><b>原生统一多模态基座</b>：底层统一表征文本/图像/音频/视频/3D（商汤 SenseNova U1 Pro、Meta Muse Spark）。</li>
-        <li><b>量产去表演化</b>：仓储/产线/巡检；人形全球出货占比 88.7%（作者口径，待核验）；2026 目标产量 10 万台；大脑-小脑-神经端到端闭环；全直驱灵巧手全自动产线。</li>
+        <li><b>自指 ≠ 自进化</b>：DeepSeek 创造模式（内存自指运行时）提供了自修改机制，但缺确定性验证函数（Verification Gate）与环境闭环反馈，动态修改易演化为崩溃或"创可贴式退化"（08-17）。</li>
+        <li><b>车的合规闭环更严</b>：OTA 受监管/召回/可追溯约束，harness 自进化须可验证、可回滚、可审计每条行为变更（arxiv 2605.18747 的 change contract 正是为此）（08-21 2127）。</li>
+        <li><b>过程记录是载体</b>：仅追加事件流（单一事实来源）+ Trajectory 精确回放，叠加 OTel + 三级记忆 + 自省迭代闭环，构成"过程记录 / 可验证 / 延迟反馈"，否则长期 Agent 会自发篡改目标/记忆（08-17、08-21 综合记录）。</li>
       </ul>
     </div>
 
     <div class="theme">
-      <h3><span class="tag">底座</span>模型底层架构与算力超节点</h3>
+      <h3><span class="tag">具身</span>具身智能产业化周期与窗口</h3>
       <ul>
-        <li><b>MoE 成标配</b>：动态路由分域专家，推理成本最高降 60%（作者口径）；长上下文动态稀疏注意力 O(n²)→O(n log n)，百万 Token 算力约 1/10。</li>
-        <li><b>慢思考与并行生成</b>：CoVe 链式校验降幻觉；SSM 低延迟 + 文本扩散并行生成打破逐词自回归。</li>
-        <li><b>竞争升级为超节点集群</b>：华为昇腾 950 超节点 1024 张 NPU / 1 EFLOPS FP8；曙光 8000 十万卡级；WAIC 2026 发布超节点白皮书。</li>
+        <li><b>强分化淘汰赛初期</b>：非资本冰河期，而是头部吸水、尾部断流；200+ 缺乏真机闭环的初创首轮出清，人才溢价从 3 倍回归约 50%（08-20）。</li>
+        <li><b>智驾经验不可平移</b>："开环数据+堆算力"范式无法平移至高自由度、强物理接触、非线性交互的机器人本体（08-20）。</li>
+        <li><b>2026–2028 三阶段</b>：① 工程幻灭与微闭环死斗（MTBF/连续成功率）② 基座统一+硬件白菜化（开源大脑、整机 10–15 万）③ 巨头收割与规模化上岗（百万工时无事故率/TCO/责任兜底）（08-20）。</li>
+        <li><b>去表演化量产</b>：NSP 状态预测打通仿真与机器人、原生统一多模态、灵巧手全自动产线把"新增能力边际成本"压下来（08-21 综合记录）。</li>
+      </ul>
+    </div>
+
+    <div class="theme">
+      <h3><span class="tag">底座</span>模型架构与算力超节点（支撑层）</h3>
+      <ul>
+        <li><b>MoE 成标配</b>：动态路由分域专家，推理成本最高降 60%（作者口径）；长上下文动态稀疏注意力 O(n²)→O(n log n)，百万 Token 算力约 1/10（08-21 综合记录）。</li>
+        <li><b>慢思考与并行生成</b>：CoVe 链式校验降幻觉；SSM 低延迟 + 文本扩散并行打破逐词自回归（08-21 综合记录）。</li>
+        <li><b>竞争升级为超节点集群</b>：华为昇腾 950 超节点 1024 张 NPU / 1 EFLOPS FP8；《超节点定义与实践白皮书》WAIC 2026 发布（08-21 综合记录）。</li>
       </ul>
     </div>
   </section>
@@ -123,32 +134,36 @@
   <section id="insights">
     <h2>二、核心认知</h2>
     <div class="grid">
-      <div class="card"><div class="h">1. 治理层已落地雏形</div>
-        MCP/A2A/三级记忆/OTel/三平面安全，正是 Agent OS"Authority、Memory Boundary、Commit、Runtime Boundary"的产业落地雏形；前篇讲"为何需要治理"，本篇讲"产业往哪填"。</div>
-      <div class="card"><div class="h">2. 白空间须精确收窄</div>
-        harness 与车用 OS 都不是空白；空白在"汽车×安全攸关×自进化 harness 的协同演进路径"。向高管表述必须用收窄版，否则被懂行者一击破。</div>
-      <div class="card"><div class="h">3. 责任边界=市场壁垒（硬约束版）</div>
-        谁定义车的行为边界、谁承担事故/召回责任；harness 即"责任边界"的技术化，是车上的法律与生命边界，而非工程护栏。</div>
-      <div class="card"><div class="h">4. 可验证环境是进化前提</div>
-        车的"异常→识别→回退→替代 Skill→重规划→人工接管"，是延迟反馈 + 过程记录的硬实时版；无此层则长期 Agent 会自发篡改目标/记忆。</div>
-      <div class="card"><div class="h">5. 模型是租的、harness 是自有</div>
-        模型抽象 + Skill 资产化是车厂对抗"模型绑定"的关键 IP，与"下一项能力边际成本持续下降"的 Physical Token 经济学同构。</div>
-      <div class="card"><div class="h">6. 趋势综述≠理论原创</div>
-        前沿综论价值在"扫得全、归类清"，引用须按"趋势综述"处理，厂商指标（88.7%、10 万台、60%、1024 张/1 EFLOPS）均属作者口径，需注明出处、留待核验。</div>
+      <div class="card"><div class="h">1. Harness/治理层已成明确产业主线</div>
+        DeepSeek 用独立品牌把"执行外壳"从"模型权重"中分拆，印证生态控制点正下沉到上下文控制、工具交互效率、状态管理与可观测体系——这是与"模型能力"平行的新价值层。</div>
+      <div class="card"><div class="h">2. 连接 / 控制 / 治理 三级分层</div>
+        MCP（怎么连）、Harness（怎么跑）、Agent OS（怎么被授权/约束/追溯地跑）是三层而非一层；混淆三者会误判"是否在重复造 OS"。</div>
+      <div class="card"><div class="h">3. 责任边界 = 市场壁垒（硬约束版）</div>
+        具身与汽车共享同一逻辑：谁能兜底物理/生命安全责任，谁定义产业边界；车上即 ASIL-D 法律生命边界，harness 是其技术化。</div>
+      <div class="card"><div class="h">4. 自进化必须可验证闭环</div>
+        仅有自指/自修改机制不够，必须有 Verification Gate / change contract / OTel 过程记录，否则长期 Agent 自发篡改目标与记忆。</div>
+      <div class="card"><div class="h">5. 白空间须精确收窄</div>
+        harness 与车用 OS 都已有人提；空白在"汽车 × 安全攸关 × 自进化 harness 的协同演进路径"。向高管表述必须用收窄版，否则被懂行者一击破。</div>
+      <div class="card"><div class="h">6. 趋势综述 ≠ 理论原创</div>
+        前沿综论价值在"扫得全、归类清"；厂商指标（88.7%、10 万台、60%、1024 张/1 EFLOPS）均属作者口径，引用须标注出处、留待核验。</div>
     </div>
   </section>
 
   <section id="tensions">
     <h2>三、关键张力</h2>
     <div class="grid">
-      <div class="card tension"><div class="h">A. OS 重复 vs 新增语义平面</div>
-        "这不就是整车 OS / SOA 吗？"——传统 OS 解决"确定性功能怎么跑"（控制平面）；harness 解决"概率 AI 怎么被授权、约束、追溯地跑"（语义权力平面）。是新的一层，非重复造 OS。</div>
-      <div class="card tension"><div class="h">B. 自进化 vs 召回合规</div>
-        ISO 26262 / 21448 SOTIF 对自适应系统的边界，是否允许 model/harness 现场自改，是白空间能否成立的前提，也可能是最大约束。</div>
-      <div class="card tension"><div class="h">C. 基础研究 vs 工程架构</div>
-        2127 定位"基础技术研究"：harness 偏工程还是基础技术？建议口径"面向安全攸关系统的自进化系统架构基础研究"，上接控制论/形式化验证。</div>
-      <div class="card tension"><div class="h">D. 追热点 vs 补基础层</div>
-        harness 是"模型之上、可交付之下"那一层，符合 2127 调性；需避免被误读为追 AI 热点。</div>
+      <div class="card tension"><div class="h">A. 自指接口 ≠ 自进化能力</div>
+        创造模式给了自修改运行时的机制，但缺确定性验证函数（Verification Gate）与环境闭环反馈，动态修改极易演化为系统崩溃或"创可贴式退化"（08-17）。</div>
+      <div class="card tension"><div class="h">B. 插件全栈开放 vs 生产治理成本</div>
+        插件可触及文件系统、执行环境与核心会话数据；权限隔离、供应链安全与依赖冲突将是企业生产落地的主要瓶颈（08-17）。</div>
+      <div class="card tension"><div class="h">C. "这不就是整车 OS / SOA 吗？"</div>
+        传统车用 OS 解决"确定性功能怎么跑"（控制平面）；harness 解决"概率 AI 怎么被授权、约束、追溯地跑"（语义权力平面），是新的一层而非重复造 OS（08-21 2127）。</div>
+      <div class="card tension"><div class="h">D. 自进化 + 召回合规</div>
+        ISO 26262 / 21448 SOTIF 对自适应系统的边界，是否允许 model/harness 现场自改，是白空间能否成立的前提，也可能是最大约束（08-21 2127）。</div>
+      <div class="card tension"><div class="h">E. 基础研究 vs 工程架构</div>
+        2127 定位"基础技术研究"：harness 偏工程还是基础技术？建议"面向安全攸关系统的自进化系统架构基础研究"，上接控制论/形式化验证（08-21 2127）。</div>
+      <div class="card tension"><div class="h">F. 追热点 vs 补基础层</div>
+        harness 是"模型之上、可交付之下"那一层，符合 2127 调性；需避免被误读为追 AI 热点（08-21 2127）。</div>
     </div>
   </section>
 
@@ -156,27 +171,30 @@
     <h2>四、认知变化</h2>
     <div class="grid">
       <div class="card change"><div class="h">从"无人提出"到"偏大不成立"</div>
-        用户原判断"行业没有在如此复杂系统上的概念提出与路径"被实证修正：通用 harness、车用 AIOS 均已活跃；收敛为准确的白空间边界。</div>
-      <div class="card change"><div class="h">从"为何治理"到"往哪填"</div>
-        两篇合并理解——治理必要性（Agent OS 篇）+ 产业落地方向（综合记录篇），框架从"问题"补全为"问题+路径"。</div>
-      <div class="card change"><div class="h">从"模型能力"到"自有资产"</div>
-        明确模型抽象 + Skill 资产化是车厂对抗模型绑定、构筑长期边际成本优势的核心 IP 抓手。</div>
+        08-21 实证核验修正对 2127 白空间的判断：通用 Agent Harness、车用 OS 均已活跃；收敛为"汽车×安全攸关×自进化 harness 协同演进路径"这一准确边界。</div>
+      <div class="card change"><div class="h">从"为何治理"到"往哪填"到"怎么卡位"</div>
+        08-17 DeepSeek 给具体工程机制 → 08-21 综合记录给产业落地方向 → 08-21 2127 给垂直（车）卡位，框架从"问题"补全为"问题+路径+靶心"。</div>
+      <div class="card change"><div class="h">从"模型能力竞争"到"自有资产竞争"</div>
+        模型抽象 + Skill 资产化是车厂对抗"模型绑定"的关键 IP，与"下一项能力边际成本持续下降"的 Physical Token 经济学同构。</div>
+      <div class="card change"><div class="h">具身从"概念普惠"到"强分化淘汰赛"</div>
+        人才定价回归、智驾经验不可平移、窗口期三阶段，判断锚点从 Demo 炫技转向真机 MTBF/连续成功率与责任闭环（08-20）。</div>
     </div>
   </section>
 
   <section id="open">
     <h2>五、待思考问题</h2>
     <div class="grid">
-      <div class="card open"><div class="h">Q1</div>这六层里，哪层是长安前瞻院最该卡位的？（结合 2127"基础技术研究"定位）</div>
-      <div class="card open"><div class="h">Q2</div>Agent OS 与 MCP/A2A 关系：标准是"连接器"、OS 是"治理层"，二者是否被文章有意区分？</div>
-      <div class="card open"><div class="h">Q3</div>世界模型 NSP 与具身量产，哪个更接近"100 年后基础技术"的苗头？</div>
-      <div class="card open"><div class="h">Q4</div>车用 OS 厂商（东软 NeuSAR、AutoCore、SONATUS）是否已做"AI 语义权力平面"？需跟踪 2026-09 AI 定义汽车论坛与佐思报告。</div>
-      <div class="card open"><div class="h">Q5</div>自进化 + 召回合规在监管上是否允许 model/harness 现场自改？这是白空间成立的前提，也是最大不确定项。</div>
+      <div class="card open"><div class="h">Q1</div>六层框架里，哪层是 2127 / 长安前瞻院最该卡位的？（结合"基础技术研究"定位）</div>
+      <div class="card open"><div class="h">Q2</div>MCP（连接）/ Harness（控制）/ Agent OS（治理）三级是否会被文章有意区分，还是混叙？需跟踪标准与 OS 厂商口径。</div>
+      <div class="card open"><div class="h">Q3</div>自进化 + 召回合规在监管上是否允许 model/harness 现场自改？白空间成立前提，也是最大不确定项。</div>
+      <div class="card open"><div class="h">Q4</div>车用 OS 厂商（东软 NeuSAR、AutoCore、SONATUS）是否已做"AI 语义权力平面"？跟踪 2026-09 AI 定义汽车论坛 + 佐思报告，确认白空间未被抢先定义。</div>
+      <div class="card open"><div class="h">Q5</div>NSP 世界模型与具身量产，哪个更接近"100 年后基础技术"的苗头？</div>
+      <div class="card open"><div class="h">Q6</div>DeepSeek 创造模式（自指运行时）与 2127 车用 harness 自进化，是否共用同一套 Verification Gate 设计？可互相借鉴。</div>
     </div>
-    <p class="note">说明：本回顾覆盖窗口为 2026-08-21 至 2026-08-23；其中 08-22、08-23 知识库目录暂无新增记录，实际命中笔记均来自 2026-08-21（2 篇）。厂商指标均为原文综述口径，引用时已标注"据该文"，未经原始来源逐一核验。</p>
+    <p class="note">说明：本页为 2026-08-24 每日回顾。严格扫描窗口 2026-08-22 → 2026-08-24 内知识库目录暂无新增 Markdown（08-22、08-23、08-24 均无日期子目录）；最近有实质内容的三个日期为 2026-08-17、2026-08-20、2026-08-21（共 4 篇），本页顺延聚合之，以避免空窗并保持连续性。其中 2026-08-21 两篇已于 2026-08-23 回顾，本次新增 08-17（DeepSeek Harness 设计哲学）与 08-20（具身赛道周期）两篇视角。各厂商指标均为原文综述口径，引用时已标注"据该文"，未经原始来源逐一核验。</p>
   </section>
 
-  <footer>知识库每日回顾 · 由 Hermes 自动生成 · 2026-08-23 · GitHub Pages 部署</footer>
+  <footer>知识库每日回顾 · 由 Hermes 自动生成 · 2026-08-24 · GitHub Pages 部署</footer>
 </div>
 </body>
 </html>
