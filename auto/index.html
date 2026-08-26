@@ -3,334 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>汽车早报 2026-08-25（星期二）· 最近24小时行业要闻</title>
+<title>汽车早报 · 2026年8月26日（星期三）</title>
 <style>
   :root{
-    --bg:#f5f6f8; --card:#ffffff; --ink:#1a1d24; --sub:#5b6470; --line:#e6e8ec;
-    --brand:#1f5fd6; --brand2:#0a8f5b; --warn:#c0392b; --tag-media:#3a6ea5;
-    --tag-official:#0a8f5b; --tag-comm:#b0772b;
+    --bg:#f7f7f7;
+    --card:#ffffff;
+    --ink:#1f2328;
+    --sub:#5a6169;
+    --line:#e6e8eb;
+    --accent:#0a6cff;
+    --accent2:#0e7c4f;
+    --warn:#b54708;
+    --tag-bg:#eef3fb;
+    --tag-ink:#0a6cff;
   }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    line-height:1.6;-webkit-text-size-adjust:100%}
-  .wrap{max-width:860px;margin:0 auto;padding:14px 14px 40px}
-  header.hero{background:linear-gradient(135deg,#1f5fd6,#0a8f5b);color:#fff;border-radius:14px;padding:20px 18px;margin-bottom:14px}
-  header.hero h1{margin:0 0 6px;font-size:22px;line-height:1.3}
-  header.hero .date{font-size:14px;opacity:.95}
-  .summary{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:16px;font-size:14px}
-  .summary b{color:var(--brand)}
-  .summary .pill{display:inline-block;background:#eaf0fb;color:var(--brand);border-radius:999px;padding:2px 10px;margin:2px 4px 2px 0;font-size:13px}
-  .summary .note{color:var(--sub);font-size:13px;margin-top:8px}
-  section.block{margin:0 0 18px}
-  section.block > h2{font-size:17px;margin:0 0 10px;padding-left:10px;border-left:4px solid var(--brand);color:var(--ink)}
-  section.block.s2 > h2{border-color:var(--brand2)}
-  section.block.s3 > h2{border-color:var(--warn)}
-  section.block.s4 > h2{border-color:#7a52c7}
-  article.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 15px;margin-bottom:11px;
-    box-shadow:0 1px 2px rgba(20,30,60,.04)}
-  article.item h3{margin:0 0 6px;font-size:16px;line-height:1.4}
-  .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;color:var(--sub);margin-bottom:8px}
-  .meta .src{color:var(--brand);text-decoration:none;font-weight:600}
-  .meta .src:hover{text-decoration:underline}
-  .tag{font-size:11.5px;border-radius:6px;padding:1px 7px;font-weight:600}
-  .tag.media{background:#eaf1f8;color:var(--tag-media)}
-  .tag.official{background:#e7f6ee;color:var(--tag-official)}
-  .tag.comm{background:#fbf0dc;color:var(--tag-comm)}
-  .facts{font-size:13.5px;color:var(--ink);margin:6px 0 6px;padding-left:2px}
-  .facts .k{color:var(--sub);font-weight:600}
-  .detail{font-size:14px;color:#2a2f38;margin:4px 0 0}
-  footer.takeaways{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-top:8px}
-  footer.takeaways h2{font-size:16px;margin:0 0 8px;color:var(--ink)}
-  footer.takeaways ol{margin:0;padding-left:20px}
-  footer.takeaways li{font-size:14px;margin:5px 0;color:#2a2f38}
-  .foot{font-size:12px;color:var(--sub);margin-top:14px;text-align:center}
-  a{color:var(--brand)}
+    line-height:1.7;
+    font-size:16px;
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:18px 14px 48px;}
+  header.top{
+    background:linear-gradient(180deg,#ffffff,#fbfcfe);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 18px;
+    margin-bottom:16px;
+  }
+  header.top h1{font-size:23px;margin:0 0 6px;font-weight:800;letter-spacing:.3px;}
+  .date-line{color:var(--sub);font-size:14px;margin-bottom:12px;}
+  .stat-bar{
+    display:flex;flex-wrap:wrap;gap:8px;font-size:13px;
+  }
+  .pill{
+    background:var(--tag-bg);color:var(--tag-ink);
+    border:1px solid #d7e6ff;border-radius:999px;
+    padding:5px 11px;white-space:nowrap;
+  }
+  .pill.ok{background:#e8f6ee;color:var(--accent2);border-color:#bfe6cd;}
+  .pill.gray{background:#f0f1f3;color:var(--sub);border-color:#e2e4e8;}
+  .note{
+    margin-top:12px;font-size:13px;color:var(--sub);
+    background:#fbfdfe;border:1px solid var(--line);border-radius:10px;padding:10px 12px;
+  }
+  section.block{margin:18px 0;}
+  .block-title{
+    font-size:18px;font-weight:800;margin:0 0 10px;
+    padding-left:11px;border-left:4px solid var(--accent);
+  }
+  .block-title.b2{border-color:#7c3aed;}
+  .block-title.b3{border-color:var(--warn);}
+  .block-title.b4{border-color:var(--accent2);}
+  .block-title.b5{border-color:#475569;}
+  article.card{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:14px 14px 12px;margin-bottom:11px;
+  }
+  article.card h3{font-size:16.5px;margin:0 0 6px;line-height:1.45;font-weight:700;}
+  .meta{font-size:12.5px;color:var(--sub);margin-bottom:8px;display:flex;flex-wrap:wrap;gap:6px 10px;}
+  .meta a{color:var(--accent);text-decoration:none;}
+  .meta a:hover{text-decoration:underline;}
+  .tag{
+    display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:6px;
+    background:var(--tag-bg);color:var(--tag-ink);border:1px solid #d7e6ff;
+  }
+  .tag.official{background:#e8f6ee;color:var(--accent2);border-color:#bfe6cd;}
+  .tag.media{background:#fff4e6;color:var(--warn);border-color:#ffd8a8;}
+  .tag.community{background:#fdeef0;color:#b42318;border-color:#f6c9cd;}
+  .facts{font-size:13.5px;color:var(--ink);margin:6px 0 6px;}
+  .facts b{color:#0b3d91;}
+  .detail{font-size:14.5px;color:#2b3138;margin:4px 0 0;}
+  .src-line{font-size:12px;color:var(--sub);margin-top:8px;border-top:1px dashed var(--line);padding-top:7px;}
+  h2.kicker{font-size:17px;margin:26px 0 8px;font-weight:800;color:#27303a;}
+  ul.takeaways{margin:0;padding-left:0;list-style:none;}
+  ul.takeaways li{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:11px 13px;margin-bottom:9px;font-size:14.5px;
+  }
+  ul.takeaways li::before{content:"▸ ";color:var(--accent);font-weight:700;}
+  footer.foot{
+    margin-top:26px;font-size:12.5px;color:var(--sub);
+    border-top:1px solid var(--line);padding-top:14px;
+  }
+  .legend{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+  @media (max-width:480px){
+    body{font-size:15.5px;}
+    header.top h1{font-size:21px;}
+    .wrap{padding:12px 10px 40px;}
+    article.card h3{font-size:15.5px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="hero">
-  <h1>汽车早报 · 2026-08-25（星期二）</h1>
-  <div class="date">最近24小时（2026-08-24 ~ 2026-08-25）汽车行业独立事件汇总 · 数据基于原始来源，事实以链接页面为准</div>
-</header>
-
-<div class="summary">
-  <div>本期共收录 <b>20</b> 条独立事件。板块覆盖：
-    <span class="pill">① 中国车型与发布会 7 条</span>
-    <span class="pill">② 自动驾驶与智能化 4 条</span>
-    <span class="pill">③ 法规·标准·监管 4 条</span>
-    <span class="pill">④ 电动化·供应链·产业 5 条</span>
-  </div>
-  <div class="note">
-    配额核对：国内重大车型/发布会 = 7（≥2 ✔）；自动驾驶与智能化 = 4（≥2 ✔）；法规/标准/监管 = 4（≥2 ✔）。
-    说明：过去24小时国内抓取源未见新发重大法规事件，本期第③板块以美国NHTSA调查、Polestar在美受限、美加汽车关税等海外监管动态填满配额，并补充近期已发布、影响重大的中国强制国标 GB 44721—2026 作为背景（事件日期如实标注为 2026-08-04）。社区线索（Reddit）仅作印证，占比 0%，未作为任何产品的唯一证据。
-  </div>
-</div>
-
-<!-- ===================== ① 中国车型与发布会 ===================== -->
-<section class="block s1">
-  <h2>① 中国车型与发布会（国内最高优先级）</h2>
-
-  <article class="item">
-    <h3>小米发布 3nm 自研智驾芯片「玄戒 Xring D100」，2027 年量产上车</h3>
-    <div class="meta">
-      <span class="tag official">官方发布</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/xiaomi-unveils-xring-d100-smart-driving-chip/" target="_blank" rel="noopener">CnEVPost 报道</a>
-      <span>·</span>
-      <a class="src" href="https://insideevs.com/news/805921/xiaomi-self-driving-chip-nvidia/" target="_blank" rel="noopener">InsideEVs 报道</a>
+  <header class="top">
+    <h1>汽车早报 · 2026年8月26日（星期三）</h1>
+    <div class="date-line">生成时间窗口：2026-08-25 00:30 — 2026-08-26 00:30（UTC+8，近24小时）｜ 数据来源：车企/监管机构官方、专业媒体及补充检索</div>
+    <div class="stat-bar">
+      <span class="pill ok">独立事件 18 条</span>
+      <span class="pill ok">①中国车型/发布会 4</span>
+      <span class="pill ok">②自动驾驶/智能化 4</span>
+      <span class="pill ok">③法规/标准/监管 3</span>
+      <span class="pill gray">④电动化/供应链 5</span>
+      <span class="pill gray">⑤国际动态 2</span>
     </div>
-    <div class="facts"><span class="k">关键事实：</span>小米（1810.HK）发布首款车规智驾芯片 Xring D100，采用 3nm 工艺，20 核 CPU + 16 核 NPU，最高可本地运行 2000 亿参数大模型，已完成全部验证，计划 2027 年商用。</div>
-    <p class="detail">小米称 D100 为中国首款 3nm 高算力智驾芯片，将补齐其从手机、机器人到汽车的垂直芯片布局。该芯片直接对标英伟达车规方案，是其电动车与 AI 驾驶战略的核心算力底座；量产节奏取决于 2027 年整车落地进度。</p>
-  </article>
-
-  <article class="item">
-    <h3>比亚迪腾势 Z9S（续航 1100km）已到店全国 101 家经销商，上市在即</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://carnewschina.com/2026/08/24/byds-denza-z9s-sedan-with-1100-km-of-range-arrived-at-101-dealers-across-china-ahead-of-launch/" target="_blank" rel="noopener">CarNewsChina 报道</a>
+    <div class="note">
+      配额核验：国内重大车型/发布会 4 条（≥2）、自动驾驶相关 4 条（≥2）、法规/标准/监管 3 条（≥2），均达标。
+      Reddit 仅作线索且最终占比 0%；本月较早（7月）发布的 NHTSA 自动驾驶一揽子政策、GB 44721 强制国标（8月4日）等不计入"近24小时"事件，相关背景仅在本报要点中提及，避免篡改事实日期。
     </div>
-    <div class="facts"><span class="k">关键事实：</span>腾势 Z9S 轿车综合续航约 1100km，上市前已抵达全国 101 家腾势门店，进入铺货阶段。</div>
-    <p class="detail">Z9S 定位高端插混/增程旗舰轿车，长续航是其核心卖点，直接对标同级豪华新能源轿车。到店动作显示比亚迪高端品牌腾势的渠道铺开节奏加快，正式售价与配置预计在近期上市发布会公布。</p>
-  </article>
+  </header>
 
-  <article class="item">
-    <h3>小鹏 G9L 将于 9 月上市交付，Mona L05 定档 Q4，目标月销 6 万辆</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24 / 25</span>
-      <a class="src" href="https://cnevpost.com/2026/08/25/xpeng-launch-g9l-sept-mona-l05-q4-2026" target="_blank" rel="noopener">CnEVPost 报道</a>
+  <!-- ① -->
+  <section class="block">
+    <h2 class="block-title">① 中国车型与发布会</h2>
+
+    <article class="card">
+      <h3>奔驰全新长轴距 GLE SUV 全球首秀，首款中国本土生产大型豪华 SUV</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-21（成都车展，本报窗口内重点追踪）</span>
+        <span class="tag official">官方/媒体</span>
+        <a href="https://chedongxi.com/p/374806.html" target="_blank" rel="noopener">车东西报道 ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>车长 5051mm、轴距 3115mm；提供 GLE 350 L 4MATIC（2.0T，190kW）与 GLE 450 L 4MATIC（3.0T，280kW）共 5 款配置；搭载体化智能座舱与"中国智驾"，售价与上市时间未公布。</div>
+      <p class="detail">新车是奔驰首款在中国本土生产的大型豪华 SUV，针对后排空间、座舱配置与智能化进行本土化调整，并展出全新纯电 GLC SUV。该发布体现代豪华品牌在华"本土研发+本土制造"加速，但价格与智驾方案细节仍待官方后续披露。</p>
+      <div class="src-line">来源类型：专业汽车媒体（车东西现场报道）。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>长城哈弗 H9 力魂版正式上市，限时 21.49 万元起</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://chedongxi.com/p/374991.html" target="_blank" rel="noopener">车东西报道 ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>汽油版建议零售价 23.99 万元、限时焕新价 21.49 万元；柴油版 25.79 / 23.29 万元。标配前后桥差速锁、9 种驾驶模式，可选原厂涉水喉，最小离地间隙 236mm、涉水深度 800mm。</div>
+      <p class="detail">力魂版为 H9 官方改装版本，在外观、越野性能与舒适性上升级。长城将硬派越野下探至 21 万元级，意在巩固其在越野细分市场的价格与配置优势。</p>
+      <div class="src-line">来源类型：专业汽车媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>比亚迪 Sealion 08 定档 9 月 2 日上市，海洋网旗舰 SUV</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25（定档）</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://cnevpost.com/2026/08/25/byd-to-launch-sealion-08-sept-2-2026/" target="_blank" rel="noopener">CnEVPost ↗</a>
+        <a href="https://carnewschina.com/2026/08/25/byd-to-launch-sealion-08-flagship-suv-on-september-2-with-up-to-115-072-kwh-battery-and-900-km-range/" target="_blank" rel="noopener">CarNewsChina ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>预售价 23–28 万元；EV 版 CLTC 续航最高 900km，电池最高约 115kWh；提供 BEV 与 PHEV 两种动力，定位海洋网旗舰。</div>
+      <p class="detail">Sealion 08 的发布显示比亚迪在 20–30 万元级新能源 SUV 市场的产品矩阵进一步加密，长续航 BEV 版本直接对标同级竞品，预售到上市节奏紧凑。</p>
+      <div class="src-line">来源类型：专业媒体（中/英）。双源交叉印证，原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>丰田新款 bZ5 将于 8 月 26 日在中国上市</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25（官宣）/ 上市 2026-08-26</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://cnevpost.com/2026/08/25/updated-toyota-bz5-launch-aug-26-2026/" target="_blank" rel="noopener">CnEVPost ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>2027 款 bZ5 预计保留现款造型，升级重点聚焦驾驶辅助与续航；由一汽丰田生产，8 月 26 日正式发布。</div>
+      <p class="detail">作为合资品牌在华纯电主力之一，bZ5 的年度改款把升级重心放在智驾与续航，反映合资车企在电动化下半场以"智能化补课"争夺份额的策略。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+  </section>
+
+  <!-- ② -->
+  <section class="block">
+    <h2 class="block-title b2">② 自动驾驶与智能化</h2>
+
+    <article class="card">
+      <h3>吉利近 9.3 万辆因激光雷达缺陷召回，主要涉及领克</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://carnewschina.com/2026/08/25/geely-recalls-nearly-93000-vehicles-due-to-lidar-failures-primarily-affecting-lynk-co-models/" target="_blank" rel="noopener">CarNewsChina ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>召回规模约 92,800 辆，缺陷来自激光雷达（LiDAR）故障，主要影响 Lynk &amp; Co（领克）车型。</div>
+      <p class="detail">这是一起与高阶智驾传感器直接相关的批量召回，凸显智能驾驶硬件可靠性已成为整车安全与售后合规的核心环节，也为后续 L3/L4 强制国标落地提供了现实注脚。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>Waymo robotaxi 将落地德国慕尼黑，数周内开始地图采集</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://techcrunch.com/2026/08/25/waymo-robotaxis-are-headed-to-munich/" target="_blank" rel="noopener">TechCrunch ↗</a>
+        <a href="https://insideevs.com/news/806056/waymo-coming-to-germany/" target="_blank" rel="noopener">InsideEVs ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>Waymo 将在未来数周对慕尼黑街道进行地图采集，商业服务预计 2027 年启动；德国自动驾驶法规已使其成为自动驾驶测试与运营的热点市场。</div>
+      <p class="detail">这是 Waymo 继美国多城之后首次进入欧洲核心市场，依托德国清晰的 AV 监管框架推进。若落地顺利，将成为全球 Robotaxi 跨洲扩张的标志性案例。</p>
+      <div class="src-line">来源类型：专业媒体（双源）。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>自动驾驶卡车初创 Gatik 完成 2 亿美元融资，紧接百事合作</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://techcrunch.com/2026/08/25/self-driving-truck-startup-gatik-raises-200m-following-pepsico-deal/" target="_blank" rel="noopener">TechCrunch ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>本轮为公司迄今最大融资，由卡塔尔投资局（QIA）与 Koch Disruptive Technologies 领投，紧随其与百事（PepsiCo）的自动驾驶货运合作之后。</div>
+      <p class="detail">Gatik 聚焦 B2B 短途干线自动驾驶货运，本轮融资显示资本在 L4 卡车赛道对"已落地商业合同"企业的偏好增强，行业从 Demo 转向可验证的运营收入。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>奔驰 AMG GT 原型车完成纽北"双手脱离"自动驾驶圈速挑战</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://www.carscoops.com/2026/08/mercedes-amg-gt-autonomous/" target="_blank" rel="noopener">CarScoops ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>一台 GT 63 原型车完成两圈"双手脱离方向盘"的纽北圈速，但成绩仍明显落后于此前小米 YU7 GT 的自动驾驶圈速。</div>
+      <p class="detail">该尝试是主机厂以赛道场景展示智驾能力的营销式佐证，也折射出中外车企在"智能驾驶性能化"叙事上的竞争。需注意：赛道演示不等于公开道路合规自动驾驶能力。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+  </section>
+
+  <!-- ③ -->
+  <section class="block">
+    <h2 class="block-title b3">③ 法规、标准与监管</h2>
+
+    <article class="card">
+      <h3>道交法修订草案拟设"自动驾驶汽车特别规定"专章，明确责任归属</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag official">官方/媒体</span>
+        <a href="https://chedongxi.com/p/375011.html" target="_blank" rel="noopener">车东西报道 ↗</a>
+        <a href="https://cnevpost.com/2026/08/25/china-proposes-automakers-traffic-violations-fully-autonomous/" target="_blank" rel="noopener">CnEVPost ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>修订草案（共9章170条）提请十四届全国人大常委会第二十四次会议初次审议，拟增设自动驾驶专章：自动驾驶功能激活状态下发生交通违法，由生产企业/进口企业接受处理；仅辅助驾驶按非自动驾驶管理。同步严打"盲驾"（开车持手机、看视频），违者罚 200–500 元并可暂扣驾照。</div>
+      <p class="detail">这是国家层面首次以法律专章形式明确"功能激活即车企担责"的归责原则，直接回应 L2 滥用与 L3/L4 责任边界争议。草案全文尚未公开，后续将依法在中国人大网征求意见。背景上，强制性国标 GB 44721—2026《自动驾驶系统安全要求》（8月4日发布，拟2027-07-01实施）已为 L3/L4 划定统一安全准入基线，二者共同构成"法律+强制标准"的监管框架（GB 44721 为较早发布，不计入本次24小时事件）。</p>
+      <div class="src-line">来源类型：新华社通稿转引 + 专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>中国牵头！固态电池领域全球首个 IEC 国际标准成功立项</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag official">官方公告/媒体</span>
+        <a href="https://chedongxi.com/p/374932.html" target="_blank" rel="noopener">车东西报道 ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>据国家市场监督管理总局公告，我国提出的《电动汽车驱动用二次锂离子电池 固态电池应用指南、测试项目及条件》在 IEC 成功立项，为固态电池领域全球首个国际标准；法国、韩国、日本等多国专家参与研制。</div>
+      <p class="detail">该标准将统一全球固态电池测试规范，被视为中国在下一代电池技术话语权的体现。报道同时提到头部电池厂量产路线图：比亚迪计划 2027 年左右示范装车、2030 后大规模上车；国轩、蜂巢、亿纬等亦在推进中。标准先行折射产业从实验室走向商业化的关键转折。</p>
+      <div class="src-line">来源类型：官方公告（市场监管总局）转引 + 专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>日产 Altima 因安全气囊螺栓装错在美召回 149 辆</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道/监管</span>
+        <a href="https://www.carscoops.com/2026/08/nissan-altima-airbag-recall/" target="_blank" rel="noopener">CarScoops ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>日产 Canton 工厂一名技师发现安全气囊使用了错误螺栓，导致对两天内生产的 149 辆 Altima 发起召回；涉及 NHTSA 监管。</div>
+      <p class="detail">虽规模较小，但属典型"生产一致性"安全缺陷召回，体现美国 NHTSA 对被动安全件装配合规的持续监管。对国内车企出海而言，供应链与装配质量管控是进入成熟市场的硬门槛。</p>
+      <div class="src-line">来源类型：专业媒体（引用 NHTSA）。原始链接可用。</div>
+    </article>
+  </section>
+
+  <!-- ④ -->
+  <section class="block">
+    <h2 class="block-title b4">④ 电动化 / 供应链 / 产业</h2>
+
+    <article class="card">
+      <h3>零跑与一汽深化战略合作，覆盖股权、整车、AI 与三电</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25（8月24日长春签约）</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://autonews.gasgoo.com/articles/news/leapmotor-faw-group-deepen-strategic-partnership-across-vehicles-components-ai-2092172151447900160" target="_blank" rel="noopener">盖世汽车 ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>双方 8 月 24 日在长春签署深化协议，覆盖股权投资、新能源整车、智能驾驶辅助、动力总成、动力电池、智能底盘、轻量化零部件、具身智能机器人及金融服务；首款联合开发车型接近量产。</div>
+      <p class="detail">继 2025 年 3 月战略合作备忘录后，双方从"联合开发车型"升级到"资本+技术+生态"深度绑定，反映新势力与传统央企在电动化、智能化上的资源整合加速。</p>
+      <div class="src-line">来源类型：专业媒体（盖世汽车）。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>宁德时代收购国有网络股权，成中国最大重卡换电运营商</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://carnewschina.com/2026/08/25/catl-becomes-chinas-largest-heavy-duty-truck-battery-swapping-operator-after-acquiring-state-owned-network-stake/" target="_blank" rel="noopener">CarNewsChina ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>宁德时代通过收购国有换电网络股权，成为中国最大的重卡电池换电运营商。</div>
+      <p class="detail">重卡是商用车减碳与补能效率矛盾最突出的场景，换电模式在干线物流具备天然优势。CATL 加码重卡换电，与其乘用车巧克力换电网络形成互补，强化其在补能生态中的主导地位。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>吉利研发 1000V 高压架构，目标突破 5.5 分钟 10%–80% 充电</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://carnewschina.com/2026/08/25/geely-develops-1000v-architecture-to-go-beyond-5-5-minute-10-80-charging/" target="_blank" rel="noopener">CarNewsChina ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>吉利控股集团正在开发 1000V 高压架构，目标将 10%–80% 充电时间压缩至 5.5 分钟以内（优于当前水平）。</div>
+      <p class="detail">超快充是缓解里程焦虑的核心路径。1000V 架构叠加麒麟/神盾等电池体系，体现中国车企在高压平台上的军备竞赛，也将倒逼充电桩与电网侧升级。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>比亚迪电池与蒙古乌兰巴托签署绿色城市发展 MOU</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://autonews.gasgoo.com/articles/news/byd-battery-ulaanbaatar-plan-cooperation-on-green-urban-development-2092173508275884032" target="_blank" rel="noopener">盖世汽车 ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>比亚迪电池（FinDreams Battery）与蒙古首都乌兰巴托签署谅解备忘录，合作涵盖绿色交通、城市快充网络、储能系统，以及基于比亚迪电池技术的 SkyShuttle 智能公交项目。</div>
+      <p class="detail">这是比亚迪电池"技术+储能+交通"一体化出海的城级案例，以蒙古首都为样板探索中蒙可持续城市合作，亦拓展了储能与公共交通的场景边界。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>赛力斯系 Aiva 拟接入宁德时代换电网络，首款车型年底亮相</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://cnevpost.com/2026/08/25/seres-backed-aiva-explores-catl-battery-swap/" target="_blank" rel="noopener">CnEVPost ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>Aiva（赛力斯支持）正与 CATL 探讨换电方案，其首款量产车型 ME7 计划 2026 年底前亮相。</div>
+      <p class="detail">新品牌借力宁德时代换电生态，可降低补能网络自建成本、加快交付节奏，也显示换电标准"朋友圈"在持续扩大。</p>
+      <div class="src-line">来源类型：专业媒体。原始链接可用。</div>
+    </article>
+  </section>
+
+  <!-- ⑤ -->
+  <section class="block">
+    <h2 class="block-title b5">⑤ 国际动态</h2>
+
+    <article class="card">
+      <h3>特斯拉 Cybertruck 全系悄然涨价 5000 美元，需求承压</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://electrek.co/2026/08/25/tesla-cybertruck-price-increase-5000-demand/" target="_blank" rel="noopener">Electrek ↗</a>
+        <a href="https://www.carscoops.com/2026/08/teslas-cybertruck-isnt-selling-so-naturally-it-now-costs-5000-more/" target="_blank" rel="noopener">CarScoops ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>双电机全驱版起售价由 69,990 美元上调至 74,990 美元，规格未变；报道指其产线利用率仅约规划产能的 10%。</div>
+      <p class="detail">在需求偏弱背景下逆势提价，反映特斯拉在 Cybertruck 上的定价与产能错配。该事件属国际电动化经营动态，对国内皮卡/硬派纯电产品定价具参照意义。</p>
+      <div class="src-line">来源类型：专业媒体（双源）。原始链接可用。</div>
+    </article>
+
+    <article class="card">
+      <h3>福特将推约 2.5 万美元跨界 SUV，是否电动仍待定</h3>
+      <div class="meta">
+        <span>事件日期：2026-08-25</span>
+        <span class="tag media">媒体报道</span>
+        <a href="https://electrek.co/2026/08/25/ford-reveals-new-25000-crossover-suv-dealers/" target="_blank" rel="noopener">Electrek ↗</a>
+      </div>
+      <div class="facts"><b>关键事实：</b>福特向经销商预览了一款起售价约 2.5 万美元的跨界 SUV，将是福特最便宜车型；据称不基于 Universal EV 平台，是否电动尚未明确。</div>
+      <p class="detail">该车型关乎福特在大众化市场的份额防守。若最终为电动，将成为与平价中国出海车型正面竞争的关键产品；当前信息仍属预热阶段，需以官方发布为准。</p>
+      <div class="src-line">来源类型：专业媒体（预热/预览）。原始链接可用。</div>
+    </article>
+  </section>
+
+  <!-- 今日要点 -->
+  <h2 class="kicker">今日要点（仅归纳，不替代事件）</h2>
+  <ul class="takeaways">
+    <li><b>监管拐点已至：</b>道交法修订草案首次以专章明确"自动驾驶功能激活即车企担责"，叠加已发布的 GB 44721 强制国标，中国 L2–L4 监管框架加速成型。</li>
+    <li><b>中国智驾出海与硬科技并举：</b>Waymo 落子慕尼黑、Gatik 获 2 亿美元，国际 L4 商业化提速；国内固态电池 IEC 国际标准立项，话语权提升。</li>
+    <li><b>安全召回警示：</b>吉利近 9.3 万辆因激光雷达缺陷召回，提示高阶智驾传感器可靠性已成整车合规核心；日产 Altima 美召回归因装配一致性。</li>
+    <li><b>补能与电动化内卷：</b>宁德时代重卡换电登顶、吉利 1000V 架构、比亚迪电池城级出海、零跑×一汽深度绑定，产业链纵向整合与生态扩张同步加速。</li>
+    <li><b>车型节奏密集：</b>奔驰长轴距 GLE、哈弗 H9 力魂版、比亚迪 Sealion 08、丰田 bZ5 集中释放，20–30 万元新能源与豪华本土化成为主战场。</li>
+  </ul>
+
+  <footer class="foot">
+    <div>本报告仅汇总 2026-08-25 00:30 至 2026-08-26 00:30（UTC+8）公开发布的汽车行业事件，事实以原始来源为准，未作主观延展。</div>
+    <div class="legend">
+      <span class="tag official">官方/监管</span>
+      <span class="tag media">专业媒体</span>
+      <span class="tag community">社区线索</span>
+      <span>本期货源分布：车东西 / 盖世汽车 / CnEVPost / CarNewsChina / TechCrunch / InsideEVs / CarScoops / Electrek；Reddit 0 条入选。</span>
     </div>
-    <div class="facts"><span class="k">关键事实：</span>小鹏 G9L 计划 9 月在中国上市并启动交付，提供 BEV 与 EREV 双动力；Mona L05 中型 SUV 将于 Q4 推出；公司冲击月销 6 万辆。G9L 此前已于 8 月 11 日开启预售，首发第二代 VLA 智驾模型（有效算力最高 2250 TOPS）。</div>
-    <p class="detail">G9L 车长 5120mm、轴距 3100mm，将与理想 L7、华为系 Aito M7 竞争，并与 6 座 GX 组成双旗舰。小鹏二季度海外销量首破 2 万辆（同比 +81%），海外均价超 4 万欧元，2027 年还将在海外市场投放多款 EREV 车型。</p>
-  </article>
-
-  <article class="item">
-    <h3>蔚来新 ES8 上市 335 天交付突破 14 万辆，纯电占比或超 50%</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://autonews.gasgoo.com/articles/news/new-nio-es8-reaches-140000-deliveries-in-335-days-ev-share-may-top-50-2091828012583763968" target="_blank" rel="noopener">盖世汽车 Gasgoo 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>全新 ES8 自上市起 335 天内累计交付超 14 万辆；行业观察称国内新能源（含纯电）渗透率有望阶段性的突破 50%。</div>
-    <p class="detail">ES8 是蔚来冲击主流高端纯电 SUV 销量的关键车型，快速交付验证其换代后的产品力与产能。该数据同时反映高端纯电市场接受度提升，对蔚来现金流与换电网络利用率形成支撑。</p>
-  </article>
-
-  <article class="item">
-    <h3>比亚迪海洋网首款 MPV 或于年底发布，系列总经理透露规划</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/byd-exec-ocean-mpv-may-launch-year-end/" target="_blank" rel="noopener">CnEVPost 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>比亚迪海洋网总经理表示， Ocean 系列首款 MPV 可能于 2026 年年底前发布。</div>
-    <p class="detail">比亚迪正补齐 MPV 品类，海洋网首款 MPV 有望切入家用与商务新能源 MPV 蓝海，与腾势 D9、岚图梦想家等形成集团内梯度布局。具体动力形式与定价尚未公布。</p>
-  </article>
-
-  <article class="item">
-    <h3>比亚迪新「海鸥（Great Seagull）」EV 两厢车年内上市</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://carnewschina.com/2026/08/24/byd-to-launch-the-new-great-seagull-ev-hatchback-this-year-ocean-series-gm-shared/" target="_blank" rel="noopener">CarNewsChina 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>比亚迪海洋网总经理确认，新一代「海鸥」纯电两厢车将于今年内上市。</div>
-    <p class="detail">海鸥是比亚迪走量入门级纯电代表，新款延续低价高配策略，主要面向城市代步与下沉市场，对巩固比亚迪在 A00-A0 级纯电的份额具有意义。具体续航与价格待发布。</p>
-  </article>
-
-  <article class="item">
-    <h3>极氪 7X 全球订单突破 20 万辆，已进入 50+ 国家</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/zeekr-7x-orders-top-200000-globally/" target="_blank" rel="noopener">CnEVPost 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>极氪 7X 全球累计订单超过 20 万辆，销售网络覆盖 50 余个国家。</div>
-    <p class="detail">7X 是极氪全球扩张的主力 SUV 车型，订单规模印证中国高端纯电在海外市场的接受度提升。极氪正加速欧洲、中东等市场布局，7X 的走量对品牌规模效应至关重要。</p>
-  </article>
-</section>
-
-<!-- ===================== ② 自动驾驶与智能化 ===================== -->
-<section class="block s2">
-  <h2>② 自动驾驶与智能化（L2/L3/L4、Robotaxi、端到端、VLA）</h2>
-
-  <article class="item">
-    <h3>特斯拉确认 Cybercab 下周发布，Robotaxi 商业化节点临近</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://electrek.co/2026/08/24/tesla-cybercab-exclusive-access-robotaxi-sept-3/" target="_blank" rel="noopener">Electrek 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>Electrek 称特斯拉确认 Cybercab（无人驾驶出租车）将在「下周」启动发布/限定体验，时间点指向 9 月初。</div>
-    <p class="detail">Cybercab 是特斯拉 L4 Robotaxi 路线的载体，若如期发布将推动其"无方向盘/踏板"量产车型进入公众视野。但当前特斯拉 Robotaxi 实际运营仍局限于奥斯汀等少数区域，规模化取决于监管批准与硬件（AI5 芯片）进度。</p>
-  </article>
-
-  <article class="item">
-    <h3>特斯拉 FSD v14「Lite」演示：碾过巨木未停车，引发安全讨论</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span class="tag comm">社区线索</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://electrek.co/2026/08/24/tesla-fsd-v14-1-lite-drove-over-log/" target="_blank" rel="noopener">Electrek 报道</a>
-      <span>·</span>
-      <a class="src" href="https://www.reddit.com/r/SelfDrivingCars/comments/1vx7xuf/watch_tesla_fsd_v14_lite_drive_over_a_giant_log/" target="_blank" rel="noopener">Reddit r/SelfDrivingCars（印证）</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>一段 FSD v14.1「Lite」道路视频显示，车辆在未减速情况下碾过横在路上的一根巨大原木；该视频在自动驾驶社区引发对感知与避让策略的讨论。</div>
-    <p class="detail">该片段反映端到端模型在非常规障碍物面前的应对仍存争议。需区分：这是辅助驾驶（需驾驶员监管）演示，并非 Robotaxi 无人驾驶状态；社区讨论仅作线索，尚不能据此判定系统性缺陷。</p>
-  </article>
-
-  <article class="item">
-    <h3>通用超 110 万辆车（含 EV）遭 NHTSA 调查，刹车问题受联邦重点关注</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://electrek.co/2026/08/24/over-1-1m-gm-vehicles-evs-nhtsa-investigation/" target="_blank" rel="noopener">Electrek 报道</a>
-      <span>·</span>
-      <a class="src" href="https://techcrunch.com/2026/08/24/brake-problems-in-gm-evs-draw-greater-federal-scrutiny/" target="_blank" rel="noopener">TechCrunch 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>NHTSA 对通用汽车逾 110 万辆车辆（含电动车型）展开调查，焦点为刹车系统问题；TechCrunch 称联邦层面对 GM 电动车刹车缺陷的审查升级。</div>
-    <p class="detail">调查涉及规模庞大，若确认缺陷可能触发大规模召回，对通用电动化车型口碑与成本构成压力。该事件同时显示美国监管对 EV 安全（尤其是制动/控制）的审查趋严，属自动驾驶/功能安全监管范畴。</p>
-  </article>
-
-  <article class="item">
-    <h3>蔚来据报投资任少卿创业具身智能公司，后者留任智驾负责人</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/nio-to-invest-in-startup-by-ren-shaoqing-report/" target="_blank" rel="noopener">CnEVPost 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>据报道，蔚来将投资由智能驾驶负责人任少卿创办的具身智能（embodied AI）初创公司，任少卿将继续担任蔚来智驾业务负责人。</div>
-    <p class="detail">该动向显示蔚来把自动驾驶的 AI 能力向机器人/具身智能延伸，智驾团队与具身智能共享底层模型与人才。报道为媒体消息，具体投资条款与业务边界以公司官方公告为准。</p>
-  </article>
-</section>
-
-<!-- ===================== ③ 法规、标准与监管 ===================== -->
-<section class="block s3">
-  <h2>③ 法规、标准与监管（准入/上路试点/召回/功能安全/贸易）</h2>
-
-  <article class="item">
-    <h3>中国强制国标《智能网联汽车 自动驾驶系统安全要求》GB 44721—2026 发布（近期重大补充）</h3>
-    <div class="meta">
-      <span class="tag official">官方发布</span>
-      <span>事件日期：2026-08-04（发布）</span>
-      <a class="src" href="http://www.news.cn/20260804/e5863153f33c43908222ad6788a6db31/c.html" target="_blank" rel="noopener">新华网（工信部/国标委发布）</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>市场监管总局、国标委批准发布 GB 44721—2026 强制性国家标准，适用于 L3/L4 系统，拟于 2027-07-01 实施；要求企业建立全生命周期安全保障、规范人机交互与接管监测。</div>
-    <p class="detail">该标准是国内首部 L3/L4 自动驾驶系统安全强制国标，为产品准入划定统一安全基线，并明确激活/退出提示、驾驶人接管能力监测等要求。本期作为"近期重大监管/标准"补充：过去24小时抓取源未覆盖新的国内法规事件，但此标准构成当前智能网联汽车监管框架的核心，故纳入以供参照。</p>
-  </article>
-
-  <article class="item">
-    <h3>美国 NHTSA 对通用超 110 万辆车（含 EV）启动调查</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://electrek.co/2026/08/24/over-1-1m-gm-vehicles-evs-nhtsa-investigation/" target="_blank" rel="noopener">Electrek 报道（据 NHTSA）</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>美国国家公路交通安全管理局（NHTSA）对通用逾 110 万辆车辆（涵盖电动车）开展缺陷调查，涉及刹车等安全问题。</div>
-    <p class="detail">这是美国监管对主流车企电动车安全的一次大规模介入，若升级为召回将影响通用财务与品牌。对中资出海企业亦具警示意义：进入美国市场须满足 NHTSA 缺陷调查与功能安全合规要求。</p>
-  </article>
-
-  <article class="item">
-    <h3>Polestar 称不知美国政府将其"踢出"的原因</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://insideevs.com/news/805940/polestar-no-idea-us-government-ban-ev/" target="_blank" rel="noopener">InsideEVs 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>InsideEVs 报道，Polestar 表示并不清楚美国政府将其排除（ban/限制）的具体原因，事件影响其美国市场准入。</div>
-    <p class="detail">该报道指向美国对特定车企/车型的政策或准入限制，具体依据与范围以美国政府官方文件为准。对行业而言，它反映电动汽车贸易与监管环境的不确定性上升，出海企业需密切关注合规与政策风险。</p>
-  </article>
-
-  <article class="item">
-    <h3>特朗普威胁对加拿大汽车加征 50% 关税，安大略以断电反制</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://www.carscoops.com/2026/08/us-canada-auto-tariffs/" target="_blank" rel="noopener">Carscoops 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>Carscoops 报道，美方威胁对加拿大汽车征收最高 50% 关税，加拿大安大略省以切断对美电力输送相威胁（报道为更新稿，事态仍在演变）。</div>
-    <p class="detail">汽车是美加供应链一体化最深的产业之一，关税升级将冲击跨境零部件与整车贸易。此属贸易政策类监管动态，直接关系北美产能布局与车企成本，需以两国政府后续官方表态为准。</p>
-  </article>
-</section>
-
-<!-- ===================== ④ 电动化/供应链/产业 ===================== -->
-<section class="block s4">
-  <h2>④ 电动化 / 供应链 / 产业（动力电池、补能、经营与重大合作）</h2>
-
-  <article class="item">
-    <h3>零跑 H1 营收同比大增 57.2%，仍保持盈利</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://autonews.gasgoo.com/articles/news/leapmotor-reports-572-yoy-surge-in-h1-2026-revenue-2091865362001051648" target="_blank" rel="noopener">盖世汽车 Gasgoo 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>零跑汽车公布 2026 年上半年营收同比增长 57.2%，在价格战背景下维持盈利。</div>
-    <p class="detail">营收高增反映零跑凭借性价比车型与海外合作（Stellantis）渠道持续放量。盈利同时承受毛利率与现金流压力，凸显新势力在规模与利润间的平衡难度。</p>
-  </article>
-
-  <article class="item">
-    <h3>小鹏 Q2 营收增 8%，净亏损近乎翻倍</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/xpeng-q2-2026-earnings/" target="_blank" rel="noopener">CnEVPost 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>小鹏汽车 Q2 营收同比增长 8%，但净亏损同比近乎翻倍（净亏损近三倍扩大，按报道口径）。</div>
-    <p class="detail">增收不增利反映小鹏在智驾研发、新车铺货与海外扩张上的高投入。伴随 G9L/Mona L05 等新车周期与海外放量，盈利能力能否在下半年改善是市场关注焦点。</p>
-  </article>
-
-  <article class="item">
-    <h3>小鹏分拆机器人业务，估值 63 亿美元、募资 9 亿美元</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://cnevpost.com/2026/08/24/xpeng-carves-out-robotics-business/" target="_blank" rel="noopener">CnEVPost 报道</a>
-      <span>·</span>
-      <a class="src" href="https://electrek.co/2026/08/24/xpeng-robotics-900m-iron-humanoid-robot-valuation/" target="_blank" rel="noopener">Electrek 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>小鹏将机器人业务（IRON 人形机器人）分拆独立，投后估值约 63 亿美元，融资约 9 亿美元。</div>
-    <p class="detail">分拆显示车企正把具身智能视为独立增长曲线，与智驾共享 AI 与制造能力。资金将用于 IRON 人形机器人的研发与量产，亦反映"车+机器人"协同的战略取向。</p>
-  </article>
-
-  <article class="item">
-    <h3>比亚迪旗舰 EV 海外开启预订：续航超 1000km、售价低于 4 万美元</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://electrek.co/2026/08/24/byd-opens-flagship-ev-orders-with-1000-km-range-under-40k/" target="_blank" rel="noopener">Electrek 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>Electrek 报道，比亚迪一款旗舰纯电车型在海外开启预订，综合续航超 1000km，起售价低于 4 万美元。</div>
-    <p class="detail">长续航+低定价延续比亚迪出海的性价比打法，对海外主流纯电形成价格压力。具体车型与上市市场以比亚迪官方为准；该动作是其全球份额扩张的关键一步。</p>
-  </article>
-
-  <article class="item">
-    <h3>通用与加拿大工会 Unifor 达成劳资协议</h3>
-    <div class="meta">
-      <span class="tag media">媒体报道</span>
-      <span>事件日期：2026-08-24</span>
-      <a class="src" href="https://www.carscoops.com/2026/08/gm-unifor-deal/" target="_blank" rel="noopener">Carscoops 报道</a>
-    </div>
-    <div class="facts"><span class="k">关键事实：</span>通用汽车与加拿大工会 Unifor 达成新劳资协议，稳定其加拿大工厂运营。</div>
-    <p class="detail">在美加汽车关税分歧背景下，劳资协议降低供应链中断风险，保障通用在加产能（含电动化产线）。属产业经营与劳动关系动态，对北美供给稳定性有直接影响。</p>
-  </article>
-</section>
-
-<footer class="takeaways">
-  <h2>今日要点（归纳，不替代事件）</h2>
-  <ol>
-    <li><b>中国车型密集上新：</b>小米 3nm 智驾芯片、小鹏 G9L/Mona L05、比亚迪腾势 Z9S 等多款新车/芯片集中释放，国内产品与技术节奏明显加速。</li>
-    <li><b>自动驾驶两条线并行：</b>海外特斯拉 Cybercab 临近发布、FSD v14 演示引安全讨论；国内小米/小鹏/蔚来把智驾能力向芯片与具身智能延伸。</li>
-    <li><b>监管与贸易不确定性上升：</b>NHTSA 调查通用超 110 万辆车、Polestar 在美受限、美加汽车关税对峙，叠加中国 GB 44721—2026 强制国标框架成型，合规成核心变量。</li>
-    <li><b>产业经营分化：</b>零跑盈利高增、小鹏增收不增利并分拆机器人业务、通用劳资协议落地，显示规模与利润、主业与生态的再平衡。</li>
-  </ol>
-</footer>
-
-<div class="foot">
-  本页由定时任务自动生成 · 数据仅基于上方原始来源链接页面 · 事件日期以来源发布时间为准 · 生成时间 2026-08-25（北京时间）
-</div>
+    <div style="margin-top:8px;">公网页面：https://taoleb.github.io/daily-news-pages/auto/ ｜ 部署：GitHub Pages</div>
+  </footer>
 
 </div>
 </body>
