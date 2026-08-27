@@ -3,182 +3,266 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026-08-26（覆盖最近三天 2026-08-24 至 08-26）</title>
+<title>知识库回顾 · 2026年8月27日</title>
 <style>
   :root{
-    --bg:#f7f8fa; --panel:#ffffff; --panel2:#f1f4f8; --ink:#1f2329; --muted:#5b6470;
-    --line:#e3e8ef; --accent:#2f6fed; --accent2:#0f9d8a; --warn:#b9770a; --danger:#c0392b;
-    --radius:14px;
+    --bg:#f7f7f5; --card:#ffffff; --ink:#1a1a1a; --body:#2d2d2d; --muted:#6e6e6e;
+    --line:#e6e6e2; --accent:#0f766e; --accent-soft:#e6f4f2; --tag-bg:#eef2ff; --tag-ink:#4338ca;
+    --warn-bg:#fdf6e3; --warn-ink:#8a6d1a; --ok-bg:#e8f5ee; --ok-ink:#1b7a4d;
   }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%;}
   body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
-    line-height:1.78; font-size:16px;
+    background:var(--bg); color:var(--body);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans SC","Segoe UI",sans-serif;
+    line-height:1.75; font-size:16px; padding:32px 16px 64px;
   }
-  .wrap{max-width:960px; margin:0 auto; padding:28px 18px 72px}
-  header{
-    border:1px solid var(--line); border-radius:var(--radius); padding:24px 22px 20px;
-    background:linear-gradient(180deg,#ffffff,#f4f7fc); margin-bottom:22px;
+  .wrap{max-width:760px; margin:0 auto;}
+  header.kr-head{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    padding:28px 26px 22px; margin-bottom:20px;
   }
-  h1{margin:.1em 0 .3em; font-size:clamp(1.5rem,4.4vw,2.1rem); letter-spacing:.4px; color:#16202e}
-  .sub{color:var(--muted); font-size:.95rem}
-  .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-  .chip{font-size:.78rem; color:var(--muted); border:1px solid var(--line); background:var(--panel2);
-    padding:4px 10px; border-radius:999px}
-  .chip b{color:var(--ink); font-weight:600}
-  .chip.warn{border-color:#e4c79a; color:var(--warn); background:#fdf6ea}
-  nav.toc{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 6px}
-  nav.toc a{color:var(--accent); text-decoration:none; font-size:.88rem; border:1px solid var(--line);
-    padding:6px 12px; border-radius:10px; background:#fff}
-  nav.toc a:hover{border-color:var(--accent)}
-  section{margin:26px 0}
-  h2{font-size:1.22rem; margin:0 0 12px; padding-left:12px; border-left:4px solid var(--accent);
-    line-height:1.3; color:#16202e}
-  h3{font-size:1.04rem; margin:18px 0 8px; color:var(--accent2)}
-  p{margin:.6em 0}
-  ul,ol{margin:.5em 0; padding-left:1.4em}
-  li{margin:.42em 0}
-  .card{border:1px solid var(--line); border-radius:var(--radius); background:var(--panel);
-    padding:16px 18px; margin:14px 0; box-shadow:0 1px 2px rgba(20,40,80,.04)}
-  .note-src{font-size:.82rem; color:var(--muted); margin:0 0 6px}
-  .tag{display:inline-block; font-size:.74rem; color:var(--accent); background:#eef3ff;
-    border:1px solid #d7e2ff; padding:2px 8px; border-radius:8px; margin-right:6px}
-  .tension{border-left:4px solid var(--warn)}
-  .change{border-left:4px solid var(--accent2)}
-  .open{border-left:4px solid var(--accent)}
-  b.hl{color:var(--danger); font-weight:600}
-  footer{margin-top:34px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem}
+  .kr-eyebrow{font-size:13px; letter-spacing:.12em; color:var(--muted); margin-bottom:8px;}
+  h1{font-size:26px; color:var(--ink); line-height:1.35; font-weight:700;}
+  .kr-sub{color:var(--muted); font-size:14px; margin-top:8px;}
+  .kr-meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .chip{
+    display:inline-flex; align-items:center; gap:6px; font-size:12.5px;
+    background:var(--accent-soft); color:var(--accent); border-radius:999px; padding:4px 12px; font-weight:600;
+  }
+  .chip.gray{background:#f0f0ee; color:#6e6e6e;}
+  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 26px 10px; margin-bottom:20px;}
+  h2{font-size:19px; color:var(--ink); margin-bottom:4px; display:flex; align-items:center; gap:10px;}
+  h2 .no{
+    flex:none; width:26px; height:26px; border-radius:8px; background:var(--accent); color:#fff;
+    font-size:14px; display:inline-flex; align-items:center; justify-content:center; font-weight:700;
+  }
+  .sec-desc{color:var(--muted); font-size:13.5px; margin-bottom:16px;}
+  .topic{margin-bottom:18px;}
+  .topic h3{font-size:16px; color:var(--ink); margin-bottom:6px; padding-left:12px; border-left:4px solid var(--accent); line-height:1.4;}
+  .topic .src{font-size:12.5px; color:var(--muted); margin-bottom:6px;}
+  .topic ul{list-style:none;}
+  .topic li{position:relative; padding-left:18px; margin-bottom:5px; font-size:14.5px;}
+  .topic li::before{content:""; position:absolute; left:2px; top:11px; width:6px; height:6px; border-radius:2px; background:var(--accent); opacity:.55;}
+  .topic li b{color:var(--ink); font-weight:600;}
+  .quote{
+    background:var(--accent-soft); border-radius:10px; padding:12px 16px; font-size:14px; color:#15575a; margin-bottom:16px;
+  }
+  .quote b{color:#0f4b4e;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px;}
+  .kv{background:#fafaf8; border:1px solid var(--line); border-radius:10px; padding:12px 14px; font-size:13.5px;}
+  .kv .k{font-size:12px; color:var(--muted); letter-spacing:.05em; margin-bottom:3px;}
+  .kv .v{color:var(--ink); font-weight:600;}
+  .insight{margin-bottom:14px;}
+  .insight .ih{font-size:14.5px; color:var(--ink); font-weight:600; margin-bottom:2px;}
+  .insight .ih .tag{font-weight:500; font-size:11.5px; background:var(--tag-bg); color:var(--tag-ink); border-radius:999px; padding:1px 9px; margin-left:6px; vertical-align:2px;}
+  .insight p{font-size:14px; color:var(--body);}
+  .tension{margin-bottom:16px;}
+  .tension .th{font-size:14.5px; color:var(--ink); font-weight:600; margin-bottom:4px;}
+  .tension .th .vs{color:var(--muted); font-weight:500;}
+  .tension p{font-size:13.8px; color:var(--body);}
+  .tension .take{font-size:13px; color:var(--accent); margin-top:3px;}
+  .timeline{position:relative; padding-left:22px;}
+  .timeline::before{content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  .tl{position:relative; margin-bottom:16px;}
+  .tl::before{content:""; position:absolute; left:-22px; top:7px; width:10px; height:10px; border-radius:50%; background:var(--accent); border:2px solid var(--card);}
+  .tl .d{font-size:12.5px; color:var(--muted); font-weight:600;}
+  .tl p{font-size:14px;}
+  .tl p b{color:var(--ink);}
+  .q{margin-bottom:14px;}
+  .q .qh{font-size:14.5px; font-weight:600; color:var(--ink); margin-bottom:2px;}
+  .q p{font-size:13.8px; color:var(--body);}
+  footer{color:var(--muted); font-size:12.5px; text-align:center; margin-top:24px;}
   @media (max-width:600px){
-    .wrap{padding:20px 14px 56px}
-    header{padding:18px 16px}
+    body{padding:16px 10px 48px; font-size:15px;}
+    h1{font-size:22px;}
+    header.kr-head, section{padding:20px 18px 8px; border-radius:14px;}
+    .grid2{grid-template-columns:1fr;}
+    h2{font-size:17px;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>知识库回顾 · 2026-08-26</h1>
-    <div class="sub">个人知识库 · daily 目录结构化回顾报告</div>
-    <div class="meta">
-      <span class="chip">生成日期 <b>2026-08-26</b></span>
-      <span class="chip">覆盖记录日 <b>08-25</b></span>
-      <span class="chip">扫描窗口 <b>08-24 ~ 08-26</b></span>
-      <span class="chip">扫描笔记 <b>1 篇</b></span>
+
+  <header class="kr-head">
+    <div class="kr-eyebrow">KNOWLEDGE REVIEW · DAILY</div>
+    <h1>知识库回顾 · 2026年8月27日</h1>
+    <div class="kr-sub">扫描窗口：2026-08-25 ~ 2026-08-27（最近三天）· 共 2 篇笔记（08-26 无新增）</div>
+    <div class="kr-meta">
+      <span class="chip">2 篇笔记</span>
+      <span class="chip gray">4 个聚合主题</span>
+      <span class="chip gray">主线：Token 终局 × AI Infra</span>
     </div>
-    <nav class="toc">
-      <a href="#themes">一、主题聚合</a>
-      <a href="#core">二、核心认知</a>
-      <a href="#tension">三、关键张力</a>
-      <a href="#change">四、认知变化</a>
-      <a href="#open">五、待思考问题</a>
-    </nav>
   </header>
 
-  <p style="color:var(--muted);font-size:.9rem">
-    <b>扫描说明：</b>原定“最近三天（2026-08-24 至 08-26）”窗口内，<b>仅 2026-08-25 有 1 篇新增 Markdown 笔记</b>（08-24、08-26 无记录目录）。
-    该笔记《具身 / Agent 的 Token 终局：差异化来自智力与责任边界》是一篇高密度的战略研判讨论（用户核心判断 + 助手反方 + 收敛结论），
-    并与既有框架（Physical Token 经济学、责任边界=市场壁垒、语义权力平面、2127 汽车白空间）形成强连接。以下按主题聚合，再收敛核心认知、张力、认知变化与待思考。
-  </p>
+  <!-- 主题聚合 -->
+  <section>
+    <h2><span class="no">1</span>主题聚合</h2>
+    <p class="sec-desc">两天笔记围绕同一条主线展开：智能产业的终局形态是什么、差异化从哪里来、工程上如何落地。</p>
 
-  <section id="themes">
-    <h2>一、主题聚合（按主题归类）</h2>
-
-    <div class="card">
-      <p class="note-src">来源笔记：具身与 Agent 的 Token 终局（08-25）</p>
-      <h3>主题 A · Token 终局与价值迁移：能力 → 计费入口</h3>
-      <p>笔记沿一条主线推进：当“能力”可被标准化、随时调用，<b>稀缺性从“拥有能力”转移到“调度能力的入口 / 计费权”</b>。
-      机器人后期成为通用硬件平台，价值从硬件转移到“每次调用的智能”；类比 Agent——架构开源趋同后架构不赚钱，赚钱的是模型调用 Token。
-      底层判断是 Physical Token 经济学的终极形态：<span class="tag">能力无限可分</span><span class="tag">按次计价</span><span class="tag">硬件沉没</span>，硬件毛利归零是必然。</p>
+    <div class="topic">
+      <h3>主题一 · Token 终局：机器人终局是"卖智能"，不是"卖硬件"</h3>
+      <div class="src">来源：08-25《具身 / Agent 的 Token 终局》（天南 WRC 复盘 × 用户对话延伸）</div>
+      <ul>
+        <li>机器人后期只是<b>通用性平台</b>：硬件标准化、趋同，最终卖的是<b>智能 / Token</b>——与当下 Agent 产业同构。</li>
+        <li>类比 Agent：架构开源后"几乎都差不多"，架构本身不赚钱，真正赚钱的是<b>模型调用的 Token</b>。</li>
+        <li>底层逻辑：能力可标准化、随时调用后，<b>稀缺性从"拥有能力"转移到"调度能力的入口 / 计费权"</b>——Physical Token 经济学的终极形态：能力无限可分、按次计价、硬件沉没。</li>
+        <li>关键提醒：硬件平台化速度快，但<b>"通用智能"恰是最难的部分</b>——两者不同速，不宜混为一谈。</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <p class="note-src">来源笔记：具身与 Agent 的 Token 终局（08-25）+ 助手反方修正</p>
-      <h3>主题 B · 差异化锚点：智力 × 责任边界（裸 Token 趋零之后卖什么）</h3>
-      <p>用户在原判断基础上做出<b>关键修正</b>：若 Token 本身是差异化来源，那差异化“可能来自智力与责任边界”。
-      助手反方进一步把这一修正推到尽头——Token 自身也会趋零成本（万卡→更高效训练→单位 Token 降价），
-      于是“卖 Token”只是<b>中间态</b>，终局卖的是<b>“被信任的智能调度权”</b>（harness / 语义权力平面），而非裸 Token。
-      真正不可复制的，是“多聪明的智能”与“多大程度兜得住责任”两件事的<b>绑定</b>。</p>
+    <div class="topic">
+      <h3>主题二 · 差异化来源：智力 × 责任边界，而非裸 Token 或架构</h3>
+      <div class="src">来源：08-25 笔记（用户本次关键修正 + 助手反方 + 收敛结论）</div>
+      <ul>
+        <li>若 Token 本身是差异化来源，差异化来自<b>"智力与责任边界"</b>——而非裸 Token 价格或架构。</li>
+        <li>真实壁垒三件套：<b>(a) 模型权重 / 推理成本</b>（谁训得起万卡）、<b>(b) 调度入口</b>（谁掌握运行时计费与编排）、<b>(c) 数据飞轮</b>（谁有真实任务回流）——全是基础设施 + 权力结构，非架构创新。</li>
+        <li>"卖 Token"是<b>中间态</b>；终局卖的是<b>"被信任的智能调度权"</b>——可靠、可信、可责任化的调用。</li>
+        <li>责任边界 = 市场壁垒：谁定义计价单位 / 调用边界 / 失败归属，谁定义产业边界（语义权力平面）。</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <p class="note-src">来源笔记：具身与 Agent 的 Token 终局（08-25）· 具身 vs 数字 Agent 差异</p>
-      <h3>主题 C · 具身计价的“不干净”：Token + SLA + 责任承保</h3>
-      <p>数字 Agent 调用高频、可分、云端计费成熟，Token 经济成立；而具身“调用一次智能 = 一次物理动作”，带安全 / 责任 / 现场约束。
-      客户买的不是“一次 Token”，而是“在我现场不闯祸干完活的系统”——因此具身终局可能是 <b>Token + SLA + 责任承保</b>：
-      硬件负毛利，但“保证不闯祸的调用”收溢价，<b>责任是计价的一部分</b>（比数字 Agent 的 Token 不“干净”）。</p>
+    <div class="topic">
+      <h3>主题三 · 生产级 AI Infra：Demo 只需 L1+L4，生产需要 9 层 + 4 横切</h3>
+      <div class="src">来源：08-27《AI Infra 全景图：9 层纵向架构 + 4 个横切能力》（Knock，用户评价：总结得很好）</div>
+      <div class="quote">核心断言：绝大多数 Agent 项目停在 Demo 阶段——<b>不是模型不行、不是算法不行，是 Infra 不行</b>。</div>
+      <div class="grid2">
+        <div class="kv"><div class="k">纵向 9 层</div><div class="v">L0 资源 → L1 模型/推理 → L2 数据/知识 → L3 Prompt → L4 编排/Agent → L5 工具执行 → L6 状态/记忆 → L7 评测/质量 → L8 可观测</div></div>
+        <div class="kv"><div class="k">横切 4 能力</div><div class="v">安全治理 · CI/CD 发布治理 · FinOps 成本治理 · 开发者体验（贯穿所有层）</div></div>
+      </div>
+      <ul>
+        <li><b>关键洞察</b>：多数团队只关注 L4（Agent Framework）+ L2（向量库），忽略其余 7 层——生产级稳定性恰恰取决于那些"不起眼"的基础设施。</li>
+        <li><b>生产 vs Demo 的本质区别</b> = 每一层都有日志、可追溯、有 Fallback。</li>
+        <li>典型组件：LiteLLM/vLLM（L1）、LangGraph/CrewAI/Temporal（L4）、E2B 沙箱/MCP（L5）、Mem0/Zep（L6）、RAGAS/LangSmith（L7）、LangFuse/OTel（L8）。</li>
+        <li>路线图：验证期 1-2 周最小闭环 → 原型期 1-2 月补编排/记忆/评测 → 生产期全 9 层 + 门禁。</li>
+      </ul>
     </div>
 
-    <div class="card">
-      <p class="note-src">来源笔记：具身与 Agent 的 Token 终局（08-25）· 对 2127 的战略启示</p>
-      <h3>主题 D · 2127 的战略落点：语义权力平面的商业实体化</h3>
-      <p>结论直指 2127（长安前瞻院）：不该只思考“造什么车 / 什么模型”，应思考“未来车的智能按什么单位、什么规则、向谁计费、谁担责”。
-      这即既有“白空间=语义权力平面”的商业落点——<b>掌握车的智能调用入口与责任边界，才是 Token 终局里的卡位点</b>，而非硬件平台化。</p>
-    </div>
-  </section>
-
-  <section id="core">
-    <h2>二、核心认知（跨框架收敛的关键结论）</h2>
-    <ul>
-      <li><b>稀缺性迁移定律：</b>能力一旦标准化、可随时调用，稀缺性即从“拥有能力”转移到“调度能力的入口 / 计费权”——硬件毛利归零，终局按“每次调用已存在能力的 Token”计价。</li>
-      <li><b>差异化锚点 = 智力 × 责任边界：</b>裸 Token 价格趋同、架构趋同后，真正不可复制的是“多聪明的智能”与“多大程度兜得住责任”的绑定；二者缺一，调用无法被信任并付费。</li>
-      <li><b>“卖 Token”是中间态：</b>Token 自身成本随时间趋零，终局卖“被信任的智能调度权”（harness / 语义权力平面）；把中间态当终局战略是认知陷阱。</li>
-      <li><b>具身计价不“干净”：</b>具身终局 = Token + SLA + 责任承保，责任是计价的一部分；安全攸关域里，责任边界决定调用能否被客户信任并付费。</li>
-      <li><b>卡位点是计费入口而非硬件：</b>谁能定义计价单位 / 调用边界 / 失败归属，谁定义产业边界——这与“责任边界=市场壁垒”“语义权力平面”完全同构。</li>
-    </ul>
-  </section>
-
-  <section id="tension">
-    <h2>三、关键张力（尚未解决的矛盾与修正）</h2>
-
-    <div class="card tension">
-      <p class="note-src">张力 1 · 硬件平台化快 vs 通用智能难（不同速）</p>
-      <p>用户“机器人后期只是通用平台”的措辞需拆开：<b class="hl">硬件平台化速度快，但“通用智能”恰是最难</b>。
-      天南测算单步需 99.78% 才撑得起长程 80%——二者不同速，不能把“通用平台”等同于“通用智能”。</p>
-    </div>
-
-    <div class="card tension">
-      <p class="note-src">张力 2 · 战略叙事 vs 既定事实</p>
-      <p>“硬件终局负毛利”是星海图的战略叙事，<b class="hl">非既定事实</b>；具身 Token 计价能否跑通，取决于安全 / 责任承保机制是否建立——目前是前提假设，而非已验证结果。</p>
-    </div>
-
-    <div class="card tension">
-      <p class="note-src">张力 3 · 裸 Token 趋零 vs 责任溢价尚未成熟</p>
-      <p>若 Token 趋零，差异只剩“可靠 + 可信 + 可责任化”；但责任承保机制本身（审计、可追溯、回滚、现场兜底）尚未成熟。
-      即：我们推论出终局卖“责任”，而责任的技术化机制恰恰还是待建项——<b class="hl">结论依赖一个尚未成立的约束条件</b>。</p>
+    <div class="topic">
+      <h3>主题四 · 汽车域落地：2127 harness = 9 层 × 汽车域 + 语义权力平面</h3>
+      <div class="src">来源：08-27 笔记延伸（连接 08-21《2127 汽车自进化 harness 架构》白空间判断）</div>
+      <ul>
+        <li>9 层即通用 harness 清单，汽车 harness = <b>9 层 × 汽车域实现</b>：L0 车载算力、L1 车端模型网关、L4 任务编排、L5 车控执行 / 安全沙箱（ASIL-D）、L6 行为履历 / 故障记忆、L7 场景库回归 / 安全验证、L8 全链路 Trace / 回滚审计。</li>
+        <li>横切安全治理 = <b>功能安全 + 信息安全 + 责任边界</b>；引用时须补 ISO 26262 / SOTIF / 责任链维度（原文未覆盖）。</li>
+        <li>语义权力平面在 9 层中的落点 = <b>L4（编排权）+ L5（执行边界）+ 横切安全治理</b>。</li>
+        <li>战略启示：2127 不该只思考"造什么车 / 什么模型"，该思考<b>"未来车的智能按什么单位、什么规则、向谁计费、谁担责"</b>。</li>
+      </ul>
     </div>
   </section>
 
-  <section id="change">
-    <h2>四、认知变化（相对既有框架的新推进）</h2>
-
-    <div class="card change">
-      <p>从静态的“<b>责任边界=市场壁垒</b>”推进为可操作的“<b>Token 终局的差异化 = 智力 × 责任绑定</b>”：把壁垒机制落到计价单位 / 调用边界 / 失败归属的具体定义，而非停留在“谁兜底谁定义产业”的抽象断言。</p>
+  <!-- 核心认知 -->
+  <section>
+    <h2><span class="no">2</span>核心认知</h2>
+    <p class="sec-desc">跨两篇笔记、可沉淀为判断依据的认知。</p>
+    <div class="insight">
+      <div class="ih">稀缺性从"拥有能力"转移到"调度入口 / 计费权"<span class="tag">终局判断</span></div>
+      <p>能力一旦可标准化、随时调用，硬件毛利归零是必然；价值从"能力本身"转移到"调用能力的基础设施与计费权"。</p>
     </div>
-    <div class="card change">
-      <p>对 2127 的落点从“做硬件平台 / 造什么车或模型”<b>具体化</b>为“思考车的智能按什么单位、什么规则、向谁计费、谁担责”——语义权力平面第一次有了明确的商业问句，而不只是架构概念。</p>
+    <div class="insight">
+      <div class="ih">终局卖"被信任的智能调度权"，而非裸 Token<span class="tag">差异化</span></div>
+      <p>Token 本身也会趋零成本；不可复制的是"多聪明的智能"与"多大程度兜得住责任"这两件事的绑定——智力决定调用质量上限，责任边界决定能否被信任并付费。</p>
     </div>
-    <div class="card change">
-      <p>明确接纳反方修正：<b>“卖 Token”是中间态而非终态</b>。避免在战略表述上把过渡形态当作终局，从而把资源错误地压在“裸 Token 价格 / 架构”这类注定趋同的维度。</p>
+    <div class="insight">
+      <div class="ih">具身的 Token 不"干净"：Token + SLA + 责任承保<span class="tag">具身特例</span></div>
+      <p>数字 Agent 调用高频、云端计费成熟，Token 经济成立；具身一次调用 = 一次物理动作，客户买的是"在我现场不闯祸干完活的系统"，责任是计价的一部分——硬件负毛利但"保证不闯祸的调用"收溢价。</p>
+    </div>
+    <div class="insight">
+      <div class="ih">Demo → 生产的鸿沟在 Infra，不在模型<span class="tag">工程认知</span></div>
+      <p>L1 模型网关（计费 / 路由）+ 横切 FinOps（成本归因）= Token 经济的物理实现；谁掌握 L1+L4+横切治理，谁掌握"被信任的智能调度权"——抽象判断落到工程层。</p>
+    </div>
+    <div class="insight">
+      <div class="ih">L4 是能力（Capability），L5-L8+横切才是 Authority<span class="tag">框架辨析</span></div>
+      <p>Agent OS 视角：Framework 只给能力；边界 / 记忆 / 验证 / 可观测属于 OS 层。生产要的是 Authority，不只是能力——两篇笔记合读为同一判断的两视角。</p>
     </div>
   </section>
 
-  <section id="open">
-    <h2>五、待思考问题（下一步应追问）</h2>
-    <ul>
-      <li><b>万卡基本面时点性：</b>“万卡基本面未形成”有时点性，引用须标注时点；需跟踪具身算力投入变化再判断是否仍成立。</li>
-      <li><b>责任承保机制：</b>具身 Token 计价能否跑通的关键前提——安全 / 责任承保机制（审计、可追溯、回滚、现场兜底）何时、以何种形态建立？当前只是假设。</li>
-      <li><b>通用智能难度：</b>硬件平台化与通用智能不同速，2127 卡位应避免把“通用平台”叙事误当作“通用智能”能力已具备。</li>
-      <li><b>锚点验证：</b>2127 应优先验证“车的智能调用入口 + 责任边界”是否真构成壁垒（计费权与责任归属能否被客户接受并付费），而非被硬件平台化叙事带偏。</li>
-      <li><b>中间态边界：</b>在 Token 真正趋零之前，“卖 Token”仍是真实现金流；战略上应如何同时经营当前 Token 收入与终局“被信任的调度权”卡位，避免过早放弃当下现金牛？</li>
-    </ul>
+  <!-- 关键张力 -->
+  <section>
+    <h2><span class="no">3</span>关键张力</h2>
+    <p class="sec-desc">笔记中明确对立或尚未定论之处。</p>
+    <div class="tension">
+      <div class="th">具身 vs 数字 Agent：<span class="vs">是否通向同一个 Token 终局？</span></div>
+      <p>数字 Agent 调用高频、可分、云端计费成熟；具身调用受安全 / 责任 / 现场约束，单次物理动作不可任意重试。反方立场：具身终局是 Token + SLA + 责任承保，与数字 Agent 的"干净 Token"不同构。</p>
+      <div class="take">收敛：终局同构（都卖智能调度权），但具身的计费结构必须含责任溢价。</div>
+    </div>
+    <div class="tension">
+      <div class="th">Token 趋零 vs 终局卖什么：<span class="vs">中间态与终极态</span></div>
+      <p>按 Physical Token 逻辑，模型调用成本随时间下降；若 Token 也趋零，终局卖裸 Token 无意义。助手反方主张"卖 Token"只是中间态，终极形态是卖"可靠 + 可信 + 可责任化的调用"（harness / 语义权力平面）。</p>
+      <div class="take">用户认同并收敛：差异化 = 智力水平 × 责任边界，而非 Token 价格。</div>
+    </div>
+    <div class="tension">
+      <div class="th">硬件平台化快 vs 通用智能难：<span class="vs">"机器人只是通用平台"需拆分</span></div>
+      <p>天南测算：单步需 99.78% 成功率才撑得起长程任务 80% 成功率。硬件标准化很快，但"通用智能"恰是最难、最慢的环节——二者不同速，混为一谈会误判节奏。</p>
+    </div>
+    <div class="tension">
+      <div class="th">架构趋同 vs 真实壁垒：<span class="vs">开源趋同不是壁垒</span></div>
+      <p>开源架构趋同后，壁垒在模型权重 / 推理成本（万卡）、调度入口、数据飞轮——全是基础设施 + 权力结构，而非架构创新。谁掌握计费入口与失败归属，谁定义产业边界。</p>
+    </div>
+    <div class="tension">
+      <div class="th">9 层框架的通用性与主观性：<span class="vs">通用框架 vs 权威标准</span></div>
+      <p>作者自述为个人框架：记忆 / 状态可合一，评测 / 可观测边界模糊；工具对比是 2025-2026 时点快照，Agent 工具换代快。汽车域引用时须补 ISO 26262 / SOTIF / 责任链维度。</p>
+    </div>
+  </section>
+
+  <!-- 认知变化 -->
+  <section>
+    <h2><span class="no">4</span>认知变化</h2>
+    <p class="sec-desc">本次扫描窗口内的判断演进。</p>
+    <div class="timeline">
+      <div class="tl">
+        <div class="d">08-25 · 关键修正（用户补充）</div>
+        <p>差异化来源从<b>"裸 Token 价格 / 架构"修正为"智力与责任边界"</b>——Token 终局的真正护城河不是计费本身，而是智力水平与兜责能力的绑定。</p>
+      </div>
+      <div class="tl">
+        <div class="d">08-25 · 收敛（用户认同助手反方）</div>
+        <p>从"卖 Token"收敛为<b>"卖被信任的智能调度权"</b>：裸 Token 是中间态；终局竞争不是"谁模型强"，而是"谁能在可控责任下稳定输出智力"。</p>
+      </div>
+      <div class="tl">
+        <div class="d">08-27 · 工程落地（抽象 → 具体）</div>
+        <p>9 层 × 4 横切把抽象判断落到物理层面：<b>L1 网关 + FinOps = Token 经济；L4 + L5 + 横切安全治理 = 语义权力平面</b>；"智力 × 责任边界"在工程上可拆解、可建、可验证。</p>
+      </div>
+      <div class="tl">
+        <div class="d">08-27 · 视角叠加（一事两看）</div>
+        <p>"Agent OS：为什么需要 OS 而非 Framework"与 9 层框架合读 = 同一判断两视角：<b>Demo 用 L4（能力）就够，生产必须全栈（Authority）</b>——责任边界不是理论概念，是 Infra 层级的强制要求。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 待思考问题 -->
+  <section>
+    <h2><span class="no">5</span>待思考问题</h2>
+    <p class="sec-desc">笔记中标注"待核验 / 风险"及值得继续追问的问题。</p>
+    <div class="q">
+      <div class="qh">1. 具身 Token 计价由谁承保？</div>
+      <p>能否跑通取决于安全 / 责任承保机制是否建立——目前无成熟承保主体与定价模型，这是具身商业化路径上最先要回答的问题。</p>
+    </div>
+    <div class="q">
+      <div class="qh">2. "硬件终局负毛利"是事实还是叙事？</div>
+      <p>源自星海图战略叙事，非既定事实。若硬件被 Token 化榨干毛利的路径成立，现有整车 / 机器人厂商的估值锚点将整体迁移——需要更多产业数据验证。</p>
+    </div>
+    <div class="q">
+      <div class="qh">3. "万卡基本面未形成"的时点性？</div>
+      <p>天南复盘为 2026 年中研究员视角，具身算力投入变化快，引用时需标注时点并持续跟踪。</p>
+    </div>
+    <div class="q">
+      <div class="qh">4. 车厂何时定义"智能计费的单位、规则、对象与责任归属"？</div>
+      <p>语义权力平面的商业落点 = 掌握"车的智能调用入口 + 责任边界"。先定义这些规则的一方，将占据 Token 终局中的卡位。</p>
+    </div>
+    <div class="q">
+      <div class="qh">5. 通用智能何时跨越单步 99.78% 的门槛？</div>
+      <p>天南测算长程任务 80% 成功率对应的单步下限——该数字的达成速度，决定"通用平台 vs 通用智能"不同速的判断何时收敛。</p>
+    </div>
+    <div class="q">
+      <div class="qh">6. 9 层框架的选型与边界如何演进？</div>
+      <p>工具换代快，选型须按实际评测更新；记忆 / 状态、评测 / 可观测的边界划分可随实践调整；汽车域须补功能安全维度后再引用。</p>
+    </div>
   </section>
 
   <footer>
-    本报告由知识库回顾定时任务自动生成 · 页面托管于 GitHub Pages（daily-news-pages / knowledge-review）。<br>
-    覆盖窗口：2026-08-24 至 08-26；实际扫描笔记：2026-08-25《具身与 Agent 的 Token 终局》（共 1 篇）。浅色主题，适配移动端阅读。
+    知识库回顾 · 2026-08-27 ｜ 扫描窗口 08-25 ~ 08-27（共 2 篇） ｜ 由定时任务自动生成并部署
   </footer>
+
 </div>
 </body>
 </html>
