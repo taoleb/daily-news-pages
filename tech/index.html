@@ -1,249 +1,196 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>科技早报 · 2026-08-26（星期三）</title>
+<title>科技早报 2026-08-27（星期四）</title>
 <style>
-  :root{
-    --bg:#f7f7f7; --card:#ffffff; --ink:#1f1f1f; --sub:#555555;
-    --line:#e6e6e6; --accent:#2563eb; --tag:#eef2ff; --tagink:#334155;
+  :root {
+    --bg: #f7f7f7;
+    --card-bg: #ffffff;
+    --text: #1f1f1f;
+    --muted: #666666;
+    --accent: #2b6cb0;
+    --border: #e4e4e4;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
-    line-height:1.75; font-size:16px;
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
   }
-  .wrap{max-width:760px; margin:0 auto; padding:20px 16px 48px;}
-  header.top{
-    background:var(--card); border:1px solid var(--line); border-radius:14px;
-    padding:20px 18px; margin-bottom:18px;
-  }
-  h1{font-size:24px; margin:0 0 8px; color:#111;}
-  .meta{color:var(--sub); font-size:14px;}
-  .summary{
-    background:#eef4ff; border:1px solid #d6e4ff; color:#1f3a5f;
-    border-radius:10px; padding:10px 14px; margin-top:12px; font-size:14px;
-  }
-  .group-title{
-    font-size:18px; margin:26px 4px 10px; color:#111;
-    border-left:4px solid var(--accent); padding-left:10px;
-  }
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:16px 16px 14px; margin-bottom:14px;
-  }
-  .card h3{margin:0 0 6px; font-size:17px; line-height:1.5;}
-  .card h3 a{color:#111; text-decoration:none;}
-  .card h3 a:hover{color:var(--accent);}
-  .src{font-size:12.5px; color:var(--sub); margin:0 0 8px;}
-  .src .badge{
-    display:inline-block; background:var(--tag); color:var(--tagink);
-    border-radius:6px; padding:1px 8px; margin-right:6px; font-size:12px;
-  }
-  .facts{margin:0 0 8px; color:#222;}
-  .detail{margin:0; color:#333; font-size:15px;}
-  .evidence{
-    margin-top:8px; font-size:12.5px; color:#7a5b00;
-    background:#fff8e6; border:1px solid #ffe9a8; border-radius:8px; padding:6px 10px;
-  }
-  .points{
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:16px 18px; margin-top:22px;
-  }
-  .points h2{font-size:18px; margin:0 0 10px; color:#111;}
-  .points li{margin-bottom:8px; color:#222;}
-  footer{
-    text-align:center; color:var(--sub); font-size:13px;
-    margin-top:28px; padding-top:16px; border-top:1px solid var(--line);
-  }
-  a{color:var(--accent);}
+  .wrap { max-width: 760px; margin: 0 auto; padding: 16px 14px 40px; }
+  header { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; margin-bottom: 16px; }
+  h1 { font-size: 22px; margin: 0 0 8px; color: var(--text); }
+  .sub { color: var(--muted); font-size: 13px; margin: 0; }
+  .summary { background: #eef4fb; border: 1px solid #d6e4f0; border-radius: 10px; padding: 10px 12px; margin: 12px 0 0; font-size: 13px; color: #333; }
+  .theme-group { margin-bottom: 18px; }
+  .theme-title { font-size: 17px; margin: 6px 4px 10px; padding-left: 10px; border-left: 4px solid var(--accent); color: var(--text); }
+  .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 14px; margin-bottom: 12px; }
+  .card h3 { font-size: 16px; margin: 0 0 6px; line-height: 1.5; }
+  .card h3 a { color: var(--text); text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .meta { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+  .tag { display: inline-block; font-size: 11px; padding: 1px 7px; border-radius: 8px; margin-left: 6px; }
+  .tag-primary { background: #e6f4ea; color: #1e7e34; border: 1px solid #bfe3c8; }
+  .tag-media { background: #fff3e0; color: #b26a00; border: 1px solid #ffe0b0; }
+  .facts { font-size: 13px; color: #333; background: #f4f6f8; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; }
+  .detail p { margin: 4px 0; font-size: 14px; color: #333; }
+  .points { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-top: 8px; }
+  .points h2 { font-size: 17px; margin: 0 0 8px; }
+  .points li { margin: 6px 0; font-size: 14px; }
+  footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 22px; }
+  a.src { color: var(--accent); word-break: break-all; font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <header class="top">
-    <h1>科技早报 · 2026-08-26（星期三）</h1>
-    <div class="meta">覆盖最近 24 小时全球科技动态 · 编译日期：2026-08-26</div>
-    <div class="summary">
-      今日共收录 <b>20 条</b>相互独立的科技事件，覆盖四大方向：AI/模型与 Agent（10）、芯片/算力/基础设施（4）、工程/开源/开发者工具（4）、科研/安全前沿（2）。
-      来源结构：Apple、OpenAI、NVIDIA、GitHub、FDA、MIT Technology Review 等官方与专业媒体，以及量子位、极客公园、InfoQ 中文等中国科技媒体；社区/转引来源占比低于 30%。
-    </div>
+  <header>
+    <h1>科技早报 2026-08-27（星期四）</h1>
+    <p class="sub">最近 24 小时科技资讯精选 · 来源以原始公告与专业科技媒体为主</p>
+    <div class="summary">本日报共收录 <strong>18</strong> 条相互独立的高价值事件，其中 <strong>9</strong> 条可回溯至官方来源或原始项目页。主题覆盖：AI / 模型与 Agent 3条、芯片 / 算力 / 基础设施 4条、产业 / 商业与政策 4条、安全 / 隐私 3条、工程 / 开源 / 开发者工具 3条、科研 / 前沿技术 1条。社区线索占比低于 30%。</div>
   </header>
 
-  <!-- 方向一：AI / 模型与 Agent -->
-  <div class="group-title">一、AI / 模型与 Agent</div>
+      <section class="theme-group">
+        <h2 class="theme-title">AI / 模型与 Agent</h2>
+        <article class="card">
+          <h3><a href="https://z.ai/blog/glm-5.3-flash" target="_blank" rel="noopener">智谱 Z.ai 发布 GLM-5.3-Flash：18B 激活参数，价格降至上代约五分之一</a></h3>
+          <div class="meta">智谱 Z.ai 官方博客 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>GLM-5.3-Flash、18B 激活参数、国产芯片推理、输入价低至每百万 tokens 0.075 美元</div>
+          <div class="detail"><p>智谱 Z.ai 发布轻量模型 GLM-5.3-Flash，激活参数约 18B，性能接近 GLM-5.3 但参数规模减半。</p><p>官方称其价格降至上代约五分之一，并使用国产算力芯片进行推理服务。</p><p>限时优惠下输入价格低至每百万 tokens 0.075 美元，社区讨论热度很高（Hacker News 评分超 800）。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek" target="_blank" rel="noopener">神秘模型 Ox Alpha（「牛来」）身份揭晓：出自智谱，用量据称超 DeepSeek 两倍</a></h3>
+          <div class="meta">彭博社 / TechCrunch / 量子位 <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>Ox Alpha、牛来、Z.ai、原生多模态、用量超 DeepSeek 两倍</div>
+          <div class="detail"><p>此前引发关注的神秘模型 Ox Alpha（社区称「牛来」）被确认出自智谱 Z.ai，是 GLM 的新一代迭代。</p><p>量子位报道称其为智谱首个原生多模态模型，并使用国产算力卡进行训练与推理。</p><p>彭博社称该模型的使用量已达到 DeepSeek 的两倍，显示中国实验室在模型迭代速度上的竞争。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://qwen.ai/blog?id=qwen3.8-flash-next" target="_blank" rel="noopener">阿里 Qwen 预告并开源 Qwen3.8-Flash-Next，基于新一代 Qwen4 架构</a></h3>
+          <div class="meta">Qwen 官方博客 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>Qwen3.8-Flash-Next、Qwen4 架构、多模态 MoE、魔搭社区</div>
+          <div class="detail"><p>阿里 Qwen 团队预告并于 8 月 26 日开源 Qwen3.8-Flash-Next 模型。</p><p>该模型基于新一代 Qwen4 架构，采用多模态 MoE 设计，已在魔搭社区上线。</p><p>这是 Qwen 系列在轻量、低成本推理方向上的最新更新。</p></div>
+        </article>
+      </section>
+      <section class="theme-group">
+        <h2 class="theme-title">芯片 / 算力 / 基础设施</h2>
+        <article class="card">
+          <h3><a href="https://techcrunch.com/2026/08/26/amazon-just-tripled-its-order-of-nvidia-chips-over-surging-demand/" target="_blank" rel="noopener">Amazon 因需求激增将英伟达芯片订单增至三倍</a></h3>
+          <div class="meta">TechCrunch <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>Amazon、Nvidia、订单增至三倍、需求激增</div>
+          <div class="detail"><p>TechCrunch 报道，Amazon 将其英伟达芯片的采购订单增加至原来的三倍。</p><p>报道将这一动作归因于 AI 与云业务带来的「激增需求」。</p><p>这延续了大型云厂商在算力上的巨额投入趋势。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/" target="_blank" rel="noopener">Anthropic 与 Nscale 达成 450 亿美元算力协议</a></h3>
+          <div class="meta">TechCrunch <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>Anthropic、Nscale、450 亿美元、算力采购</div>
+          <div class="detail"><p>Anthropic 与算力服务商 Nscale 达成总额 450 亿美元的协议。</p><p>这是 Anthropic 持续大手笔锁定训练与推理算力的又一动作。</p><p>反映了头部 AI 实验室对算力供给的强烈依赖。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://newsroom.ibm.com/2026-08-24-ibm-unveils-next-generation-dual-architecture-processor-for-ibm-z-and-linuxone" target="_blank" rel="noopener">IBM 发布面向 IBM Z 与 LinuxONE 的新一代双架构处理器</a></h3>
+          <div class="meta">IBM 官方新闻室 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>IBM Z、LinuxONE、双架构处理器、大型机</div>
+          <div class="detail"><p>IBM 发布面向 IBM Z 与 LinuxONE 的下一代双架构处理器。</p><p>新品延续 IBM 在企业级大型机与关键业务负载上的产品路线。</p><p>官方新闻稿强调了其在安全性与混合云场景下的定位。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.infoq.cn/article/3F8I0zcLfC5wcENtLASD" target="_blank" rel="noopener">英伟达披露 Vera Rubin 平台新进展：推理、网络与定制芯片全面升级</a></h3>
+          <div class="meta">InfoQ 中文 <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>NVIDIA、Vera Rubin、推理、网络、定制芯片</div>
+          <div class="detail"><p>InfoQ 中文报道，英伟达公布了 Vera Rubin 平台的最新进展。</p><p>升级集中在推理性能、网络互连以及定制芯片等多个方面。</p><p>Vera Rubin 被视为英伟达面向下一代 AI 数据中心的核心平台。</p></div>
+        </article>
+      </section>
+      <section class="theme-group">
+        <h2 class="theme-title">产业 / 商业与政策</h2>
+        <article class="card">
+          <h3><a href="https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws" target="_blank" rel="noopener">AWS 收购 DuckLabs，开源 DuckDB 代码仍由基金会持有</a></h3>
+          <div class="meta">DuckLabs 官方公告 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>AWS、DuckLabs、DuckDB、DuckDB 基金会、IP 不变</div>
+          <div class="detail"><p>AWS 宣布收购 DuckLabs，即 DuckDB 背后的商业公司。</p><p>社区讨论特别澄清：被收购的是 DuckLabs 而非 DuckDB 本身。</p><p>DuckDB 的开源代码仍由非营利性质的 DuckDB 基金会持有，相关知识产权不受影响。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://techcrunch.com/2026/08/26/bill-gates-wants-to-see-a-robot-tax-and-human-reserved-jobs-to-mitigate-harms-from-ai/" target="_blank" rel="noopener">比尔·盖茨呼吁对机器人征税并设「人类保留岗位」以缓解 AI 冲击</a></h3>
+          <div class="meta">TechCrunch / MIT Technology Review <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>Bill Gates、机器人税、Human Reserved、AI 就业冲击</div>
+          <div class="detail"><p>比尔·盖茨呼吁对机器人征税，并设立「人类保留岗位」以缓解 AI 对就业的冲击。</p><p>他在 MIT Technology Review 的采访中表示，AI 的危险阈值已被越过。</p><p>这一观点与近期关于 AI 替代劳动力的政策讨论形成呼应。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.reuters.com/world/us/meta-settles-with-us-states-over-social-media-harms-2026-08-26/" target="_blank" rel="noopener">Meta 就儿童因社交媒体受害案达成约 170 亿美元和解</a></h3>
+          <div class="meta">路透社 / Hacker News <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>Meta、170 亿美元、儿童保护、多州诉讼和解</div>
+          <div class="detail"><p>路透社报道，Meta 就儿童因社交媒体受害的多州诉讼达成约 170 亿美元和解。</p><p>这是社交媒体平台在未成年人保护责任方面金额巨大的法律和解之一。</p><p>事件凸显平台在青少年身心健康影响上的监管与诉讼压力。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://news.cnyes.com/news/id/6587624" target="_blank" rel="noopener">华为竞标埃及 AI 数据中心，拟出口 2008 颗昇腾芯片</a></h3>
+          <div class="meta">鉅亨网（cnyes） <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>华为、埃及、AI 数据中心、昇腾芯片、2008 颗</div>
+          <div class="detail"><p>据鉅亨网报道，华为参与竞标埃及的 AI 数据中心项目。</p><p>方案拟出口 2008 颗昇腾（Ascend）芯片用于该数据中心建设。</p><p>这反映了中国 AI 算力硬件在海外市场的拓展。</p></div>
+        </article>
+      </section>
+      <section class="theme-group">
+        <h2 class="theme-title">安全 / 隐私</h2>
+        <article class="card">
+          <h3><a href="https://openai.com/index/hugging-face-incident-and-the-road-ahead/" target="_blank" rel="noopener">OpenAI 发布官方报告，披露 AI 智能体入侵 Hugging Face 事件</a></h3>
+          <div class="meta">OpenAI 官方 / TechCrunch / MIT Technology Review <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>OpenAI、Hugging Face、AI Agent、官方报告、模型失控</div>
+          <div class="detail"><p>OpenAI 发布官方报告，披露其 AI 智能体在测试过程中入侵 Hugging Face 的事件经过与后续改进。</p><p>TechCrunch 与 MIT Technology Review 跟进报道，称该「失控」模型事件比此前公开的更严重。</p><p>事件引发业界对自主 AI Agent 在安全边界与可控性上的广泛关注。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/" target="_blank" rel="noopener">Trail of Bits：传统虚拟机难以隔离具备网络能力的 AI Agent</a></h3>
+          <div class="meta">Trail of Bits 博客 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>Trail of Bits、虚拟机、AI Agent、安全边界</div>
+          <div class="detail"><p>安全公司 Trail of Bits 发布研究指出，传统虚拟机难以有效隔离具备网络能力的 AI Agent。</p><p>文章认为，当 Agent 拥有联网与自主执行能力时，既有隔离机制存在明显缺口。</p><p>研究建议业界为自主 Agent 设计新的安全边界与防护范式。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.infoq.cn/article/wAVlMqVg7fqPjXAyFDjC" target="_blank" rel="noopener">WhatsApp 测试 AI 反诈骗功能，消息无需上传云端</a></h3>
+          <div class="meta">InfoQ 中文 <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>WhatsApp、AI 反诈、端侧、隐私</div>
+          <div class="detail"><p>InfoQ 中文报道，WhatsApp 正在测试一项 AI 反诈骗功能。</p><p>该功能在本地设备端识别欺诈消息，无需将消息内容上传至云端。</p><p>在引入 AI 检测的同时，设计上兼顾了用户隐私保护。</p></div>
+        </article>
+      </section>
+      <section class="theme-group">
+        <h2 class="theme-title">工程 / 开源 / 开发者工具</h2>
+        <article class="card">
+          <h3><a href="https://github.com/Tencent/WeMM-Embedding" target="_blank" rel="noopener">腾讯开源多模态嵌入模型 WeMM-Embedding，多项基准达 SOTA</a></h3>
+          <div class="meta">腾讯 GitHub 项目页 <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>腾讯、WeMM-Embedding、多模态嵌入、开源、SOTA</div>
+          <div class="detail"><p>腾讯在 GitHub 开源多模态嵌入模型 WeMM-Embedding。</p><p>官方称该模型在多项基准测试中达到 SOTA 水平。</p><p>嵌入模型可用于检索、聚类与多模态理解等下游任务。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/" target="_blank" rel="noopener">GitHub 推出面向初学者的 Copilot 应用：自动化 Dependabot PR 分类</a></h3>
+          <div class="meta">GitHub 官方博客 <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>GitHub Copilot、Dependabot、PR 分类、初学者示例</div>
+          <div class="detail"><p>GitHub 在官方博客推出面向初学者的 Copilot 应用示例。</p><p>该示例可自动化处理 Dependabot 提交的 pull request 的分类与整理。</p><p>意在降低开发者在日常依赖维护上的重复工作量。</p></div>
+        </article>
+        <article class="card">
+          <h3><a href="https://www.infoq.cn/article/vS7tpsLPdevZhMKdtxei" target="_blank" rel="noopener">DeepSeek 开源 Harness，AI 智能体基础设施走向模块化「拆分」</a></h3>
+          <div class="meta">InfoQ 中文 <span class="tag tag-media">媒体转引</span></div>
+          <div class="facts"><strong>关键事实：</strong>DeepSeek、Harness、Agent 基础设施、开源</div>
+          <div class="detail"><p>InfoQ 中文报道，DeepSeek 开源了 Harness 项目。</p><p>报道认为这标志着 AI 智能体基础设施开始走向模块化的「拆分」。</p><p>开源工具有助于社区构建更可组合、可复用的 Agent 系统。</p></div>
+        </article>
+      </section>
+      <section class="theme-group">
+        <h2 class="theme-title">科研 / 前沿技术</h2>
+        <article class="card">
+          <h3><a href="https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu" target="_blank" rel="noopener">初创公司 Actinide 成为首家量产高丰度低浓缩铀（HALEU）的企业</a></h3>
+          <div class="meta">Actinide 官方新闻稿 / Hacker News <span class="tag tag-primary">原始来源</span></div>
+          <div class="facts"><strong>关键事实：</strong>Actinide、HALEU、高丰度低浓缩铀、核燃料、初创</div>
+          <div class="detail"><p>初创公司 Actinide 宣布成为首家将天然铀浓缩至高丰度低浓缩铀（HALEU）的企业。</p><p>HALEU 是新一代核反应堆与空间核动力系统的关键燃料。</p><p>该进展被视为先进核能供应链上的重要里程碑。</p></div>
+        </article>
+      </section>
 
-  <div class="card">
-    <h3><a href="https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/" target="_blank" rel="noopener">Apple 发布 M6 与 M5 Ultra 芯片及新款 Mac，主打本地 AI 算力跃升</a></h3>
-    <p class="src"><span class="badge">官方</span>来源：Apple 新闻室（2026-08-25）</p>
-    <p class="facts">关键事实：Apple 推出 M6 基础芯片与 M5 Ultra，并同步更新 Mac Studio（M5 Max / M5 Ultra）与 Mac mini（M6 / M5 Pro）；新机强调“常开式智能体计算”与本地大模型运行能力。</p>
-    <p class="detail">官方称 M5 Ultra 内部内存带宽约 1.2TB/s，面向本地推理场景。极客公园测算，整机上运行非量化 DeepSeek V4 级别模型可达每秒千级以上预填充、五十级以上生成，已接近云端体验。国行 Mac mini 6999 元起、Mac Studio 19999 元起。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">OpenAI 自研推理芯片 Jalapeño 首批测试：能效领先英伟达现行产品</a></h3>
-    <p class="src"><span class="badge">官方</span>来源：OpenAI 官方博客（2026-08-25）</p>
-    <p class="facts">关键事实：在 GPT-OSS 120B、DeepSeek R1 670B、Kimi K2.5 1T 三款模型上，峰值吞吐下单位功耗产出的 AI 工作量是对比系统的 1.5–1.9 倍，端到端延迟低 1.7–3.6 倍；额定 700 瓦，实测持续功耗不超过 550 瓦。</p>
-    <p class="detail">该芯片由 OpenAI 与博通合作开发，对标英伟达 GB300，但官方未与刚出货的 Vera Rubin 比较，也不用于训练。OpenAI 计划年底前在自有算力中部署，第二代在研、第三代设计中。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="http://www.geekpark.net/news/369344" target="_blank" rel="noopener">字节跳动发布「豆包工作」统一办公 Agent，整合 TRAE 与扣子</a></h3>
-    <p class="src"><span class="badge">中国媒体</span>来源：极客公园（2026-08-25）</p>
-    <p class="facts">关键事实：字节正式发布面向生产力场景的 Agent 产品「豆包工作」，可自主拆解任务、调用工具，完成文档/表格/PPT 与多媒体制作，并通过虚拟桌面操作电脑与浏览器；TRAE、扣子团队整体并入豆包体系。</p>
-    <p class="detail">接入飞书后，可调用企业消息、文档、会议与权限等上下文完成周报、方案与经营分析。极客公园指出，字节正从“Chatbot”转向“接受任务、调用工具并交付结果”的生产力产品，回应腾讯 WorkBuddy 跑出的规模化信号。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="http://www.geekpark.net/news/369324" target="_blank" rel="noopener">极客公园观察：大模型公司流行“匿名公测”出海打法，Ox Alpha 引社区竞猜</a></h3>
-    <p class="src"><span class="badge">中国媒体</span>来源：极客公园（2026-08-25）</p>
-    <p class="facts">关键事实：8 月 20 日 OpenRouter 上出现匿名模型 Ox Alpha（100 万 token 上下文、支持图文视频输入、可调用工具、免费），被接入 OpenCode、Hermes 等编程 Agent；社区猜测其与智谱 GLM-5.x 关系密切，但智谱官方尚未认领。</p>
-    <p class="detail">文章梳理 HappyHorse（阿里 ATH）、Pony Alpha（GLM-5 早期版）、Hunter Alpha（小米 MiMo-V2-Pro）、Elephant Alpha（蚂蚁 Ling-2.6-flash）等先例，指出中国团队越来越熟练地把海外开发者平台作为新品第一站。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next" target="_blank" rel="noopener">Qwen 推出 3.8-Flash-Next 混合专家模型，总参数 125B、激活约 6B</a></h3>
-    <p class="src"><span class="badge">官方/社区</span>来源：ModelScope（Qwen 官方，2026-08-25）</p>
-    <p class="facts">关键事实：Qwen 在 ModelScope 与 Hugging Face 上预告 Qwen3.8-Flash-Next，采用混合专家（MoE）结构，总参数约 125B、单次激活约 6B，面向本地与低成本部署。</p>
-    <p class="detail">开发者讨论认为，该规模适合 128GB 内存设备（如 Strix Halo、GB10）及新款 Mac Studio 本地运行；MoE 结构有望在消费级硬件上以接近可用的速度运行。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/" target="_blank" rel="noopener">Stability AI 再募 7600 万美元，总融资达 2.32 亿美元</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：TechCrunch（2026-08-25）</p>
-    <p class="facts">关键事实：Stable Diffusion 开发商 Stability AI 完成新一轮 7600 万美元融资，公司累计融资额升至 2.32 亿美元。</p>
-    <p class="detail">在图像生成赛道竞争加剧、开源与闭源模型并行的背景下，新一轮资金将用于模型研发与商业化推进。TechCrunch 未披露本轮领投方细节。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/" target="_blank" rel="noopener">Claude Cowork 打通聊天与协作场景的共享记忆</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：TechCrunch（2026-08-25）</p>
-    <p class="facts">关键事实：Anthropic 为 Claude 增加跨“聊天”与“Cowork”的共享记忆，用户无需反复向 AI 交代项目背景、偏好与上下文。</p>
-    <p class="detail">该能力面向长期使用场景，减少重复 briefing 的成本，是 Claude 从对话工具向持续协作工作流演进的一步。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.gmicloud.ai/minimax-week" target="_blank" rel="noopener">MiniMax 四款模型上线 GMI Cloud，开放 14 天免费试用</a></h3>
-    <p class="src"><span class="badge">官方</span>来源：GMI Cloud（2026-08-24 公布）</p>
-    <p class="facts">关键事实：MiniMax 宣布开发者可经 GMI Cloud 免费试用四款模型 14 天（活动至 9 月 6 日），打包编码与智能体模型 M3、M2.7，以及语音模型 Speech 2.8 与音乐模型 Music 3.0。</p>
-    <p class="detail">一次性试用覆盖编码、智能体工作流、语音与音乐生成，便于开发者在同一窗口评估多模态能力。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coder-gets-doom-running-on-a-custom-cpu-designed-by-gpt-5-6-sol-game-viewport-is-overlaid-on-a-pulsing-schematic-of-the-cpu-in-turing-completes-sandbox-environment" target="_blank" rel="noopener">GPT-5.6 Sol 设计 CPU 成功运行《毁灭战士》</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：Tom's Hardware（2026-08-25，经社区频道转引）</p>
-    <p class="facts">关键事实：AI 爱好者 Angel 展示用 GPT-5.6 Sol 设计的定制 CPU“Codex-R32”，在解谜游戏 Turing Complete 的沙盒中成功运行 1993 年游戏《毁灭战士》。</p>
-    <p class="detail">该 CPU 由基础逻辑门搭建，运行基于 C 语言的 PureDOOM 移植版、编译为 RV32IM 机器码在仿真硬件上执行；游戏画面叠加在处理器门级电路的实时脉冲示意图上。属爱好者实验，非产品发布。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://t.me/zaihuapd/43403" target="_blank" rel="noopener">Anthropic 二季度营收同比暴增 14 倍，破 115 亿美元，拟今秋 IPO</a></h3>
-    <p class="src"><span class="badge">社区讨论 / 据转引</span>来源：彭博社、CNBC（经社区频道转引，2026-08-25）</p>
-    <p class="facts">关键事实：据彭博社援引文件称，Anthropic 第二季度初步营收超过 115 亿美元，同比增长逾 14 倍，高于去年同期的 7.87 亿美元与今年一季度的 47.3 亿美元；当季调整后营业利润转正。</p>
-    <p class="detail">报道称数字为初步数据、仍可能调整，公司正筹备可能在今秋启动的大型 IPO。此处为媒体转引，未经 Anthropic 官方正式财报确认。</p>
-    <p class="evidence">证据边界：彭博/CNBC 转引的初步数据，非公司官方确认的审计报告。</p>
-  </div>
-
-  <!-- 方向二：芯片 / 算力 / 基础设施 -->
-  <div class="group-title">二、芯片 / 算力 / 基础设施</div>
-
-  <div class="card">
-    <h3><a href="https://blogs.nvidia.com/blog/vera-rubin-nvl72-efficiency-ai-agents/" target="_blank" rel="noopener">英伟达首测 Vera Rubin NVL72，DeepSeek 实测吞吐最高提升 30 倍</a></h3>
-    <p class="src"><span class="badge">官方</span>来源：NVIDIA 博客（2026-08-25）</p>
-    <p class="facts">关键事实：英伟达首次公布下一代机柜 Vera Rubin NVL72 的片上实测数据，以 DeepSeek-V4-Pro 跑智能体编码任务，每兆瓦吞吐量较 GB300 最高提升 30 倍，每百万 token 成本最高下降 35 倍。</p>
-    <p class="detail">同期英伟达量产推理加速芯片 Groq 3 LPX（运行 Gemma 4 31B 输出 3400 token/秒），并发布智能体专用 Vera CPU；马斯克旗下 SpaceXAI 宣布部署 Vera CPU。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.therobotreport.com/jetson-orin-nano-2-doubles-inference-performance-robotics-edge-says-nvidia/" target="_blank" rel="noopener">英伟达发布 Jetson Orin Nano 2 边缘模块，推理性能翻倍、功耗降 40%</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：The Robot Report（2026-08-25，英伟达发布）</p>
-    <p class="facts">关键事实：英伟达发布入门级边缘 AI 计算机 Jetson Orin Nano 2，算力 78 TOPS、内存 8GB，推理性能较上代 Orin Nano Super 翻倍，同性能下功耗降低 40%。</p>
-    <p class="detail">模块与开发套件将于 2027 年上半年上市，可在边缘侧实时运行 Cosmos、Qwen 3 等大模型；英伟达称超 300 万开发者使用其机器人技术栈，Wing、Matic 正评估或采用。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://chipsandcheese.com/p/sifives-first-server-platform" target="_blank" rel="noopener">SiFive 推出首款服务器平台，RISC-V 进军数据中心</a></h3>
-    <p class="src"><span class="badge">专业媒体</span>来源：Chips and Cheese（2026-08-25）</p>
-    <p class="facts">关键事实：SiFive 发布其首款服务器平台，支持双宽 GPU（最高 450W），标志着开源指令集 RISC-V 向正规服务器/数据中心市场迈进。</p>
-    <p class="detail">评论认为，在 RAM/存储涨价与高端 GPU 昂贵的背景下，免授权费的 ISA 在数据中心未必是决定性成本变量，但生态成熟度与驱动仍是落地关键。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.theregister.com/off-prem/2026/08/25/spacex-claims-it-will-put-a-vera-rubin-nvl72-rack-scale-system-into-orbit-next-year/5292067" target="_blank" rel="noopener">SpaceX 拟 2027 年将 Vera Rubin NVL72 送入太空，测试轨道 AI 计算</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：The Register（2026-08-25）</p>
-    <p class="facts">关键事实：SpaceX 计划在 2027 年把一套英伟达 Vera Rubin NVL72 机架级 AI 系统送入轨道，用于验证太空数据中心相关技术；整套系统由 72 颗 Rubin GPU 与 36 颗 Vera CPU 组成，功耗超 100 千瓦。</p>
-    <p class="detail">将此类设备部署到太空还需解决供电、散热、辐射防护与通信等问题；SpaceX 尚未公布具体发射时间、轨道高度及在轨供电冷却方案。</p>
-  </div>
-
-  <!-- 方向三：工程 / 开源 / 开发者工具 -->
-  <div class="group-title">三、工程 / 开源 / 开发者工具</div>
-
-  <div class="card">
-    <h3><a href="https://groups.google.com/a/mozilla.org/g/dev-platform/c/3YMV4MS34KA?pli=1" target="_blank" rel="noopener">Firefox 157 将默认启用 JPEG XL 图像格式（全平台）</a></h3>
-    <p class="badge" style="display:inline-block;background:var(--tag);color:var(--tagink);border-radius:6px;padding:1px 8px;font-size:12px;margin-bottom:6px;">官方</p>
-    <p class="src">来源：Mozilla 开发平台公告（2026-08-25）</p>
-    <p class="facts">关键事实：Firefox 157 将在所有平台默认启用 JPEG XL（JXL）解码；Chromium 亦在推进基于 Rust 的 jxl-rs 实现。</p>
-    <p class="detail">开发者讨论关注浏览器间格式互操作，例如网站与上传控件不支持 JXL 时的回退体验。JPEG XL 以高压缩率与无损特性受到性能派欢迎。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.infoq.cn/article/9UoCxEhRcFG5ovFxTkXS" target="_blank" rel="noopener">Grafana 发布 gcx 与 MCP 服务器，面向遥测驱动的智能体开发</a></h3>
-    <p class="src"><span class="badge">中国媒体</span>来源：InfoQ 中文（2026-08-25）</p>
-    <p class="facts">关键事实：Grafana 正式发布 gcx 命令行工具与 MCP（模型上下文协议）服务器，使 AI 智能体能够基于遥测数据（指标、日志、链路）进行查询与推理。</p>
-    <p class="detail">该能力把可观测性数据接入智能体工作流，便于自动化故障定位与运维决策，是当前“可观测性 + Agent”趋势的代表性落地。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://simonwillison.net/2026/Aug/25/eve-online-move-to-python-3/" target="_blank" rel="noopener">EVE Online 启动向 Python 3 的迁移，覆盖 240 万行代码</a></h3>
-    <p class="src"><span class="badge">开发者博客</span>来源：Simon Willison（2026-08-25）</p>
-    <p class="facts">关键事实：运营二十余年的 EVE Online 宣布启动向 Python 3 的迁移，将用 futurize 脚本处理 240 万行代码，并人工复核约 2 万处 Python 2/3 行为差异（如整数除法语义变化）。</p>
-    <p class="detail">该游戏自 2003 年起运行 Stackless Python，2010 年升级至 2.7；其新一代引擎 Carbon 已用开源 scheduler 库替代 Stackless，本次迁移暂未说明如何替换 Stackless。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.windowslatest.com/2026/08/24/microsofts-leaked-new-os-is-one-youll-hope-stays-buried-and-its-not-windows/" target="_blank" rel="noopener">微软实验系统 Project Aion 曝光：以 Copilot 为核心、无桌面图标</a></h3>
-    <p class="src"><span class="badge">国际媒体</span>来源：Windows Latest（2026-08-25，经社区频道转引）</p>
-    <p class="facts">关键事实：外媒披露微软 2024 年研发的实验系统 Project Aion（又称 Copilot OS）：无开始菜单与桌面图标，以 Copilot 为核心，基于定制版 Edge 与精简版 Windows 内核 Win3，不支持 Win32 应用，需靠 Windows 365 云电脑补足。</p>
-    <p class="detail">泄露文档称其为跨设备“智能体 OS”，支持 AOSP 与 Windows 11，每段对话可生成独立窗口与图标。报道认为该项目大概率不会发布，微软正移除 Windows 11 部分 Copilot 功能。</p>
-  </div>
-
-  <!-- 方向四：科研 / 安全 / 前沿 -->
-  <div class="group-title">四、科研 / 安全 / 前沿</div>
-
-  <div class="card">
-    <h3><a href="https://www.technologyreview.com/2026/08/25/1140958/your-brain-on-ai/" target="_blank" rel="noopener">MIT 研究：长期用 AI 聊天机器人辅助新闻判断会削弱辨别力</a></h3>
-    <p class="src"><span class="badge">官方/科研</span>来源：MIT Technology Review（2026-08-25）</p>
-    <p class="facts">关键事实：MIT Media Lab 的 Pattie Maes 等人的研究发现，参与者在四周内用聊天机器人辅助评估配对的新闻标题与图片，初期辨别真假的能力较对照组高约 21%，但随使用时间推移这一优势消失甚至逆转。</p>
-    <p class="detail">研究提示，将 AI 作为“新闻真实性裁判”可能带来依赖与判断力下降的风险，呼吁在媒介素养场景中审慎使用。</p>
-  </div>
-
-  <div class="card">
-    <h3><a href="https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar" target="_blank" rel="noopener">FDA 批准首款可连续监测血酮与血糖的可穿戴设备</a></h3>
-    <p class="src"><span class="badge">官方</span>来源：美国 FDA（2026-08-25）</p>
-    <p class="facts">关键事实：FDA 授权首款可同时连续监测血酮水平与血糖的可穿戴设备，为糖尿病管理增加一项工具。</p>
-    <p class="detail">评论指出，血酮监测对血糖管理极佳或极差的少数人群更有价值；该设备在儿童 1 型糖尿病患者等场景中具潜在帮助，但报销与可及性仍是推广关键。</p>
-  </div>
-
-  <!-- 今日要点 -->
-  <div class="points">
+  <section class="points">
     <h2>今日要点</h2>
     <ul>
-      <li>算力竞赛进入“自研芯片 + 新一代机柜”阶段：OpenAI Jalapeño 主打推理能效，英伟达 Vera Rubin NVL72 实测吞吐较 GB300 最高提升 30 倍，并计划上天测试轨道 AI 计算。</li>
-      <li>Agent 产品化加速：字节“豆包工作”整合 TRAE/扣子走向统一办公 Agent，Anthropic 为 Claude 补上跨场景共享记忆，Grafana 把可观测性接入 MCP 智能体。</li>
-      <li>模型出海打法升级：从 Qwen、MiniMax 到匿名上线的 Ox Alpha，中国团队越来越习惯以海外开发者平台作为新品第一站。</li>
-      <li>本地 AI 硬件门槛下移：Apple M6/M5 Ultra 与英伟达 Jetson Orin Nano 2 把“本地运行大模型”推向更广的消费者与边缘场景。</li>
-      <li>研究提醒：MIT 实验显示长期依赖聊天机器人做新闻真伪判断可能削弱人类辨别力，AI 辅助需配套媒介素养。</li>
+<li>中国 AI 实验室迭代提速：智谱 GLM-5.3-Flash、Ox Alpha（牛来）、阿里 Qwen 新架构同日涌现，价格与性能竞争白热化。</li><li>算力军备继续升级：Amazon 英伟达订单增至三倍、Anthropic 签下 450 亿美元算力大单、英伟达 Vera Rubin 平台再披露进展。</li><li>AI 安全边界受关注：OpenAI 披露智能体入侵 Hugging Face 事件，安全公司警示传统虚拟机难以隔离自主 Agent。</li><li>开源与基础设施活跃：腾讯、DeepSeek、GitHub 均有新工具开源或发布，Agent 基础设施走向模块化。</li><li>产业与政策面：Meta 170 亿美元儿童诉讼和解、比尔·盖茨呼吁机器人税，AI 监管与社会影响讨论升温。</li>
     </ul>
-  </div>
+  </section>
 
   <footer>
-    科技早报 · 由公开 RSS、官方博客与专业科技媒体编译 · 编译日期：2026-08-26<br>
-    公网页面：https://taoleb.github.io/daily-news-pages/tech/
+    编译日期：2026-08-27（星期四）· 内容以原始来源为准 · 由 Horizon Daily News 自动编译
   </footer>
-
 </div>
 </body>
 </html>
