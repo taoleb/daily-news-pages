@@ -3,155 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库周报 · 2026-08-17 至 2026-08-23（报告日期 2026-08-24）</title>
+<title>知识库周报 · 2026-08-31</title>
+<meta name="description" content="知识库周报（复习 2026-08-24 ~ 2026-08-30）：Token 终局的智力×责任边界、AI Infra 九层四横切、ROSS 安全治理五层——战略→工程→实体的一周闭环">
 <style>
   :root{
-    --bg:#0f1115; --card:#171a21; --line:#262b36; --fg:#e7e9ee; --muted:#9aa3b2;
-    --accent:#6ea8fe; --accent2:#7ee0c0; --warn:#ffb86b; --danger:#ff7b7b;
-    --tag:#1f2733;
+    color-scheme: light;
+    --bg:#f7f7f5; --card:#ffffff; --ink:#1f1f1f; --ink-2:#444444; --ink-3:#6b6b6b;
+    --line:#e6e6e2; --accent:#2f5d3a; --accent-soft:#e8f0ea; --accent-2:#7a4a1f; --accent-2-soft:#f6eee2;
+    --quote-bg:#f4f6f4; --code-bg:#f0f0ed;
   }
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
+  @media (prefers-color-scheme: dark){
+    :root{ /* 显式覆盖为浅色，禁止深色主题 */
+      color-scheme: light;
+      --bg:#f7f7f5; --card:#ffffff; --ink:#1f1f1f; --ink-2:#444444; --ink-3:#6b6b6b;
+      --line:#e6e6e2; --accent:#2f5d3a; --accent-soft:#e8f0ea; --accent-2:#7a4a1f; --accent-2-soft:#f6eee2;
+      --quote-bg:#f4f6f4; --code-bg:#f0f0ed;
+    }
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
   body{
-    margin:0; background:var(--bg); color:var(--fg);
-    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    padding:0 0 64px;
+    background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px; margin:0 auto; padding:20px 16px 0}
-  header{
-    border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:8px;
-  }
-  h1{font-size:1.5rem; line-height:1.35; margin:0 0 8px; letter-spacing:.3px}
-  .meta{color:var(--muted); font-size:.9rem}
-  .meta b{color:var(--accent2); font-weight:600}
-  h2{
-    font-size:1.18rem; margin:30px 0 12px; padding-left:10px;
-    border-left:3px solid var(--accent);
-  }
-  h3{font-size:1.02rem; margin:20px 0 8px; color:#cdd6e4}
-  p{margin:10px 0}
-  .card{
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:14px 16px; margin:14px 0;
-  }
-  .tag{
-    display:inline-block; background:var(--tag); color:var(--muted);
-    font-size:.74rem; padding:2px 9px; border-radius:999px; margin:0 6px 6px 0;
-    border:1px solid var(--line);
-  }
-  .hl{color:var(--accent); font-weight:600}
-  .hl2{color:var(--accent2); font-weight:600}
-  .warn{color:var(--warn); font-weight:600}
-  .danger{color:var(--danger); font-weight:600}
-  ul,ol{margin:10px 0; padding-left:22px}
-  li{margin:7px 0}
-  .src{
-    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    font-size:.8rem; color:var(--muted); background:#11141a;
-    border:1px solid var(--line); border-radius:8px; padding:8px 10px; margin:6px 0;
-    word-break:break-all;
-  }
+  .wrap{max-width:760px; margin:0 auto; padding:28px 18px 64px;}
+  header.head{padding:36px 24px 26px; background:linear-gradient(135deg,#ffffff 0%,#f0f5f1 100%); border:1px solid var(--line); border-radius:16px; margin-bottom:26px;}
+  .kicker{font-size:12.5px; letter-spacing:.14em; color:var(--accent); font-weight:700; margin-bottom:10px;}
+  h1{font-size:26px; line-height:1.35; font-weight:800; letter-spacing:.01em;}
+  .sub{color:var(--ink-2); font-size:14.5px; margin-top:10px;}
+  .sub b{color:var(--ink);}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .tag{background:var(--accent-soft); color:var(--accent); font-size:12.5px; font-weight:600; padding:4px 12px; border-radius:999px;}
+  .lead{margin-top:18px; font-size:15.5px; color:var(--ink-2); border-left:3px solid var(--accent); padding-left:14px;}
+  section{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px 24px; margin-bottom:22px;}
+  h2{font-size:19px; font-weight:800; margin-bottom:6px; display:flex; align-items:baseline; gap:10px;}
+  h2 .no{color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.06em;}
+  .sec-sub{font-size:13px; color:var(--ink-3); margin-bottom:18px;}
+  h3{font-size:15.5px; font-weight:700; margin:22px 0 8px; color:var(--ink);}
+  section h3:first-of-type{margin-top:14px;}
+  p{margin:0 0 10px; color:var(--ink-2); font-size:15px;}
+  p b, li b, .quote b{color:var(--ink); font-weight:700;}
+  ul,ol{margin:0 0 12px; padding-left:22px;}
+  li{margin-bottom:7px; color:var(--ink-2); font-size:15px;}
   .quote{
-    border-left:3px solid var(--warn); background:#1a1813; padding:10px 14px;
-    border-radius:0 8px 8px 0; color:#f0e6d6; margin:12px 0; font-size:.95rem;
+    background:var(--quote-bg); border-left:3px solid var(--accent);
+    padding:12px 16px; margin:12px 0; border-radius:0 10px 10px 0;
+    color:var(--ink); font-size:15px;
   }
-  .connect{
-    background:#121824; border:1px dashed var(--accent); border-radius:10px;
-    padding:12px 14px; font-size:.92rem; color:#d6e0f0;
+  .quote .src{display:block; margin-top:6px; font-size:12.5px; color:var(--ink-3);}
+  .flow{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:12px 0;
+    font-size:13.5px; color:var(--ink-2);
   }
-  .footer{
-    margin-top:34px; padding-top:14px; border-top:1px solid var(--line);
-    color:var(--muted); font-size:.82rem;
+  .flow .node{background:var(--accent-soft); color:var(--accent); font-weight:700; padding:5px 12px; border-radius:8px;}
+  .flow .node.late{background:var(--accent-2-soft); color:var(--accent-2);}
+  .flow .arrow{color:var(--ink-3); font-weight:700;}
+  .warn{background:#fdf6ec; border:1px solid #ecd9b8; border-radius:10px; padding:12px 16px; margin:10px 0; font-size:14px; color:#5c4630;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;}
+  .card-mini{background:var(--quote-bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px;}
+  .card-mini .t{font-weight:700; font-size:14px; color:var(--ink); margin-bottom:4px;}
+  .card-mini .d{font-size:13.5px; color:var(--ink-2);}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:13.5px;}
+  th,td{border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--accent-soft); color:var(--accent); font-weight:700; white-space:nowrap;}
+  td{color:var(--ink-2);}
+  .layers{display:flex; flex-direction:column; gap:6px; margin:12px 0;}
+  .layer{display:flex; align-items:flex-start; gap:10px; font-size:14px;}
+  .layer .lv{flex:0 0 34px; text-align:center; background:var(--accent-soft); color:var(--accent); font-weight:800; font-size:12px; border-radius:7px; padding:4px 0;}
+  .layer .tx{color:var(--ink-2);} .layer .tx b{color:var(--ink);}
+  .src-list{list-style:none; padding:0;}
+  .src-list li{font-size:12.5px; color:var(--ink-3); padding:5px 0; border-bottom:1px dashed var(--line); word-break:break-all;}
+  .src-list li:last-child{border-bottom:none;}
+  footer{color:var(--ink-3); font-size:12.5px; text-align:center; margin-top:6px; line-height:1.9;}
+  .open{font-weight:800; color:var(--accent-2);}
+  @media (max-width:560px){
+    body{font-size:15px;}
+    .wrap{padding:16px 12px 48px;}
+    header.head{padding:26px 18px 22px;}
+    h1{font-size:22px;}
+    section{padding:22px 18px;}
+    .grid2{grid-template-columns:1fr;}
+    table{font-size:12.5px;}
+    th,td{padding:6px 8px;}
   }
-  .pill{font-size:.72rem;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:1px 6px;margin-right:6px}
-  b.u{color:#fff}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <h1>知识库周报 · 2026-08-17 至 2026-08-23</h1>
-    <div class="meta">报告日期：<b>2026-08-24（周一）</b> ｜ 覆盖上一个完整自然周（周一至周日）</div>
-    <div class="meta" style="margin-top:6px">扫描路径：<span style="word-break:break-all">D:\个人知识库\daily\</span> 下日期目录 2026-08-17 / 2026-08-20 / 2026-08-21；本周实际有记录的目录仅此三个（08-18、08-19、08-22、08-23 无 .md）。递归扫描得 <b>4 篇</b> Markdown，含 2 篇 *_summary 与 2 篇非 summary 文件，<b>全部纳入</b>，未按文件名排除。</div>
-  </header>
 
-  <h2>一、本周知识增量：一条主线 + 一个横切框架</h2>
-  <p>本周四篇笔记高度收敛到同一问题域：<span class="hl">AI 从"模型"走向"可交付、可治理、能自进化的运行基础设施"</span>，以及这条主线在汽车与具身两个实体产业中的具体化。它们不是并列罗列，而是同一判断的层层展开，并伴随一次关键的自我修正。</p>
-
-  <div class="card">
-    <h3>主线 1：Agent 运行基础设施（Harness / Agent OS / 治理层）成为新控制点</h3>
-    <p><span class="pill">08-17</span>DeepSeek Harness 给出当前最完整的"控制层"实践样本：Cordis「一切皆插件」把模型适配器、工具、上下文乃至 <b class="u">Agent 循环本身</b> 抽象为可插拔单元；仅追加事件流 + 轨迹回放解决长程任务的可观测与归因；四种模式（标准 / 极简 / PTC / 创造）分别服务生产、纯净评测、压低 Token 成本、运行时自演进。其与用户既有 ETCLOVG 七层框架可对齐——Harness 把"可观测性独立层""能力-控制矛盾"工程化了。</p>
-    <p><span class="pill">08-21</span>AI 前沿综述把这一层放进产业全景：MCP/A2A 是"连接器"（解决<b>怎么连</b>），Agent OS 是"治理层"（解决被<b>授权、约束、追溯</b>地跑）。OTel GenAI、三级记忆、三平面安全正是 Agent OS 理论中 Authority / Memory Boundary / Commit / Runtime Boundary 的产业落地雏形。该文价值在"扫得全"而非原创框架——引用时按趋势综述处理。</p>
-    <p class="hl2">关键点：用户已把"治理层"从 DeepSeek 单点案例，提升为横跨整个行业的判断——MCP 是 TCP/IP 式标准，OS 才是权力平面。</p>
+<header class="head">
+  <div class="kicker">KNOWLEDGE REVIEW · WEEKLY</div>
+  <h1>知识库周报 · 2026-08-31</h1>
+  <div class="sub">复习区间：<b>2026-08-24（周一）～ 2026-08-30（周日）</b> · 全量递归扫描 7 个日期目录</div>
+  <div class="meta-row">
+    <span class="tag">3 篇记录</span>
+    <span class="tag">2 个记录日：08-25 / 08-27</span>
+    <span class="tag">主题：Token 终局 × AI Infra × 具身安全治理</span>
   </div>
+  <p class="lead">本周三篇笔记构成一个罕见的完整闭环：8-25 的战略判断（<b>终局卖什么、差异化来自哪里</b>）→ 8-27 的工程框架（<b>生产级 Infra 长什么样</b>）→ 同日 ROSS 实践（<b>物理世界怎么把"责任边界"做成系统骨架</b>）。三者互相咬合，一周内完成了"战略 → 工程 → 实体验证"的推导链。</p>
+</header>
 
-  <div class="card">
-    <h3>主线 2：把治理层塞进"安全攸关、长生命周期、跨域"的实体系统，难度升一个量级</h3>
-    <p><span class="pill">08-21</span><b class="u">2127 汽车自进化 Harness</b> 是本周最具原创性的判断：把 Harness 治理与车用 OS 在「汽车这种安全攸关、跨域、长生命周期、需自进化」的系统上做成统一架构与协同演进路径——这一<b>具体靶点</b>是空白。</p>
-    <p class="warn">自我修正（重要认知变化）：</b>用户原以为"行业没有提出汽车 harness 概念"，经 web 核验后<b>明确撤回该表述</b>——通用 Agent Harness（arxiv 2605.18747、Lilian Weng 长文等）与车用 OS（东软 NeuSAR、AutoCore、AI-Native 整车 OS）各自都已是活跃方向。"空白"在二者的交叉靶点，不在任一本身。向高管 / 评委表述必须用收窄版，否则会被一击破。这是一次由实证核验驱动的判断收窄，应保留为方法论习惯。</p>
-    <div class="quote">正确口径：空白在「汽车 × 安全攸关 × 自进化 harness 的协同演进路径」，不在 harness 或 OS 自身。</div>
-    <p>汽车比工业 / 数字 harness 难一个量级的四点依据：① ASIL-D 功能安全 + 责任链（"谁批准 Commit、谁兜底"是<b>法律与生命边界</b>）；② 智驾 / 座舱 / 车控 / 云端四域耦合；③ OTA 受监管 / 召回约束，自进化必须可验证、可回滚、可审计（arxiv 的 change contract）；④ 模型数月一换但车不能重训，harness 的模型抽象 + Skill 资产化是车厂对抗"模型绑定"的自有 IP。</p>
+<section>
+  <h2><span class="no">01</span>Token 终局的差异化：智力 × 责任边界</h2>
+  <div class="sec-sub">来源：《具身与Agent的Token终局》（2026-08-25 · daily/2026-08-25/）</div>
+  <p>本周最重要的认知增量是一条<b>用户原话级的关键修正</b>。原始判断是"机器人后期 = 通用平台，终局卖 Token（类比 Agent 开源趋同后靠卖调用赚钱）"；用户在讨论中主动补了一句：<b>若 Token 是差异化来源，差异化可能来自"智力与责任边界"，而非裸 Token 价格或架构</b>。整篇笔记的收敛结论就是这句话的展开：裸 Token 价格趋同、架构趋同，真正不可复制的是<b>"多聪明的智能"与"多大程度兜得住责任"这两件事的绑定</b>——智力决定调用质量上限，责任边界决定调用能否被客户信任并付费。</p>
+  <div class="flow">
+    <span class="node">卖台（星海图旧锚点）</span><span class="arrow">→</span>
+    <span class="node">卖 Token</span><span class="arrow">→</span>
+    <span class="node late">差异化 = 智力 × 责任边界（用户修正）</span><span class="arrow">→</span>
+    <span class="node late">终局：卖"被信任的智能调度权"</span>
   </div>
+  <p>这四条不是并列，是<b>同一周内发生的叙事演进</b>：助手补了关键反方——具身调用一次智能 = 一次物理动作，客户买的不是"一次 Token"而是"在我现场不闯祸干完活的系统"，所以具身终局可能是 <b>Token + SLA + 责任承保</b>，责任是计价的一部分（比数字 Agent 的 Token 不"干净"）；同时按 Physical Token 逻辑，模型调用成本也会趋零，若 Token 也趋零终局卖什么？答案把判断再推一层：<b>"卖 Token"是中间态，终局卖"被信任的智能调度权"= 卖 harness / 语义权力平面</b>。这个演进直接激活了此前（8-21）沉淀的两个框架：<b>责任边界 = 市场壁垒</b>、<b>语义权力平面</b>——"谁定义计价单位 / 调用边界 / 失败归属，谁定义产业边界"。</p>
+  <h3>用户对 Agent 现状的"刀法"</h3>
+  <p>开源架构趋同不是壁垒；真正壁垒在 (a) 模型权重 / 推理成本（谁训得起万卡）、(b) 调度入口（谁掌握运行时计费与编排）、(c) 数据飞轮（谁有真实任务回流）——<b>三者全是基础设施 + 权力结构，非架构创新</b>。</p>
+  <h3>对 2127 的战略启示</h3>
+  <div class="quote">长安 2127 不该只思考"造什么车 / 什么模型"，该思考"未来车的智能按什么单位、什么规则、向谁计费、谁担责"。掌握车的<b>智能调用入口与责任边界</b>，才是 Token 终局里的卡位点，而非硬件平台化。<span class="src">—— 笔记第六节，语义权力平面在汽车域的商业落点</span></div>
+</section>
 
-  <div class="card">
-    <h3>横切框架：责任边界 = 市场壁垒（本周反复出现并深化）</h3>
-    <p><span class="pill">08-20</span>具身语境：谁能对机器人进入工厂 / 社会后的物理破坏、质量波动、安全事故承担终极兜底责任，谁才拥有万亿级市场定义权——故 2028 终局看"责任与产业生态咬合度"。</p>
-    <p><span class="pill">08-21</span>汽车 harness 语境：车的责任边界 = 事故 / 召回责任，harness 即"责任边界的技术化"，是 责任边界=市场壁垒 的<b>硬约束版</b>（法律与生命，而非产业博弈）。</p>
-    <p class="hl2">这条用户原创框架本周完成一次跨域迁移：从具身 / 机器人 → 汽车安全攸关系统，语义一致但约束强度升级。</p>
+<section>
+  <h2><span class="no">02</span>AI Infra 九层四横切：Demo 与生产的分水岭</h2>
+  <div class="sec-sub">来源：《AI_Infra全景图_九层四横切框架》（2026-08-27 · daily/2026-08-27/） · 用户评价："总结得很好"</div>
+  <div class="quote">绝大多数 Agent 项目停在 Demo 阶段无法融入生产——不是模型不行、不是算法不行，是 Infra 不行。<b>Demo 只需要 L1（模型）+ L4（编排）；生产需要全部 9 层 + 4 横切。</b><span class="src">—— 核心断言，被当作本周工程层的纲</span></div>
+  <div class="layers">
+    <div class="layer"><span class="lv">L0</span><span class="tx"><b>基础资源</b>：算力 / 存储 / 网络，模型和应用运行在哪里</span></div>
+    <div class="layer"><span class="lv">L1</span><span class="tx"><b>模型与推理</b>：网关 / Fallback / vLLM，用哪个模型、怎么降本</span></div>
+    <div class="layer"><span class="lv">L2</span><span class="tx"><b>数据与知识</b>：解析 → 切分 → 向量索引 → 混合检索 → 权限继承</span></div>
+    <div class="layer"><span class="lv">L3</span><span class="tx"><b>Prompt 与上下文</b>：PromptOps，版本 / 实验 / Token Budget</span></div>
+    <div class="layer"><span class="lv">L4</span><span class="tx"><b>编排与 Agent</b>：LangGraph / CrewAI / Temporal，任务拆解调度（多数团队只到此）</span></div>
+    <div class="layer"><span class="lv">L5</span><span class="tx"><b>工具执行</b>：MCP / 沙箱 / 浏览器自动化，执行边界与权限校验</span></div>
+    <div class="layer"><span class="lv">L6</span><span class="tx"><b>状态与记忆</b>：工作 / 短期 / 长期 / 情景 / 语义五级记忆</span></div>
+    <div class="layer"><span class="lv">L7</span><span class="tx"><b>评测与质量</b>：Golden Set / 在线指标 / 人审三层，发布门禁</span></div>
+    <div class="layer"><span class="lv">L8</span><span class="tx"><b>可观测与运营</b>：Trace / 成本归因 / 全链路日志</span></div>
   </div>
+  <p><b>4 个横切贯穿所有层</b>：安全治理、CI/CD 与发布治理（Prompt/模型/RAG/工具全组件版本化灰度）、FinOps 成本治理（每笔成本归因到应用/用户/任务——Token 计费的工程基础）、开发者体验。关键洞察：多数团队只盯 L4 + L2，<b>生产级稳定性恰恰取决于那些"不起眼"的基础设施</b>。</p>
+  <h3>与既有框架的连接（本周的关键串联动作）</h3>
+  <ul>
+    <li><b>Token 终局的工程落点</b>：L1 模型网关（计费/路由）+ 横切 FinOps = Token 经济的物理实现；谁掌握 L1+L4+横切治理，谁掌握"被信任的智能调度权"——<b>8-25 的"智力×责任边界"在此有了工程坐标</b>。</li>
+    <li><b>OS vs Framework</b>：L4 只是 Framework（能力 Capability）；L5-L8 + 横切才是 OS 层（Authority / 边界 / 记忆 / 验证 / 可观测）。生产要的是 Authority，不只是能力——与"Agent 需要 OS 而非 Framework"的判断合读，同一结论两视角。</li>
+    <li><b>汽车 harness 白空间</b>：此 9 层即通用 harness 清单 × 汽车域实现——L5 对应车控执行 / 安全沙箱（ASIL-D），L6 对应行为履历，L7 对应场景库回归，横切安全治理对应功能安全 + 责任边界。<b>"语义权力平面"的落点 = L4 编排权 + L5 执行边界 + 横切安全治理</b>。</li>
+    <li><b>本地 LLM 变笨（8-23 Level1Techs）</b>：推理栈漂移是物理事实，L1 网关 Fallback + L7 门禁 + L8 Trace 是补偿机制。</li>
+  </ul>
+</section>
 
-  <div class="card">
-    <h3>具身产业周期（08-20）：强分化淘汰赛初期，三阶段窗口</h3>
-    <p>赛道定性不是"冰河期"，而是头部吸水、尾部断流的<b>强分化淘汰赛初期</b>：资本极化、人才溢价从 3× 回归 ~50%、智驾"堆算力 / 开环数据"范式无法平移到高自由度物理本体。</p>
-    <ul>
-      <li><b>第一阶段（2026 下–2027 上）工程幻灭与微闭环死斗</b>：看 MTBF、连续执行成功率 &gt;95%。</li>
-      <li><b>第二阶段（2027 中–下）基座模型开源 + 硬件降至 10–15 万</b>：看数据飞轮。</li>
-      <li><b>第三阶段（2028）巨头收割与规模化上岗</b>：看责任闭环、百万工时无事故。</li>
-    </ul>
-    <p>与 AI 综述（08-21 具身节）互证：NSP 世界模型、量产级灵巧手全自动产线，正是"下一项能力边际成本持续下降"的实例，呼应 Physical Token 经济学。</p>
-  </div>
+<section>
+  <h2><span class="no">03</span>ROSS 安全治理五层：物理世界的"横切安全"实体化</h2>
+  <div class="sec-sub">来源：《ROSS_Harness安全治理五层实践》（2026-08-27 · daily/2026-08-27/ · 机器之心报道，PR 口径）</div>
+  <p>灵犀智涌把 8-21 报道的 ROSS 安全体系拆成五层，恰好是 Infra 框架"横切安全治理"在<b>物理世界</b>的实体化——本篇笔记的定位即与此互证。五层的骨架逻辑值得记住：</p>
+  <ul>
+    <li><b>模型侧安全增强</b>（Safe-BeAl / VLA-Stem / CLMASP）：默认"模型可能给出看似合理但物理危险的动作"，安全治理不做在模型"心中"，做在模型<b>出口</b>——方案先过安全评估，违规拦下；VLA-Stem 不修改原 VLA，外部轻量附加，换基座不影响安全层（同数字 Agent 的"意图防火墙"思路）。</li>
+    <li><b>执行侧动作保障</b>（STDArm）：模型给理想动作，硬件面对惯量/摩擦/延迟，此层转成稳定可控执行指令，防"想对了、执行偏了"。</li>
+    <li><b>分层安全监控（时间尺度分层，核心招牌）</b>：毫秒级硬安全（碰撞/力矩/急停，<b>不经过任何模型推理</b>）→ 高频轨迹监督 → 任务级判断（继续/重规划/异常恢复）。核心原则：<b>语言模型擅长慢思考，实时控制与安全兜底必须运行在更高频率上——不同层级决策放在各自适合的时间尺度</b>。</li>
+    <li><b>异常恢复</b>：中断 → 重试 → 回退 → 替代 Skill → 重新规划 → 人工接管；失败分类本身是安全判断的一部分。</li>
+    <li><b>安全飞轮</b>：失败案例 / 人工接管 / 近失事件结构化沉淀，更新 Skill 约束、成为训练数据——<b>安全知识不是静态规则，是随真实运行积累的</b>。</li>
+  </ul>
+  <p>与 9 纵 4 横的互证关系：Safe-BeAl≈输出校验（L5）、STDArm≈幂等/事务的物理版（L5）、分层监控≈运行时边界强制（L8）、异常恢复≈Fallback 物理版、安全飞轮≈失败经验回流（L7+CI/CD）。笔记的落点判断很明确：<b>灵犀把物理安全做进系统每一层而非靠模型自觉——安全不是功能而是系统骨架；谁能兜住物理世界安全责任，谁拿到市场定义权</b>，这正是"责任边界 = 市场壁垒"在具身域的实证。</p>
+</section>
 
-  <h2>二、用户原创判断与框架（保留原味，未泛化）</h2>
-  <div class="card">
-    <span class="tag">责任边界=市场壁垒</span><span class="tag">白空间判断方法论</span><span class="tag">汽车 harness 难一个量级</span><span class="tag">节奏研判准则</span>
-    <ol>
-      <li><b class="u">责任边界 = 市场壁垒</b>：跨域核心框架，本周深化到车的硬约束版（法律 / 生命级）。</li>
-      <li><b class="u">白空间判断方法论</b>：claim"行业空白"前必须实证核验；空白常不在"概念本身"而在"概念的交叉靶点"。</li>
-      <li><b class="u">汽车 harness 难一个量级的四因</b>：安全等级 / 跨域耦合 / 召回合规 / 模型快迭代车不能重训。</li>
-      <li><b class="u">节奏研判准则</b>：2026 看真机工程、2027 看数据飞轮、2028 看责任与生态。</li>
-    </ol>
-  </div>
+<section>
+  <h2><span class="no">04</span>纵向串联：一周内的判断闭环</h2>
+  <div class="sec-sub">同一主线如何在 5 天内发展、修正、深化</div>
+  <ul>
+    <li><b>8-21 → 8-25：框架被激活。</b>"责任边界 = 市场壁垒""语义权力平面"（白空间判断）本是为汽车 harness 立的概念；Token 终局讨论把它从"汽车域假设"提升为"跨 Agent / 具身 / 汽车的<b>一般性商业规律</b>"，并补上"智力"这一极，形成 <b>智力 × 责任边界</b> 的二维差异化。</li>
+    <li><b>8-25 → 8-27：判断被工程化。</b>"卖被信任的智能调度权"落到了具体坐标：L1 网关 + FinOps 是计费与归因的物理实现；L4/L5/横切安全是语义权力平面的三个落点。战略语言第一次有了可审计的工程清单。</li>
+    <li><b>8-27 双篇互证：抽象被实证。</b>ROSS 的五层 = "横切安全治理"在真实物理系统的展开，且其商业逻辑（安全做进骨架 → 市场定义权）与 8-25 收敛结论同构。两类来源（框架文 vs PR 文）独立到达同一判断，可信度上升。</li>
+    <li><b>风险点并存：</b>ROSS 未见第三方审计、具身 Token 计价尚未被验证跑通、天南"万卡基本面未形成"有时点性——支撑链扎实，但终局叙事仍是推理而非事实。</li>
+  </ul>
+</section>
 
-  <h2>三、同一主题的纵向串联（观点如何发展 / 修正）</h2>
-  <div class="connect">
-    <p><b>「治理层 / Harness」</b>：08-17 以 DeepSeek 单点案例引入 → 08-21 综述提升为"MCP=连接、OS=治理"的产业分层 → 08-21 2127 笔记下沉到汽车安全攸关系统，并完成"空白表述"的自我收窄。</p>
-    <p style="margin-bottom:0"><b>趋势：</b>从观察 → 提炼层级 → 落地到自家战略靶点的<b>同时修正了自己的夸大判断</b>。</p>
-  </div>
-  <div class="connect" style="margin-top:12px">
-    <p><b>「责任边界=市场壁垒」</b>：08-20 在具身语境提出 → 08-21 在汽车语境复用并升级为法律 / 生命级硬约束。</p>
-    <p style="margin-bottom:0"><b>趋势：</b>从产业比喻 → 工程 / 法律约束的<b>同构迁移</b>。</p>
-  </div>
+<section>
+  <h2><span class="no">05</span>尚未解决的问题 & 值得继续追问</h2>
+  <div class="sec-sub">笔记中明确标注的待核验项，即下一周的靶心</div>
+  <h3>待核验 / 风险</h3>
+  <ul>
+    <li>具身 <b>Token + SLA + 责任承保</b> 的计价模式能否跑通，取决于安全/责任承保机制是否建立；"硬件终局负毛利"是星海图战略叙事，非既定事实。</li>
+    <li>"机器人后期只是通用平台"措辞需拆开：<b>硬件平台化快，但"通用智能"最难</b>（天南测算单步需 99.78% 才撑得起长程 80%）——二者不同速。</li>
+    <li>ROSS 全部为 PR 口径（160 分 / 全国第三 / 3.6 倍提升均自报），论文成果工程成熟度未独立验证；场景仅限实验室 / 工业单机，<b>未覆盖汽车级约束（ASIL-D / 多域协同 / OTA / 长生命周期）——此空白即 2127 白空间</b>。</li>
+    <li>Infra 9 层分法有主观性（记忆可并、评测/可观测边界模糊）；工具对比为 2025-2026 时点快照；汽车域引用须补 ISO 26262 / SOTIF / 责任链维度。</li>
+  </ul>
+  <h3>值得继续追问的方向</h3>
+  <ul>
+    <li><b>智力的差异化从哪来？</b>既然终局竞争是"谁能在可控责任下稳定输出智力"，那"智力"这一极的壁垒是否最终也回到万卡 / 数据飞轮 / 推理成本（8-25 用户刀法）？智力与责任边界如何被<b>产品化打包</b>成可计价单位？</li>
+    <li><b>具身的"责任承保"商业模式</b>：谁承保（保险 / 车企 / 平台方）？计价单位是"任务"还是"调用"？这是 Token 终局在物理域能否成立的关键未知数。</li>
+    <li><b>自进化飞轮 vs 万卡门槛</b>：ROSS 走"安全层 + 领域数据 + 轻量外部架构"路线，与天南"万卡基本面未形成"形成张力——算力门槛是否会被"安全架构 + 数据回流"部分绕过？值得盯着两者后续演进。</li>
+    <li><b>2127 卡位细化</b>：结合 9 层框架，把"车的智能调用入口 + 责任边界"拆成可执行的 2127 架构清单（哪几层自研、哪几层外购、责任链如何设计）。</li>
+  </ul>
+</section>
 
-  <h2>四、未决问题与值得追问的方向</h2>
-  <div class="card">
-    <ul>
-      <li><span class="danger">监管前提</span>：自进化 + 召回合规是否允许 model / harness 现场自改？需查 ISO 26262 / 21448 SOTIF 对自适应系统的边界——这是白空间能否成立的前提，也可能是<b>最大约束</b>。</li>
-      <li><b>白空间竞速</b>：东软 NeuSAR、AutoCore、SONATUS 等车用 OS 厂商是否已在做"AI 语义权力平面"？持续跟踪 2026-09 AI 定义汽车论坛与佐思报告，确认交叉靶点未被抢先定义。</li>
-      <li><b>2127 定位辨析</b>：harness 偏工程架构还是基础技术？建议立项表述为"面向安全攸关系统的自进化系统架构基础研究"，上接控制论 / 形式化验证，下接工程。</li>
-      <li><b>承袭自 DeepSeek Harness 的两大张力</b>：① 自指接口 ≠ 自进化能力（缺 Verification Gate 易"创可贴式退化"）；② 插件开放度 vs 生产治理成本（权限隔离 / 供应链安全 / 依赖冲突）。</li>
-      <li><b>综述遗留</b>：六层里长安前瞻院最该卡位哪层？NSP 世界模型与具身量产哪个更接近"100 年后基础技术"苗头？</li>
-    </ul>
-  </div>
+<section>
+  <h2><span class="no">06</span>扫描范围与文件来源</h2>
+  <div class="sec-sub">全量递归扫描，未按文件名筛选，未遗漏无 summary 的记录</div>
+  <ul class="src-list">
+    <li>扫描根目录：D:\个人知识库\daily\；日期区间：2026-08-24 ～ 2026-08-30（共 7 个日期目录，递归查找全部 *.md）</li>
+    <li>08-24 / 08-26 / 08-28 / 08-29 / 08-30：无任何 Markdown 文件</li>
+    <li>daily/2026-08-25/具身与Agent的Token终局_智力与责任边界差异化.md</li>
+    <li>daily/2026-08-27/AI_Infra全景图_九层四横切框架.md</li>
+    <li>daily/2026-08-27/ROSS_Harness安全治理五层实践.md</li>
+    <li>纵向串联引用（本周之前）：2026-08-21 白空间判断 / 2026-08-21 ROSS 创立报道 / 2026-08-23 Level1Techs 本地 LLM</li>
+  </ul>
+</section>
 
-  <h2>五、源文件清单（实际纳入，非仅 summary）</h2>
-  <div class="src">2026-08-17/DeepSeek_Harness_设计哲学与Agent基础设施演进_summary.md</div>
-  <div class="src">2026-08-20/具身智能赛道周期与2026_2028窗口期研判_summary.md</div>
-  <div class="src">2026-08-21/2127_汽车自进化harness架构_白空间判断.md</div>
-  <div class="src">2026-08-21/人工智能前沿技术与迭代趋势_综合记录.md</div>
+<footer>
+  本页由定时任务自动生成 · 只读知识库，未修改任何原始文件 · 生成时间 2026-08-31<br>
+  页面：knowledge-review-weekly · 部署：GitHub Pages
+</footer>
 
-  <div class="footer">
-    本报告由定时任务自动聚合生成，未修改知识库原始文件，亦未写回知识库。内容按主题聚合，保留用户原创判断与认知变化，非 AI 泛化摘要。
-  </div>
 </div>
 </body>
 </html>
