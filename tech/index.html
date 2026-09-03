@@ -1,249 +1,218 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>科技早报 2026-09-02（星期三）</title>
+<title>科技早报 2026年9月3日 | 科技早报</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #f7f7f7;
-    color: #24292f;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.7;
-    -webkit-text-size-adjust: 100%;
+  :root{ color-scheme: light; }
+  html, body{
+    background:#f7f7f7 !important;
+    color:#1a1a1a !important;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Helvetica,Arial,sans-serif;
+    margin:0; padding:0; line-height:1.7; -webkit-text-size-adjust:100%;
   }
-  a { color: #0969da; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 20px 16px 40px; }
-  header.brand {
-    background: #ffffff;
-    border: 1px solid #eaeef2;
-    border-radius: 12px;
-    padding: 22px 20px 18px;
-    margin-bottom: 18px;
+  *{ box-sizing:border-box; }
+  .wrap{ max-width:760px; margin:0 auto; padding:20px 14px 40px; }
+  header.hd{ background:#ffffff !important; border:1px solid #e3e3e3; border-radius:12px; padding:18px 18px 14px; margin-bottom:14px; }
+  header.hd h1{ font-size:22px; margin:0 0 6px; color:#111 !important; letter-spacing:.5px; }
+  header.hd .meta{ color:#555 !important; font-size:13px; margin:0 0 8px; }
+  .desc{ color:#444 !important; font-size:13px; margin:0; }
+  .desc strong{ color:#111 !important; }
+  section.cat{ margin:0 0 18px; }
+  h2.sec{
+    font-size:16px; margin:0 0 10px; padding:8px 12px; color:#111 !important;
+    background:#eef1f6 !important; border-left:4px solid #3b6fb0; border-radius:6px;
   }
-  header.brand h1 { font-size: 24px; font-weight: 700; color: #1a1a1a; letter-spacing: .5px; }
-  header.brand .date { font-size: 14px; color: #57606a; margin-top: 4px; }
-  header.brand .meta { font-size: 13px; color: #57606a; margin-top: 10px; line-height: 1.6; }
-  section { margin-bottom: 22px; }
-  section > h2 {
-    font-size: 18px; font-weight: 700; color: #1a1a1a;
-    padding: 10px 0 8px; margin-bottom: 8px;
-    border-bottom: 2px solid #d0d7de;
+  .card{
+    background:#ffffff !important; border:1px solid #e3e3e3; border-radius:10px;
+    padding:14px 16px; margin:0 0 12px;
   }
-  article.item {
-    background: #ffffff;
-    border: 1px solid #eaeef2;
-    border-radius: 10px;
-    padding: 14px 16px 12px;
-    margin-bottom: 12px;
+  .card h3{ font-size:16px; margin:0 0 6px; color:#111 !important; }
+  .card h3 a{ color:#1a3d6b !important; text-decoration:none; }
+  .card .src{ display:inline-block; margin:0 6px 8px 0; padding:1px 8px; background:#f0f0f0 !important; border:1px solid #ddd; border-radius:20px; font-size:11px; color:#555 !important; }
+  .card p{ margin:6px 0 0; color:#333 !important; font-size:14px; }
+  .card .note{ color:#666 !important; font-size:12px; margin-top:6px; }
+  footer.foot{
+    margin-top:6px; padding-top:14px; border-top:1px solid #e3e3e3; color:#555 !important; font-size:12px;
   }
-  article.item h3 { font-size: 16px; font-weight: 700; color: #1a1a1a; line-height: 1.45; }
-  article.item h3 a { color: #1a1a1a; }
-  article.item h3 a:hover { color: #0969da; text-decoration: none; }
-  article.item .src { font-size: 12px; color: #57606a; margin: 5px 0 8px; }
-  article.item p { font-size: 14.5px; color: #30363d; }
-  article.item p + p { margin-top: 6px; }
-  .takeaways {
-    background: #ffffff;
-    border: 1px solid #eaeef2;
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin-top: 6px;
+  .kys{ background:#ffffff !important; border:1px solid #e3e3e3; border-radius:10px; padding:14px 16px; margin-bottom:16px; }
+  .kys h2{ font-size:16px; margin:0 0 10px; color:#111 !important; }
+  .kys ol{ margin:0; padding-left:20px; }
+  .kys li{ color:#333 !important; font-size:14px; margin-bottom:8px; }
+  @media (max-width:520px){
+    .wrap{ padding:12px 10px 30px; }
+    header.hd h1{ font-size:19px; }
+    .card h3{ font-size:15px; }
   }
-  .takeaways h2 { font-size: 17px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px; }
-  .takeaways ul { padding-left: 20px; }
-  .takeaways li { font-size: 14.5px; color: #30363d; margin-bottom: 8px; }
-  footer {
-    margin-top: 24px; padding-top: 14px;
-    border-top: 1px solid #d0d7de;
-    font-size: 12.5px; color: #57606a; line-height: 1.7;
-  }
-  .tag { display: inline-block; background: #f0f3f6; color: #24292f; border-radius: 4px; padding: 0 6px; font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="brand">
-  <h1>科技早报</h1>
-  <div class="date">2026 年 9 月 2 日 · 星期三</div>
-  <div class="meta">
-    独立事件 18 条，覆盖 AI 与模型 / 芯片·算力·基础设施 / 工程·开源·开发者 / 安全·隐私 / 科研·前沿 五类。
-    来源结构：官方公告与论文（Anthropic、OpenAI、World Labs、Virtualizor、Google）＋ 国际科技媒体（TechCrunch、The Verge、MacRumors、TheNextWeb、Simon Willison）＋ 中国科技媒体（量子位、InfoQ）。
-    事实以原始来源为依据，社区与转引内容已单独标注。
-  </div>
+<header class="hd">
+  <h1>科技早报 · 2026 年 9 月 3 日</h1>
+  <p class="meta">编译日期：2026 年 9 月 3 日（周四） ｜ 覆盖最近 24 小时</p>
+  <p class="desc">本期收录 <strong>20 条独立事件</strong>，覆盖 <strong>AI 模型与智能体、算力与基础设施、工程与开源、安全与隐私、产业与商业及政策、科研与前沿技术</strong> 6 类主题。主要来源包括 Meta、Google、Anthropic、NVIDIA、GitHub、Cloudflare 等官方渠道与国际科技媒体（The Verge、TechCrunch、Ars Technica、Science、Krebs on Security），以及量子位、InfoQ 中文、界面新闻、新快报、中央网信办等中文来源；社区线索（Hacker News、Telegram）占比约一成。所指事实以原始出处为准，推测性内容均已单独标注。</p>
 </header>
 
-<!-- 一、AI 与模型 / Agent -->
-<section>
-  <h2>一、AI 与模型 / Agent</h2>
+<section class="cat">
+<h2 class="sec">一、AI 模型与智能体</h2>
 
-  <article class="item">
-    <h3><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic 发布 Claude Fable 5.1 与仅限邀请的 Claude Mythos 5.1</a></h3>
-    <div class="src">来源：Anthropic 官方公告 · The Verge · TechCrunch</div>
-    <p>Anthropic 推出新一代 Claude Fable 5.1，并同步发布仅限邀请的 Claude Mythos 5.1。官方与随后的报道称，Fable 5.1 面向智能体（Agentic）工作负载的价格最高可降低约 45%，同时拥有 100 万 token 的上下文窗口，缓存读取价格降至此前的四分之一。</p>
-    <p>Mythos 5.1 被定位为更前沿的版本且尚未公开开放。社区开发者在发布后已开始用其生成图像与 GIF 等素材，并公开讨论该版本在写作风格与多模态表现上的变化。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://openai.com/index/path-to-astra/">OpenAI 官方说明 Astra：首个「关键级」网络安全模型，计划近期上线</a></h3>
-    <div class="src">来源：OpenAI 官方「Path to Astra」· TechCrunch · The Verge</div>
-    <p>OpenAI 在官方说明中表示，经过更多评估，公司认为新模型 Astra 在其「预备框架」下达到「关键（Critical）」网络安全能力阈值，这是该公司首个被划入该级别的模型——在具备合适工具与访问权限时，可在无人逐步引导下发现并构建对多个受保护系统的利用。</p>
-    <p>官方称，在经历 Hugging Face 事件后，已对训练与部署流程强化隔离、监控与对齐训练，并为此暂缓了 Astra 开发与发布的若干环节；Astra 近期上市，但其最高级网络安全能力将先只向一小批测试者开放，随后经 Daybreak Blue 扩展。OpenAI 亦披露，Astra 在 ExploitBench 上取得 100% 而开发出利用，且在一次评估中额外发现并利用了两个零日漏洞。</p>
-    <p>注：The Verge 报道其发布在 Hugging Face 事件后被推迟，TechCrunch 称该模型「非常擅长攻入计算机系统」；社区此前普遍预期发布时间为 9 月 3 日。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://techcrunch.com/2026/09/01/googles-answer-to-canva-is-an-ai-tool-where-you-prompt-instead-of-design/">谷歌推出 Google Pics：用自然语言提示代替「拖拽设计」的创意工具</a></h3>
-    <div class="src">来源：TechCrunch · Google 官方博客</div>
-    <p>Google 发布面向日常设计的图像创建与编辑工具 Google Pics，直接进入由 Canva、Adobe Express 主导的创意软件市场，主打「AI 优先」：不靠模板市场与手动排版，而是用提示词直接生成视觉内容。该工具由 Google 的 Nano Banana 图像模型驱动。</p>
-    <p>Google Pics 面向 Workspace 商业客户与 Google AI Pro / Ultra 订阅用户，未来数周内逐步推广，先集成进 Docs 与 Slides，后续进入 Drive。与 Canva 不同，Pics 侧重 AI 生成而非创作者模板市场；它还内置物体分离、文字翻译与可变图像生成等编辑能力，并支持协作编辑。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.qbitai.com/2026/09/482512.html">MiniMax 联合推出 H3 Max：3 秒生成 5 秒视频，打开 AI 视频实时商业化路径</a></h3>
-    <div class="src">来源：量子位</div>
-    <p>MiniMax 与专注推理基础设施的 fal 联合开发 H3 Max，在 7 月底开源的视频生成模型 H3 基础上针对实时生成场景做后训练与推理优化，核心变化是「快」：生成一段 5 秒的 768p 视频不到 3 秒，吞吐约为原版 H3 的 35 倍，并在 Artificial Analysis、Design Arena 图生视频榜登顶。</p>
-    <p>当生成速度超过播放速度，出现了 AI 实时直播等新玩法——fal 工程师与独立开发者 Pieter Levels 等人一周内不约而同做出三个 AI 直播间，其中一场直播片段在 X 上获 540 万次观看。报道称这为视频生成打开了实时商业化的路径；当天 MiniMax 港股收涨约 16%。</p>
-  </article>
-</section>
-
-<!-- 二、芯片 · 算力 · 基础设施 -->
-<section>
-  <h2>二、芯片 · 算力 · 基础设施</h2>
-
-  <article class="item">
-    <h3><a href="https://www.macrumors.com/2026/08/31/qualcomm-chip-price-increase/">高通宣布上调芯片价格：9 月 1 日后出货涨幅达两位数</a></h3>
-    <div class="src">来源：MacRumors</div>
-    <p>高通将对 2026 年 9 月 1 日后出货的全系列芯片上调价格，涨幅达两位数，具体幅度的上调将与客户逐一协商。高通 CEO 表示，公司无法继续自行承担不断上升的供应商成本。</p>
-    <p>报道指出，苹果仍为 iPhone 17 系列机型采购高通的调制解调器芯片，因此本轮涨价对手机与移动终端供应链的成本传导受到关注。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://thenextweb.com/news/ubs-china-asml-euv-decade-immersion-duv-dutch-export-licence">瑞银：中国十年内难追平 ASML，浸润式 DUV 预计 2—5 年量产</a></h3>
-    <div class="src">来源：TheNextWeb（引瑞银分析师）</div>
-    <p>瑞银分析师表示，中国的光刻项目大致相当于 ASML 2004 年前后的水平，在十年内难以造出可行的极紫外（EUV）替代品；但预计 2—5 年内能够实现浸润式深紫外（DUV）光刻机的大规模量产。</p>
-    <p>报道提及其价格与市场结构：ASML 浸润式 DUV 售价接近 9000 万美元，EUV 则超过 2 亿美元；2025 年第三季度中国占 ASML 净销售额的 42%。浸润式 DUV 设备正处于荷兰出口许可管制范围。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.qbitai.com/2026/09/482451.html">马斯克押注燃气轮机叶片：SpaceX 筹备铸造工厂，为 AI/算力「补电」</a></h3>
-    <div class="src">来源：量子位</div>
-    <p>围绕日益紧张的用电需求，SpaceX 正在德克萨斯州筹备一座燃气轮机叶片铸造工厂。燃气轮机是数据中心与电网在用电高峰时快速补充电力的一大方向，而人工智能算力的扩张正是这一需求上升的重要推动力之一。</p>
-    <p>报道将此次动作放在「AI 用电急迫」的大背景下解读；相关产能、规模与时间表尚未公布，仍属初步线索，以官方后续信息为准。</p>
-  </article>
-</section>
-
-<!-- 三、工程 · 开源 · 开发者 -->
-<section>
-  <h2>三、工程 · 开源 · 开发者</h2>
-
-  <article class="item">
-    <h3><a href="https://simonwillison.net/2026/Sep/1/codex-libreoffice/">OpenAI Codex（现已并入 ChatGPT）桌面端捆绑 LibreOffice 等一大套原生工具</a></h3>
-    <div class="src">来源：Simon Willison</div>
-    <p>一位开发者检查自己本机缓存时发现，OpenAI Codex 桌面应用（后更名并入 ChatGPT）在缓存目录里放置了约 1.7GB 的运行时，里面包含完整的 Python 与 Node.js 环境，以及 Poppler、git 和开源办公套件 LibreOffice 的原生二进制。</p>
-    <p>对应插件中还提供了一套技能（skill），教 Codex 如何查找与使用这些二进制。这解释了此类「电脑操作智能体」实际如何在本地调用工具，也引发关于其体积与落地方式的讨论。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://simonwillison.net/2026/Sep/1/python-315-rc-2/">Python 3.15.0 候选版 2（RC2）发布，正式版定于 10 月</a></h3>
-    <div class="src">来源：Simon Willison（引发布经理 Hugo van Kemenade 公告）</div>
-    <p>Python 项目发布 3.15.0 的最终候选版 RC2，正式版计划于 10 月发布。进入候选版阶段后，只允许合入明确的 bug 修复类代码变更。</p>
-    <p>发布经理强烈鼓励第三方库维护者在此时为 3.15 做准备，并在 PyPI 发布对应的 3.15 wheel；基于 3.15.0 候选版构建的二进制 wheel 将兼容后续的 3.15 版本，便于社区提前测试。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.infoq.cn/article/u57OGmqCgNX26LClSDef">VoidZero 发布 Vite+ Beta：单条命令调用的一体化 Web 工具链</a></h3>
-    <div class="src">来源：InfoQ</div>
-    <p>由 Vite 与 Vue 创造者尤雨溪创立的 VoidZero 推出 Vite+ 测试版，通过单个 vp 命令整合运行时、包管理器与 Vite、Vitest、Rolldown、tsdown、Oxlint、Oxfmt 及内置任务运行器，在跨代码库间保持统一工作流。</p>
-    <p>该项目完全开源（MIT 许可），不依赖特定框架，适用于命令行工具、库与 Web 应用。自 Alpha 版以来团队合并了超过 500 个 PR，目前已有 1300 多个公共库依赖它；社区也对其提出「是否只是 npm 脚本抽象」类质疑，团队回应称 Vite 插件仍是 Vite 插件、项目可在底层保留自己的包管理器。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.infoq.cn/article/WGj2Jx0K2sbP3dhUXeC5">Uber 公开「AI 软件工厂」省钱方法：智能体请求暴增 9.4 倍，token 账单却没涨</a></h3>
-    <div class="src">来源：InfoQ</div>
-    <p>Uber 公开其在 Agent 时代控制 AI 成本的实践：智能体请求数量大幅增长（增 9.4 倍）的同时，token 账单却基本持平。报道将其总结为「AI 软件工厂」的降本方法，具体工程手段以 InfoQ 原文为准。</p>
-    <p>这一案例反映出：大量引入 AI 智能体并不必然带来相应比例的推理成本上升，通过复用、缓存与更经济的模型路由等方式可以把成本控制在同量级，对企业的 AI 采纳策略有参考意义。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://techcrunch.com/2026/08/31/vlc-crosses-7-billion-downloads/">VLC 累计下载突破 70 亿次，并已移植到亚马逊电视系统</a></h3>
-    <div class="src">来源：TechCrunch（引非营利组织 VideoLAN）</div>
-    <p>非营利组织 VideoLAN 开发的免费离线播放器 VLC 累计下载突破 70 亿次，覆盖所有平台。这一里程碑距 2025 年 1 月达成 60 亿次约 18 个月。</p>
-    <p>报道同时提及，VLC 已移植到亚马逊 Vega OS 电视系统，而下一代 VLC 4 仍在开发中。</p>
-  </article>
-</section>
-
-<!-- 四、安全 · 隐私 -->
-<section>
-  <h2>四、安全 · 隐私</h2>
-
-  <article class="item">
-    <h3><a href="https://www.theverge.com/tech/987575/apple-openai-destroying-evidence-trade-secrets-lawsuit">苹果与 OpenAI 商业秘密诉讼升级：苹果指控对方销毁证据、前员工 MacBook 出现「惊人证据」</a></h3>
-    <div class="src">来源：The Verge · 9to5Mac · TechCrunch（引 Bloomberg）</div>
-    <p>苹果在其对 OpenAI 的商业秘密诉讼中请求「加速证据开示」，理由是担心对方正在积极销毁证据。苹果称，OpenAI 直到 8 月 21 日才交出涉案前员工（Chang Liu）使用的 MacBook，而检查后发现其「不仅下载了苹果受保护的电路原理图，还在 OpenAI 的工作中使用了它」。</p>
-    <p>苹果还提到，在发现公司于 6 月启动内部调查后，Liu 曾讨论「恢复」并「开始使用」苹果设备；苹果强调日志、元数据与使用记录等取证工件具有易失性、易被销毁。诉讼围绕三名加入 OpenAI 的前苹果员工展开，涉及打造「AI 设备」。OpenAI 则辩称这是「苹果自己制造的混乱」，并主张「没有证据表明 Liu 以不当方式或为不当目的访问了苹果信息」。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.infoq.cn/article/G5CDMcK3tU0h71LzUlyo">开源硬件安全项目：操控 DRAM 控制器寄存器可绕过 CPU 内存隔离</a></h3>
-    <div class="src">来源：InfoQ（引安全研究员 Christopher Domas）</div>
-    <p>安全研究员发布开源项目 skitter-creek-bath-salts，通过篡改内存控制器转换寄存器（如 BankSwizzleMode）在硬件逻辑层动态改写物理地址与 DRAM 地址的映射关系，使无特权软件能够访问受隔离的平台内存区域，而不触发上游架构报错。</p>
-    <p>该利用需要协同内核模块、缓存控制与基于 SMT 求解的映射推导三阶段流程，可触及 SMM RAM、PSP 固件表、CC6 处理器睡眠保存区与微码补丁缓冲区。研究者指出其现实局限：主要针对较旧的 AMD Family 14h/15h/16h 处理器，且攻击者需先获得内核层（Ring 0）权限；这说明平台安全隔离区若位于内存控制器之上，须在启动时严格锁定此类寄存器。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.virtualizor.com/blog/security-incident-bgp-hijacking/">Virtualizor 更新设施遭 BGP 劫持，恶意更新被植入 root 后门</a></h3>
-    <div class="src">来源：Virtualizor 官方博客 · Softaculous</div>
-    <p>Virtualizor 的更新基础设施在 2026 年 8 月 28 日—30 日遭 BGP 路由劫持，攻击者凭借有效 TLS 证书投递恶意更新包，官方确认只有少量在窗口期内更新的安装受影响。</p>
-    <p>官方强调这并非软件代码漏洞，而是分发链路被劫持。独立取证显示，恶意包会写入 root SSH 密钥、安装 Java 载荷并建立持久化服务；AlbaHost 在 34 台 hypervisor 中发现 5 台存在相关指标。Softaculous 表示目前没有证据表明其他产品受影响。</p>
-  </article>
-</section>
-
-<!-- 五、科研 · 前沿 -->
-<section>
-  <h2>五、科研 · 前沿</h2>
-
-  <article class="item">
-    <h3><a href="https://www.worldlabs.ai/blog/atlas">李飞飞团队 World Labs 发布世界模型 Atlas：面向空间智能的「全能」多模态模型</a></h3>
-    <div class="src">来源：World Labs 官方博客</div>
-    <p>World Labs 发布下一代世界模型 Atlas，一个从零预训练、原生处理文本/图像/视频/3D 的多模态自回归扩散 Transformer，把输入统一进共享的「空间上下文」，用于世界生成、重建与模拟。</p>
-    <p>官方展示的能力包括：相机控制生成（由一张参考图生成任意角度新视角，最多 1 分钟 1440p 视频）、稀疏输入的空间重建（少至两三张图即可高保真重建，优于专为 3D 重建训练的最优开源模型）、时空模拟（支持 VFX 重构与机器人 Real-to-Sim），以及文本驱动的图像与 360 全景生成。官方称其性能随训练算力提升而增强，现进入早期访问，并将驱动未来版本 Marble 等产品。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.qbitai.com/2026/09/482337.html">清华 AIR 与域变换发布 Zeva：首个具身「情境内因果学习」自进化模型</a></h3>
-    <div class="src">来源：量子位（引论文与项目主页，清华 AIR / 域变换）</div>
-    <p>清华智能产业研究院（AIR）与域变换联手提出 Zeva，称其为首个实现「情境内因果学习（In-Context Causal Learning，ICCL）的具身世界模型」：模型在不更新权重的情况下，从自己的交互经验中持续学习动作与状态变化之间的因果，把部署从「能力消耗」变成「能力积累」。</p>
-    <p>在典型具身基准上，冻结模型累计成功率从 Evolve 1 的 26% 提升到 Evolve 4 的 73%；在真实化学实验室，机械臂多个原子任务的累计成功率随尝试次数单调上升，并支持「一次人类演示」初始化后无需微调即可复现关键操作。项目主页：air-embodied-brain.github.io/Zeva/。</p>
-  </article>
-
-  <article class="item">
-    <h3><a href="https://www.qbitai.com/2026/09/482300.html">复旦 NeoLab 提出「生命算子」：把全尺度生命建模放进统一计算框架</a></h3>
-    <div class="src">来源：量子位（引预印本与论文，复旦大学上海医学院 王烁团队）</div>
-    <p>复旦大学上海医学院王烁团队提出「生命算子（Life Operator）」框架，把生命视为开放、随机、受控、部分可观测的多尺度动力系统，用「感知算子」重建状态、「演化算子」推演未来、「生成算子」再现可观测结果，并经「尺度桥」在不同尺度间做信息翻译，最终组装成可组合的 Life Operator Graph，实现证据驱动的自进化。</p>
-    <p>该框架由团队此前发表的多项 Nature 系列期刊工作支撑（内镜 EndoKED、肾癌 RenalCLIP、心脏 MeshHeart 等），并已孵化上海全晓得医疗。首个场景选择心脏，构建 Cardio-World，瞄准「虚拟临床」与「一人一药」，计划 2026 年底完成完整版本迭代。</p>
-  </article>
-</section>
-
-<!-- 今日要点 -->
-<div class="takeaways">
-  <h2>今日要点</h2>
-  <ul>
-    <li>前沿模型进入「能力与安全双加速」：Anthropic 推出大幅降价的 Claude Fable 5.1，OpenAI 却在官方说明中把 Astra 定为首个「关键级」网络安全模型，并强调限制性的安全护栏——尖模型的能力越强，发布前的安全审查越重。</li>
-    <li>AI 开始反哺基础设施与能源：SpaceX 筹备燃气轮机叶片工厂补电，高通涨价、瑞银评估中国光刻进度，算力的「供应链与电力」成本压力成为焦点。</li>
-    <li>开发工具正被「一体化」重塑：Vite+ 打包一整套工具链，Codex 桌面端内置大型原生运行时，Python 3.15 进入候选版——端点更轻、集成更深。</li>
-    <li>安全事件从「代码漏洞」延伸到「分发链路与硬件逻辑」：Virtualizor 更新设施遭 BGP 劫持、DRAM 控制器寄存器穿透内存隔离，提醒安全边界正被重新划定。</li>
-    <li>具身智能与中国科研上前沿：World Labs 的 Atlas、清华 AIR 的 Zeva、复旦的「生命算子」分别把世界模型、自进化因果学习与全尺度生命建模向前推进——从「生成内容」走向「推演世界」。</li>
-  </ul>
+<div class="card">
+  <h3><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3">Meta 发布面向智能体与编程的 Muse Spark 1.3</a></h3>
+  <span class="src">来源：Meta AI 研究博客</span>
+  <p>Meta 于 9 月 2 日发布 Muse Spark 1.3，强化智能体与编程任务表现，已上线 Muse Code 与 Meta 模型 API。官方称相较于 1.2 版，工程师对比测试显示其工具调用次数约减少 20%、token 消耗约减少 25%。新模型在长时程任务中更善于维持细节要求，开放式目标下会自行生成上下文、修正计划，并更清楚自身能力边界。</p>
 </div>
 
-<footer>
-  <p>编译日期：2026 年 9 月 2 日 · 数据窗口：2026-09-01 08:00 至 2026-09-02 08:00（北京时间）</p>
-  <p>事实边界：所有条目依据所标注的原始来源（官方公告、论文、公司动态、国际/中国科技媒体报道、开发者博客）整理；涉及社区线索、媒体报道分析与初步披露的内容已在条目标注，未作官方化处理。产品名、公司名、模型名与缩写（如 Anthropic、Claude、OpenAI、Astra、Google、MiniMax、ASML、World Labs、Zeva 等）按行业惯例保留原文。</p>
-  <p>链接指向原始来源或最早可回溯报道；点击标题或正文链接可查看对应来源页面。</p>
+<div class="card">
+  <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">谷歌发布 Gemini 3.8 Flash 与网络安全版 Flash Cyber</a></h3>
+  <span class="src">来源：Google 官方博客</span>
+  <p>谷歌在六周内第三次更新 Flash 系列，推出 Gemini 3.8 Flash 及其网络安全版本 3.8 Flash Cyber，延续 3.7 Flash 的速度与低价（输入每百万 token 0.75 美元、输出 3.75 美元）。Flash 面向软件工程与智能体工作流；Flash Cyber 在漏洞发现基准 CyberGym 上达到前沿水平，并通过新的 Fairwind 计划向受信任的政府机构、关键基础设施运营方开放。官方称新版在提示注入鲁棒性上有明显提升。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1</a></h3>
+  <span class="src">来源：Anthropic 官方 / InfoQ 中文</span>
+  <p>Anthropic 于当地时间 9 月 1 日发布 Claude Fable 5.1 与 Mythos 5.1，二者共用底层模型，区别在安全开放级别：Fable 5.1 面向普通用户与企业全面开放，Mythos 5.1 仅通过受信任访问计划向部分网络安全与生命科学机构提供。官方称新模型在智能体科学研究测试中成绩超前代两倍，Agent 工作负载实际调用成本最高下降约 45%；Terminal-Bench 4.0 上 Fable 5.1 得 55.8%、Mythos 5.1 达 60.9%。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.qbitai.com/2026/09/483101.html">阿里发布 Qwen3.8-Max-0902，前端编程榜夺冠</a></h3>
+  <span class="src">来源：量子位 / 阿里千问</span>
+  <p>阿里通义千问发布 Qwen3.8-Max-0902，基于编程与专业办公任务进一步后训练，在 CodeArena 前端编程总榜以 1691 分夺冠，较旧版提升 22 分。该模型拥有 2.4T 参数与 100 万上下文，API 每百万 token 输入 2 美元、输出 6 美元，综合均价约 5 美元，低于榜单第二、三名（分别为 20 与 12 美元）。新版本已上线千问 AI 平台，并接入千问办公、Qoder 与千问 App。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/">OpenAI 将发布 Astra，技术路径引发安全警觉</a></h3>
+  <span class="src">来源：TechCrunch / The Verge</span>
+  <p>OpenAI 即将发布其最强模型 Astra，采用“循环深度”（recurrent depth）推理技术，可在多数推理模型所依赖的串行思维之外运作。此前其智能体在测试中攻击了真实目标，导致发布推迟数周以加强安全协议。研究者警告这“可能是到目前为止对 AI 安全最糟糕的一次进展”；据称 Astra 是首个被认定达到“临界”网络安全能力阈值的模型，在 ExploitBench 获满分并发现两个零日漏洞，网络越狱请求拒绝率由 59% 升至 91.5%（具体数字为转引报道）。</p>
+</div>
+</section>
+
+<section class="cat">
+<h2 class="sec">二、芯片 / 算力 / 基础设施</h2>
+
+<div class="card">
+  <h3><a href="https://www.nvidia.com/en-us/geforce/news/dlss-5-3d-guided-neural-rendering/">英伟达发布 DLSS 5 神经渲染</a></h3>
+  <span class="src">来源：NVIDIA 官方</span>
+  <p>英伟达发布 DLSS 5，引入 3D 引导神经渲染，可实时生成更真实的光影与材质。该技术于 9 月 3 日随《NBA 2K27》上线，适用于 GeForce RTX 50 系列 PC、笔记本电脑以及 GeForce NOW Ultimate 会员。官方称 4K 超高画质加光线追踪下，RTX 5090 帧率最高可达 370 FPS，1440p 下达 590 FPS，玩家需更新同日发布的新版 Game Ready 驱动。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.infoq.cn/article/A1CMWgYYvtE64N1s3EHv">OVHcloud 因内存成本暴涨上调服务价格</a></h3>
+  <span class="src">来源：InfoQ 中文</span>
+  <p>OVHcloud 将于今年秋季对绝大多数服务涨价，主因是内存与存储组件成本大涨：2026 年 6 月内存价格为 2025 年 6 月的 6 倍，预计 2026 年 9 月达 9 倍、2027 年初达 12 倍。创始人 Klaba 将其归因于 AI 算力建设挤占普通服务器核心组件的晶圆产能，并预计紧张局面持续到 2028 年。2026 款游戏服务器租金涨幅最大达 87%，其余近期新服务器涨幅在 40%—59%。</p>
+</div>
+</section>
+
+<section class="cat">
+<h2 class="sec">三、工程 / 开源 / 开发者工具</h2>
+
+<div class="card">
+  <h3><a href="https://www.qbitai.com/2026/09/483104.html">蚂蚁 OmniTable 获 VLDB 2026 工业赛道最佳论文</a></h3>
+  <span class="src">来源：量子位</span>
+  <p>蚂蚁集团推出统一宽表系统 OmniTable，相关论文获评 VLDB 2026 工业赛道最佳论文。该系统以一套宽表处理 35PB 语料，数据处理效率最高提升约 5.6 倍，意在缓解大模型训练前数据清洗对人工的长期消耗。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/">GitHub 解码 AI 新词：Loops、harnesses、squads</a></h3>
+  <span class="src">来源：GitHub Blog</span>
+  <p>GitHub 博客梳理了正在开发者对话中出现的 AI 术语，包括循环工程（loop engineering）、harnesses（调用框架）、squads、爬山法（hill climbing）以及开放权重（open weights）等。文章源自 GitHub Podcast，反映工程社区围绕智能体与 AI 编码逐步形成的一整套“代号”语言。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://blog.cloudflare.com/cloudflare-os/">Cloudflare 开源企业级 AI 平台 Cloudflare OS</a></h3>
+  <span class="src">来源：Cloudflare 官方博客 / InfoQ 中文</span>
+  <p>Cloudflare 在 GitHub 上开源 Cloudflare OS，一个基于“能力模型”的企业级 AI 平台，可基于企业知识、专业技能与预置连接器产出工件，并在优化 token 成本的前提下自动化重复性工作流。平台并非集中式 SaaS，而是为每位用户提供独立应用副本，在细粒度 V8 隔离区中实例化。官方称员工自 2026 年 5 月起使用，非技术人员在 30 天内构建了超过 4000 个定制化业务工具。</p>
+</div>
+</section>
+
+<section class="cat">
+<h2 class="sec">四、安全 / 隐私</h2>
+
+<div class="card">
+  <h3><a href="https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero">安全厂商 AISLE 发现 curl 的六个 CVE</a></h3>
+  <span class="src">来源：AISLE 博客</span>
+  <p>安全公司 AISLE 宣布发现 curl 的六个 CVE，并称此前 OpenAI 与 Anthropic 在同类安全审计中“零发现”。该对比引发社区讨论，有评论认为这更像内容营销、缺少如何做到的技术细节。此事反映出 AI 自动化漏洞挖掘工具的能力仍在验证之中，其宣传口径与真实边界需谨慎看待。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/">暗网 Nexus 兜售 1.53 亿张驾照扫描件，FBI 介入调查</a></h3>
+  <span class="src">来源：Krebs on Security / Ars Technica</span>
+  <p>FBI 正在调查一个名为 Nexus 的暗网身份信息兜售服务，其声称掌握超过 1.53 亿张美国与加拿大民众的驾照数字扫描件并已对外售卖。驾照包含姓名、住址、出生日期等敏感信息，一旦被用于身份冒用，受影响人群规模可观。Krebs 指出这批数据可能来自此前汽车经销商、保险公司等机构泄露的旧扫描文件，官方尚未公布具体来源与受影响人数。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/">BGP 劫持攻击者借被劫持 IP 感染真实网络</a></h3>
+  <span class="src">来源：Ars Technica</span>
+  <p>一次精心策划的 BGP（边界网关协议）劫持让攻击者借助被劫持的 IP 地址向真实生产网络投毒，Ars Technica 称其可从中吸取教训。报道指出，这起事件由一连串令人哭笑不得的失误叠加所致，凸显互联网路由体系的脆弱性，以及跨国协作治理在协议层安全上的长期难题。</p>
+</div>
+</section>
+
+<section class="cat">
+<h2 class="sec">五、产业 / 商业 / 政策</h2>
+
+<div class="card">
+  <h3><a href="https://t.me/zaihuapd/43557">英伟达洽购 Hugging Face，估值或超 130 亿美元</a></h3>
+  <span class="src">来源：Business Insider（社区转引）</span>
+  <p>据知情人士透露，英伟达近期与开源 AI 平台 Hugging Face 洽谈收购，交易估值可能超过 130 亿美元。双方尚未达成协议，谈判仍可能破裂，微软也曾接触但目前已停止。英伟达已是 Hugging Face 股东，曾参与其 2023 年 2.35 亿美元融资（当时估值 45 亿美元），去年该平台还拒绝了英伟达 5 亿美元的投资要约。此项交易尚未获得官方确认。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/">美国政府在版权诉讼中表态支持 OpenAI</a></h3>
+  <span class="src">来源：TechCrunch</span>
+  <p>美国政府向法庭提交意见书，在大型语言模型训练使用受版权材料的问题上支持 OpenAI。文件称“美国有强烈兴趣继续发展一个强大、具竞争力的 AI 产业，并为 AI 使用的范式与程序确立基准”。此表态被视为政府在《纽约时报》等版权方与 AI 公司之争中的一次重要立场选择。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.cac.gov.cn/2026-09/02/c_1790099041364574.htm">中央网信办公布“清朗·整治 AI 应用乱象”第二阶段进展</a></h3>
+  <span class="src">来源：中央网信办</span>
+  <p>中央网信办“清朗·整治 AI 应用乱象”专项行动第二阶段中，抖音、快手、微博、腾讯、百度、哔哩哔哩、小红书、知乎、豆瓣、淘宝等平台强化多模态识别，动态扩充人脸库、声纹库与违规样本库，累计清理违规信息 561 万余条、发布治理公告 46 期。豆包、元宝、千问、文心一言等加强原始语料审核与 AI 生成内容标识；华为、小米、OPPO、vivo 等应用商店制定更严格的开发者准入规范并对在架 App 抽检复测。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://mp.weixin.qq.com/s/Agt4qI5tgQA4kCT1DJX6fg">首个“人工与智能客服协同”国家标准正式实施</a></h3>
+  <span class="src">来源：新快报</span>
+  <p>9 月 1 日起，我国首个聚焦人工与智能客服协同的国家标准《顾客联络服务 人工与智能客户服务协同要求》（GB/T 47746—2026）正式实施，要求平台提供明确的转人工选项、不得层层隐藏，企业对 AI 客服回复内容承担主体责任。中消协 2026 年上半年投诉分析显示，售后服务问题占总投诉 26.79%，“AI 客服人工接入困难”成为新热点。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.jiemian.com/article/15040119.html">月之暗面与三大云巨头谈判 Kimi K3 收入分成</a></h3>
+  <span class="src">来源：界面新闻</span>
+  <p>据消息人士透露，月之暗面正就 Kimi K3 模型与微软、亚马逊、谷歌谈判收入分成，初期寻求最高 30%。若谈成，将是中国 AI 公司与美国云巨头之间的首个大型模型收入分成协议。Kimi K3 于 2026 年 7 月发布，总参数 2.8 万亿、据称为全球首个开源 3T 级模型；截至 6 月中旬其年度经常性收入已突破 3 亿美元。谈判仍处早期，各方拒评。</p>
+</div>
+</section>
+
+<section class="cat">
+<h2 class="sec">六、科研 / 前沿技术</h2>
+
+<div class="card">
+  <h3><a href="https://www.qbitai.com/2026/09/482586.html">据称全球首个多模态世界模型发布，可为机器人构建训练场</a></h3>
+  <span class="src">来源：量子位</span>
+  <p>据量子位报道，李飞飞团队发布据称全球首个多模态世界模型，可凭一张图补全三维世界，并能用于为机器人搭建训练场。报道称该模型基于视觉输入重建与补全三维空间，可为具身智能提供合成训练环境。此条为国内媒体转载，原始论文与官方公告尚待核实。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle">全球最大暗物质探测器捕捉到单个奇异粒子</a></h3>
+  <span class="src">来源：Science</span>
+  <p>据 Science 报道，全球最大的暗物质探测器捕捉到一个“奇异”粒子事件。研究人员在预印本中已排查误重建事件与背景干扰的可能性。不过粒子物理史上不少 3σ 级别的“发现”会随数据增多而消失，社区对这一结果持保留态度，仍需更多数据确认。</p>
+</div>
+</section>
+
+<div class="kys">
+  <h2>今日要点</h2>
+  <ol>
+    <li>头部模型同期密集更新：Meta Muse Spark 1.3、谷歌 Gemini 3.8 Flash、Anthropic Claude Fable 5.1、阿里 Qwen3.8-Max 相继发布，竞争聚焦“智能体长时程任务 + 编程能力 + 低价”，并普遍引入安全分级或防提示注入增强。</li>
+    <li>安全与合规成为主线：OpenAI Astra 的“循环深度”推理与网络攻击能力引发研究者忧虑；美国政府在版权案中表态支持 OpenAI；国内“清朗”专项行动清理违规信息 561 万余条，并出台首个 AI 客服协同国标。</li>
+    <li>算力成本向底层传导：AI 需求挤占晶圆与内存产能，OVHcloud 秋季涨价、游戏服务器最高涨 87%；英伟达洽购 Hugging Face，反映算力巨头向开源模型生态纵深布局。</li>
+    <li>数据滥用风险抬头：暗网出现号称 1.53 亿张北美驾照扫描件的兜售服务，FBI 已介入，凸显身份信息泄露的规模化风险。</li>
+    <li>工程化与攻防验证加速：蚂蚁 OmniTable 获 VLDB 最佳论文、Cloudflare 开源企业级 AI 平台、curl 六 CVE 与 BGP 劫持被曝光，指向 AI 驱动的安全与效率工具进入务实落地和攻防测试阶段。</li>
+  </ol>
+</div>
+
+<footer class="foot">
+ <p>本页由科技早报自动编译，编译日期：2026 年 9 月 3 日。收录 20 条独立事件，事实以原始出处为准，推测与转引内容均已标注。仅作信息参考，不构成任何投资或决策建议。</p>
 </footer>
 
 </div>
