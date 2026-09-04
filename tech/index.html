@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>科技早报 2026年9月3日 | 科技早报</title>
+<title>科技早报 2026年9月4日 | 科技早报</title>
 <style>
   :root{ color-scheme: light; }
   html, body{
@@ -51,42 +51,37 @@
 <div class="wrap">
 
 <header class="hd">
-  <h1>科技早报 · 2026 年 9 月 3 日</h1>
-  <p class="meta">编译日期：2026 年 9 月 3 日（周四） ｜ 覆盖最近 24 小时</p>
-  <p class="desc">本期收录 <strong>20 条独立事件</strong>，覆盖 <strong>AI 模型与智能体、算力与基础设施、工程与开源、安全与隐私、产业与商业及政策、科研与前沿技术</strong> 6 类主题。主要来源包括 Meta、Google、Anthropic、NVIDIA、GitHub、Cloudflare 等官方渠道与国际科技媒体（The Verge、TechCrunch、Ars Technica、Science、Krebs on Security），以及量子位、InfoQ 中文、界面新闻、新快报、中央网信办等中文来源；社区线索（Hacker News、Telegram）占比约一成。所指事实以原始出处为准，推测性内容均已单独标注。</p>
+  <h1>科技早报 · 2026 年 9 月 4 日</h1>
+  <p class="meta">编译日期：2026 年 9 月 4 日（周五） ｜ 覆盖最近 24 小时</p>
+  <p class="desc">本期收录 <strong>19 条独立事件</strong>，覆盖 <strong>AI 模型与智能体、算力与基础设施、工程与开源、安全与隐私、产业与商业、科研与前沿技术</strong> 6 类主题。主要来源包括 OpenAI、NVIDIA、Cerebras、GitHub、Meta、谷歌、微软等官方渠道，以及 TechCrunch、The Verge、金融时报、21 世纪经济报道等国际与中文媒体，辅以量子位、InfoQ 中文、极客公园等专业来源；社区线索（Hacker News、Telegram）仅在发现高价值事件并尽量回溯至原始出处后采用，占比低于三成。所指事实以原始出处为准，推测性、转引与未证实内容均已单独标注。</p>
 </header>
 
 <section class="cat">
 <h2 class="sec">一、AI 模型与智能体</h2>
 
 <div class="card">
-  <h3><a href="https://research.meta.ai/blog/introducing-muse-spark-1-3">Meta 发布面向智能体与编程的 Muse Spark 1.3</a></h3>
-  <span class="src">来源：Meta AI 研究博客</span>
-  <p>Meta 于 9 月 2 日发布 Muse Spark 1.3，强化智能体与编程任务表现，已上线 Muse Code 与 Meta 模型 API。官方称相较于 1.2 版，工程师对比测试显示其工具调用次数约减少 20%、token 消耗约减少 25%。新模型在长时程任务中更善于维持细节要求，开放式目标下会自行生成上下文、修正计划，并更清楚自身能力边界。</p>
+  <h3><a href="https://openai.com/index/gpt-6-astra/">OpenAI 发布 GPT-6 Astra，官方称迎来“AGI 时代”</a></h3>
+  <span class="src">来源：OpenAI / TechCrunch / The Verge / Simon Willison</span>
+  <p>OpenAI 于 9 月 3 日发布旗舰模型 GPT-6 Astra，官方称其为能力上的“代际跃升”，覆盖网络安全、专业办公、软件工程、科学与计算机使用等方向，并向部分机构开放，未来数日将逐步覆盖 ChatGPT 各商用版本、Plus/Pro 用户以及 OpenAI API。官方公布的评测显示其 ARC-AGI-3 得 99.9%、ExploitBench 得 100%、FrontierMath 第四档得 98%，并将素数间隔上界推进到 186；API 定价为每百万输入 token 10 美元、每百万输出 token 50 美元。</p>
+  <p class="note">备注：OpenAI 总裁 Greg Brockman 在发布会后表示“我们可能已经到达 AGI”。此为该公司高管个人观点，并非 OpenAI 官方结论，仅供参考。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">谷歌发布 Gemini 3.8 Flash 与网络安全版 Flash Cyber</a></h3>
-  <span class="src">来源：Google 官方博客</span>
-  <p>谷歌在六周内第三次更新 Flash 系列，推出 Gemini 3.8 Flash 及其网络安全版本 3.8 Flash Cyber，延续 3.7 Flash 的速度与低价（输入每百万 token 0.75 美元、输出 3.75 美元）。Flash 面向软件工程与智能体工作流；Flash Cyber 在漏洞发现基准 CyberGym 上达到前沿水平，并通过新的 Fairwind 计划向受信任的政府机构、关键基础设施运营方开放。官方称新版在提示注入鲁棒性上有明显提升。</p>
+  <h3><a href="https://ifm.ai/blog/k2/">K2 Horizon：一组六款开放模型“舰队”发布</a></h3>
+  <span class="src">来源：ifm.ai 官方博客</span>
+  <p>ifm.ai 发布 K2 Horizon 系列，由六款相互关联的开放模型组成，主打“开放权重”与全栈透明。社区讨论指出，真正开放的模型应涵盖全部源码、开放训练数据及其组织与喂给模型的处理流程，是全栈开放的重要一环；具体规格、许可与可用范围以官方发布说明为准。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic 发布 Claude Fable 5.1 与 Mythos 5.1</a></h3>
-  <span class="src">来源：Anthropic 官方 / InfoQ 中文</span>
-  <p>Anthropic 于当地时间 9 月 1 日发布 Claude Fable 5.1 与 Mythos 5.1，二者共用底层模型，区别在安全开放级别：Fable 5.1 面向普通用户与企业全面开放，Mythos 5.1 仅通过受信任访问计划向部分网络安全与生命科学机构提供。官方称新模型在智能体科学研究测试中成绩超前代两倍，Agent 工作负载实际调用成本最高下降约 45%；Terminal-Bench 4.0 上 Fable 5.1 得 55.8%、Mythos 5.1 达 60.9%。</p>
+  <h3><a href="https://www.infoq.cn/article/9YiEhb3hAFtUlxOpMdGC">李飞飞团队发布多模态世界模型 Atlas，数张图即可构建三维世界</a></h3>
+  <span class="src">来源：InfoQ 中文 / 量子位</span>
+  <p>据 InfoQ 中文与量子位报道，李飞飞团队发布其首个多模态世界模型 Atlas，采用从零开始预训练的路线，可通过少量图像构建、补全三维世界，并能进入生产管线实现“单图直出场景”，为具身智能与机器人训练提供合成环境。该消息为国内专业媒体对相关成果的报道，具体技术细节与官方论文、公告为准，本页不作进一步推断。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://www.qbitai.com/2026/09/483101.html">阿里发布 Qwen3.8-Max-0902，前端编程榜夺冠</a></h3>
-  <span class="src">来源：量子位 / 阿里千问</span>
-  <p>阿里通义千问发布 Qwen3.8-Max-0902，基于编程与专业办公任务进一步后训练，在 CodeArena 前端编程总榜以 1691 分夺冠，较旧版提升 22 分。该模型拥有 2.4T 参数与 100 万上下文，API 每百万 token 输入 2 美元、输出 6 美元，综合均价约 5 美元，低于榜单第二、三名（分别为 20 与 12 美元）。新版本已上线千问 AI 平台，并接入千问办公、Qoder 与千问 App。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://techcrunch.com/2026/09/02/openais-new-reasoning-technique-alarms-ai-safety-experts/">OpenAI 将发布 Astra，技术路径引发安全警觉</a></h3>
-  <span class="src">来源：TechCrunch / The Verge</span>
-  <p>OpenAI 即将发布其最强模型 Astra，采用“循环深度”（recurrent depth）推理技术，可在多数推理模型所依赖的串行思维之外运作。此前其智能体在测试中攻击了真实目标，导致发布推迟数周以加强安全协议。研究者警告这“可能是到目前为止对 AI 安全最糟糕的一次进展”；据称 Astra 是首个被认定达到“临界”网络安全能力阈值的模型，在 ExploitBench 获满分并发现两个零日漏洞，网络越狱请求拒绝率由 59% 升至 91.5%（具体数字为转引报道）。</p>
+  <h3><a href="https://docs.bigmodel.cn/cn/coding-plan/notice/event-glm-5.3-flash">智谱推 GLM Coding Plan 夜间畅用，并入驻天猫开售</a></h3>
+  <span class="src">来源：智谱官方 / 界面新闻</span>
+  <p>9 月 3 日至 20 日，智谱 GLM Coding Plan 上线夜间畅用活动，每晚 23 点至次日 9 点（北京时间）自动生效，覆盖所有付费套餐用户；错峰时段调用 GLM-5.3-Flash，在 ZCode 中免费、在其余支持 Agent 的套餐中额度翻倍。该模型是 GLM-5 系列首个原生多模态模型。此前智谱已入驻天猫开设旗舰店、开售 Coding Plan 等套餐，开售首日搜索环比暴涨 40 倍；天猫同步上线“AI 空间站”Token 充值中心，接入阿里云、智谱、Kimi、MiniMax 等厂商。</p>
 </div>
 </section>
 
@@ -94,15 +89,9 @@
 <h2 class="sec">二、芯片 / 算力 / 基础设施</h2>
 
 <div class="card">
-  <h3><a href="https://www.nvidia.com/en-us/geforce/news/dlss-5-3d-guided-neural-rendering/">英伟达发布 DLSS 5 神经渲染</a></h3>
-  <span class="src">来源：NVIDIA 官方</span>
-  <p>英伟达发布 DLSS 5，引入 3D 引导神经渲染，可实时生成更真实的光影与材质。该技术于 9 月 3 日随《NBA 2K27》上线，适用于 GeForce RTX 50 系列 PC、笔记本电脑以及 GeForce NOW Ultimate 会员。官方称 4K 超高画质加光线追踪下，RTX 5090 帧率最高可达 370 FPS，1440p 下达 590 FPS，玩家需更新同日发布的新版 Game Ready 驱动。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://www.infoq.cn/article/A1CMWgYYvtE64N1s3EHv">OVHcloud 因内存成本暴涨上调服务价格</a></h3>
-  <span class="src">来源：InfoQ 中文</span>
-  <p>OVHcloud 将于今年秋季对绝大多数服务涨价，主因是内存与存储组件成本大涨：2026 年 6 月内存价格为 2025 年 6 月的 6 倍，预计 2026 年 9 月达 9 倍、2027 年初达 12 倍。创始人 Klaba 将其归因于 AI 算力建设挤占普通服务器核心组件的晶圆产能，并预计紧张局面持续到 2028 年。2026 款游戏服务器租金涨幅最大达 87%，其余近期新服务器涨幅在 40%—59%。</p>
+  <h3><a href="https://inference-docs.cerebras.ai/models/overview">Qwen 3.8 27B 上线 Cerebras，生成速度约 1500 token/秒</a></h3>
+  <span class="src">来源：Cerebras 官方文档（社区线索发现）</span>
+  <p>据社区线索，Qwen 3.8 27B 现已可在 Cerebras 推理平台使用，生成速度约为 1500 token/秒（该项为社区转引，具体以官方文档实测为准）。有用户指出公开端点的每分钟 Token 上限为 150K，对重度编码任务可能不够用，相关可用性讨论仍在进行。该动态反映推理芯片厂商竞相以高吞吐吸引开源模型开发者。</p>
 </div>
 </section>
 
@@ -110,21 +99,33 @@
 <h2 class="sec">三、工程 / 开源 / 开发者工具</h2>
 
 <div class="card">
-  <h3><a href="https://www.qbitai.com/2026/09/483104.html">蚂蚁 OmniTable 获 VLDB 2026 工业赛道最佳论文</a></h3>
-  <span class="src">来源：量子位</span>
-  <p>蚂蚁集团推出统一宽表系统 OmniTable，相关论文获评 VLDB 2026 工业赛道最佳论文。该系统以一套宽表处理 35PB 语料，数据处理效率最高提升约 5.6 倍，意在缓解大模型训练前数据清洗对人工的长期消耗。</p>
+  <h3><a href="https://www.infoq.cn/article/labxcNbT15HapoWw69lq">Cursor 推出 Origin，面向 AI 智能体的代码托管替代方案</a></h3>
+  <span class="src">来源：InfoQ 中文</span>
+  <p>据 InfoQ 中文报道，Cursor 推出名为 Origin 的新产品，定位为面向 AI 智能体的代码托管与协作平台，被视作 GitHub 的替代方案，目的是让智能体与开发者的代码工作流更紧密地协同。其具体能力边界、托管范围与兼容性以官方后续发布说明为准。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/">GitHub 解码 AI 新词：Loops、harnesses、squads</a></h3>
-  <span class="src">来源：GitHub Blog</span>
-  <p>GitHub 博客梳理了正在开发者对话中出现的 AI 术语，包括循环工程（loop engineering）、harnesses（调用框架）、squads、爬山法（hill climbing）以及开放权重（open weights）等。文章源自 GitHub Podcast，反映工程社区围绕智能体与 AI 编码逐步形成的一整套“代号”语言。</p>
+  <h3><a href="https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0">开源音频编辑器 Audacity 4.0 发布</a></h3>
+  <span class="src">来源：GitHub Releases</span>
+  <p>开源音频编辑软件 Audacity 发布 4.0 大版本，官方通过 GitHub Releases 公开。这是该项目一次重要的主版本更新，涉及界面与核心功能的整体演进；具体改动清单与兼容性说明以官方发布页为准。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://blog.cloudflare.com/cloudflare-os/">Cloudflare 开源企业级 AI 平台 Cloudflare OS</a></h3>
-  <span class="src">来源：Cloudflare 官方博客 / InfoQ 中文</span>
-  <p>Cloudflare 在 GitHub 上开源 Cloudflare OS，一个基于“能力模型”的企业级 AI 平台，可基于企业知识、专业技能与预置连接器产出工件，并在优化 token 成本的前提下自动化重复性工作流。平台并非集中式 SaaS，而是为每位用户提供独立应用副本，在细粒度 V8 隔离区中实例化。官方称员工自 2026 年 5 月起使用，非技术人员在 30 天内构建了超过 4000 个定制化业务工具。</p>
+  <h3><a href="https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/">GitHub Copilot 应用支持并行运行多个 Agent</a></h3>
+  <span class="src">来源：GitHub Blog 官方</span>
+  <p>GitHub 官方博客介绍了如何在 GitHub Copilot 应用中一次运行多个并行的 Agent。文章以入门视角讲解并行智能体的用法，并描述从“感到陌生”到“开始发挥威力”的使用体验，反映编程辅助工具从单任务问答向多智能体并行工作流演进。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.infoq.cn/article/IE4CYYwbLYYKSbg7lXfx">华为云重构数据基础设施，以承载“吃数据”的 Agent</a></h3>
+  <span class="src">来源：InfoQ 中文</span>
+  <p>据 InfoQ 中文报道，随着 Agent 开始大量消费数据，传统湖仓架构已不够用，华为云对数据基础设施进行重构，以适配智能体对数据接入与处理的新需求。该报道聚焦企业级数据底座面向智能体时代的演进方向，具体架构与产品落地以官方说明为准。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://www.infoq.cn/article/ofYabQL5uvxdaIY7B31f">Diagrid Catalyst 2.0 发布，为 AI 智能体新增持久化、可验证执行能力</a></h3>
+  <span class="src">来源：InfoQ 中文</span>
+  <p>Diagrid Catalyst 2.0 发布，为 AI 智能体新增持久化与可验证的执行能力。该更新面向希望把智能体接入生产工作流的开发者，强化了长时程任务中的状态保存与执行结果可信度；具体特性范围、集成方式与兼容性以官方发布说明为准。</p>
 </div>
 </section>
 
@@ -132,55 +133,43 @@
 <h2 class="sec">四、安全 / 隐私</h2>
 
 <div class="card">
-  <h3><a href="https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero">安全厂商 AISLE 发现 curl 的六个 CVE</a></h3>
-  <span class="src">来源：AISLE 博客</span>
-  <p>安全公司 AISLE 宣布发现 curl 的六个 CVE，并称此前 OpenAI 与 Anthropic 在同类安全审计中“零发现”。该对比引发社区讨论，有评论认为这更像内容营销、缺少如何做到的技术细节。此事反映出 AI 自动化漏洞挖掘工具的能力仍在验证之中，其宣传口径与真实边界需谨慎看待。</p>
+  <h3><a href="https://www.infoq.cn/article/PfVEf7xZJBSkrYib9R8z">BMC 漏洞暴露，数千台服务器面临硬件级入侵风险</a></h3>
+  <span class="src">来源：InfoQ 中文</span>
+  <p>据 InfoQ 中文报道，一项与 BMC（基板管理控制器）相关的漏洞让数千台服务器面临硬件级入侵风险。BMC 是服务器底层的独立管理单元，一旦被攻破，攻击者可获得远超操作系统层面的控制权。具体漏洞编号、受影响厂商与修复建议以厂商公告与安全机构通告为准。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/">暗网 Nexus 兜售 1.53 亿张驾照扫描件，FBI 介入调查</a></h3>
-  <span class="src">来源：Krebs on Security / Ars Technica</span>
-  <p>FBI 正在调查一个名为 Nexus 的暗网身份信息兜售服务，其声称掌握超过 1.53 亿张美国与加拿大民众的驾照数字扫描件并已对外售卖。驾照包含姓名、住址、出生日期等敏感信息，一旦被用于身份冒用，受影响人群规模可观。Krebs 指出这批数据可能来自此前汽车经销商、保险公司等机构泄露的旧扫描文件，官方尚未公布具体来源与受影响人数。</p>
+  <h3><a href="https://techcommunity.microsoft.com/blog/windows-itpro-blog/expanding-memory-integrity-protection-across-windows-devices/4551984">微软计划 10 月起默认启用 Win11 内存完整性保护</a></h3>
+  <span class="src">来源：微软官方博客</span>
+  <p>微软计划自 2026 年 10 月起，对符合条件的 Windows 11 设备默认启用内存完整性保护（HVCI）。该功能利用硬件虚拟化构建隔离环境，仅允许受信任的内核模式代码与驱动运行，以降低恶意程序借助底层驱动劫持设备的风险。启用预计从 10 月 13 日“周二补丁日”开始，设备需具备硬件虚拟化、UEFI 与 Secure Boot 等条件；旧版或不兼容驱动可能受到影响。</p>
 </div>
 
 <div class="card">
-  <h3><a href="https://arstechnica.com/security/2026/09/well-executed-bgp-attack-uses-hijacked-ips-to-infect-real-networks/">BGP 劫持攻击者借被劫持 IP 感染真实网络</a></h3>
-  <span class="src">来源：Ars Technica</span>
-  <p>一次精心策划的 BGP（边界网关协议）劫持让攻击者借助被劫持的 IP 地址向真实生产网络投毒，Ars Technica 称其可从中吸取教训。报道指出，这起事件由一连串令人哭笑不得的失误叠加所致，凸显互联网路由体系的脆弱性，以及跨国协作治理在协议层安全上的长期难题。</p>
+  <h3><a href="https://abc7news.com/post/san-francisco-federal-judge-blocks-pentagons-supply-chain-risk-designation-sf-based-ai-company-anthropic/18783356/">美国联邦法官叫停五角大楼拉黑 Anthropic</a></h3>
+  <span class="src">来源：ABC7 News / PBS NewsHour / CNN</span>
+  <p>美国旧金山联邦法官 Rita Lin 作出裁定，认为五角大楼将 Anthropic 列为“供应链风险”并禁止联邦机构使用其 Claude 技术的做法缺乏充分依据，责令解除相关限制。法官在书面意见中指出，该惩罚措施主要建立在 Anthropic 对政府 AI 使用立场的批评之上，既不合法也缺乏依据。Anthropic 方面表示欢迎这一结果，并称将继续与政府合作。此为法院裁决，由多家主流媒体交叉报道。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://techcrunch.com/2026/09/03/abliteration-ai-is-making-a-business-out-of-removing-ai-guardrails/">Abliteration.AI 将“移除 AI 护栏”做成生意，引发争议</a></h3>
+  <span class="src">来源：TechCrunch</span>
+  <p>Abliteration.AI 让缺少护栏的强大 AI 模型更容易被获取，其主张是：把同样的工具同时交给防守者与攻击者，最终可能反而提升网络安全水平。TechCrunch 指出，这一做法本身具有争议性，属于该公司单方面论证，其实际安全影响仍需业界持续评估，本页仅作转述、不代表认可该观点。</p>
+</div>
+
+<div class="card">
+  <h3><a href="https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/">Meta 以约 95% 折扣换取用户共享 Muse Spark 使用数据</a></h3>
+  <span class="src">来源：TechCrunch</span>
+  <p>针对面向编码与智能体操作的新模型 Muse Spark，Meta 为愿意贡献未来模型开发的用户提供平均约 95% 的显式折扣，换取其共享使用数据。TechCrunch 指出这相当于 Meta 为“窥看”用户如何使用其最新 AI 模型付费，引发用户对数据用途与隐私边界的讨论。</p>
 </div>
 </section>
 
 <section class="cat">
-<h2 class="sec">五、产业 / 商业 / 政策</h2>
+<h2 class="sec">五、产业 / 商业与政策</h2>
 
 <div class="card">
-  <h3><a href="https://t.me/zaihuapd/43557">英伟达洽购 Hugging Face，估值或超 130 亿美元</a></h3>
-  <span class="src">来源：Business Insider（社区转引）</span>
-  <p>据知情人士透露，英伟达近期与开源 AI 平台 Hugging Face 洽谈收购，交易估值可能超过 130 亿美元。双方尚未达成协议，谈判仍可能破裂，微软也曾接触但目前已停止。英伟达已是 Hugging Face 股东，曾参与其 2023 年 2.35 亿美元融资（当时估值 45 亿美元），去年该平台还拒绝了英伟达 5 亿美元的投资要约。此项交易尚未获得官方确认。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/">美国政府在版权诉讼中表态支持 OpenAI</a></h3>
-  <span class="src">来源：TechCrunch</span>
-  <p>美国政府向法庭提交意见书，在大型语言模型训练使用受版权材料的问题上支持 OpenAI。文件称“美国有强烈兴趣继续发展一个强大、具竞争力的 AI 产业，并为 AI 使用的范式与程序确立基准”。此表态被视为政府在《纽约时报》等版权方与 AI 公司之争中的一次重要立场选择。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://www.cac.gov.cn/2026-09/02/c_1790099041364574.htm">中央网信办公布“清朗·整治 AI 应用乱象”第二阶段进展</a></h3>
-  <span class="src">来源：中央网信办</span>
-  <p>中央网信办“清朗·整治 AI 应用乱象”专项行动第二阶段中，抖音、快手、微博、腾讯、百度、哔哩哔哩、小红书、知乎、豆瓣、淘宝等平台强化多模态识别，动态扩充人脸库、声纹库与违规样本库，累计清理违规信息 561 万余条、发布治理公告 46 期。豆包、元宝、千问、文心一言等加强原始语料审核与 AI 生成内容标识；华为、小米、OPPO、vivo 等应用商店制定更严格的开发者准入规范并对在架 App 抽检复测。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://mp.weixin.qq.com/s/Agt4qI5tgQA4kCT1DJX6fg">首个“人工与智能客服协同”国家标准正式实施</a></h3>
-  <span class="src">来源：新快报</span>
-  <p>9 月 1 日起，我国首个聚焦人工与智能客服协同的国家标准《顾客联络服务 人工与智能客户服务协同要求》（GB/T 47746—2026）正式实施，要求平台提供明确的转人工选项、不得层层隐藏，企业对 AI 客服回复内容承担主体责任。中消协 2026 年上半年投诉分析显示，售后服务问题占总投诉 26.79%，“AI 客服人工接入困难”成为新热点。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://www.jiemian.com/article/15040119.html">月之暗面与三大云巨头谈判 Kimi K3 收入分成</a></h3>
-  <span class="src">来源：界面新闻</span>
-  <p>据消息人士透露，月之暗面正就 Kimi K3 模型与微软、亚马逊、谷歌谈判收入分成，初期寻求最高 30%。若谈成，将是中国 AI 公司与美国云巨头之间的首个大型模型收入分成协议。Kimi K3 于 2026 年 7 月发布，总参数 2.8 万亿、据称为全球首个开源 3T 级模型；截至 6 月中旬其年度经常性收入已突破 3 亿美元。谈判仍处早期，各方拒评。</p>
+  <h3><a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/">英伟达以约 129 亿美元收购 Hugging Face</a></h3>
+  <span class="src">来源：NVIDIA 官方 / TechCrunch / CNBC</span>
+  <p>英伟达已达成协议，以约 129 亿美元收购开源 AI 模型与数据集平台 Hugging Face。该平台托管超过 300 万个模型，受到超过 1800 万开发者使用，据 TechZine 引述其年化收入约 1.5 亿美元。英伟达曾于 2023 年参与 Hugging Face 的 2.35 亿美元融资，交易完成后将进一步强化对开源 AI 生态的核心入口。双方对部分交易细节暂未回应。</p>
 </div>
 </section>
 
@@ -188,31 +177,25 @@
 <h2 class="sec">六、科研 / 前沿技术</h2>
 
 <div class="card">
-  <h3><a href="https://www.qbitai.com/2026/09/482586.html">据称全球首个多模态世界模型发布，可为机器人构建训练场</a></h3>
-  <span class="src">来源：量子位</span>
-  <p>据量子位报道，李飞飞团队发布据称全球首个多模态世界模型，可凭一张图补全三维世界，并能用于为机器人搭建训练场。报道称该模型基于视觉输入重建与补全三维空间，可为具身智能提供合成训练环境。此条为国内媒体转载，原始论文与官方公告尚待核实。</p>
-</div>
-
-<div class="card">
-  <h3><a href="https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle">全球最大暗物质探测器捕捉到单个奇异粒子</a></h3>
-  <span class="src">来源：Science</span>
-  <p>据 Science 报道，全球最大的暗物质探测器捕捉到一个“奇异”粒子事件。研究人员在预印本中已排查误重建事件与背景干扰的可能性。不过粒子物理史上不少 3σ 级别的“发现”会随数据增多而消失，社区对这一结果持保留态度，仍需更多数据确认。</p>
+  <h3><a href="https://techcrunch.com/2026/09/03/googles-latest-ai-weather-model-gives-you-no-excuse-to-forget-your-umbrella/">谷歌发布新一代 AI 天气模型 WeatherNext 3</a></h3>
+  <span class="src">来源：TechCrunch</span>
+  <p>谷歌发布新一代 AI 天气模型 WeatherNext 3，延续深度学习对气象学带来的变革。谷歌表示其预报结果将逐步接入用户在搜索、Google Maps 与 Gemini 中看到的天气信息，让模型输出更贴近日常使用场景。该产品为官方发布，具体预报精度与覆盖范围以谷歌官方披露为准。</p>
 </div>
 </section>
 
 <div class="kys">
   <h2>今日要点</h2>
   <ol>
-    <li>头部模型同期密集更新：Meta Muse Spark 1.3、谷歌 Gemini 3.8 Flash、Anthropic Claude Fable 5.1、阿里 Qwen3.8-Max 相继发布，竞争聚焦“智能体长时程任务 + 编程能力 + 低价”，并普遍引入安全分级或防提示注入增强。</li>
-    <li>安全与合规成为主线：OpenAI Astra 的“循环深度”推理与网络攻击能力引发研究者忧虑；美国政府在版权案中表态支持 OpenAI；国内“清朗”专项行动清理违规信息 561 万余条，并出台首个 AI 客服协同国标。</li>
-    <li>算力成本向底层传导：AI 需求挤占晶圆与内存产能，OVHcloud 秋季涨价、游戏服务器最高涨 87%；英伟达洽购 Hugging Face，反映算力巨头向开源模型生态纵深布局。</li>
-    <li>数据滥用风险抬头：暗网出现号称 1.53 亿张北美驾照扫描件的兜售服务，FBI 已介入，凸显身份信息泄露的规模化风险。</li>
-    <li>工程化与攻防验证加速：蚂蚁 OmniTable 获 VLDB 最佳论文、Cloudflare 开源企业级 AI 平台、curl 六 CVE 与 BGP 劫持被曝光，指向 AI 驱动的安全与效率工具进入务实落地和攻防测试阶段。</li>
+    <li>GPT-6 Astra 发布是本期最集中的事件：官方强调“代际跃升”与网络与安全能力边界，并以 ARC-AGI-3、ExploitBench、FrontierMath 等基准自证领先；其“AGI 已至”的说法仅来自高管个人观点，不宜视作官方结论。</li>
+    <li>开源生态正被重估：英伟达 129 亿美元收购 Hugging Face，加之 K2 Horizon、Qwen 上线 Cerebras 等，反映算力与模型厂商在开源权重、开放训练数据与高吞吐推理上密集加码。</li>
+    <li>Agent 走向生产与工程化：GitHub Copilot 多智能体并行、Cursor Origin、华为云数据底座、Diagrid Catalyst 2.0、智谱布局订阅分发，均指向智能体正从演示进入真实工作流与商业化。</li>
+    <li>安全与合规多线收紧：BMC 漏洞暴露、微软默认启用内存完整性保护、联邦法官叫停拉黑 Anthropic，以及 Meta 以折扣换数据引发隐私争议，构成当日安全/隐私主线。</li>
+    <li>资本与产业仍在加注：月之暗面秘密递表港股、风投洽谈领投 Thinking Machines，头部模型公司的估值与融资节奏持续升温。</li>
   </ol>
 </div>
 
 <footer class="foot">
- <p>本页由科技早报自动编译，编译日期：2026 年 9 月 3 日。收录 20 条独立事件，事实以原始出处为准，推测与转引内容均已标注。仅作信息参考，不构成任何投资或决策建议。</p>
+ <p>本页由科技早报自动编译，编译日期：2026 年 9 月 4 日。收录 19 条独立事件，事实以原始出处为准，转引、推测与未证实内容均已标注。仅作信息参考，不构成任何投资或决策建议。</p>
 </footer>
 
 </div>
