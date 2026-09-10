@@ -3,237 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="only light">
-<title>知识库回顾 · 2026年9月9日</title>
+<title>知识库回顾 · 2026年9月10日</title>
 <style>
   :root{
-    --bg:#f7f7f5; --card:#ffffff; --ink:#1a1a1a; --body:#2d2d2d; --muted:#6e6e6e;
-    --line:#e6e6e2; --accent:#0f766e; --accent-soft:#e6f4f2; --tag-bg:#eef2ff; --tag-ink:#4338ca;
-    --warn-bg:#fdf6e3; --warn-ink:#8a6d1a; --ok-bg:#e8f5ee; --ok-ink:#1b7a4d;
+    --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --ink2:#333; --muted:#6b7280;
+    --line:#e5e7eb; --accent:#1f4e79; --mark:#111;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  html{-webkit-text-size-adjust:100%; color-scheme:only light;}
+  html{ -webkit-text-size-adjust:100%; }
   body{
-    background:var(--bg); color:var(--body);
-    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans SC","Segoe UI",sans-serif;
-    line-height:1.75; font-size:16px; padding:32px 16px 64px;
+    background:var(--bg) !important; color:var(--ink2);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75; font-size:16px; padding-bottom:56px;
   }
-  strong{color:#111; font-weight:700;}
-  .wrap{max-width:760px; margin:0 auto;}
-  header.kr-head{
-    background:var(--card); border:1px solid var(--line); border-radius:16px;
-    padding:28px 26px 22px; margin-bottom:20px;
+  .wrap{max-width:860px; margin:0 auto; padding:0 18px;}
+  header{padding:36px 0 20px; border-bottom:1px solid var(--line); background:#fff;}
+  h1{color:var(--ink); font-size:26px; font-weight:800; letter-spacing:.5px;}
+  .sub{color:var(--muted); font-size:14px; margin-top:8px;}
+  .sub strong{color:var(--mark);}
+  .thread{
+    background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent);
+    border-radius:10px; padding:16px 18px; margin:22px 0;
   }
-  .kr-eyebrow{font-size:13px; letter-spacing:.12em; color:var(--muted); margin-bottom:8px;}
-  h1{font-size:26px; color:var(--ink); line-height:1.35; font-weight:700;}
-  .kr-sub{color:var(--muted); font-size:14px; margin-top:8px;}
-  .kr-sub strong{color:#111;}
-  .kr-meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
-  .chip{
-    display:inline-flex; align-items:center; gap:6px; font-size:12.5px;
-    background:var(--accent-soft); color:var(--accent); border-radius:999px; padding:4px 12px; font-weight:600;
+  .thread h2{font-size:15px; color:var(--accent); font-weight:800; margin-bottom:6px;}
+  section{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 20px; margin:22px 0;}
+  h2.sec{font-size:20px; color:var(--ink); font-weight:800; margin-bottom:4px;}
+  .meta{font-size:13px; color:var(--muted); margin-bottom:14px;}
+  h3{font-size:16.5px; color:var(--ink); font-weight:800; margin:18px 0 8px;}
+  p{margin:8px 0;}
+  ul{margin:6px 0 10px; padding-left:22px;}
+  li{margin:6px 0;}
+  strong{color:var(--mark); font-weight:700;}
+  .pull{
+    border-left:4px solid var(--accent); background:#fafbfc;
+    padding:10px 16px; margin:14px 0; font-size:17px; color:var(--ink);
+    font-weight:700; line-height:1.7; border-radius:0 8px 8px 0;
   }
-  .chip.gray{background:#f0f0ee; color:#555;}
-  section{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 26px 10px; margin-bottom:20px;}
-  h2{font-size:19px; color:var(--ink); margin-bottom:4px; display:flex; align-items:center; gap:10px;}
-  h2 .no{
-    flex:none; width:26px; height:26px; border-radius:8px; background:var(--accent); color:#fff;
-    font-size:14px; display:inline-flex; align-items:center; justify-content:center; font-weight:700;
-  }
-  .sec-desc{color:var(--muted); font-size:13.5px; margin-bottom:16px;}
-  .sec-desc strong{color:#111;}
-  .topic{margin-bottom:18px;}
-  .topic h3{font-size:16px; color:var(--ink); margin-bottom:6px; padding-left:12px; border-left:4px solid var(--accent); line-height:1.4;}
-  .topic .src{font-size:12.5px; color:var(--muted); margin-bottom:6px;}
-  .topic ul{list-style:none;}
-  .topic li{position:relative; padding-left:18px; margin-bottom:5px; font-size:14.5px;}
-  .topic li::before{content:""; position:absolute; left:2px; top:11px; width:6px; height:6px; border-radius:2px; background:var(--accent); opacity:.55;}
-  .keyline{
-    border-left:3px solid var(--accent); padding:2px 0 2px 12px; margin:6px 0 14px;
-    font-size:15px; color:var(--ink); font-weight:700; line-height:1.6;
-  }
-  .insight{margin-bottom:14px;}
-  .insight .ih{font-size:14.5px; color:var(--ink); font-weight:700; margin-bottom:2px;}
-  .insight .ih .tag{font-weight:500; font-size:11.5px; background:var(--tag-bg); color:var(--tag-ink); border-radius:999px; padding:1px 9px; margin-left:6px; vertical-align:2px;}
-  .insight p{font-size:14px;}
-  .tension{margin-bottom:16px;}
-  .tension .th{font-size:14.5px; color:var(--ink); font-weight:700; margin-bottom:4px;}
-  .tension .th .vs{color:var(--muted); font-weight:500;}
-  .tension p{font-size:13.8px; color:var(--body);}
-  .tension .take{font-size:13px; color:var(--accent); margin-top:3px;}
-  .timeline{position:relative; padding-left:22px;}
-  .timeline::before{content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--line);}
-  .tl{position:relative; margin-bottom:16px;}
-  .tl::before{content:""; position:absolute; left:-22px; top:7px; width:10px; height:10px; border-radius:50%; background:var(--accent); border:2px solid var(--card);}
-  .tl .d{font-size:12.5px; color:var(--muted); font-weight:600;}
-  .tl p{font-size:14px;}
-  .q{margin-bottom:14px;}
-  .q .qh{font-size:14.5px; font-weight:700; color:var(--ink); margin-bottom:2px;}
-  .q p{font-size:13.8px; color:var(--body);}
-  .tbl{width:100%; border-collapse:collapse; margin-bottom:8px; font-size:13.5px;}
-  .tbl th,.tbl td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
-  .tbl th{background:#fafaf8; color:var(--ink); font-weight:700;}
-  footer{color:var(--muted); font-size:12.5px; text-align:center; margin-top:24px;}
-  @media (prefers-color-scheme:dark){
-    :root{--bg:#f7f7f5; --card:#ffffff; --ink:#1a1a1a; --body:#2d2d2d; --muted:#6e6e6e; --line:#e6e6e2;}
-    body{background:#f7f7f5; color:#2d2d2d;}
-  }
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14.5px;}
+  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:#f3f4f6; color:var(--ink); font-weight:700;}
+  .tag{display:inline-block; background:#eef2f7; color:var(--accent); border-radius:999px; padding:1px 10px; font-size:12.5px; font-weight:700; margin-right:6px;}
+  .qa li{margin:10px 0;}
+  footer{margin-top:34px; text-align:center; font-size:13px; color:var(--muted);}
   @media (max-width:600px){
-    body{padding:16px 10px 48px; font-size:15px;}
+    body{font-size:15.5px;}
     h1{font-size:22px;}
-    header.kr-head, section{padding:20px 18px 8px; border-radius:14px;}
-    h2{font-size:17px;}
+    section{padding:18px 15px;}
+    table{display:block; overflow-x:auto; white-space:normal;}
   }
 </style>
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <h1>知识库回顾</h1>
+    <div class="sub">2026年9月10日 · 扫描范围 <strong>09-02 / 09-07 / 09-08</strong> 三篇笔记 · 按主题聚合后提炼张力与变化</div>
+  </div>
+</header>
+
 <div class="wrap">
 
-  <header class="kr-head">
-    <div class="kr-eyebrow">KNOWLEDGE REVIEW · DAILY</div>
-    <h1>知识库回顾 · 2026年9月9日</h1>
-    <div class="kr-sub">扫描窗口：近三天（09-07 / 09-08 / 09-09），<strong>两天连续实质输入</strong>——09-07《GEO 生成式引擎优化｜腾讯 Answerbit》、09-08《Looped Transformer 循环深度：第三 scaling 轴》，09-09（今日）暂无新增。主线一天跨两域：从<strong>营销分发层</strong>下沉到<strong>模型架构层</strong>，两条新素材在"过程黑盒"处会师。</div>
-    <div class="kr-meta">
-      <span class="chip">2 条新增</span>
-      <span class="chip gray">语义权力 × 架构演化</span>
-      <span class="chip">监控悖论：无东西可看</span>
-      <span class="chip gray">harness 前提承压</span>
-      <span class="chip">第三 scaling 轴</span>
-    </div>
-  </header>
+  <div class="thread">
+    <h2>本期主线</h2>
+    <p>三篇笔记看似分属安全、营销、模型架构三个领域，实则被同一条线穿过：<strong>过程对监督者不透明</strong>。AI 攻防的瓶颈从发现转向修复（09-02）、品牌争夺从链接位转向不可验证的答案位（09-07）、推理从可监控的 token 序列沉入隐状态循环（09-08）。三者同型：中间过程不再外化为符号，外部审计失去工作面。</p>
+  </div>
 
-  <!-- 1 主题聚合 -->
+  <!-- 主题一 -->
   <section>
-    <h2><span class="no">1</span>主题聚合：两条新线索</h2>
-    <p class="sec-desc">窗口内两条笔记分属两个域，但共享同一底层问题：<strong>过程对监督者不透明</strong>。A 线把语义权力分析延伸到 AI 分发层；B 线沿技术演化史追问"计算深度还能从哪里买"。</p>
+    <h2 class="sec">主题一 · AI 自动发现漏洞与攻防逻辑变革</h2>
+    <div class="meta">2026-09-02 · 来源：公众号《我在用AI进化》+ OpenAI 官方核验</div>
 
-    <div class="topic">
-      <h3>A. GEO：竞争从"链接位"移到"答案位"（09-07）</h3>
-      <div class="src">来源：09-07 笔记（普林斯顿论文 arXiv 2311.09735 + Answerbit 官网 + 产业实践多篇）</div>
-      <ul>
-        <li>GEO = 让品牌<strong>被 AI 写进答案正文并引用</strong>，而不只是搜索结果排名；量化指标"答案份额"＝提及概率 × 引用权重 × 追问留存率。</li>
-        <li>数据：微软 2025-10 披露 AI 搜索推荐流量<strong>同比 +357%</strong>；GEO 报告 2026 称 AI 推荐流量 <strong>+527% YoY</strong>、转化率约 4.4×（商业口径需打折看）。</li>
-        <li>Answerbit 闭环：每日并行问 5 平台→归因→优化→回测。<strong>腾讯有元宝却监测豆包/Kimi</strong>——在腾讯判断里，分发层价值高于自家模型输赢。</li>
-        <li>五层框架：优化对象是 RAG 管线，"被推荐"＝<strong>被抓到→被选中→被写进答案</strong>三道门；技术上 robots.txt 放行 / llms.txt（<strong>至今无厂商背书</strong>）/ JSON-LD / SSR；内容上统计+引用+引述单项最高 <strong>+40%</strong>，作者档案引用率 <strong>+47%</strong>。</li>
-        <li>原创判断：GEO 技术层本质是<strong>把内容编译成模型信任的格式</strong>；与华为 ADS 分层同构——语义权力的争夺落到<strong>谁定义可验证的接口</strong>。</li>
-      </ul>
-      <div class="keyline">接口标准的制定权＝答案位的税权——"责任边界=市场壁垒"在营销分发侧的直接同构。</div>
-    </div>
+    <p>AI 改变网安的不是"黑客变强"，而是<strong>漏洞从"找不到"变成"修不过来"</strong>——稀缺资源由发现能力转移到修复速度。真正变量是规模可复制：中级水平 AI × 十万份 × 24 小时，以前"不值得攻击"的低价值目标开始值得攻击。</p>
+    <p>范式因此从 Detection First 转向 <strong>Remediation First</strong>，核心指标变为 <strong>MTTR（平均修复时间）</strong>；漏洞扫描降格为基础设施，值钱的是"发现→验证→评估→补丁→测试→部署"完整闭环。人退到策略与例外处理。</p>
 
-    <div class="topic">
-      <h3>B. Looped Transformer：第三根 scaling 轴的诞生史（09-08）</h3>
-      <div class="src">来源：09-08 笔记（arXiv 1807.03819 / 2502.05171 / 2605.23872 / 2606.18023 / 2607.16051，提交日期已核原文）</div>
-      <ul>
-        <li>第一性问题：<strong>堆参数变贵后，计算深度从哪买</strong>——同一组权重循环 R 次，参数轴、token 轴之外出现<strong>迭代深度这第三根轴</strong>；思考搬进潜空间，不占输出带宽、不需 CoT 数据。</li>
-        <li>辩证链：UT（2018）提出即被堆参数军备竞赛否决 → Recurrent Depth（2025.2）<strong>3.5B 打 50B 等效</strong>、GSM8K ≈0→34.8 → Training-Free（2026.5）循环=数值阻尼精化，窗口 <strong>n=4 甜点、n≥6 悬崖</strong> → LoopCoder-v2（2026.6）18T token 受控实验<strong>循环 3 次以上回退</strong> → Loopie（2026.7）<strong>layer-loop 优于 model-loop</strong>，同算力击败 vanilla 对照。</li>
-        <li>时间结构观察：2018→2025 沉寂七年、一年走完十年路——<strong>范式复活的前提是核算体系变了</strong>，不是论文变好了。</li>
-        <li>Astra 证据须分层：已确认仅"9/4 发布全量上线"；"用了 recurrent depth"是 <strong>The Information 报道级判断</strong>，非 OpenAI 官宣；行为指纹（少 token 换强推理）为独立佐证；"必然已绕过饱和墙"是<strong>零证据纯推断</strong>。</li>
-        <li>监控悖论：latent reasoning 的推理<strong>在隐状态循环里、不在 token 序列上</strong>——CoT 监控看到的只是"说话草稿"，能力藏在不可观测的 R 圈里。</li>
-      </ul>
-      <div class="keyline">不是没人愿意看，是没有东西可看——监督问题从环境设计层下沉到架构层。</div>
-    </div>
+    <h3>关键事实（已一手核验）</h3>
+    <ul>
+      <li><strong>GPT-6 Astra</strong> 于 9/1 被 OpenAI 确认为 Preparedness Framework 首个 <strong>Critical 级</strong>网安模型：ExploitBench 满分 100%，在 20 个 V8 私有基准中<strong>发现并利用 2 个真实 0-day</strong>，拒绝率 91.5%（GPT-5.6 Sol 为 59%）。</li>
+      <li>防御侧 Daybreak 体系：Codex Security 已扫描 3000 万+ commits；Patch the Planet 帮 cURL、Go 等 <strong>30+ 开源项目</strong>修补丁，保留 maintainer 决定权。</li>
+    </ul>
+
+    <div class="pull">"修复瓶颈论"本身，就是 OpenAI 为推广 Daybreak 构建的叙事框架——观点正确性与利益自洽性须分开看待。</div>
+
+    <h3>与立场的连接</h3>
+    <p>机器速度攻防成立的前提是系统"可修"（能 OTA、能回滚、依赖链有主）。对<strong>修复窗口以年计</strong>的场景——10-15 年生命周期的车、厂商已消失的工控——MTTR 指标失效，逻辑退化为"设计期封死"。这正是<strong>责任边界=市场壁垒</strong>的接口：谁负责修、多快必须修完，会从合规成本变成架构约束。</p>
   </section>
 
-  <!-- 2 核心认知 -->
+  <!-- 主题二 -->
   <section>
-    <h2><span class="no">2</span>核心认知（本轮新增 4 项）</h2>
-    <p class="sec-desc">两条素材共同强化了主线，并给出一个<strong>三同型</strong>会师点。</p>
+    <h2 class="sec">主题二 · GEO：竞争从"链接位"移到"答案位"</h2>
+    <div class="meta">2026-09-07 · 来源：腾讯 Answerbit 官网 + 普林斯顿论文 arXiv 2311.09735 + 产业实践</div>
 
-    <div class="insight">
-      <div class="ih">信号可及性问题下沉到架构层<span class="tag">主线深化</span></div>
-      <p>Agent 自进化的"评价信号可及性"原属环境设计层议题；Looped Transformer 证明<strong>思考不外化则监督失去工作面</strong>——同一问题在模型架构层复现，且更难绕开。</p>
-    </div>
-    <div class="insight">
-      <div class="ih">"过程黑盒"三同型<span class="tag">会师点</span></div>
-      <p>GEO 答案位次黑盒、潜空间不可读轨迹、比昂 O（不可知的真实）三者同型：<strong>过程不透明是新范式的结构性特征而非缺陷</strong>——09-08 笔记显式完成这条连接。</p>
-    </div>
-    <div class="insight">
-      <div class="ih">技术路线的价值判定依赖核算结构<span class="tag">方法论</span></div>
-      <p>免费深度沉寂七年突然值钱，因 test-time compute 共识 + MoE 改算力核算 + 算力墙三条件齐备：<strong>被埋葬的归纳偏置可六个月走完十年演化</strong>。与汽车"设计期封死 vs 机器速度"笔记互证。</p>
-    </div>
-    <div class="insight">
-      <div class="ih">语义权力平面获营销侧第 4 个样本<span class="tag">跨域</span></div>
-      <p>GEO 与华为 ADS 都是<strong>把黑盒能力拆成可核对承诺</strong>的产业化动作；谁承诺接口谁收租，llms.txt 无背书即明证。</p>
-    </div>
+    <p>GEO＝<strong>让品牌被 AI 写进答案正文</strong>并获引用，而不只在搜索结果列表排名。用户直接问豆包/DeepSeek/Kimi 要答案，品牌不在 AI 推荐列表＝不在决策链里。量化概念"<strong>答案份额</strong>"＝被提及概率 × 被引用权重 × 追问留存率。</p>
+    <p>数据支撑：微软广告团队 2025-10 披露 AI 搜索推荐流量<strong>同比 +357%</strong>；AI 搜索用户转化率约为传统 organic 的 <strong>4.4×</strong>（商业口径需打折）。</p>
+
+    <h3>五层实现框架</h3>
+    <ul>
+      <li><strong>原理层</strong>："被推荐"＝闯三道门——被抓到（收录）→被选中（检索进 top-k）→<strong>被写进答案</strong>。SEO 只管前两道，GEO 全管。</li>
+      <li><strong>技术层</strong>：robots.txt 放行 AI 爬虫（<strong>检索与训练分开配</strong>）、llms.txt、JSON-LD schema、SSR。最高的杠杆是 5 分钟修复 robots.txt——很多品牌被墙而不自知。</li>
+      <li><strong>内容层</strong>：普林斯顿三招——加统计数据、加权威引用、加专家引述，<strong>单项最高 +40%</strong> 可见度；FAQPage schema 是 200+ campaign 复盘中<strong>移动指标最稳的单一杠杆</strong>。</li>
+      <li><strong>权威层</strong>：Wikidata/百科实体登记＋作者档案，完整作者信息使引用率 <strong>+47%</strong>；模型"信谁"靠跨源一致性。</li>
+      <li><strong>测量层</strong>：Answerbit 卖的就是这层——每日向 5 平台并行提问，统计可见度/位次/引用源，再反推生成针对性内容回测。</li>
+    </ul>
+
+    <h3>核心判断（原创提炼）</h3>
+    <p>GEO 技术层的本质是<strong>把人类内容编译成模型信任的格式</strong>；而定义这套格式的不是内容方，是模型厂商（llms.txt 至今无厂商背书即明证）。</p>
+    <div class="pull">接口标准的制定权＝答案位的收税权——"语义权力平面"在营销分发侧的又一个样本。</div>
+    <p>身份微妙处：腾讯自己有元宝，却建平台监测豆包/Kimi——说明在腾讯的判断里，<strong>"被 AI 引用"的分发层价值更高</strong>，高于自家模型输赢。与华为 ADS"把黑盒能力拆成可核对承诺"分层定价同构。边界警示：RAG 式刷量（FAQ 农场、伪造统计）已发生，<strong>alpha 窗口会关闭</strong>。</p>
   </section>
 
-  <!-- 3 关键张力 -->
+  <!-- 主题三 -->
   <section>
-    <h2><span class="no">3</span>关键张力（3 项）</h2>
-    <p class="sec-desc">两条新线各留一组未收敛对立，外加一组贯穿两者的定位张力。</p>
+    <h2 class="sec">主题三 · Looped Transformer：第三根 scaling 轴</h2>
+    <div class="meta">2026-09-08 · 五篇论文时间轴（提交日期已核 arXiv 原文）</div>
 
-    <div class="tension">
-      <div class="th">循环三次回退：墙还是伪影？<span class="vs">vs 固定剂量假设</span></div>
-      <p>LoopCoder 结论在"代码域+从头预训练+固定 R"下测得；若叠加深度随机采样 + PLT 并行化 + 按输入条件化 R（ACT 回魂），非单调<strong>可能只是固定剂量的伪影</strong>。</p>
-      <div class="take">判断："循环三次有害"与"对同一题固定循环三次有害"两命题之差，就是"想多久算多久"能否成立。</div>
-    </div>
+    <p>第一性问题：<strong>堆参数变贵后，"计算深度"从哪买？</strong>答案是同一组权重循环 R 次，用迭代次数接管深度——参数、token 之外出现<strong>第三根 test-time 计算轴</strong>。与 o 系列"想多久算多久"不同，它把思考搬进潜空间：<strong>不占输出带宽、不需要 CoT 数据</strong>。</p>
 
-    <div class="tension">
-      <div class="th">内部循环吃掉外部循环？<span class="vs">vs harness 定位前提</span></div>
-      <p>模型 test-time 深度可伸缩后，harness 层 agent loop（反思/重试/多轮编排）的<strong>增量价值边界需重估</strong>——直接冲击 2127 自进化 harness 论证的前提。</p>
-      <div class="take">判断：这是本轮对既有立场最硬的一条修订压力，优先级高于 GEO 观察项。</div>
-    </div>
+    <h3>辩证链（正题→复辟→扩散→反题→合题）</h3>
+    <table>
+      <tr><th>论文</th><th>时间</th><th>关键结果</th></tr>
+      <tr><td>Universal Transformer</td><td>2018.7</td><td>首个共享权重循环＋ACT；死于堆参数军备竞赛</td></tr>
+      <tr><td>Recurrent Depth</td><td>2025.2</td><td><strong>3.5B 打 50B 等效</strong>；GSM8K ≈0→34.8；深度=鲁棒超参</td></tr>
+      <tr><td>Training-Free Looped</td><td>2026.5</td><td>pre-norm 块＝ODE 欧拉步；零调参 MMLU-Pro <strong>+2.64pp</strong>；窗口 n≥6 悬崖</td></tr>
+      <tr><td>LoopCoder-v2</td><td>2026.6</td><td>18T token 受控实验：<strong>循环 1 次最优、3 次以上回退</strong>；延迟显存近常数</td></tr>
+      <tr><td>Loop the Loopies</td><td>2026.7</td><td>layer-loop 优于 model-loop；<strong>同算力击败 vanilla 30B-A3B</strong>；循环×MoE 可叠加</td></tr>
+    </table>
 
-    <div class="tension">
-      <div class="th">路线没走完就进场采买<span class="vs">vs 剂量问题悬空</span></div>
-      <p>Astra 在 LoopCoder 警告（6/16）三个月后、Loopie 合题（7/17）后 49 天发布——OpenAI 要么独立解决了剂量问题，<strong>要么没解决但赌其他增益更大</strong>；全链条唯一悬空的关键工程问题。</p>
-      <div class="take">判断：行为指纹≠机制确认，对外引用时保持"报道级"标注纪律。</div>
-    </div>
+    <div class="pull">范式复活的条件是核算体系变了，不是论文变好了——七年沉寂，六个月走完十年路。</div>
+    <p>test-time compute 共识＋MoE 改算力核算＋大厂撞算力墙，三者同时满足，被埋葬的归纳偏置才突然值钱。历史注脚：RNN 的循环偏置被 Transformer 击败八年后的"回魂"。</p>
+
+    <h3>Astra 证据分层（勿混）</h3>
+    <ul>
+      <li>已确认：Astra <strong>9/4 发布全量上线</strong>；五篇论文数据可查。</li>
+      <li>报道级：The Information 称其"很可能"用 recurrent depth——<strong>信源判断，非官宣</strong>。</li>
+      <li>行为指纹：OpenAI 自述 Astra 在 V8 基准成功率大涨而<strong>输出 token 显著更少</strong>——少 token 换强推理正是 latent reasoning 指纹；漏洞挖掘＝"持有候选解多轮自我精化"，与深度循环需求结构天然匹配。</li>
+    </ul>
+    <p>时间张力：<strong>"三次回退"警告 3 个月后 Astra 发布</strong>、Loopie 合题后仅 49 天。OpenAI 要么独立解决了剂量问题，要么在赌——这是全链条唯一悬空的关键工程问题。</p>
+
+    <h3>监控悖论（本路线的安全学含义）</h3>
+    <p>OpenAI 对 Astra 的安全措施之一是 <strong>CoT 监控可实时中断</strong>。但 latent reasoning 的定义就是推理在隐状态循环里，不在 token 序列上——CoT 监控看到的只是"说话草稿"而非"思考过程"。</p>
+    <div class="pull">安全防线审计的是输出的最后一层投影，能力藏在不可观测的 R 圈里——不是没人愿意看，是没有东西可看。</div>
+    <p>一般化：当学习/推理过程不再外化为符号序列，外部监督与 reward hacking 检测失去工作面。这是 Agent 自进化领域"评价信号可及性"问题的<strong>架构级版本</strong>。</p>
   </section>
 
-  <!-- 4 认知变化 -->
+  <!-- 关键张力 -->
   <section>
-    <h2><span class="no">4</span>认知变化：从"补素材"到"前提修订"</h2>
-    <p class="sec-desc">连续两天实质输入使回顾任务的性质再次改变：<strong>候选线不再只有营销分发层</strong>，架构层首次带来对主线前提的反向压力。</p>
-    <div class="timeline">
-      <div class="tl">
-        <div class="d">09-07 · 打破 4 天静默 · 跨出营销分发层</div>
-        <p>GEO 进入：<strong>语义权力平面获第 4 个样本</strong>，与华为 ADS 分层同构；给出汽车"AI 答案位监测"低成本观察项。</p>
-      </div>
-      <div class="tl">
-        <div class="d">09-08 · 下沉到模型架构层 · 提出三轴</div>
-        <p>Looped Transformer 进入：监控悖论把"信号可及性"从环境层推到架构层；<strong>"内循环吞并外循环"</strong>首次对 harness=跨域长生命周期定位构成前提挑战——精确归因纪律同时被强化（Astra 证据分四层）。</p>
-      </div>
-      <div class="tl">
-        <div class="d">09-09 · 窗口终点 · 暂无新增</div>
-        <p>今日目录未建；连续两天输入后素材饥荒解除，重心转入消化：harness 边界问题是下一个必须收敛的口子。</p>
-      </div>
-    </div>
+    <h2 class="sec">关键张力</h2>
+    <ul>
+      <li><span class="tag">跨主题</span><strong>不透明性同构</strong>：潜空间循环（Loopie）、GEO 答案位黑盒、比昂 O（不可知的真实）三者同型——过程对监督者不透明是新范式的<strong>结构性特征而非缺陷</strong>，但所有外部治理机制都建在"可看的中间态"上，需要重估。</li>
+      <li><span class="tag">知识摄入</span><strong>叙事自利 vs 观点正确</strong>：OpenAI 同时是攻防主角（Astra Critical）、产品推手（Daybreak"修复瓶颈论"）、范式定义者（recurrent depth 报道）——三篇笔记的一手核验价值正在这里：每条结论都要拆信源利益。</li>
+      <li><span class="tag">立场接口</span><strong>速度竞赛 vs 长周期锁死</strong>：机器速度叙事在车的 10-15 年生命周期落不了地，反而放大设计期安全的价值——空白处恰是站位处。</li>
+      <li><span class="tag">权力</span><strong>赋能话术 vs 收税实质</strong>：GEO 学术源头是"创作者夺回可见性"，产业化却滑向"在别人答案里挤位置"，且接口定义权在厂商手里——标准制定权＝收税权。</li>
+    </ul>
   </section>
 
-  <!-- 5 待思考问题 -->
+  <!-- 认知变化 -->
   <section>
-    <h2><span class="no">5</span>待思考问题：两线留下的五个钩子</h2>
-    <p class="sec-desc">按与主线（2127 立场 / Agent 自进化）的距离排序，<strong>harness 边界问题居首</strong>。</p>
+    <h2 class="sec">认知变化（相对昨日回顾）</h2>
+    <ul>
+      <li>昨日的增量是"GEO↔Loopie"连接表；今日把这条线正式升格为<strong>知识库主线的候选脊柱</strong>——三篇同型证据成立后，"过程不透明"不再是一个比喻，而是可操作的分析框架。</li>
+      <li>监控悖论的落点被修正：它不是安全团队的局部问题，而是"<strong>评价信号可及性</strong>"问题下沉到模型架构层——Agent 自进化论证的前提需要随之修订。</li>
+      <li>新增一个未决对撞：LoopCoder"固定三次循环有害"（09-08）与 Astra"少 token 强推理"的行为指纹（09-02/09-08 交叉）之间，<strong>剂量问题是唯一悬空环节</strong>——若 Astra 真用此技术，它必然已绕过两次饱和墙，这本身构成对该负面结果的隐性反驳。</li>
+    </ul>
+  </section>
 
-    <div class="q">
-      <div class="qh">1.【前提修订】harness 外部循环的增量价值边界在哪？</div>
-      <p>若模型内部深度可伸缩，反思/重试/多轮编排哪些仍必须在外层做？<strong>这决定 harness 论证要不要改写</strong>，是本轮最急的开放问题。</p>
-    </div>
-    <div class="q">
-      <div class="qh">2.【安全学】思考不外化后，监督的替代工作面是什么？</div>
-      <p>CoT 监控审计的只是输出投影——<strong>可验证环境设计需给出架构层答案</strong>（如潜空间轨迹可读化工具、干预点），否则安全承诺退化为对训练的置信。</p>
-    </div>
-    <div class="q">
-      <div class="qh">3.【伪影之辩】"两次饱和墙"能否被自适应深度推翻？</div>
-      <p>社区若确认回退是固定剂量伪影，<strong>自适应深度还差什么</strong>——第三轴 scaling law（参数×token×迭代最优曲面）目前只有离散点证据。</p>
-    </div>
-    <div class="q">
-      <div class="qh">4.【标准权】模型厂商会不会官方化"引用接口"？</div>
-      <p>类 Bing 站长工具之于 SEO，<strong>谁先做谁拿标准权</strong>（国内：元宝/豆包/DeepSeek）；GEO 监测数据反哺自家权重是配套观察点。</p>
-    </div>
-    <div class="q">
-      <div class="qh">5.【2127 观察项】主机厂要不要建"AI 答案位监测"？</div>
-      <p>成本极低（5 平台每日提问）、行业几乎无人做——<strong>汽车分发层 AI 可见度</strong>仍是前瞻视角的首选低成本候选。</p>
-    </div>
-
-    <div class="keyline">本轮总判断：GEO 给出语义权力的分发侧样本，Looped Transformer 给出架构侧的监督缺口；两线在"过程不可见"会师，而 harness 边界是必须先收敛的那个口子。</div>
+  <!-- 待思考 -->
+  <section>
+    <h2 class="sec">待思考问题</h2>
+    <ul class="qa">
+      <li><strong>"两次饱和"是墙还是伪影？</strong>LoopCoder 在"代码域＋从头预训练＋固定 R"下测得；若叠加深度随机采样＋按输入条件化的 R 决策（ACT 回魂），非单调可能只是固定剂量对变难度题目的伪影。</li>
+      <li><strong>内部循环吃掉外部循环吗？</strong>模型 test-time 深度可伸缩后，harness 层 agent loop（反思/重试/编排）的增量价值边界在哪——直接关系"自进化 harness"定位。</li>
+      <li><strong>谁先官方化"引用接口"？</strong>元宝/豆包/DeepSeek 会不会做类似 Bing 站长工具的产品——谁先做，谁拿标准权。</li>
+      <li><strong>汽车要不要自建"AI 答案位监测"？</strong>成本极低（5 平台每日提问）但行业几乎无人做——2127 前瞻视角候选观察项。</li>
+      <li><strong>谁来定义 MTTR 的底线？</strong>无主老系统被持续扫描的世界里，"谁负责修"是责任机制问题，不是技术问题。</li>
+    </ul>
   </section>
 
   <footer>
-    知识库回顾 · 2026-09-09 ｜ 扫描窗口 09-07~09-09：新增 2 条（GEO/腾讯 Answerbit、Looped Transformer 第三 scaling 轴），09-09 暂无 ｜ 主线一天跨两域：营销分发层 → 模型架构层，会师于"过程黑盒"；首要开放项=harness 外部循环价值边界 ｜ 由定时任务自动生成并部署
+    由 daily-memory-review 定时任务生成 · 2026-09-10 13:10 · 数据源：D:/个人知识库/daily/ 09-02、09-07、09-08
   </footer>
-
 </div>
 </body>
 </html>
