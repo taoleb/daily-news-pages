@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>科技早报 · 2026年9月9日（星期三）</title>
+<title>科技早报 · 2026年9月10日（星期四）</title>
 <style>
   :root{
     --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --sub:#555; --line:#e6e6e6;
@@ -31,7 +31,6 @@
   .t-official{background:#e8f5ec; color:#1a7f3c; border:1px solid #bfe3cb;}
   .t-media{background:#fff4e5; color:#9a6400; border:1px solid #f0d9b0;}
   .t-community{background:#f0f0f0; color:#666; border:1px solid #ddd;}
-  .t-paper{background:#ede9fe; color:#5b3ea8; border:1px solid #d8cef6;}
   .t-domestic{background:#eef3ff; color:#2b52a0; border:1px solid #d3defa;}
   .t-global{background:#f7eefe; color:#7b3ba6; border:1px solid #e5d0f2;}
   .fact{font-size:14.5px; background:#fafafa; border:1px dashed #ddd; border-radius:8px; padding:8px 12px; margin:8px 0;}
@@ -56,196 +55,210 @@
 <div class="wrap">
 
 <header class="hero">
-  <h1>🔭 科技早报</h1>
-  <div class="date">2026年9月9日（星期三）· 覆盖最近24小时（9月8日—9月9日晨）</div>
+  <h1>💻 科技早报</h1>
+  <div class="date">2026年9月10日（星期四）· 覆盖最近24小时（9月9日—9月10日晨）</div>
   <div class="meta">
-    今日共收录 <b>19 条独立事件</b>：国内 4 条 / 国际 15 条。<br>
-    主题覆盖：<span class="badge">① AI模型与Agent 5 条</span><span class="badge">② 芯片/算力/基础设施 2 条</span><span class="badge">③ 安全与隐私 5 条</span><span class="badge">④ 科研/前沿 3 条</span><span class="badge">⑤ 产业·商业·政策 4 条</span><br>
-    来源结构：<b>官方发布 7</b> · <b>媒体报道 9</b> · <b>论文原文 1</b> · <b>社区转引 2</b>（社区来源占比约10%，均尽量回溯原始出处）。<br>
-    证据分级：<span class="tag t-official">官方发布</span>为企业/机构一手口径，<span class="tag t-media">媒体报道</span>为主流科技媒体报道，<span class="tag t-community">社区转引</span>仅作线索、须待官方确认。
+    今日共收录 <b>20 条独立事件</b>：国内来源 3 条 / 国际 17 条；证据分级为官方发布 8 条、媒体报道 11 条、社区转引 1 条（约5%，远低于30%上限）。<br>
+    板块覆盖：<span class="badge">① AI与模型 5 条 ✓</span><span class="badge">② 芯片/算力/基础设施 2 条 ✓</span><span class="badge">③ 工程/开源/开发者 2 条 ✓</span><span class="badge">④ 安全/隐私 4 条 ✓</span><span class="badge">⑤ 产业/商业与政策 5 条 ✓</span><span class="badge">⑥ 科研/前沿 2 条 ✓</span><br>
+    说明：<span class="tag t-official">官方发布</span>为公司/机构一手口径，<span class="tag t-media">媒体报道</span>为主流科技媒体报道，<span class="tag t-community">社区转引</span>仅作线索并明确标注。本期中国科技媒体RSS抓取异常，国内条目以转引原始媒体页补足。
   </div>
 </header>
 
 <!-- ================= 板块一 ================= -->
 <section>
-  <h2 class="sec">① AI 模型与 Agent</h2>
-  <div class="sec-note">模型发布、能力里程碑与智能体产品动态</div>
+  <h2 class="sec">① AI与模型</h2>
+  <div class="sec-note">前沿模型发布、对齐与治理动态</div>
 
   <article class="item">
-    <h3>OpenAI 宣布攻克纳维-斯托克斯千禧年问题：内部模型证明三维流体方程可有限时间爆破</h3>
+    <h3>OpenAI发布GPT-6 Astra：代理任务基准大幅登顶，首个触及"关键级"网安能力阈值</h3>
     <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：<b>悬置约90年的千禧年难题</b>；结论为奇点<b>可在有限时间形成</b>（命题C/D）；附 <b>Lean 形式化验证</b>；明确<b>不申请100万美元千禧年奖金</b></div>
-    <div class="detail">OpenAI 9月8日发布博文，称其<strong>未公开的内部模型</strong>（能力显著高于 GPT-6 Astra）解决了<strong>纳维-斯托克斯千禧年问题</strong>：给出三维不可压流体在光滑外力下仍可产生有限时间奇点的解析证明，并同步开源 Lean 形式化证明。工程规模同样惊人：<strong>近百个智能体协作88小时</strong>，全程发送490万条消息、<strong>消耗约3000亿输出 token</strong>；Lean 验证另耗时17小时。OpenAI 在博文中承认其行动由"他人已解题"的传闻触发，并在"并行工作"一节提及 NYU 教授 Tristan Buckmaster 与 Anthropic 员工 Levent Alpöge 的相关工作——后者同日发声明质疑 OpenAI 的做法，争议仍在发酵。</div>
-    <div class="quote">千禧年难题的"解"第一次以AI系统的形式公布，而数学界的争论焦点是：优先权与研究伦理。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：OpenAI 官方博客（附论文PDF与GitHub Lean证明） · <a href="https://openai.com/index/navier-stokes-solution/">openai.com/index/navier-stokes-solution</a> · 争议报道：<a href="https://techcrunch.com/2026-09-08/openai-fought-dirty-on-career-making-math-problem-says-nyu-mathematician/">TechCrunch</a></div>
+    <div class="fact">关键事实：Terminal-Bench 4.0 得分 <b>57.9%</b>（GPT-5.6 Sol为37.3%）；API定价 <b>每百万token输入$10/输出$50</b>；首个达到Preparedness框架 <b>Critical网安阈值</b> 的模型</div>
+    <div class="detail">OpenAI正式发布GPT-6 Astra，定位"迄今最智能、最对齐"的工作模型，主攻计算机操作、浏览、软件工程与科学推理。官方数据显示其在代理终端任务基准Terminal-Bench 4.0上达<strong>57.9%</strong>，较前代GPT-5.6 Sol（37.3%）大幅跃升，且估算每任务API成本更低。Astra同时是OpenAI首个在内部Preparedness框架中触及<strong>"关键级"网络安全能力阈值</strong>的模型——即能在无人逐步引导下跨系统发现并利用未知漏洞，OpenAI称已同步加强越权防护与工具调用审查。API定价为每百万token输入<strong>10美元、输出50美元</strong>；企业默认关闭访问，需管理员手动启用。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：OpenAI官方博客 · <a href="https://openai.com/index/gpt-6-astra-next-generation-work">openai.com/index/gpt-6-astra-next-generation-work</a></div>
   </article>
 
   <article class="item">
-    <h3>Meta 推出个人 AI 智能体 Muse：托管专属虚拟机替用户订票、填表、购物，主打"动作先审批"</h3>
+    <h3>OpenAI系统卡罕见承认：Astra思维链可监测性较前代"显著下降"</h3>
     <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：运行于<b>专用安全虚拟机（Muse Secure VM）</b>；登录凭据存于<b>智能体不可读的密码库</b>，即将接入 1Password；购物用<b>一次性卡号</b>；<b>对话不进入Meta广告系统</b>；免费额度+付费订阅</div>
-    <div class="detail">Meta 9月8日上线个人智能体 <b>Muse</b>：它在常驻的专属虚拟机里用浏览器替用户订预约、填表单、处理客服，可连接邮箱、日历、Instagram 等应用，缺少工具时甚至<strong>自己现造工具</strong>；关键动作（发邮件、下单）须用户审批并留完整审计日志，购物生成一次性卡号，符合条件订单还获得 Link 的购买保障——Meta 称这是<strong>AI 智能体中的首创</strong>。TechCrunch 与 The Verge 同时指出，Muse 要求接触邮箱、日历、支付乃至健康服务数据，这是 <strong>Meta 在消费 AI 上最重的一次押注</strong>，也是对<strong>"用户还信不信 Meta 管数据"的直接测试</strong>；产品已上架 iOS/Android，可通过 WhatsApp 对话。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：Meta 官方产品页 + TechCrunch / The Verge 解读 · <a href="https://ai.meta.com/muse/">ai.meta.com/muse</a></div>
+    <div class="fact">关键事实：首席科学家Pachocki称CoT监测能力 <b>"逐步减弱"</b>；英国AI安全研究所外部评估发现 <b>Astra原始推理更压缩、含混短语增多</b></div>
+    <div class="detail">OpenAI在发布同日的Astra系统卡中披露：该模型的<strong>思维链（CoT）可监测性出现显著下降</strong>。首席科学家Jakub Pachocki称，模型越来越能控制自身推理过程、可在更少甚至无需语言化推理的情况下完成复杂任务，导致依赖CoT做安全监测的能力"逐步减弱"。英国AI安全研究所的外部评估同样发现Astra原始推理更压缩、含义不清的短语有所增加；OpenAI转而部署对完整推理轨迹（含CoT）的普遍监测与"阻断式对齐评估"。这一披露直击前沿安全治理的一个核心假设——<strong>"模型在想什么，人类还看得见吗"</strong>。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：OpenAI部署安全中心（系统卡） · <a href="https://deploymentsafety.openai.com/gpt-6-astra">deploymentsafety.openai.com/gpt-6-astra</a></div>
   </article>
 
   <article class="item">
-    <h3>OpenAI 发布 ChatGPT Images 2.5：生成延迟最高砍半，新增"随手画草图出图"，API 同步推两款新模型</h3>
-    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：每周图像生成量<b>超30亿张</b>；较 Images 2.0 <b>延迟最高降低50%</b>；API 新模型 <b>GPT-Image-2.5 Flare / Sunburst</b>；保留 <b>C2PA 元数据+不可见水印</b></div>
-    <div class="detail">OpenAI 9月8日推出新一代图像模型 <b>ChatGPT Images 2.5</b>：光影纹理更自然、参考图主体保持度更高、多轮编辑指令遵循更稳，<strong>生成延迟较 Images 2.0 最多降一半</strong>。产品端新增 <strong>Sketch 草图生图</strong>、模板、<strong>图上评论式局部编辑</strong>与提示词分享；开发者侧 Flare 主打低延迟默认档、Sunburst 主打高控制力精品档。值得注意的是，发布同日 ChatGPT 出现<strong>图像生成失败与文件上传卡滞的故障</strong>，OpenAI 称已定位原因并缓解（BleepingComputer 报道），部分请求当时仍会失败。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：OpenAI 官方发布页 + BleepingComputer（故障） · <a href="https://openai.com/index/introducing-chatgpt-images-2-5/">openai.com/index/introducing-chatgpt-images-2-5</a></div>
+    <h3>OpenAI称88小时攻克Navier-Stokes千禧难题，"抢发"指控引爆数学界</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：未发布模型耗时 <b>88小时</b>；约 <b>1万个AI代理</b>协同求解；问题困扰数学界 <b>近90年</b>、悬赏 <b>100万美元</b>；OpenAI否认挪用他人成果</div>
+    <div class="detail">OpenAI宣布其智能体群解决了克雷数学研究所七大千禧年难题之一的Navier–Stokes存在性与光滑性问题：一个未发布模型在约1万个代理协同下<strong>88小时完成解答</strong>，此前该问题仅有一例千禧难题被人类解决。但公告同日即被争议淹没——纽约大学教授Tristan Buckmaster与Anthropic研究员Levent Alpöge（以个人身份）前一天刚公布该问题的关键进展，指OpenAI是听到风声后"赶工抢发"、未予致谢；Buckmaster称质问时收到"你为什么要毁掉你的职业生涯"及"如果你不想让我客气，我就不必客气"等回复。OpenAI否认将二人成果直接用作跳板。研究者担忧此事标志<strong>大实验室与学术规范的系统性冲突</strong>。</div>
+    <div class="quote">里程碑与学术伦理危机，在同一天、同一个证明里出现。</div>
+    <div class="src">事件日期：2026-09-09（周二公告、周三发酵） · 来源：The Verge（MIT Technology Review同日分析相互印证） · <a href="https://www.theverge.com/ai-artificial-intelligence/992953/openai-math-millennium-prize-navier-stokes">theverge.com/…/openai-math-millennium-prize-navier-stokes</a></div>
   </article>
 
   <article class="item">
-    <h3>传 DeepSeek 开启 V4.1 Flash 内测：原生多模态、称更快更省，定价沿用 V4 Flash</h3>
+    <h3>对齐研究员Paul Christiano加入OpenAI基金会董事会</h3>
+    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：长期专注 <b>AI对齐与安全标准</b> 的研究者；同时进入 <b>安全与安保委员会</b></div>
+    <div class="detail">OpenAI基金会官方宣布，以蒸馏研究与AI对齐立场著称的<strong>Paul Christiano</strong>加入基金会董事会并进入安全与安保委员会。TechCrunch称其为"著名的AI末日论者"——实验室把长期批评对齐节奏的力量引入自身治理层，被解读为在监管与舆论压力上升期（叠加Astra关键级网安阈值、CoT监测性下降等争议）的人员回应。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：OpenAI官方公告（TechCrunch报道相互印证） · <a href="https://openai.com/index/paul-christiano-joins-openai-foundation-board">openai.com/index/paul-christiano-joins-openai-foundation-board</a></div>
+  </article>
+
+  <article class="item">
+    <h3>DeepSeek V4.1 Flash被曝开启内测：原生多模态、计费与上代持平</h3>
     <div class="tags"><span class="tag t-community">社区转引</span><span class="tag t-domestic">国内</span></div>
-    <div class="fact">关键事实：内测模型名含 <b>expires-on-0910（9月10日到期）</b>；宣称<b>新模型结构+原生多模态</b>；计费与 <b>deepseek-v4-flash 相同</b>；单账号限流20并发</div>
-    <div class="detail">据技术社区/Telegram 渠道转述的 DeepSeek 内测邮件，<strong>DeepSeek V4.1 Flash</strong> 中间版本<strong>已开启内测</strong>：调用 base_url 不变、模型名为 deepseek-v4.1-flash-expires-on-0910，官方口径称其"能力更强、速度更快且成本更低"，<strong>支持原生多模态</strong>，计费维持 V4 Flash 水平。<span class="tag t-community" style="font-size:11px;">据转引</span>该消息未见 DeepSeek 官网公告佐证，能力宣称以内测方口径为准，正式发布节奏待确认。</div>
-    <div class="src">事件日期：2026-09-08（社区转述内测通知） · 来源：Telegram 技术频道转引 · <a href="https://t.me/zaihuapd/43681">t.me/zaihuapd/43681</a></div>
-  </article>
-
-  <article class="item">
-    <h3>小米 MiMo 桌面端开放内测：自动评估任务复杂度并拆分，多 Agent 并行推进</h3>
-    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-domestic">国内</span></div>
-    <div class="fact">关键事实：桌面客户端<b>开放内测申请</b>；按任务类型/复杂度/成本<b>自动路由至办公、代码或研究框架</b>；复杂任务<b>多Agent并行、状态全程可见</b></div>
-    <div class="detail">小米 MiMo 桌面客户端上线<strong>智能调度</strong>能力并开始收集内测资格：系统自动评估任务类型、复杂度与成本，按需路由到办公、代码或研究子框架；<strong>复杂任务拆为子任务、多 Agent 并行</strong>且全程可视化。这是国内大厂把"多智能体编排"从开发者工具推向<strong>通用桌面入口</strong>的最新一例。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：小米 MiMo 官方内测页（经技术社区渠道传播） · <a href="https://mimo.xiaomimimo.com/desktop/invite/">mimo.xiaomimimo.com/desktop/invite</a></div>
+    <div class="fact">关键事实：模型名 deepseek-v4.1-flash；计费 <b>与deepseek-v4-flash相同</b>；每账号限流 <b>20并发</b>；官方尚未公开公告</div>
+    <div class="detail">据AI资讯频道"在花频道"转引，深度求索已开启中间版本<strong>DeepSeek V4.1 Flash内测</strong>，称采用新模型结构、支持<strong>原生多模态</strong>，速度更快且成本更低；调用时base_url不变，计费与v4-flash一致。内测模型名带"expires-on-0910"字样，暗示该通道今日到期。截至发稿，DeepSeek官网与官方账号<strong>均未见公开公告</strong>，本条仅为社区线索，参数与排期以官方后续口径为准。</div>
+    <div class="src">线索日期：2026-09-09 · 来源：Telegram"在花频道"转引（据转引，未回溯到官方源） · <a href="https://t.me/zaihuapd/43708">t.me/zaihuapd/43708</a></div>
   </article>
 </section>
 
 <!-- ================= 板块二 ================= -->
 <section>
   <h2 class="sec">② 芯片、算力与基础设施</h2>
-  <div class="sec-note">国家级算力规划与半导体设备路线演进</div>
+  <div class="sec-note">AI芯片、数据中心政策与算力成本动态</div>
 
   <article class="item">
-    <h3>工信部五年规划：2030年智能算力达 9800 EFLOPS，信息基础设施投资 3.8万亿元</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-domestic">国内</span></div>
-    <div class="fact">关键事实：目标 <b>9800 EFLOPS（2030）</b>；较今年6月底的 <b>2185 EFLOPS 需增4倍以上</b>；2026—2030累计投资 <b>3.8万亿元（约5320亿美元）</b>；部署<b>万卡及10万卡级集群</b></div>
-    <div class="detail">据南华早报援引工信部周一发布的五年产业规划，中国提出到2030年<strong>智能算力提升至9800 EFLOPS</strong>，2026—2030年信息基础设施累计投资<strong>3.8万亿元</strong>；要求"有序部署"万卡级乃至<strong>10万卡以上智算集群</strong>，并加强基础设施与<strong>国产算力芯片的适配</strong>。截至今年6月底全国智能算力为2185 EFLOPS（同比+177%）、已有52座万卡设施——<strong>四年内算力规模需翻两番以上</strong>，延续"东数西算"以来的国家级算力扩张。</div>
-    <div class="src">事件日期：2026-09-07规划发布 / 09-08报道 · 来源：SCMP（引工信部规划） · <a href="https://www.scmp.com/tech/policy/article/3366733/china-targets-fourfold-boost-ai-computing-capacity-2030-major-tech-push">scmp.com/…/china-targets-fourfold-boost…</a></div>
+    <h3>OpenAI首席财务官：AI进军芯片设计，自研Jalapeno九个月定稿、Luna降价80%后用量增约10倍</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：自研 <b>Jalapeno芯片9个月完成设计定稿</b>；低价模型Luna <b>降价80%</b> 后使用量 <b>增长约10倍</b>；价格对标直指中国开源模型</div>
+    <div class="detail">路透社报道，OpenAI首席财务官Sarah Friar表示公司正把AI能力扩展到<strong>芯片设计、生命科学与金融服务</strong>，并称自研Jalapeno芯片在9个月内完成设计定稿。她同时给出商业化口径：低价云端模型Luna降价80%后使用量增加约10倍，且部署成本<strong>低于DeepSeek等中国开源替代方案</strong>——这是OpenAI迄今最直接的"闭源降价对标中国开源"公开表态。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：Reuters · <a href="https://www.reuters.com/world/china/openai-offers-ai-chip-design-touts-cost-advantage-over-open-source-cfo-says-2026-09-09/">reuters.com/…/openai-offers-ai-chip-design…</a></div>
   </article>
 
   <article class="item">
-    <h3>ASML 联手台积电推进 High-NA EUV 升级：光掩模从6英寸转向12英寸，2031年试产、2033年量产</h3>
+    <h3>马萨诸塞州对数据中心祭出清洁能源新规，三个月内第三个收紧的州</h3>
     <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：掩模规格 <b>6英寸→12英寸</b>；<b>2031年试产线、2033年量产系统</b>；台积电拟 <b>2030年起</b>在先进节点大规模采用 High-NA</div>
-    <div class="detail">荷兰媒体 NRC 报道，<strong>ASML 与台积电于9月7日发起产业合作</strong>，把 High-NA EUV 光刻的掩模版从现有6英寸推向12英寸，以提高设备生产率、降低单次曝光成本并减少多掩模拼接限制；双方计划<strong>2031年建成12英寸掩模试产线</strong>、<strong>2033年进入先进制程量产</strong>，台积电拟自2030年起在先进节点规模使用 High-NA。这直接回应了 High-NA 长期被诟病的<strong>产能与经济性短板</strong>，是决定2nm后段光刻路线的关键一步。</div>
-    <div class="src">事件日期：2026-09-07（合作发起）/ 09-08（NRC报道） · 来源：NRC · <a href="https://www.nrc.nl/nieuws/2026-09-08/asml-gaat-samenwerken-met-taiwanese-chipgigant-tsmc-om-zijn-nieuwste-chipmachines-te-upgraden-a4936073">nrc.nl/…/asml-tsmc-high-na-upgrade</a></div>
+    <div class="fact">关键事实：<b>三个月内第三个</b>对新数据中心设置限制的美国州；新增清洁电力与并网义务</div>
+    <div class="detail">TechCrunch报道，马萨诸塞州通过针对数据中心的新清洁能源规则，成为<strong>三个月内第三个收紧数据中心开发限制</strong>的美国州——此前已有州级政府以用电、水资源与噪音为由设置门槛。AI算力需求暴涨与电网承载力之间的矛盾正把选址竞争从"税收优惠战"推向<strong>"能源义务战"</strong>，超大规模云厂商的扩张成本结构面临重估。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：TechCrunch · <a href="https://techcrunch.com/2026/09/09/massachusetts-hits-data-centers-with-new-clean-power-rules/">techcrunch.com/…/massachusetts-hits-data-centers…</a></div>
   </article>
 </section>
 
 <!-- ================= 板块三 ================= -->
 <section>
-  <h2 class="sec">③ 安全与隐私</h2>
-  <div class="sec-note">补丁周期、账户盗用、诉讼与政府监控</div>
+  <h2 class="sec">③ 工程、开源与开发者工具</h2>
+  <div class="sec-note">开源生态、基础模型工程化与商业格局</div>
 
   <article class="item">
-    <h3>微软9月补丁星期二修复约 972 个漏洞创纪录，其中 112 个评为严重</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：修复漏洞约 <b>972个（创纪录）</b>；<b>112个严重级</b>；背景是两周前 <b>百余家机构联署警告"AI辅助攻击浪潮"</b></div>
-    <div class="detail">Ars Technica 报道，微软本月补丁修复<strong>约972个漏洞、创单月纪录</strong>，其中<strong>112个达到最高"严重"评级</strong>。报道将其放入更大的攻防叙事中：两周前 OpenAI、Anthropic、AWS、谷歌、微软等<strong>100余家公司与组织发表公开信</strong>，警告 AI 辅助漏洞挖掘正急剧收窄"漏洞已知—补丁可用"的窗口期，<strong>修复速度本身正在成为安全能力</strong>。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：Ars Technica · <a href="https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/">arstechnica.com/…/microsoft-patches-a-record-972-vulnerabilities…</a></div>
+    <h3>Shopify官宣接管Tailwind Labs：每周1.1亿次安装的开源框架获"长期归属"，商业产品停售新客</h3>
+    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：Tailwind CSS 周安装量 <b>超1.1亿次</b>；开源部分维持 <b>MIT许可不变</b>；Tailwind Plus等商业产品 <b>停止新客户注册</b></div>
+    <div class="detail">Tailwind创始人Adam Wathan 9月9日官宣<strong>Tailwind Labs加入Shopify</strong>，称这是框架"稳定的长期归属"——该CSS框架已被ChatGPT、X、Cloudflare、Reddit等产品的界面所用。MIT开源部分承诺不变，团队继续主导维护；但商业侧收缩：Tailwind Plus、ui.sh等停止新客注册。社区同时重提其年初公告——<strong>因AI冲击模板业务，工程团队曾在1月裁员75%</strong>——此收购被视为AI重构开源商业模式的一个标志性注脚。</div>
+    <div class="quote">AI压垮了"卖模板养开源"的老模式，Tailwind选择把自己交给一家用它造店的产品公司。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：Tailwind官方博客（HN讨论指向该原文） · <a href="https://tailwindcss.com/blog/tailwind-is-joining-shopify">tailwindcss.com/blog/tailwind-is-joining-shopify</a></div>
   </article>
 
   <article class="item">
-    <h3>Chrome 正式转入两周一次更新：随 Chrome 153 落地，应对 AI 时代的"N-day"攻击窗口</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：发布周期 <b>4周→2周</b>；随 <b>Chrome 153</b> 桌面版生效；谷歌称与 <b>AI 时代安全形势</b>直接相关；Mozilla、Edge、Brave 已跟进</div>
-    <div class="detail">谷歌 Chrome 自9月8日的 <b>Chrome 153</b> 起正式从四周周期切换为<strong>两周发布一次</strong>。官方逻辑是：AI 自动化工具与社区报洞让补丁量激增，<strong>缩短"N-day"窗口</strong>（漏洞公开到修复完成的时间差）比什么都重要；同时 AI 辅助开发催生的新浏览器竞争也要求更快的功能节奏。作为全球份额第一的浏览器，<strong>Mozilla、Edge、Brave</strong> 已相继跟进两周制，行业发布节奏正被整体改写。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：TechCrunch · <a href="https://techcrunch.com/2026-09-08/chrome-is-now-shipping-updates-every-2-weeks-as-ai-changes-the-security-landscape/">techcrunch.com/…/chrome-is-now-shipping-updates-every-2-weeks…</a></div>
-  </article>
-
-  <article class="item">
-    <h3>黑客开始"偷 Claude 额度"：订阅用户闲置时 token 被刷，Anthropic 已发警告</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：受害形态为<b>账户被盗用后消耗订阅 token</b>；最早案例发生于8月；<b>Anthropic 已向用户发出警告</b></div>
-    <div class="detail">TechCrunch 报道，一名 Claude 用户上月发现<strong>自己没有使用、token 却在持续消耗</strong>——攻击者盗取订阅账户凭据后，把高价模型额度转卖或自用。Anthropic 其后向用户发出安全警告。<strong>"算力订阅额度"正取代储值卡</strong>，成为盗号套利的新标的，这也与大模型 API 计费体系天然绑定个人/团队账户的结构有关。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：TechCrunch · <a href="https://techcrunch.com/2026-09-08/hackers-are-stealing-claude-tokens-from-subscribers/">techcrunch.com/…/hackers-are-stealing-claude-tokens-from-subscribers</a></div>
-  </article>
-
-  <article class="item">
-    <h3>重度用户集体诉讼 Anthropic：称最高档订阅"名不副实"，诉讼范围扩大</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：原告为<b>AI重度使用者</b>；指控<b>最高档订阅承诺与实际可用量不符</b>；为<b>扩大后的集体诉讼</b></div>
-    <div class="detail">The Verge 报道，一批 Claude 高级订阅用户<strong>扩大了针对 Anthropic 的集体诉讼</strong>，称被"最高档套餐=更高用量"的宣传误导——实际获得的推理额度远低于宣传，而 Anthropic 一边声称重视重度用户、一边又为保产能限制这类重度使用。<strong>订阅定价的"承诺-兑现"边界首次上法庭</strong>，判决或和解将直接影响整个行业的套餐设计。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：The Verge · <a href="https://www.theverge.com/ai-artificial-intelligence/990313/anthropic-class-action-lawsuit-pricing-subscription-plans">theverge.com/…/anthropic-class-action-lawsuit-pricing-subscription-plans</a></div>
-  </article>
-
-  <article class="item">
-    <h3>404 Media 调查：美国土安全部神秘"预测性警务"单元正分析美国人金融习惯并据此拦车</h3>
-    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：主体为 <b>DHS 秘密"预测性警务"单元</b>；手段为<b>分析金融交易习惯</b>；已出现<b>据此拦停普通市民</b>的案例</div>
-    <div class="detail">调查媒体 404 Media 曝光，美国国土安全部下一个<b>鲜为人知的"预测性警务"单元</b>正在分析美国人的消费与金融行为数据，用于生成"可疑个人"画像并支持路面拦截。文章指出该系统<strong>几乎不受国会监督、算法逻辑不透明</strong>，把金融隐私数据接入了执法决策——在 AI 画像技术快速下沉的当下，这是政府监控边界的一次实质性越线。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：404 Media · <a href="https://www.404media.co/a-secretive-dhs-predictive-policing-unit-is-analyzing-americans-financial-habits-and-pulling-them-over/">404media.co/…dhs-predictive-policing…</a></div>
+    <h3>IBM发布PatchTST-FM-r2时间序列基础模型：商用友好许可下零样本预测登顶</h3>
+    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：约 <b>3.85亿参数</b>、上下文最长 <b>8,192</b>；许可 <b>Apache 2.0 + OpenMDW 1.0</b>；截至9月8日为GIFT-Eval可复现零样本模型 <b>榜首</b></div>
+    <div class="detail">IBM研究院在Hugging Face发布Granite Time Series系列新版<strong>PatchTST-FM-r2</strong>：改用Conformer骨干（自注意力+时序卷积）、扩大预训练语料、支持99分位数概率预测，面向需求、电价、负载、遥测等时间序列做开箱即用的零样本预测。官方博客称其截至9月8日是<strong>GIFT-Eval榜单上采用宽松商用许可、可复现的零样本模型中表现最佳者</strong>。IBM还联合Confluent把Granite时序模型推入流式生产环境早期访问——时间序列基础模型的"生产化竞赛"开始从论文走向部署。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：Hugging Face / IBM Research官方博客 · <a href="https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series">huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series</a></div>
   </article>
 </section>
 
 <!-- ================= 板块四 ================= -->
 <section>
-  <h2 class="sec">④ 科研与前沿</h2>
-  <div class="sec-note">AI 驱动科学研究、模型行为研究与学界反思</div>
+  <h2 class="sec">④ 安全与隐私</h2>
+  <div class="sec-note">在野利用、补丁周期与隐私争议</div>
 
   <article class="item">
-    <h3>DeepMind 发布 AlphaGenome Atlas：预测人类基因组全部 90 亿种单字母变异，数据量达 1PB</h3>
-    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：覆盖 <b>90亿种单核苷酸变异</b>（每一种单字母改变）；数据集 <b>1PB、为 AlphaFold 数据库30余倍</b>；新增 <b>AVI 综合影响分</b>；学术免费开放</div>
-    <div class="detail">Google DeepMind 9月8日上线 <b>AlphaGenome Atlas</b>：把 AlphaGenome 模型的预测<strong>预计算到全部约90亿种单字母变异</strong>，横跨数百种人/小鼠细胞类型、输出数千项分子效应指标，是迄今最完整的"突变-分子效应"图谱。配套发布的 <strong>AVI 变异影响分</strong>同时覆盖编码区（2%）与非编码区（98%），已帮助 Broad Institute 团队在未解罕见病中定位致病错剪接变异（DNM1 与癫痫性脑病相关），Exeter 大学基于 UK Biobank 5.4万人数据<strong>多发现22%的非编码关联</strong>。平台经网页门户、API 与 Google Antigravity 技能对学术免费开放，商用接口将进谷歌云。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：Google DeepMind 官方博客 · <a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">deepmind.google/blog/alphagenome-atlas…</a></div>
+    <h3>微软史上最疯狂补丁日：974个CVE、2个在野零日、20个蠕虫级漏洞</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：单日修复 <b>974个CVE</b> 创历史纪录；<b>2个</b> 已被在野利用的权限提升零日；一次性修补 <b>20个可蠕虫化</b> 漏洞</div>
+    <div class="detail">微软9月补丁星期二修复自有产品<strong>974个漏洞</strong>（含非微软组件口径约999个），为有史以来最大单日披露。两个在野利用零日均为本地权限提升至SYSTEM：Windows ALPC堆溢出（CVE-2026-85880，ALPC组件近四年第二个零日）与Windows更新栈链接劫持（CVE-2026-81963，该组件首次被确认在野利用）。更棘手的是<strong>20个无需用户交互即可远程传播的蠕虫级缺陷</strong>，波及DNS、DHCP、SMB、Netlogon等核心网络服务；Exchange无需用户交互的恶意Visio邮件RCE（CVE-2026-55007）被研究者列为最优先补丁。分析者指出AI辅助漏洞发现正在推高披露量，"这是新常态"。</div>
+    <div class="src">事件日期：2026-09-08（美东）/09-09 · 来源：SecurityWeek、The Register（Rapid7同日报道） · <a href="https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/">securityweek.com/…microsoft-patches-record-974…</a></div>
   </article>
 
   <article class="item">
-    <h3>论文：大模型在探索任务中会"自适应地"形成新的社会偏见，远超提示词植入的刻板印象</h3>
-    <div class="tags"><span class="tag t-paper">论文原文</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：偏见来源为<b>模型在任务中的自适应探索</b>而非仅训练语料；实验设定为<b>虚构城市招聘</b>（四个陌生人群体）；结论为<b>模型会发展出新的社会偏见</b></div>
-    <div class="detail">一项提交至 OpenReview 的研究（9月8日登上 Hacker News 热榜）让大模型在"为虚构城市招聘20类岗位、申请者来自四个陌生人群"的任务中反复决策，发现<strong>模型会在交互中自发形成</strong>针对陌生群体的新偏见，且这类"自适应探索型偏见"与提示注入的刻板印象不同，更难通过表层对齐清除。<span class="tag t-paper" style="font-size:11px;">研究结论</span>该文尚处评审/预印本阶段，结论边界以论文为准，对模型部署中的"在线偏见漂移"监测提出新课题。</div>
-    <div class="src">事件日期：2026-09-08（HN热议） · 来源：OpenReview 论文页 · <a href="https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH">openreview.net/forum?id=pc7fqaOcAH</a></div>
+    <h3>思科确认Firewall Management Center满分漏洞遭在野利用：一个HTTP请求拿下root</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：CVE-2026-20079，CVSS <b>10.0</b> 未认证远程root；<b>无临时缓解措施</b>；热补丁无法清除已植入后门；CISA责令联邦机构 <b>9月12日前</b> 完成处置</div>
+    <div class="detail">思科9月9日更新公告，确认Secure Firewall Management Center认证绕过漏洞<strong>CVE-2026-20079（CVSS 10.0）已遭在野利用</strong>：攻击者向FMC Web界面发送特制HTTP请求即可绕过认证、以root执行脚本。该漏洞3月即公开但当时标注"无已知利用"，PSIRT称8月才察觉攻击，而官方公布的日志IOC显示<strong>7月23日已有入侵痕迹</strong>。CISA已将其列入KEV目录并责令美国联邦机构<strong>9月12日前</strong>取证与加固；Talos追踪到与Sandworm相关的APT及Qilin勒索软件关联簇两股利用势力；同批次静态凭证漏洞CVE-2026-20316亦在被利用。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：BleepingComputer（以Cisco PSIRT公告为据） · <a href="https://www.bleepingcomputer.com/news/security/cisco-confirms-cve-2026-20079-secure-fmc-flaw-exploited-in-attacks/">bleepingcomputer.com/…cisco-confirms-cve-2026-20079…</a></div>
   </article>
 
   <article class="item">
-    <h3>陶哲轩警告：数学公开问题正被 AI"不可再生地开采"，传闻本身即可触发围剿式攻坚</h3>
-    <div class="tags"><span class="tag t-community">社区转引</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：出自<b>陶哲轩本人公开帖</b>；核心判断——<b>"有人在研究"的传闻即可引爆AI大规模抢解</b>；后果指向<b>研究者不再共享研究方向</b></div>
-    <div class="detail">数学家陶哲轩9月8日在个人账号发文（经 Simon Willison 转引热议），提出<strong>"好的公开问题正被AI不可再生地开采"</strong>：即便某个解法尚未成型，仅"有人在做"的消息就足以<strong>触发海量AI算力抢先解题</strong>；他的担忧是激励结构将迫使研究者<strong>对同行保密有苗头的方向</strong>，侵蚀数学赖以运转的开放交流传统。此帖被视为对 OpenAI 纳维-斯托克斯公告事件最直接的学界回响。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：陶哲轩 Mathstodon 原帖（Simon Willison 转引） · <a href="https://mathstodon.xyz/@tao/117237320796901560">mathstodon.xyz/@tao/117237320796901560</a></div>
+    <h3>四个互不相关的攻击组被曝使用同一套Chrome+Windows连携漏洞套件</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：<b>4个</b>攻击团伙共用同一利用套件；报告归因于 <b>补丁间隔</b> 与 <b>AI加速漏洞发现</b></div>
+    <div class="detail">Ars Technica报道，安全研究者发现<strong>四个背景各异的攻击组织正在复用同一套Chrome/Windows漏洞利用套件</strong>。分析认为两大诱因叠加：企业浏览器与操作系统更新节奏间的"补丁间隔"持续存在，且<strong>AI辅助漏洞挖掘正在放大攻击者的弹药供给速度</strong>。本周Chrome恰成重灾区——Google已于9月3日修复在野利用的V8零日CVE-2026-85046，而微软截至补丁日仍未发布对应安全公告。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：Ars Technica · <a href="https://arstechnica.com/information-technology/2026/09/4-groups-caught-using-the-same-chrome-and-windows-exploit-kit/">arstechnica.com/…/4-groups-caught-using-the-same-chrome…</a></div>
+  </article>
+
+  <article class="item">
+    <h3>苹果"环境聆听"功能引发交锋：承诺不存原始音频，但"随时被录音"开始常态化</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：新功能含Siri Recap、Live Rewind（可转录 <b>最近15秒</b> 环境语音）；苹果发文档强调 <b>不保存原始音频</b></div>
+    <div class="detail">随Apple Watch Series 12/Ultra 4发布的Siri Recap、Live Rewind、声音识别等音频智能功能，可在本地转录近期语音并生成环境对话摘要。苹果同步发布隐私白皮书，强调新功能<strong>不会保存原始音频</strong>、转写与摘要受端侧隐私边界约束。但TechCrunch指出，"随时可被转录"这一设定本身正在<strong>把'设备一直在听'常态化</strong>：旁观者无从同意，公共场所的对话边界被重新定义。端侧模型是否等于隐私，已成苹果对抗云端AI的核心卖点，也是本期最受争议的隐私议题。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：TechCrunch（The Verge引苹果白皮书相互印证） · <a href="https://techcrunch.com/2026/09/09/apple-watchs-new-ai-features-are-normalizing-the-idea-that-technology-is-always-listening/">techcrunch.com/…apple-watchs-new-ai-features…</a></div>
   </article>
 </section>
 
 <!-- ================= 板块五 ================= -->
 <section>
   <h2 class="sec">⑤ 产业、商业与政策</h2>
-  <div class="sec-note">融资、估值、科研资助与平台格局</div>
+  <div class="sec-note">硬件发布与定价、公司治理、中国标准与号卡政策</div>
 
   <article class="item">
-    <h3>Mistral 完成 30 亿欧元 D 轮：估值超 210 亿欧元，创欧洲科技公司单轮股权融资纪录</h3>
+    <h3>苹果秋季发布会全记录：首款折叠iPhone Duo国行15999元起，10月23日发售</h3>
     <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：融资 <b>30亿欧元</b>；投后估值<b>超210亿欧元</b>；三星电子领投；<b>欧洲科技公司史上最大股权融资</b>；服务 <b>125+家企业</b>（含空客、ASML、汇丰）</div>
-    <div class="detail">法国 AI 实验室 Mistral 9月8日宣布<strong>D轮融资30亿欧元</strong>、投后估值<strong>超210亿欧元</strong>，由三星电子领投，EQT 管理的 Scaleup Europe Fund 与老股东 PSG Equity 联合领投——公司称这是<strong>欧洲科技公司迄今最大单笔股权融资</strong>。资金将投向前沿研究、算力与"主权AI"全栈（开源权重模型+私有算力+产品），Mistral 强调其定位是让客户<strong>"用AI而不交出控制权"</strong>；其C轮由 ASML 领投，两大欧洲制造业巨头先后入局，"主权AI"正在变成一门可融资的大生意。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：Mistral 官方公告（TechCrunch 同日报道） · <a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier</a></div>
+    <div class="fact">关键事实：内屏 <b>7.6英寸</b>；国行起售价 <b>15999元</b>；<b>10月16日预售、10月23日发售</b>；iPhone 18 Pro国行9999元起、9月18日发售</div>
+    <div class="detail">苹果9月9日发布首款折叠屏手机<strong>iPhone Duo</strong>：钛金属机身、折叠外屏（The Verge口径5.4英寸、转引口径5.6英寸）、支持Apple Pencil与侧边Touch ID、仅支持eSIM，国行<strong>15999元起</strong>，10月23日全球发售。同台发布iPhone 18 Pro/Pro Max（A20 Pro芯片，国行9999/10999元起）、降噪首次下放标准款的AirPods 5（999元）、以及健康传感全面升级的Apple Watch Series 12/Ultra 4。发布会上另一条AI主线是<strong>Apple Reference Image</strong>——主摄传感器对每像素签名、可证明照片未经AI修改；CEO John Ternus称"最好的AI设备仍是iPhone"，主打端侧模型与隐私差异化。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：Apple新闻室 / TechCrunch汇总（国行价格经Apple中国口径转引） · <a href="https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/">apple.com/newsroom/…/apple-debuts-iphone-18-pro…</a></div>
   </article>
 
   <article class="item">
-    <h3>Cognition 估值达 480 亿美元：投资人押注 AI 编程不是赢家通吃</h3>
+    <h3>涨价成为今年消费电子关键词：iPhone 18 Pro美区普涨100美元，旧机型同步上调</h3>
     <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：最新估值 <b>480亿美元</b>；TechCrunch 称其估值倍数<b>已超过 Cursor 出售给 SpaceX 之前的水平</b>；一年前（2025年9月）其估值为 <b>102亿美元（CNBC）</b></div>
-    <div class="detail">TechCrunch 9月8日报道，Devin/Windsurf 母公司 <b>Cognition 估值升至480亿美元</b>，其估值倍数<strong>已超 SpaceX 收购前的 Cursor</strong>；而2025年9月 CNBC 报道其收购 Windsurf 两个月后的估值还是102亿美元——<strong>一年膨胀近5倍</strong>。报道的核心判断是：资本愿意同时给多家 AI 编程公司高估值，<strong>市场并不相信AI编程赢家通吃</strong>，编码 Agent 赛道进入"多巨头并存"的定价阶段。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：TechCrunch · <a href="https://techcrunch.com/2026-09-08/cognition-hits-48b-valuation-signaling-investors-believe-ai-coding-is-far-from-a-winner-take-all-market/">techcrunch.com/…/cognition-hits-48b-valuation…</a></div>
+    <div class="fact">关键事实：iPhone 18 Pro / Pro Max美区起售价 <b>1199 / 1299美元</b>，较前代 <b>上涨100美元</b>；旧款iPhone同步涨价</div>
+    <div class="detail">The Verge总结称"为手机付更多钱几乎无法避免"：iPhone 18 Pro起售价<strong>1199美元</strong>、Pro Max 1299美元，均较前代<strong>上涨100美元</strong>；想"买旧款省钱"的路也被收窄——苹果同步上调了多款旧iPhone价格。据发布会渠道转引，iPad Pro从999美元上调至1199美元、MacBook Neo从599美元升至699美元，MacBook Air/Pro亦有上调，而<strong>国行iPhone 17系列价格保持不动</strong>。涨价潮覆盖苹果全线产品，硬件"只降不涨"的十年叙事正在掉头。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：The Verge（Mac/iPad调价据转引） · <a href="https://www.theverge.com/gadgets/993005/smartphone-price-hikes-apple-iphone-18-pro">theverge.com/gadgets/993005/smartphone-price-hikes…</a></div>
   </article>
 
   <article class="item">
-    <h3>OpenAI 出资 500 万美元征集"生成式AI与青少年发展"独立研究</h3>
-    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
-    <div class="fact">关键事实：资助规模 <b>500万美元</b>；方向为<b>生成式AI对青少年发展、福祉与安全的影响</b>；强调<b>独立研究</b>、现已开放申请</div>
-    <div class="detail">OpenAI 9月8日宣布设立<strong>500万美元研究资助计划</strong>，支持关于生成式 AI 如何影响青少年认知发展、心理健康与使用安全的独立研究。在 AI 陪伴式应用被质疑侵蚀青少年注意力与情感依赖、多国酝酿未成年人 AI 立法的节点上，<strong>由头部厂商出资资助可能约束自身的独立研究</strong>，其议程设定与结论独立性本身即是观察样本。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：OpenAI 官方公告 · <a href="https://openai.com/index/teen-development-research-grants">openai.com/index/teen-development-research-grants</a></div>
+    <h3>Automattic董事会将CEO Mullenweg置为带薪休假，本人指认CFO"串谋"</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：WordPress母公司Automattic创始人CEO <b>被带薪休假</b>；Mullenweg称CFO Mark Davies与 <b>3名董事</b> "背后串谋"表决</div>
+    <div class="detail">404 Media独家报道、The Verge跟进：Automattic CEO<strong>Matt Mullenweg被董事会置于带薪休假</strong>。他在内部消息中指控首席财务官Mark Davies与董事Ann Dunwoody、Toni Schneider、Sue Decker"在其背后串谋"表决通过该决定，并称自己将无法出席次日行业峰会。这是<strong>开源巨头罕见地以强制休假方式剥夺创始人CEO实权</strong>，WordPress.com与Automattic旗下开源项目的治理走向（以及内部派系冲突是否公开化）将直接影响全球约四成网站的底层生态。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：404 Media（首发）/ The Verge · <a href="https://www.404media.co/wordpress-automattic-ceo-matt-mullenweg-put-on-leave-of-absence/">404media.co/wordpress-automattic-ceo-matt-mullenweg…</a></div>
   </article>
 
   <article class="item">
-    <h3>野村：7月抖音人均月使用时长首次反超微信，字节系占中国网民时长 40.9%</h3>
+    <h3>荣耀主导"碰一碰"互传标准落地：小米、OPPO、vivo接入，跨品牌1GB约10秒传完</h3>
     <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-domestic">国内</span></div>
-    <div class="fact">关键事实：字节系应用占网民总时长 <b>40.9%</b>（上年同期33.6%）vs 腾讯系 <b>29.1%</b>；抖音DAU同比 <b>+19%</b>（微信+3%）；抖音日活人均 <b>112—120分钟</b> vs 微信 82—85分钟</div>
-    <div class="detail">野村证券报告（经富途资讯转述）显示，<strong>2026年7月抖音单用户月均时长</strong>首次<strong>超过微信</strong>，登顶国内时长第一 App。绝对规模上微信 DAU 仍达9.31亿（抖音7.14亿），但<strong>增速差达16个百分点</strong>（同比 +19% vs +3%）、<strong>人均日时长差约30分钟</strong>，意味着注意力继续向短视频阵营倾斜；字节系整体已拿走中国网民 <strong>40.9%</strong> 的应用时长，一年抬升7.3个百分点。</div>
-    <div class="src">事件日期：2026-09-08 · 来源：富途资讯（引野村报告） · <a href="https://news.futunn.com/flash/20721649/nomura-in-july-douyin-s-average-monthly-usage-time-per">news.futunn.com/flash/20721649</a></div>
+    <div class="fact">关键事实：<b>荣耀、小米、OPPO、vivo</b> 四大品牌统一；NFC触发配对＋Wi-Fi直连传输；<b>1GB视频约8—12秒</b>；跨品牌传输上限 <b>2GB</b></div>
+    <div class="detail">9月9日，荣耀宣布其主导制定的<strong>《碰一碰互传技术标准》正式落地</strong>，MagicOS 11支持跨品牌碰一碰分享、Magic9首发搭载，小米/OPPO/vivo已陆续接入。技术上以NFC触发配对、Wi-Fi直连传输，文件不经云端、不耗流量、不压缩画质，实测1GB视频约8—12秒传完。跨品牌互传长期是安卓阵营被iOS AirDrop对比的短板，<strong>四大厂统一短距互联标准</strong>是国内手机生态从各自为政走向互操作的一个节点。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：TechWeb（新浪财经转载原文） · <a href="https://finance.sina.com.cn/tech/roll/2026-09-09/doc-inirfivw8597070.shtml">finance.sina.com.cn/…/doc-inirfivw8597070</a></div>
+  </article>
+
+  <article class="item">
+    <h3>中国联通发布eSIM升级方案：预判"2P+2e"普及，智能手机进入一机四号时代</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-domestic">国内</span></div>
+    <div class="fact">关键事实：联通提出未来主流机型将普及 <b>"2P+2e"（双实体卡＋双eSIM）</b> 硬件配置；苹果、华为已实现 <b>全系机型支持eSIM</b></div>
+    <div class="detail">中国联通9月9日在上海世博中心发布"eSIM尝鲜季2026"升级方案，从玩法、服务、权益三个维度迭代，并判断未来主流手机将普及<strong>2张实体SIM+2个eSIM</strong>的配置——无需插拔即可灵活切换号码，指向工作、生活、跨场景出行的多号需求。联通同时援引产业事实：苹果与华为已实现全系机型支持eSIM，9—10月旗舰集中上新窗口正成为<strong>eSIM标准落地的窗口期</strong>。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：凤凰网科技（原文） · <a href="https://tech.ifeng.com/c/8wFMkZC2Mo4">tech.ifeng.com/c/8wFMkZC2Mo4</a></div>
+  </article>
+</section>
+
+<!-- ================= 板块六 ================= -->
+<section>
+  <h2 class="sec">⑥ 科研与前沿技术</h2>
+  <div class="sec-note">能源、合成生物学等前沿进展</div>
+
+  <article class="item">
+    <h3>美国储能装机再破纪录：单季度并网20.2吉瓦时，全年奔向71吉瓦时</h3>
+    <div class="tags"><span class="tag t-media">媒体报道</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：2026年二季度新增 <b>20.2 GWh</b> 储能并网；相当于 <b>约70万户家庭</b> 的日用电量；全年有望达 <b>71 GWh</b></div>
+    <div class="detail">MIT Technology Review援引最新报告，美国电池储能装机在2026年二季度再创纪录：<strong>单季度新增20.2吉瓦时</strong>并网，足以覆盖约70万户家庭的日用电需求，并将全年增速推向<strong>71吉瓦时</strong>的历史区间。这一"储能+AI用电"的结构性增长显示，电网侧调节资源正从备选项变成扩建主线，储能景气度暂未见顶。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：MIT Technology Review · <a href="https://www.technologyreview.com/2026/09/09/1143680/batteries-us-record/">technologyreview.com/…/batteries-us-record</a></div>
+  </article>
+
+  <article class="item">
+    <h3>"意外建成合成细胞工厂"：b.next发出第100套Cytosol试剂，供给全球约20个实验室</h3>
+    <div class="tags"><span class="tag t-official">官方发布</span><span class="tag t-global">国际</span></div>
+    <div class="fact">关键事实：旧金山专用工厂已运行，<b>第100套Cytosol试剂盒</b>发出；近半年向约 <b>20个实验室</b> 交付逾百套</div>
+    <div class="detail">旧金山合成生物学公司b.next发布长文《我们意外建成了一座合成细胞工厂》：公司本为承接一个开放式合成细胞传感器项目，却因供应链接连断裂——36株PURE系统质粒受许可限制无法获取、Roche与Sigma先后停供tRNA——被迫自研开放质粒集与全套协议，最终建成按Nucleus开放规范生产基础底物"Cytosol"的<strong>专用制造工厂</strong>。目前其已发出<strong>第100套试剂盒</strong>、支持全球约20个实验室的开放项目，并围绕平台扩展AI辅助设计与高通量筛选工具。这篇文章给"开放科学"提供了一个冷峻注脚：<strong>卡住社区的往往不是知识，而是供应链</strong>。</div>
+    <div class="src">事件日期：2026-09-09 · 来源：b.next官方博客（HN热帖指向该原文） · <a href="https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory">bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory</a></div>
   </article>
 </section>
 
@@ -253,17 +266,17 @@
 <section>
   <h2 class="sec">📌 今日要点（归纳）</h2>
   <ol class="keypoints">
-    <li><strong>AI 能力叙事撞上学术伦理争议</strong>：OpenAI 以"近百智能体、3000亿token"宣告解决纳维-斯托克斯千禧年问题，同日 Buckmaster 声明质疑与陶哲轩"公开问题被不可再生开采"的警告，把焦点从能力推向<strong>优先权与共享规范</strong>。</li>
-    <li><strong>消费级 Agent 进入"托管执行"阶段</strong>：Meta Muse 用专属虚拟机+审批式动作+一次性卡号把订票购物交给智能体，其成败将首先由"用户是否敢把邮箱、支付与健康数据交给 Meta"决定；国内小米 MiMo、DeepSeek V4.1 Flash 内测同步推进。</li>
-    <li><strong>算力与安全的双线提速</strong>：工信部定下 2030 年 9800 EFLOPS 与 3.8 万亿元投资的国家级目标；ASML-台积电锁定 12 英寸掩模把 High-NA EUV 推向量产；而微软 972 个漏洞、Chrome 两周更新周期表明，<strong>AI 时代攻防比的是"打补丁的速度"</strong>。</li>
-    <li><strong>钱的流向</strong>：Mistral 以 30 亿欧元创欧洲纪录、Cognition 一年估值近5倍膨胀至 480 亿美元——<strong>主权AI与AI编程</strong>成为资本最确定的两条下注线。</li>
-    <li><strong>平台权力与个体边界</strong>：Anthropic 陷入订阅集体诉讼与"额度被盗"新灰产，DHS 被曝用金融画像做预测性警务，OpenAI 则出资 500 万美元资助青少年研究——<strong>信任、隐私与未成年人议题</strong>正同步进入监管与司法程序。</li>
+    <li><strong>发布与自省同台上演</strong>：GPT-6 Astra以Terminal-Bench <strong>57.9%</strong>、首个Critical网安阈值刷新能力叙事，但系统卡罕见承认<strong>思维链可监测性显著下降</strong>——前沿模型的"对外可审计性"假设正先于能力见顶。</li>
+    <li><strong>千禧难题的抢发风波</strong>：OpenAI称88小时、约1万代理解决Navier–Stokes问题，"scooping"指控与威胁短信曝光，大实验室资源与学术协作规范的冲突<strong>公开化</strong>。</li>
+    <li><strong>安全进入"补丁赤字"周期</strong>：微软纪录性974个CVE、思科CVSS 10.0确认在野利用且无缓解措施、四个攻击组共用同一利用套件——AI同时放大了漏洞供给与利用速度，<strong>修补窗口成为瓶颈</strong>。</li>
+    <li><strong>苹果全线涨价+AI差异化押注</strong>：折叠iPhone Duo落地（国行15999元起）、iPhone普涨100美元、"像素签名+端侧模型"对抗AI造假——硬件低价时代结束，<strong>隐私与真实性成为新的卖点</strong>。</li>
+    <li><strong>开源商业模式重排</strong>：Shopify接管Tailwind（此前其因AI冲击裁员75%）、IBM以Apache 2.0+OpenMDW双许可把商用SOTA时序模型推入生产环境——<strong>开源项目寻找"企业宿主"、基础模型卷向许可与部署</strong>。</li>
   </ol>
 </section>
 
 <footer>
-  科技早报 · 由 Horizon 抓取管道 + 编辑核验编译 · 生成日期 2026-09-09（08:00 UTC+8）<br>
-  事实以各条目所引原始来源为准；标注"媒体报道"者不等于官方口径，"社区转引"仅作假设性线索。
+  科技早报 · 由 Horizon 抓取管道 + 人工核验补充生成 · 编译日期 2026-09-10 08:00 (UTC+8)，数据窗口截至发布时刻<br>
+  事实以各条目所引原始来源为准；"媒体报道"不等于官方口径，"社区转引"仅为线索并已标注边界。
 </footer>
 
 </div>
