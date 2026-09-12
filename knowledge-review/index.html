@@ -3,12 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026年9月11日</title>
-<meta name="description" content="知识库回顾 2026-09-11：扫描 D:/个人知识库/daily 近三天笔记，按主题聚合后的核心认知、关键张力与认知变化">
+<title>知识库回顾 · 2026年9月12日</title>
+<meta name="description" content="知识库回顾 2026-09-12：扫描 D:/个人知识库/daily 近三天笔记，第三轮升级为判断审计轮——每条主张标注证据档位、成立前提、推翻条件与当前可用性">
 <style>
   :root{
+    color-scheme: light;
     --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --ink2:#333; --muted:#6b7280;
     --line:#e5e7eb; --accent:#1f4e79; --mark:#111;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ /* 显式覆盖为浅色，禁止深色主题 */
+      color-scheme: light;
+      --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --ink2:#333; --muted:#6b7280;
+      --line:#e5e7eb; --accent:#1f4e79; --mark:#111;
+    }
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{ -webkit-text-size-adjust:100%; }
@@ -17,7 +25,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     line-height:1.78; font-size:16px; padding-bottom:56px;
   }
-  .wrap{max-width:860px; margin:0 auto; padding:0 18px;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 18px;}
   header{padding:36px 0 22px; border-bottom:1px solid var(--line); background:#fff;}
   h1{color:var(--ink); font-size:26px; font-weight:800; letter-spacing:.5px;}
   .sub{color:var(--muted); font-size:14px; margin-top:8px; line-height:1.65;}
@@ -41,19 +49,27 @@
     padding:10px 16px; margin:14px 0 4px; font-size:17px; color:var(--ink);
     font-weight:700; line-height:1.7; border-radius:0 8px 8px 0;
   }
-  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14.5px;}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14px;}
   th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
   th{background:#f3f4f6; color:var(--ink); font-weight:700;}
+  td.ok{color:#166534; font-weight:700;}
+  td.warn{color:#92400e; font-weight:700;}
+  td.no{color:#9f1239; font-weight:700;}
   .qa li{margin:11px 0;}
   .qa b{color:var(--mark);}
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px;}
+  .two > div{border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:#fcfcfc;}
+  .two h4{font-size:14.5px; color:var(--ink); margin-bottom:6px; font-weight:800;}
+  .two ul{padding-left:20px; font-size:14.5px;}
   footer{margin-top:34px; text-align:center; font-size:13px; color:var(--muted); line-height:1.8;}
-  @media (max-width:600px){
+  @media (max-width:640px){
     body{font-size:15.5px;}
     h1{font-size:22px;}
     h2.sec{font-size:17.5px;}
     section{padding:18px 15px;}
     .pull{font-size:16px;}
-    table{display:block; overflow-x:auto; white-space:normal;}
+    .two{grid-template-columns:1fr;}
+    table{display:block; overflow-x:auto; white-space:normal; font-size:13.5px;}
   }
 </style>
 </head>
@@ -61,130 +77,164 @@
 <header>
   <div class="wrap">
     <h1>知识库回顾</h1>
-    <div class="sub">2026年9月11日 · 扫描范围 <strong>09-02·09-07·09-08</strong> 三篇笔记 · 按主题聚合后提炼张力与变化</div>
+    <div class="sub">2026年9月12日 · 扫描范围 <strong>09-08·09-07·09-02</strong>（关联 09-01）· 第三轮：<strong>判断审计与信号化</strong></div>
   </div>
 </header>
 <div class="wrap">
 
   <div class="thread">
     <h2>本轮定位</h2>
-    <p>近三天归档日 <strong>09-08·09-07·09-02</strong>，近三天日历窗（09-09~09-11）<strong>零新增</strong>——KB 自 09-08 起静默 3 天。三篇素材与前两轮相同，故本轮不复述单篇，升级为<strong>跨笔记综合轮</strong>：把三篇收敛到两条跨域主线，再判定认知位移与未收敛项。</p>
+    <p>近三天日历窗（09-10~09-12）<strong>零新增</strong>，KB 自 09-08 起已静默 <strong>4 天</strong>。素材与前两轮完全相同，故本轮<strong>不复述内容</strong>、也不再做一般性跨篇综合，升级为<strong>判断审计轮</strong>：给每条主张标上证据档位、成立前提、推翻条件与当前可用性，把"知道"推进到"能用"。另增一条自我审查——<strong>四次跨域印证是否真的独立</strong>。</p>
   </div>
 
   <section>
     <h2 class="sec">一、扫描概览</h2>
-    <div class="meta">数据源：D:/个人知识库/daily（D 盘只进不出，仅读）</div>
+    <div class="meta">数据源：D:/个人知识库/daily（D 盘只进不出，仅读）· 本轮素材 ∈ 前两轮，故只做审计不做复述</div>
     <table>
-      <tr><th>归档日</th><th>笔记</th><th>主题域</th></tr>
-      <tr><td>09-08</td><td>Looped Transformer / Recurrent Depth：第三根 scaling 轴的诞生史</td><td>模型架构 / 算力核算</td></tr>
-      <tr><td>09-07</td><td>GEO 生成式引擎优化｜腾讯 Answerbit 与实现方法</td><td>分发层 / 语义权力</td></tr>
-      <tr><td>09-02</td><td>当 AI 开始自己寻找漏洞，网络安全的攻防逻辑要变了</td><td>安全 / 自动化攻防</td></tr>
+      <tr><th>归档日</th><th>笔记</th><th>主题域</th><th>证据性质</th></tr>
+      <tr><td>09-08</td><td>Looped Transformer / Recurrent Depth：第三根 scaling 轴诞生史</td><td>模型架构</td><td>论文可核 + 一处报道级</td></tr>
+      <tr><td>09-07</td><td>GEO 生成式引擎优化｜腾讯 Answerbit 与实现方法</td><td>分发层</td><td>官网事实 + 商业口径</td></tr>
+      <tr><td>09-02</td><td>当 AI 开始自己寻找漏洞，网安攻防逻辑要变了</td><td>安全 / 自动化攻防</td><td>一手确认 + 厂商叙事</td></tr>
+      <tr><td>09-01（关联）</td><td>AI 组织变革：个人局部最优 → 组织智慧</td><td>组织设计</td><td>观点文（实践观察）</td></tr>
     </table>
-    <p>三篇看似分属架构、营销、安全，收敛后指向同一组问题：<strong>算力往哪买、监督看得见什么、壁垒由谁定义</strong>。</p>
+    <p>窗口内零新增意味着：<strong>本轮的价值只能来自对旧素材的再加工</strong>，不能假装有新输入。</p>
   </section>
 
   <section>
-    <h2 class="sec">二、主题一 · 算力第三轴：深度成为可购买的资源</h2>
-    <div class="meta">素材：09-08 Looped Transformer / Recurrent Depth</div>
-    <ul>
-      <li>标准 Transformer 的隐含契约是"深度=层数=参数"，recurrent depth 改为<strong>同一组权重循环 R 次</strong>，在参数轴与 token 轴之外立起<strong>第三根 test-time 计算轴</strong>。</li>
-      <li>它的循环是<strong>设计期固定</strong>的（每 token 等量计算），区别于 o 系列"想多久算多久"的外化 CoT；思考被搬进<strong>潜空间</strong>，不占输出带宽、不占长上下文。</li>
-      <li>五篇论文走完一条辩证链：UT（2018）首提→被堆参数竞赛否决→RD（2025）复辟→TrainFree 民主化→LoopCoder 科学化敢报负面→Loopie 与堆参数正面对账取胜。</li>
-      <li>时间结构更值得记：<strong>七年沉寂、一年走完</strong>。范式复活的条件是<strong>核算体系变了</strong>（test-time compute 共识 + MoE 改算力核算 + 大厂撞算力墙），不是论文变好了。</li>
-      <li>证据必须分层：Astra 采用仍属<strong>The Information 报道级</strong>；"<strong>少 token 换强推理</strong>"是独立行为指纹；"已绕过两次饱和墙"是<strong>零证据推断</strong>。</li>
-    </ul>
-    <div class="pull">范式复活的条件是核算体系变了，不是论文变好了。</div>
-  </section>
-
-  <section>
-    <h2 class="sec">三、主题二 · 过程不可观测：监督失效的三层同构</h2>
-    <div class="meta">素材：09-08（监控悖论）＋ 09-07（答案位黑盒）＋ 09-02（Astra CoT 监控）</div>
-    <ul>
-      <li>架构层：latent reasoning 让推理发生在<strong>隐状态循环里</strong>，不在 token 序列上；于是 CoT 监控看到的只是"说话草稿"，而非思考过程。</li>
-      <li>安全审计因此只审到<strong>输出的最后一层投影</strong>，能力藏在不可观测的 R 圈——不是没人愿意看，是<strong>没有东西可看</strong>。</li>
-      <li>分发层（GEO）：可验证性弱于 SEO，<strong>"答案位次"是黑盒</strong>，得分只是抽样估计，无法像排名那样被独立复核。</li>
-      <li>安全层：Astra 的 CoT 监控（可实时中断）与 latent reasoning 天然冲突——<strong>能力与可监督性对冲</strong>。</li>
-      <li>三者同型（模型内循环 / 答案位 / 比昂的 O）：<strong>过程对监督者不透明</strong>，是新范式的结构性特征，而非待修的缺陷。</li>
-    </ul>
-    <div class="pull">评价信号的可及性，正从"没人愿意看"变成"没有东西可看"。</div>
-  </section>
-
-  <section>
-    <h2 class="sec">四、主题三 · 责任边界与接口定义权</h2>
-    <div class="meta">素材：09-02（MTTR）＋ 09-07（GEO 税权）＋ 09-01（价值归因，关联）</div>
-    <ul>
-      <li>漏洞域：稀缺资源从"发现能力"转向"修复速度"，核心指标换成 <strong>MTTR</strong>，范式由 Detection First 转向 <strong>Remediation First</strong>。</li>
-      <li>AI 让漏洞从"找不到"变成<strong>"修不过来"</strong>；"中级 AI × 十万份 × 24 小时"的<strong>规模可复制</strong>，使低价值目标开始值得攻击。</li>
-      <li>GEO 域：定义内容格式的不是内容方而是模型厂商，<strong>接口标准的制定权=答案位的税权</strong>（llms.txt 至今无厂商背书即明证）。</li>
-      <li>组织域（关联 09-01）：价值归因不清→理性的人造平台自保；<strong>"谁拥有产品谁拥有成果"</strong>的绩效正在惩罚正确答案。</li>
-      <li>三者共同结构：把黑盒能力拆成<strong>可核对承诺</strong>逐门定价——与华为 ADS 按 SKU 说清责任边界<strong>同构</strong>。</li>
-    </ul>
-    <div class="pull">语义权力的争夺，最后都落到"谁来定义可验证的接口"。</div>
-  </section>
-
-  <section>
-    <h2 class="sec">五、主题四 · 机器速度叙事的两处失效区</h2>
-    <div class="meta">素材：09-02（长生命周期）＋ 09-01（组织学习，关联）</div>
-    <ul>
-      <li>MTTR 叙事有前提：系统必须"可修"（能 OTA、能回滚、依赖有主）。对修复窗口以年计的场景，<strong>MTTR 指标失效</strong>，逻辑退化为<strong>设计期封死</strong>。</li>
-      <li>这给"白空间立场"补上一条独立佐证：主流机器速度攻防叙事<strong>自我排除了长生命周期系统</strong>，那里恰是设计期安全的价值区。</li>
-      <li>组织域同理：组织能力不是"曾有人把事做成"，而是<strong>同类问题下次不必从头学</strong>；<strong>100 个案例 ≠ 100 项能力</strong>。</li>
-      <li>下一代 AI 中台的定位是<strong>转译机制</strong>，其衡量标准是"<strong>第 10 个相似场景是否更易做</strong>"。</li>
-    </ul>
-    <div class="pull">1000 个局部最优，拼不出一个更聪明的组织。</div>
-  </section>
-
-  <section>
-    <h2 class="sec">六、核心认知</h2>
-    <ul>
-      <li><strong>算力第三轴与外部编排存在替代关系</strong>：模型内循环可伸缩后，harness 层 agent loop（反思/重试/多轮编排）的增量价值边界必须重新求解。</li>
-      <li><strong>新范式的共同代价是监督工作面收窄</strong>：能力越强，过程越不透明——latent reasoning、答案位、自主攻击链都指向同一结论。</li>
-      <li><strong>竞争主轴从"能力"转向"责任与速度"</strong>：谁承诺修、多快修完、谁定义接口，成为壁垒来源，这是"责任边界=市场壁垒"的又一次跨域印证。</li>
-      <li><strong>机器速度叙事的失效区</strong>，正是<strong>设计期安全与组织设计的价值区</strong>：长生命周期系统与组织复利，恰好是速度竞赛落不了地的两个靶点。</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2 class="sec">七、关键张力</h2>
-    <div class="meta">未收敛的对立结构（A 端 / B 端）</div>
+    <h2 class="sec">二、判断审计表（本轮主产出）</h2>
+    <div class="meta">四档证据：<strong>已确认</strong>（一手可核）／<strong>行为指纹</strong>（独立旁证）／<strong>报道级</strong>（信源判断）／<strong>推断级</strong>（零证据推演）。"可用性"＝现在能拿它做什么决定</div>
     <table>
-      <tr><th>张力</th><th>A 端</th><th>B 端</th><th>状态</th></tr>
-      <tr><td>循环剂量</td><td><strong>循环三次有害</strong></td><td>固定剂量对变难题的<strong>伪影</strong></td><td>未收敛</td></tr>
-      <tr><td>能力 vs 可监督性</td><td>latent reasoning 更强</td><td>CoT 监控<strong>失去工作面</strong></td><td>结构性对冲</td></tr>
-      <tr><td>攻防瓶颈</td><td>漏洞发现商品化</td><td>瓶颈转移到<strong>修复排队</strong></td><td>判定转移</td></tr>
-      <tr><td>GEO 红利</td><td>当前 alpha 窗口</td><td>军备竞赛使其<strong>必然关闭</strong></td><td>时间窗口</td></tr>
-      <tr><td>分布式创新</td><td>业务现场百花齐放</td><td>组织<strong>是否真的学会</strong></td><td>待验证</td></tr>
-      <tr><td>激励结构</td><td>个体决策理性</td><td>组织结果<strong>非最优</strong></td><td>制度性扭曲</td></tr>
+      <tr><th>主张</th><th>证据档位</th><th>成立前提</th><th>推翻条件（可观察信号）</th><th>现在能用吗</th></tr>
+      <tr>
+        <td>循环深度是继参数、token 之后的<strong>第三根算力轴</strong></td>
+        <td>论文已确认</td>
+        <td>同算力下循环优于堆参数，<strong>只在被测预算点</strong>成立</td>
+        <td>更大参数端出现 vanilla <strong>反超</strong></td>
+        <td class="ok">路线判断可用</td>
+      </tr>
+      <tr>
+        <td>Astra 已采用 recurrent depth</td>
+        <td><strong>报道级</strong>（The Information）</td>
+        <td>该信源判断正确且未被官方否认</td>
+        <td>技术报告显示 CoT 仍是<strong>主推理通道</strong></td>
+        <td class="warn">不可写死，只作假设</td>
+      </tr>
+      <tr>
+        <td>循环 <strong>3 次以上回退</strong></td>
+        <td>受控实验（18T token）</td>
+        <td>条件局限于<strong>代码域 + 固定 R + 从头训练</strong></td>
+        <td>自适应 R + 深度随机采样下非单调<strong>消失</strong></td>
+        <td class="warn">作工程警告，<strong>不作否证</strong></td>
+      </tr>
+      <tr>
+        <td>latent reasoning 使 <strong>CoT 监控失去工作面</strong></td>
+        <td>架构推演 + 厂商自述</td>
+        <td>推理确实发生在<strong>隐状态循环</strong>内</td>
+        <td>Astra 披露监控仍能<strong>实时干预</strong>推理主体</td>
+        <td class="ok">结构冲突成立</td>
+      </tr>
+      <tr>
+        <td>接口标准制定权＝<strong>答案位税权</strong></td>
+        <td>事实（llms.txt 无厂商背书）＋ 推理</td>
+        <td>头部厂商<strong>不官方化</strong>引用接口</td>
+        <td>任一头部厂商发布<strong>官方收录规范</strong></td>
+        <td class="ok">低成本先占位</td>
+      </tr>
+      <tr>
+        <td>网安瓶颈从发现<strong>转向修复</strong>（MTTR）</td>
+        <td>一手确认＋官方原话</td>
+        <td>系统<strong>可修</strong>（能 OTA、能回滚、依赖有主）</td>
+        <td>厂商叙事与利益<strong>自洽</strong>需折扣</td>
+        <td class="ok">方向可用（叙事分列）</td>
+      </tr>
+      <tr>
+        <td>机器速度失效区＝<strong>设计期安全价值区</strong></td>
+        <td>推断级（自生立场）</td>
+        <td>修复窗口确实<strong>以年计</strong></td>
+        <td>车规/工控实际修复周期<strong>数据可核</strong>时</td>
+        <td class="no">当前不可当前提用</td>
+      </tr>
+      <tr>
+        <td>组织能力≠案例堆积；中台＝<strong>转译机制</strong></td>
+        <td>观点文（实践观察）</td>
+        <td>价值归因规则可被改写</td>
+        <td>NBER 数据源尚未<strong>溯源原始研究</strong></td>
+        <td class="warn">可作设计原则</td>
+      </tr>
     </table>
-    <p>最尖锐的一条是<strong>循环剂量之争</strong>：若"循环三次有害"只是固定剂量对变难度题目的伪影，则"自适应深度"仍成立；若它是真实墙，第三轴的可用区间就被锁死。两命题之差，决定整条路线能走多远。</p>
+    <div class="pull">审计的意义不在判定对错，而在给每条主张配一把"可被推翻的开关"。</div>
   </section>
 
   <section>
-    <h2 class="sec">八、认知变化</h2>
-    <div class="pull">从逐篇复述升级为跨域综合：把架构、分发、安全三篇收敛到两条主线。</div>
+    <h2 class="sec">三、最稳与最脆</h2>
+    <div class="meta">同一批素材，判断的可依赖度差异极大</div>
+    <div class="two">
+      <div>
+        <h4>当前最稳（多域独立指向）</h4>
+        <ul>
+          <li><strong>过程不可观测</strong>是新范式的结构性特征：模型内循环／答案位黑盒／自主攻击链<strong>三类同型</strong>——不是待修缺陷。</li>
+          <li>竞争主轴从"能力"<strong>转向责任与速度</strong>：谁承诺修、多快修完、谁定义接口。</li>
+          <li>范式复活依赖<strong>核算体系</strong>变化，而非论文质量——七年沉寂、一年走完。</li>
+        </ul>
+      </div>
+      <div>
+        <h4>当前最脆（勿写进结论）</h4>
+        <ul>
+          <li>Astra 采用循环深度的<strong>归因</strong>：仅报道级，官方零确认。</li>
+          <li>"已绕过两次饱和墙"：<strong>零证据推断</strong>，纯逻辑推演。</li>
+          <li>循环非单调的<strong>普适性</strong>：实验条件窄，外推需谨慎。</li>
+          <li>长生命周期失效区论断：<strong>暂无外部证据</strong>。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec">四、关键张力（未收敛的对立结构）</h2>
+    <table>
+      <tr><th>张力</th><th>A 端</th><th>B 端</th><th>收敛所需信号</th></tr>
+      <tr>
+        <td>循环剂量<strong>（最尖锐）</strong></td>
+        <td>循环三次有害＝真实墙</td>
+        <td>固定剂量对变难题的<strong>伪影</strong></td>
+        <td>自适应 R 下的非单调是否消失</td>
+      </tr>
+      <tr><td>能力 vs 可监督性</td><td>内循环更强</td><td>监控<strong>失去工作面</strong></td><td>结构性对冲，无解</td></tr>
+      <tr><td>攻防瓶颈</td><td>漏洞发现商品化</td><td>瓶颈转到<strong>修复排队</strong></td><td>已转移，但被长生命周期切分</td></tr>
+      <tr><td>GEO 红利</td><td>当下 alpha 窗口</td><td>军备竞赛使其<strong>必然关闭</strong></td><td>厂商反制条款落地</td></tr>
+      <tr><td>分布式创新</td><td>业务现场百花齐放</td><td>组织<strong>是否真的学会</strong></td><td>第 10 个场景是否更易做</td></tr>
+      <tr><td>激励结构</td><td>个体决策理性</td><td>组织结果<strong>非最优</strong></td><td>价值归因规则改写</td></tr>
+    </table>
+    <p>六条中只有<strong>循环剂量</strong>是单点决定性：它若为真墙，第三轴可用区间被锁死；若为伪影，"想多久算多久"成立，整条路线的天花板改写。其余五条都是慢性结构问题。</p>
+    <div class="pull">其余五条决定跑多远，这一条决定还能不能跑。</div>
+  </section>
+
+  <section>
+    <h2 class="sec">五、认知变化</h2>
+    <div class="pull">证据分层从记录习惯升级为审计方法：每条主张必须自带推翻条件。</div>
     <ul>
-      <li><strong>从逐篇复述升级为跨域综合</strong>：本轮把三篇收敛到"过程不可观测"与"责任-接口权"两条主线，而非各自单独记一遍。</li>
-      <li><strong>harness 自进化的前提出现修订信号</strong>：内循环可能吞并外部编排，自进化 harness 的定位从"编排主体"被追认为"边界条件待定的外部壳"。</li>
-      <li>白空间立场获得<strong>第二条独立佐证</strong>：继"责任边界=市场壁垒"之后，漏洞域的 MTTR 失效再次自主指向长生命周期靶点。</li>
-      <li>证据分层成为默认动作：<strong>报道级 / 行为指纹 / 推断级</strong>三档分列，不再把"很可能"当成"已确认"。</li>
+      <li><strong>复述 → 综合 → 审计</strong>：三轮走完一条方法论升级路径，本轮起未收敛项一律改写为<strong>可观察信号</strong>，而不是"存疑"两个字。</li>
+      <li><strong>最重要的自我审查</strong>：所谓"责任边界＝市场壁垒"的<strong>四次跨域印证</strong>（漏洞／GEO／组织／harness），信源其实<strong>并不独立</strong>——都是同一框架对同一批素材的映射，属<strong>框架自洽</strong>而非外部印证，须警惕<strong>确证偏误</strong>。</li>
+      <li>白空间立场从"观点"<strong>降级为待验证推论</strong>：当前拿不出可引外部证据，但已获得一条可检验路径——长生命周期系统的修复窗口是否真的以年计。</li>
+      <li>对厂商叙事的分列成为默认动作：<strong>观点正确性与利益自洽性必须分开看</strong>（"修复瓶颈论"即是 OpenAI 推广 Daybreak 的叙事框架）。</li>
     </ul>
   </section>
 
   <section>
-    <h2 class="sec">九、待思考问题</h2>
+    <h2 class="sec">六、待思考问题</h2>
     <ul class="qa">
-      <li><b>① 内部循环吃掉外部循环吗？</b>模型 test-time 深度可伸缩后，harness 层 agent loop 的增量价值边界在哪——直接关系自进化 harness 论证的前提。</li>
-      <li><b>② 第三轴的 scaling law 长什么样？</b>参数 × token × 迭代的三维算力最优曲面，目前只有离散点证据。</li>
-      <li><b>③ 谁来定义 MTTR 的底线？</b>对修复窗口以年计的系统，修复责任如何前置为架构约束与责任边界定义。</li>
-      <li><b>④ 模型厂商会不会官方化"引用接口"？</b>类比 Bing 站长工具之于 SEO——谁先做，谁拿标准权与税权。</li>
-      <li><b>⑤ 汽车要不要自建"AI 答案位监测"？</b>成本极低（5 平台每日提问），行业几乎无人做，可作 2127 前瞻候选观察项。</li>
-      <li><b>⑥ 平台与业务共创的结果如何归因？</b>归因规则不变，任何中台都只是多了个组织名称。</li>
+      <li><b>① 循环剂量的判决性实验是什么？</b>把自适应 R、深度随机采样、PLT 并行化三条件叠加，看非单调是否消失——这是唯一能一次定性的实验设计。</li>
+      <li><b>② 若 Astra 不披露架构，我们凭什么继续持有"内循环吞并外循环"的前提？</b>需要一个不依赖官方披露的替代观测面（如 token 效率指纹的持续跟踪）。</li>
+      <li><b>③ "责任边界＝市场壁垒"的第五个信源从哪里找？</b>必须刻意选择非同一作者、非同一分析路径的案例，否则第四次印证只是第五次自我重复。</li>
+      <li><b>④ "修复窗口以年计"有无可核实的行业数据？</b>车规 OTA 周期、工控设备平均寿命——没有数字，这条推论不能进入对外材料。</li>
+      <li><b>⑤ 汽车 GEO 基线快照要不要本季度做一次？</b>成本极低（5 平台每日提问），行业几乎无人做，属可低成本占位的前瞻观察项。</li>
+      <li><b>⑥ 跨域规律的检验标准该定成什么？</b>若同一框架反复自洽不算印证，那么"跨域样本"的独立性门槛需要写进方法论。</li>
     </ul>
   </section>
 
   <footer>
-    知识库回顾 · 生成于 2026-09-11 13:10<br>
-    数据源：D:/个人知识库/daily（09-02 / 09-07 / 09-08）· 仅供内部回顾使用
+    知识库回顾 · 生成于 2026-09-12 13:10<br>
+    数据源：D:/个人知识库/daily（09-02 / 09-07 / 09-08，关联 09-01）· 本轮新增 <strong>0</strong> 篇 · 仅供内部回顾使用
   </footer>
 </div>
 </body>
