@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026年9月13日</title>
-<meta name="description" content="知识库回顾 2026-09-13：daily/ 近三天零新增、静默5天；前三轮复述→综合→审计已完成，本轮不再换角度做分析，转为验证看板与扫描盲区修正">
+<title>知识库回顾 · 2026年9月14日</title>
+<meta name="description" content="知识库回顾 2026-09-14：daily/ 零新增第 6 天；静默成因定位为入库事件驱动（非故障、非缺席）；昨日看板首次执行，两条主张被外部新证据修正（循环深度第三轴条件放宽 / NBER 数字溯源到 QJE 2025）">
 <style>
   :root{
     color-scheme: light;
@@ -57,10 +57,6 @@
   td.no{color:#9f1239; font-weight:700;}
   .qa li{margin:11px 0;}
   .qa b{color:var(--mark);}
-  .two{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:10px;}
-  .two > div{border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:#fcfcfc;}
-  .two h4{font-size:14.5px; color:var(--ink); margin-bottom:6px; font-weight:800;}
-  .two ul{padding-left:20px; font-size:14.5px;}
   .note{background:#fbfbfb; border:1px dashed var(--line); border-radius:10px; padding:12px 15px; font-size:14px; color:var(--ink2); margin-top:12px;}
   footer{margin-top:34px; text-align:center; font-size:13px; color:var(--muted); line-height:1.8;}
   @media (max-width:640px){
@@ -69,8 +65,7 @@
     h2.sec{font-size:17.5px;}
     section{padding:18px 15px;}
     .pull{font-size:16px;}
-    .two{grid-template-columns:1fr;}
-    table{display:block; overflow-x:auto; white-space:normal; font-size:13.5px;}
+    table{display:block; overflow-x:auto; font-size:13.5px;}
   }
 </style>
 </head>
@@ -78,175 +73,161 @@
 <header>
   <div class="wrap">
     <h1>知识库回顾</h1>
-    <div class="sub">2026年9月13日 · 扫描范围 <strong>daily/ 近三天</strong>（09-11~09-13）· 第四轮：<strong>冻结与转化——从审计到看板</strong></div>
+    <div class="sub">2026年9月14日 · 扫描范围 <strong>daily/ 近三天</strong>（09-12~09-14）· 第五轮：<strong>看板首次执行</strong></div>
   </div>
 </header>
 <div class="wrap">
 
   <div class="thread">
     <h2>本轮定位</h2>
-    <p>近三天日历窗（09-11~09-13）<strong>零新增</strong>，daily/ 目录自 09-08 起已静默 <strong>5 天</strong>。素材与前两轮完全相同，前三轮已走完<strong>复述 → 综合 → 审计</strong>三级加工。本轮拒绝换角度再生产分析——那只是<strong>伪新意</strong>。今日只做两件真事：<strong>①落地验证看板</strong>（把推翻条件变成可执行动作）；<strong>②修正扫描盲区</strong>。</p>
+    <p>daily/ 零新增进入<strong>第 6 天</strong>（09-09~09-14）。昨日把"零新增日的输出形态"定为<strong>只刷新看板、不产出新分析</strong>，本轮第一次真正执行它。结果是：看板不但被刷新了，还有<strong>两行主张被外部新证据改写</strong>——今天的内容不是"无变化"，而是看板的第一次执行就修正了它自己。</p>
   </div>
 
   <section>
-    <h2 class="sec">一、扫描概览与一个新发现</h2>
-    <div class="meta">数据源：D:/个人知识库/daily（D 盘只进不出，仅读）· 本轮素材 ∈ 前三轮，故只做转化不做复述</div>
+    <h2 class="sec">一、扫描概览：静默范围已全盘核实</h2>
+    <div class="meta">数据源：D:/个人知识库 全域（只读）· 扫描窗口 09-12~09-14 命中 <strong>0</strong> 篇 · 本轮素材仍为 09-01 / 09-02 / 09-07 / 09-08 四篇</div>
     <table>
-      <tr><th>归档日</th><th>笔记</th><th>主题域</th><th>证据性质</th><th>已加工轮次</th></tr>
-      <tr><td>09-08</td><td>Looped Transformer / Recurrent Depth：第三根 scaling 轴诞生史</td><td>模型架构</td><td>论文可核 + 一处报道级</td><td>09-10 / 09-11 / 09-12</td></tr>
-      <tr><td>09-07</td><td>GEO 生成式引擎优化｜腾讯 Answerbit 与实现方法</td><td>分发层</td><td>官网事实 + 商业口径</td><td>09-10 / 09-11 / 09-12</td></tr>
-      <tr><td>09-02</td><td>当 AI 开始自己寻找漏洞，网安攻防逻辑要变了</td><td>安全 / 自动化攻防</td><td>一手确认 + 厂商叙事</td><td>09-10 / 09-11 / 09-12</td></tr>
-      <tr><td>09-01（关联）</td><td>AI 组织变革：个人局部最优 → 组织智慧</td><td>组织设计</td><td>观点文（实践观察）</td><td>09-10 / 09-11 / 09-12</td></tr>
+      <tr><th>检查线</th><th>最近写入</th><th>距今</th><th>本轮判定</th></tr>
+      <tr><td>daily/ 行业笔记</td><td><strong>2026-09-08</strong> 14:46（Looped Transformer）</td><td><strong>6 天</strong></td><td class="warn">零新增</td></tr>
+      <tr><td>daily/index.json</td><td><strong>2026-09-08 14:47</strong></td><td><strong>6 天</strong></td><td class="ok">符合流程</td></tr>
+      <tr><td>D:/西方哲学学习</td><td><strong>2026-09-07</strong> 10:28（学习指导.md）</td><td><strong>7 天</strong></td><td class="no">未推进</td></tr>
+      <tr><td>D:/精神分析学学习</td><td><strong>2026-09-03</strong> 18:37（学习指导.md）</td><td><strong>11 天</strong></td><td class="no">未推进</td></tr>
+      <tr><td>D:/个人知识库 全域</td><td><strong>2026-09-08</strong>（全盘 find 核实）</td><td><strong>6 天</strong></td><td class="no">零写入</td></tr>
     </table>
-    <h3>盲区修正：所谓"静默"要限定范围</h3>
-    <p>昨日报告称"KB 已静默 4 天"，今天核对全盘后需修正口径：daily/ 是<strong>行业知识轨</strong>，而另外两条学习轨不在该目录内——<strong>D:/西方哲学学习/学习指导.md</strong> 最近改动 <strong>09-07</strong>，<strong>D:/精神分析学学习/学习指导.md</strong> 最近改动 <strong>09-03</strong>。二者均<strong>晚于或接近</strong> 09-08 的行业笔记。</p>
+    <p>与前几轮不同的是，本轮把核对范围<strong>从 daily/ 扩到整个知识库盘</strong>，结论更硬：不只是 daily/ 静默，<strong>三条学习轨全部停在 09-08 之前</strong>。索引文件未更新是<strong>无新笔记的必然结果</strong>，不是索引任务掉链。</p>
+  </section>
+
+  <section>
+    <h2 class="sec">二、静默成因核验：把"状态"变成"机制"</h2>
+    <div class="meta">方法：对三个候选假设逐一给出可证伪的检验动作，不用"大概是因为"收尾</div>
+    <table>
+      <tr><th>假设</th><th>检验动作</th><th>结果</th></tr>
+      <tr>
+        <td>H1 采集管道故障</td>
+        <td>读 cron/jobs.json：现有 <strong>5 个定时任务</strong>，无任何知识库入库任务，且全部 last_status=<strong>ok</strong></td>
+        <td class="no">证伪</td>
+      </tr>
+      <tr>
+        <td>H2 用户缺席（人不在）</td>
+        <td>会话元数据：<strong>09-11 两次</strong>微信交互、<strong>09-14 09:15 一次</strong>（77 条消息）</td>
+        <td class="no">证伪</td>
+      </tr>
+      <tr>
+        <td>H3 入库事件驱动：笔记由"用户投喂文章"触发，与日历日无关</td>
+        <td>daily/CLAUDE.md 流程：用户提供链接 → learn-something → 归档为 <strong>YYYY-MM-DD/标题</strong> → 调用 update_index.py</td>
+        <td class="ok">成立</td>
+      </tr>
+    </table>
+    <p>H1 与 H2 都被证据否定，只剩 H3 与全部事实相容，且它有<strong>文档级依据</strong>（不是推断）。由此得到一条关于机制本身的结论：这套知识库<strong>不是日历驱动，而是事件驱动</strong>——没有够格的内容进来，就不会有笔记。</p>
+    <div class="pull">静默不是故障，是这套知识库的正常相；把零新增当成待修复事件，只会逼出注水。</div>
+  </section>
+
+  <section>
+    <h2 class="sec">三、看板首次执行：两行主张被改写</h2>
+    <div class="meta">观测源：arXiv 检索页（可访问）＋ arXiv 摘要页＋ NBER 论文页 · 检索主题：looped transformer / recurrent depth</div>
+    <table>
+      <tr><th>看板条目</th><th>本轮新证据（可核）</th><th>判定变化</th></tr>
+      <tr>
+        <td>循环深度＝继参数、token 后的<strong>第三根算力轴</strong></td>
+        <td>2609.11516 <strong>LoopVAE</strong>（09-10 提交）：把循环深度用到<strong>视觉 tokenization</strong>，29M 参数对 84M 基线，rFID 0.28、PSNR 32.54 dB，<strong>参数少约 65%</strong></td>
+        <td class="ok">轴已跨模态</td>
+      </tr>
+      <tr>
+        <td>适用条件窄：<strong>从头预训练</strong></td>
+        <td>2608.11233：把 Qwen2.5-0.5B 改造为 Prelude＋循环块＋Coda，<strong>冻结基座</strong>、6M 可训参数即达 <strong>83.8%</strong>（全块 84.0%），深度 11 前领先</td>
+        <td class="no">必要条件被推翻</td>
+      </tr>
+      <tr>
+        <td>适用条件窄：<strong>固定循环数 R</strong></td>
+        <td>2602.07845 <strong>RD-VLA</strong>：推理端按<strong>隐状态收敛自适应停机</strong>、显存恒定，且用于<strong>连续动作空间</strong>（VLA）；2605.03999 RD-ViT 同理用于分割（<strong>仅标题级，未读摘要</strong>）</td>
+        <td class="no">局部被推翻</td>
+      </tr>
+      <tr>
+        <td>第三轴是"整体深度循环"这一整块</td>
+        <td>2608.18230 <strong>MixerLoop</strong>：追问"到底什么该循环"，只循环 mixer、FFN 走一遍，并给出 <strong>ITR 指标</strong>度量非冗余影响</td>
+        <td class="warn">轴被细分</td>
+      </tr>
+      <tr>
+        <td>组织能力≠案例堆积，中台＝转译机制（原引"NBER 研究" +35%/0%/+14%）</td>
+        <td>数字溯源锁定 <strong>w31161</strong>《Generative AI at Work》（Brynjolfsson/Li/Raymond，<strong>QJE 2025</strong>，140(2):889-942）：NBER 官方摘要给出 <strong>近 14%</strong> 整体提升与 <strong>35%</strong> 分档</td>
+        <td class="warn">部分关闭</td>
+      </tr>
+    </table>
+    <h3>一个需要点名的元问题</h3>
+    <p>最能反驳"条件窄"的论文<strong>并非新论文</strong>：RD-VLA 在 <strong>02 月</strong>、RD-ViT 在 <strong>05 月</strong>、改造预训练模型在 <strong>07 月</strong>就已存在。也就是说，审计轮写下的"推翻条件"当初<strong>缺了一道检索动作</strong>——条件写得再可观察，没人去搜也是空的。这正是看板存在的意义，也是它第一次执行就暴露出的自身缺陷。</p>
     <div class="note">
-      <strong>结论</strong>：静默是<strong>扫描范围的产物</strong>，不是学习停摆。当前日更回顾只覆盖四篇行业笔记，<strong>完全看不到两条学习轨的推进</strong>——若希望回顾覆盖"哲学 + 精分 + 行业"全域，需先明确是否扩大扫描范围（属范围决策，本轮不擅自扩大，仅登记）。
+      <strong>判决性实验仍未出现</strong>：检索到的所有工作都让"自适应循环"在工程上存在了，但没有一篇做<strong>受控实验</strong>回答"自适应 R 下非单调是否消失"。因此该条<strong>保持未收敛</strong>，但表述应从"条件窄"修正为"<strong>域已扩、机制未定量</strong>"。NBER 一项里"顶尖员工提升≈0"那一档，官方摘要页被截断，<strong>需读全文才能定档</strong>，本轮只关到摘要级。
     </div>
+    <div class="pull">看板的第一次执行，产出的不是确认，而是修正。</div>
   </section>
 
   <section>
-    <h2 class="sec">二、素材冻结声明</h2>
-    <div class="meta">四篇素材已三轮加工，边际产出归零。以下分列"可以拿走"与"不许拿走"</div>
-    <div class="two">
-      <div>
-        <h4>可拿走（已稳，可用作前提）</h4>
-        <ul>
-          <li><strong>过程不可观测</strong>是新范式结构性特征：模型内循环／答案位黑盒／自主攻击链<strong>三类同型</strong>。</li>
-          <li>竞争主轴从"能力"转向<strong>责任与速度</strong>：谁承诺修、多快修完、谁定义接口。</li>
-          <li>范式复活取决于<strong>核算体系变化</strong>：七年沉寂、一年走完，非论文质量驱动。</li>
-        </ul>
-      </div>
-      <div>
-        <h4>不许拿走（未收敛，勿写成结论）</h4>
-        <ul>
-          <li>Astra 采用循环深度的<strong>归因</strong>：仅报道级，官方零确认。</li>
-          <li>"已绕过两次饱和墙"：<strong>零证据推断</strong>，纯逻辑推演。</li>
-          <li>循环非单调的<strong>普适性</strong>：条件窄（代码域、固定 R、从头预训练）。</li>
-          <li>长生命周期<strong>设计期安全价值区</strong>：暂无外部可引证据。</li>
-        </ul>
-      </div>
-    </div>
-    <div class="pull">素材没变，第四轮如果还产出新观点，那产出的就是噪声。</div>
-  </section>
-
-  <section>
-    <h2 class="sec">三、验证看板（本轮主产出）</h2>
-    <div class="meta">把审计轮的"推翻条件"补上观测源、判定阈值、复核时点与成本——从"知道"推进到"能不能关掉它"。阈值一律写成<strong>可观察事件</strong>，不写"存疑"</div>
+    <h2 class="sec">四、观测通道巡检：看板缺的第 0 行</h2>
+    <div class="meta">执行看板必须先能观测。本轮实测了全部可用通道，结果如下</div>
     <table>
-      <tr><th>待验证主张</th><th>观测源</th><th>决定性信号 / 阈值</th><th>复核时点</th><th>成本</th></tr>
-      <tr>
-        <td>循环深度＝继参数、token 之后的<strong>第三根算力轴</strong></td>
-        <td>arXiv 新论文 + LoopCoder 后续</td>
-        <td>出现<strong>自适应 R</strong> 受控实验：非单调<strong>是否消失</strong></td>
-        <td>每两周</td>
-        <td class="ok">低</td>
-      </tr>
-      <tr>
-        <td>Astra 已采用 recurrent depth</td>
-        <td>The Information 后续 + OpenAI 系统卡</td>
-        <td>官方系统卡出现<strong>深度循环</strong>字样或架构披露</td>
-        <td>触发式（系统卡发布）</td>
-        <td class="ok">低</td>
-      </tr>
-      <tr>
-        <td>latent reasoning 使 <strong>CoT 监控失去工作面</strong></td>
-        <td>OpenAI Preparedness 文档 + 第三方红队</td>
-        <td>出现"监控能<strong>实时干预</strong>推理主体"的实证</td>
-        <td>触发式</td>
-        <td class="ok">低</td>
-      </tr>
-      <tr>
-        <td>接口标准制定权＝<strong>答案位税权</strong></td>
-        <td>国内元宝／豆包／DeepSeek、OpenAI 官方博客</td>
-        <td>任一头部发布<strong>官方收录规范</strong>（类站长工具）</td>
-        <td>每两周</td>
-        <td class="warn">中</td>
-      </tr>
-      <tr>
-        <td>网安瓶颈从发现<strong>转向修复</strong>（MTTR）</td>
-        <td>第三方行业报告（须<strong>非厂商口径</strong>）</td>
-        <td>出现独立 MTTR 统计数字，且与 Daybreak 叙事<strong>不重合</strong></td>
-        <td>每季度</td>
-        <td class="warn">中</td>
-      </tr>
-      <tr>
-        <td>修复窗口以年计 → <strong>设计期安全价值区</strong></td>
-        <td>车规 OTA 周期、工控设备平均寿命；UN R155/R156 类法规（线索，未核）</td>
-        <td>拿到<strong>可引用的数字</strong>（平均 OTA 周期 / 设备寿命）</td>
-        <td>每季度</td>
-        <td class="no">高</td>
-      </tr>
-      <tr>
-        <td>组织能力≠案例堆积；中台＝<strong>转译机制</strong></td>
-        <td>NBER 原始工作论文</td>
-        <td>溯源到原文并核对 <strong>+35% / 0% / +14%</strong> 三档数字</td>
-        <td>两周内</td>
-        <td class="ok">低</td>
-      </tr>
-      <tr>
-        <td>责任边界＝<strong>市场壁垒</strong></td>
-        <td>刻意选取<strong>非同一作者、非同一路径</strong>的案例</td>
-        <td>第 5 个信源是否来自<strong>不同行业 + 不同方法</strong></td>
-        <td>持续</td>
-        <td class="warn">中</td>
-      </tr>
+      <tr><th>通道</th><th>本轮实测</th><th>结论</th></tr>
+      <tr><td>arxiv.org 检索页（HTML）</td><td>HTTP <strong>200</strong></td><td class="ok">可用，本轮主证据来源</td></tr>
+      <tr><td>nber.org（含 /papers/）</td><td>HTTP <strong>200</strong></td><td class="ok">可用</td></tr>
+      <tr><td>export.arxiv.org API</td><td>连接失败（<strong>000</strong>）</td><td class="no">不可达</td></tr>
+      <tr><td>api.openalex.org</td><td>连接失败（<strong>000</strong>）</td><td class="no">不可达</td></tr>
+      <tr><td>api.semanticscholar.org</td><td>小请求 <strong>200</strong>，连发即 <strong>429</strong></td><td class="warn">限速，只能低频</td></tr>
+      <tr><td>通用搜索（DuckDuckGo HTML）</td><td><strong>202</strong> 挑战页，零结果</td><td class="no">不可用</td></tr>
     </table>
-    <p>看板与审计表的区别在于：审计表只要求"能说出什么时候算错"，看板要求<strong>指定谁去看、多久看一次、看到什么才算数</strong>。八条里六条成本为低或中，<strong>可立即启动</strong>；只有"修复窗口以年计"一条既贵又无现成数据源。</p>
-    <div class="pull">不能变成观测动作的怀疑，等于没怀疑。</div>
+    <p>看板八条里，至少三条的观测源依赖<strong>官方页与独立行业报告</strong>（OpenAI 系统卡、国内厂商规范、第三方 MTTR 统计），而通用搜索通道本轮<strong>未能验证通过</strong>——这意味着那几条现在<strong>画得出勾、打不了钩</strong>。此前四轮都在讨论"看到什么算数"，没人验证过"看不看得见"。</p>
+    <div class="pull">看板缺的不是"看什么"，而是"能不能看"。</div>
   </section>
 
   <section>
-    <h2 class="sec">四、关键张力（只留未收敛项）</h2>
+    <h2 class="sec">五、关键张力（只留未收敛）</h2>
     <table>
       <tr><th>张力</th><th>A 端</th><th>B 端</th><th>收敛所需信号</th></tr>
       <tr>
         <td>循环剂量<strong>（唯一决定性）</strong></td>
         <td>循环三次有害＝真实墙</td>
-        <td>固定剂量对变难题的<strong>伪影</strong></td>
-        <td>自适应 R 下非单调是否消失</td>
+        <td>固定剂量的<strong>伪影</strong></td>
+        <td>自适应 R 下非单调是否消失（本轮：<strong>工具已备、实验未做</strong>）</td>
       </tr>
-      <tr><td>能力 vs 可监督性</td><td>内循环更强</td><td>监控<strong>失去工作面</strong></td><td>结构性对冲，无解</td></tr>
+      <tr><td>能力 vs 可监督性</td><td>内循环更强</td><td>监控<strong>失去工作面</strong></td><td>结构性对冲，暂无解</td></tr>
       <tr><td>GEO 红利</td><td>当下 alpha 窗口</td><td>军备竞赛使其<strong>必然关闭</strong></td><td>厂商反制条款落地</td></tr>
       <tr><td>分布式创新</td><td>业务现场百花齐放</td><td>组织<strong>是否真的学会</strong></td><td>第 10 个场景是否更易做</td></tr>
       <tr>
-        <td class="no">新增：日更产出 vs 输入恒定</td>
-        <td>每日 13:10 应有产出</td>
-        <td>素材不变时产出<strong>只能是噪声</strong></td>
-        <td>零新增日的输出形态是否改为<strong>看板刷新</strong></td>
+        <td>静默 vs 机制</td>
+        <td>零新增＝异常信号</td>
+        <td>零新增＝<strong>事件驱动的常态</strong></td>
+        <td class="ok">已收敛：按看板刷新输出，本轮已执行一次</td>
       </tr>
     </table>
-    <p>新登记的第五条是本轮唯一新张力，且它是<strong>关于流程本身的张力</strong>，不是关于行业判断的。前四条决定"判断能不能升级"，这一条决定"这套日更机制会不会自我注水"。</p>
+    <p>昨日登记的第五条张力（日更产出 vs 输入恒定）<strong>本轮降级</strong>：它不再是对立的两端，而是一个已经落地的机制选择。<strong>张力从四条加一条，回到四条</strong>——这是本轮少见的"减法"。注意真正的减法不是删问题，而是把已解决的问题从问题清单里拿掉。</p>
   </section>
 
   <section>
-    <h2 class="sec">五、认知变化</h2>
-    <div class="pull">加工级差第三阶：审计 → 监控。判断的终点不是"标了推翻条件"，而是"排了值班表"。</div>
+    <h2 class="sec">六、认知变化</h2>
+    <div class="pull">加工级差第四阶：监控 → 执行。看板的价值不在排表，而在表被跑过。</div>
     <ul>
-      <li><strong>三级方法链定型</strong>：09-10 复述分述 → 09-11 跨篇综合 → 09-12 判断审计 → 09-13 <strong>验证看板</strong>。每级都要求前一级的结论先变成可操作物，否则不再往上加。</li>
-      <li><strong>对"静默"的归因被修正</strong>：昨日的"静默 4 天"其实含<strong>范围假设</strong>——把 daily/ 等同于整个知识库。事实是两条学习轨<strong>在别处推进</strong>，且时间更新。这是把"观察"与"口径"分开的一次实操。</li>
-      <li><strong>边际收益自觉</strong>：同一批素材到第四轮，再出"新观点"即为噪声。本轮把识别并停手本身当成产出，<strong>停手也是一种结论</strong>。</li>
-      <li>未收敛项的写法统一升级为<strong>可观察信号</strong>，取代"存疑／待观察"这类无法失效的措辞。</li>
+      <li><strong>静默归因升级</strong>：从"昨天的扫描口径错了"到"入库是<strong>事件驱动</strong>"——不再需要为静默找解释，静默本身就是设计内状态。</li>
+      <li><strong>看板性质变了</strong>：从一份静态文档，变成<strong>带外部输入的滚动清单</strong>；第一次执行就改了两行证据档位。</li>
+      <li><strong>审计与检索是两件事</strong>：审计轮标了推翻条件，却没配套检索动作；<strong>条件不检索就等于没写</strong>。</li>
+      <li><strong>前置项被暴露</strong>：观测通道可用性要单独巡检，否则看板会在"以为在看"的状态下空转。</li>
     </ul>
   </section>
 
   <section>
-    <h2 class="sec">六、待思考问题（已收敛为可判定项）</h2>
+    <h2 class="sec">七、待思考问题</h2>
     <ul class="qa">
-      <li><b>① 循环剂量的判决性实验该怎么设计？</b>把<strong>自适应 R</strong> + 深度随机采样 + PLT 并行化三条件叠加，看非单调是否消失。这是唯一能一次定性的设计；在此之前，第三轴可用区间<strong>无法写死</strong>。</li>
-      <li><b>② 回顾任务的扫描范围要不要扩到学习轨？</b>若维持现状，哲学／精分脉络永远不进回顾；若扩大，需定义"知识层内容"在两轨中的入选标准。属<strong>范围决策</strong>，等指示。</li>
-      <li><b>③ 零新增日的输出形态定成什么？</b>候选：仅刷新看板与观测状态、不产出新分析。这是对第五条张力的落地回答，<strong>不新建任何定时任务</strong>。</li>
-      <li><b>④ "责任边界＝市场壁垒"的第五个信源从哪里找？</b>必须刻意选择<strong>非同一作者、非同一分析路径</strong>的案例，否则第四次印证只是第五次自我重复。</li>
-      <li><b>⑤ 汽车 GEO 基线快照要不要本季度做一次？</b>成本极低（5 平台每日提问），行业几乎无人做，属可低成本占位的前瞻观察项。</li>
+      <li><b>① 判决性实验怎么落地？</b>RD-VLA 的<strong>收敛停机准则</strong>恰好是现成的"自适应 R"定义，可不可以直接拿来做受控实验的自适应条件，看非单调是否消失？<strong>工具已存在，缺的是实验设计</strong>。</li>
+      <li><b>② "循环深度"这个名字要不要改？</b>MixerLoop 说明可循环的只是 mixer——那把第三轴表述为<strong>"选择性重复计算"</strong>是否比"循环深度"更准确，且能容纳部分循环？</li>
+      <li><b>③ 回顾范围是否纳入两条学习轨？</b>精分已 <strong>11 天</strong>未动，哲学 <strong>7 天</strong>未动；纳入需先定义两轨的"知识层"入选标准，仍属范围决策。</li>
+      <li><b>④ "责任边界＝市场壁垒"的第五信源仍缺。</b>须刻意选<strong>非同一作者、非同一路径</strong>的案例，否则第四次印证只是第五次自证。</li>
+      <li><b>⑤ 汽车 GEO 基线快照要不要本季度做一次？</b>成本极低（<strong>5 平台每日提问</strong>），行业几乎无人做，属可低成本占位的前瞻项。</li>
     </ul>
     <div class="note">
-      <strong>本轮明确不做的事</strong>：不做第四轮跨篇综合；不扩大扫描范围；不新建定时任务；不把任何"未收敛项"写进对外材料。
+      <strong>本轮明确不做的事</strong>：不做第五轮跨篇综合；不扩大扫描范围；不新建定时任务；不把任何未收敛项写进对外材料。
     </div>
   </section>
 
   <footer>
-    知识库回顾 · 生成于 2026-09-13 13:10<br>
-    数据源：D:/个人知识库/daily（09-02 / 09-07 / 09-08，关联 09-01）· 本轮新增 <strong>0</strong> 篇 · 仅供内部回顾使用
+    知识库回顾 · 生成于 2026-09-14 13:10<br>
+    数据源：D:/个人知识库/daily（09-01 / 09-02 / 09-07 / 09-08）＋ 外部观测（arXiv 4 篇 / NBER-QJE 1 篇）· 本轮新增笔记 <strong>0</strong> 篇 · 仅供内部回顾使用
   </footer>
 </div>
 </body>
