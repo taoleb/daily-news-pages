@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026年9月17日</title>
-<meta name="description" content="知识库回顾 2026-09-17：扫描窗口 09-15~09-17，命中 3 篇（均来自 09-15，md5 校验未变，零新增连续 2 天）。本轮不重复昨日切面，换一个轴重读同一批素材：三篇都主张「锁死」，但确定性的落点分别在最上游设计期、中游验证层、下游物理出口——落点越靠下游越可证明，覆盖面越窄。">
+<title>知识库回顾 · 2026年9月18日</title>
+<meta name="description" content="知识库回顾 2026年9月18日：状态资产化与搜索策略优化两篇新笔记的主题聚合、核心认知、关键张力与待思考问题。">
 <style>
   :root{
     color-scheme: light;
@@ -39,26 +39,25 @@
   section{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 20px; margin:22px 0;}
   h2.sec{font-size:19px; color:var(--ink); font-weight:800; margin-bottom:4px; line-height:1.5;}
   .meta{font-size:13px; color:var(--muted); margin-bottom:14px;}
-  h3{font-size:16.5px; color:var(--ink); font-weight:800; margin:20px 0 6px;}
+  h3{font-size:16.5px; color:var(--ink); font-weight:800; margin:22px 0 6px;}
   p{margin:8px 0;}
   ul{margin:6px 0 10px; padding-left:22px;}
   li{margin:7px 0;}
-  strong{color:var(--mark); font-weight:700;}
+  strong{color:var(--mark); font-weight:800;}
   .pull{
     border-left:4px solid var(--accent); background:#fafbfc;
-    padding:10px 16px; margin:14px 0 4px; font-size:17px; color:var(--ink);
+    padding:10px 16px; margin:16px 0 6px; font-size:17px; color:var(--ink);
     font-weight:700; line-height:1.7; border-radius:0 8px 8px 0;
   }
   .pull strong{font-weight:800; color:var(--mark);}
   table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14px;}
   th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
   th{background:#f3f4f6; color:var(--ink); font-weight:700;}
-  td.ok{color:#166534; font-weight:700;}
-  td.warn{color:#92400e; font-weight:700;}
-  td.no{color:#9f1239; font-weight:700;}
+  td.new{color:#166534; font-weight:700;}
+  td.keep{color:#374151; font-weight:700;}
   .qa li{margin:11px 0;}
   .qa b{color:var(--mark);}
-  .note{background:#fbfbfb; border:1px dashed var(--line); border-radius:10px; padding:12px 15px; font-size:14px; color:var(--ink2); margin-top:12px;}
+  .note{background:#fbfbfb; border:1px dashed var(--line); border-radius:10px; padding:12px 15px; font-size:14px; color:var(--ink2); margin-top:14px;}
   footer{margin-top:34px; text-align:center; font-size:13px; color:var(--muted); line-height:1.8;}
   @media (max-width:640px){
     body{font-size:15.5px;}
@@ -71,179 +70,161 @@
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <h1>知识库回顾</h1>
-    <div class="sub">2026年9月17日 · 扫描范围 <strong>daily/ 近三天</strong>（09-15~09-17，命中 <strong>3</strong> 篇）· md5 校验<strong>未变</strong> · 零新增连续 <strong>2 天</strong> · 本轮形态：<strong>同一批素材，换一个轴重读</strong></div>
-  </div>
-</header>
 <div class="wrap">
 
-  <div class="thread">
-    <h2>本轮定位</h2>
-    <p>素材没动，所以不能重写昨天的结论。昨日按「谁把不可核对的东西变成可核对的」排成三条主线；本轮换一个轴：三篇都在喊<strong>锁死</strong>，但<strong>锁的位置不在同一层</strong>——CED 把约束前置到<strong>预训练设计期</strong>，RSI 综述把它放在<strong>验证层</strong>，算子文把它放在<strong>物理出口</strong>。把三个落点并排一放，一个昨日没出现过的结构性张力就露出来：<strong>落点越靠下游，越可证明，覆盖面越窄。</strong></p>
+<header>
+  <h1>知识库回顾 · 2026年9月18日</h1>
+  <div class="sub">
+    扫描范围 D:/个人知识库/daily 近三天（<strong>09-16~09-18</strong>，唯命中目录 2026-09-15，共 5 篇）<br>
+    本轮判定：<strong>2 篇新笔记</strong>（智算存储 / Dream-RSI，均于 09-17 傍晚写入，此前两轮回顾未收录）<br>
+    存量 3 篇（RSI 综述 / 算子工程 / CED）md5 逐字节复核未变，只作对照，不重述结论
   </div>
+</header>
 
-  <section>
-    <h2 class="sec">一、扫描概览：零新增第 2 天，账目与昨日逐项对上</h2>
-    <div class="meta">数据源：D:/个人知识库/daily（只读）· 扫描窗口 <strong>09-15~09-17</strong> · 命中目录仅 <strong>2026-09-15</strong> 一个</div>
-    <table>
-      <tr><th>文件</th><th>写入时间</th><th>md5 前 8 位</th><th>本轮判定</th></tr>
-      <tr><td><strong>递归自进化 RSI 与分层架构</strong></td><td>09-15 13:26</td><td>522ef07d</td><td class="warn">未变（已入昨日回顾）</td></tr>
-      <tr><td><strong>算子工程范式跃迁与刚性基座</strong></td><td>09-15 14:51</td><td>ed04f993</td><td class="warn">未变（已入昨日回顾）</td></tr>
-      <tr><td><strong>V4.1-Flash CED 架构</strong></td><td>09-15 15:16</td><td>37a7b2f1</td><td class="warn">未变（已入昨日回顾）</td></tr>
-      <tr><td>2026-09-16 / 09-17</td><td>—</td><td>—</td><td class="no">无目录</td></tr>
-    </table>
-    <p>「三天窗口」里真正有内容的只有 <strong>09-15 一个下午</strong>。三篇的 mtime 与哈希今天全部复核过，<strong>逐字节未动</strong>，因此昨日的结论并未过期，只是<strong>被重复照射</strong>。按 09-15 的记账口径，零新增进入<strong>第 2 天</strong>；库内写入仍是<strong>事件驱动</strong>，不是日常勤务——这条判断今天只需记账，不必再论证。</p>
-  </section>
+<div class="thread">
+  <h2>本轮定位</h2>
+  <p>前两轮（09-16、09-17）都在同一批素材上换轴，今天素材终于动了：<strong>09-17 傍晚连写两篇</strong>。两篇看似一个讲存储、一个讲搜索，其实是同一条链的上下游——一篇解释「为什么状态值得留下来」，另一篇解释「留下来的状态拿来干什么」。所以本轮不再换轴重读，而是把两篇接成一根链条，看它把「自进化对象是外壳」这句抽象结论填实到什么程度。</p>
+</div>
 
-  <section>
-    <h2 class="sec">二、主题聚合：把「锁死」拆成落点、成本、签字三问</h2>
-    <div class="meta">方法：不问三篇各自讲了什么，只问它们把确定性<strong>放在哪一层</strong>、把成本<strong>换成什么</strong>、把签字<strong>留给谁</strong></div>
-    <table>
-      <tr><th>主线</th><th>统一疑问</th><th>三篇的共同结构</th></tr>
-      <tr><td>① <strong>约束落点</strong></td><td>确定性放在哪一层？</td><td>都锁死，但<strong>落点分处上中下游</strong></td></tr>
-      <tr><td>② <strong>成本可复制性</strong></td><td>哪一环能被换成便宜的？</td><td>凡不可并行复制的环节<strong>必须外置</strong></td></tr>
-      <tr><td>③ <strong>签字吞吐</strong></td><td>责任留给谁、留多少？</td><td>交互频次上升，<strong>签字点上移</strong></td></tr>
-    </table>
+<section>
+  <h2 class="sec">一、扫描概览：事件驱动写入再次被验证</h2>
+  <div class="meta">数据源：D:/个人知识库/daily（只读）· 扫描窗口 09-16~09-18 · 命中目录仅 2026-09-15 · 09-16/09-17/09-18 三个日期目录均不存在</div>
+  <table>
+    <tr><th>文件</th><th>写入时间</th><th>md5 前 8 位</th><th>本轮判定</th></tr>
+    <tr>
+      <td>智算存储：从数据存储走向计算状态基础设施</td>
+      <td>09-17 17:20</td><td>10d4661d</td>
+      <td class="new">新增（入本轮）</td>
+    </tr>
+    <tr>
+      <td>Dream-RSI：搜索策略演进与梦境回放</td>
+      <td>09-17 18:10</td><td>8017f648</td>
+      <td class="new">新增（入本轮）</td>
+    </tr>
+    <tr>
+      <td>递归自我改进 RSI 与 Agent 系统分层架构</td>
+      <td>09-15 13:26</td><td>522ef07d</td>
+      <td class="keep">未变（对照）</td>
+    </tr>
+    <tr>
+      <td>算子工程范式跃迁与非图灵完备刚性基座</td>
+      <td>09-15 14:51</td><td>ed04f993</td>
+      <td class="keep">未变（对照）</td>
+    </tr>
+    <tr>
+      <td>DeepSeek-V4.1-Flash CED 架构解析</td>
+      <td>09-15 15:16</td><td>37a7b2f1</td>
+      <td class="keep">未变（对照）</td>
+    </tr>
+  </table>
+  <p>昨日回顾记了一条判断：<strong>「库内写入是事件驱动，不是日常勤务」</strong>，并已连续两天零新增。今天该判断被自己修掉一半——零新增不等于行为安静，两篇新笔记紧挨在昨日回顾执行之后（13:10 后）不到 5 小时内落盘。所以「零新增」只能当账目记，<strong>不能当作行为规律去推</strong>；真正的写入节律是「素材到手即写」。</p>
+  <div class="pull">零新增是账目，不是节律。<strong>静默期从来不是产能问题</strong>。</div>
+</section>
 
-    <h3>主线①：约束落点——三篇都锁死，但锁在不同层</h3>
-    <table>
-      <tr><th>落点</th><th>承载笔记</th><th>具体形态</th><th>可证明性</th><th>覆盖面</th></tr>
-      <tr>
-        <td><strong>最上游</strong><br>预训练设计期</td>
-        <td>CED 架构</td>
-        <td>HBM 带宽与 Prefill/Decode 时延特征写进结构：<strong>20+20 拓扑</strong>、输入 <strong>8B</strong>/输出 <strong>16B</strong>、Global KV <strong>约 890 bytes/token</strong></td>
-        <td class="no">不可形式化证明<br>（概率系统）</td>
-        <td class="ok">全局<br>从模型出生起生效</td>
-      </tr>
-      <tr>
-        <td><strong>中游</strong><br>验证层 V/L7</td>
-        <td>RSI 综述</td>
-        <td>验证层与编排层、模型层<strong>组织级解耦</strong>；用确定性断言与硬件在环回执替代 <strong>LLM 打分</strong></td>
-        <td class="warn">可证明<br>（限于被断言到的接口）</td>
-        <td class="warn">中等<br>覆盖已建模的失败面</td>
-      </tr>
-      <tr>
-        <td><strong>最下游</strong><br>物理出口 L5</td>
-        <td>非图灵完备基座</td>
-        <td><strong>ASIL-D 规则监控 MCU</strong>、Cedar/Rego、<strong>eBPF Verifier</strong>：无循环递归、状态空间封闭、越界<strong>硬切断</strong></td>
-        <td class="ok">最强<br>有限步可判定</td>
-        <td class="no">最窄<br>只覆盖穿越出口的动作</td>
-      </tr>
-    </table>
-    <ul>
-      <li>三篇在<strong>手段</strong>上完全一致（都把概率黑盒的出口换成确定性结构），分歧只在<strong>落点</strong>：一个前移到模型出生，一个卡在验证层，一个压在物理出口。</li>
-      <li>落点越靠下游，证明成本越低、结论越硬，但能管到的面积越小；越靠上游覆盖面越大，却只能靠<strong>架构偏置</strong>而非证明——上游本身就是概率系统，没有形式化的抓手。</li>
-      <li>RSI 那条「组织级解耦」是三层并存的<strong>前置条件</strong>：只要验证层还归编排层管，下游出口再硬也只是<strong>运动员兼裁判</strong>。</li>
-    </ul>
-    <div class="pull">确定性不会同时最大化<strong>可证明性</strong>和<strong>覆盖面</strong>——这两个量在层与层之间<strong>反向</strong>。</div>
+<section>
+  <h2 class="sec">二、主题聚合：两篇新笔记接成一条链，另有一条独立验证</h2>
+  <div class="meta">方法：先问两篇在链条上各占哪一环，再问它们与存量 3 篇在哪一点上独立指向了同一个判据</div>
+  <table>
+    <tr><th>主线</th><th>统一疑问</th><th>两篇的共同结构</th></tr>
+    <tr><td><strong>① 资产重定义</strong></td><td>什么东西值得被留下来？</td><td>都从「数据/权重」搬到「状态/策略」</td></tr>
+    <tr><td><strong>② 度量衡迁移</strong></td><td>用哪个量衡量好不好？</td><td>都不测「结果对不对」，改测「过程省不省」</td></tr>
+    <tr><td><strong>③ 交换律</strong></td><td>拿什么换什么？</td><td>都用可并行的便宜量，去换不可并行的昂贵量</td></tr>
+  </table>
 
-    <h3>主线②：成本可复制性——凡是不可并行的环节，必须外置</h3>
-    <ul>
-      <li><strong>变便宜的</strong>：小尺寸矩阵乘与算力、代码生成 token、手写算子技艺、单任务内的推理技巧（B0 一族）。CED 的账本正是拿便宜的 Compute 换昂贵的 Memory。</li>
-      <li><strong>不变便宜的</strong>：<strong>HBM 带宽与显存容量</strong>（所以 890 bytes/token 是硬收益）；<strong>高保真可自适应加压的环境</strong>（RSI 明说环境工程量<strong>远超策略模型</strong>）；物理试验的真实性（不可高并发复制、代价不可逆）；功能安全认证与<strong>部署签字</strong>；以及万卡集群与闭环数据所代表的<strong>组织裁决权</strong>。</li>
-      <li>合并成一条判据：自进化闭环的每一环都必须换成<strong>可并行复制</strong>、因而可变便宜的东西；凡<strong>不可并行、不可逆、需签字</strong>的环节，一律外置到刚性层，不进闭环。</li>
-      <li>这条判据与「<strong>责任边界＝市场壁垒</strong>」是同一个东西的两面：不能外包的责任，恰好就是不能进闭环的那部分，也就是壁垒所在。</li>
-    </ul>
+  <h3>主线①：资产从「数据与权重」搬到「状态与策略」——两篇是上下游</h3>
+  <ul>
+    <li>存储篇给的判据最硬：状态的本质是「<strong>已预付算力成本</strong>、未来高概率复用」的计算资产，形态包括 KV Cache、Prefix Cache、Reasoning Trace、Agent Working Memory、World Model Latent State。它与原始数据、最终结果的差别不在内容，<strong>在成本已经付过</strong>。</li>
+    <li>Dream-RSI 给的用法正好接上：把真实探索产生的<strong>[状态＋轨迹＋结果]</strong>沉淀成 Discovery Tree，再以它为底座搭一个可低成本、高并发、反复重入的 Replay Simulator。</li>
+    <li>于是两篇的接口关系清楚了：<strong>状态资产化是前置条件</strong>，搜索策略优化是下游应用。没有前一篇的「状态值得留」，后一篇的「梦境回放」在工程上根本无法启动。</li>
+    <li>两篇共同反驳的同一个人是「权重」。前一篇说核心竞争力不在峰值 FLOPS，后一篇说<strong>不改参数、改 Search Policy</strong>。存量 RSI 综述里「自进化对象是外壳」那句抽象断言，到这里第一次有了<strong>可指认的两个具体载体：状态制品与搜索策略</strong>。</li>
+  </ul>
 
-    <h3>主线③：签字吞吐——交互频次越高，签字点必须越往上移</h3>
-    <ul>
-      <li>CED 给出了交互的<strong>经济学底座</strong>：低 TTFT、廉价长上下文，才能支撑 Agent 每秒多轮工具调用与沙箱自修复。交互频次从此不再是瓶颈，会<strong>显著上升</strong>。</li>
-      <li>RSI 与算子文同时把责任钉在人身上：<strong>物理责任不可外包</strong>，部署许可须由人类签署，事故责任不能甩给 AI。</li>
-      <li>两者相遇就出现新约束：动作级的责任点数随频次线性膨胀，而<strong>人不可能每秒签一次</strong>。唯一出路是把签字从<strong>动作级上移到策略级/边界级</strong>——签一次边界，边界内的动作自动放行。</li>
-      <li>这解释了昨日那条「只能定边界、不能等证据」的张力为何成立：签字吞吐不是靠更多证据提高的，是靠<strong>把签字位置抬高</strong>换来的。</li>
-    </ul>
-  </section>
+  <h3>主线②：度量衡从结果迁到过程</h3>
+  <ul>
+    <li>存储篇把算力度量从 Peak FLOPS 换成 <strong>Effective Compute</strong>（Compute＋Memory＋Movement＋Storage＋Latency 共同决定），并给出可测细项：<strong>Bytes Moved / Token</strong>、状态重建熵值比、状态经济回报比。</li>
+    <li>Dream-RSI 把评价从 Outcome-based 换成 <strong>Process-level</strong>——不问最终答案对不对，问<strong>「寻找答案的搜索路径与算力分配是否最优」</strong>，这正好把 Test-time Compute Allocation 变成可直接优化的对象。</li>
+    <li>两条迁移线是同一个动作：<strong>把评价对象从「结果」搬到「过程」</strong>。这一步是自进化能被工程化处理的前提——结果评价只能给一个标量，过程评价才能描述「效率」。</li>
+  </ul>
 
-  <section>
-    <h2 class="sec">三、核心认知（本轮跨篇提炼）</h2>
-    <ul>
-      <li><strong>三篇的共识是手段、分歧是落点。</strong>都要求「必须有确定性结构」，差别只在<strong>放哪一层</strong>。手段一致、落点三分，这比一致本身更有信息量：架构选择的真正自由度在<strong>落点</strong>，不在手段。</li>
-      <li><strong>选场的硬门槛可以从「可复制性」推出来。</strong>不可并行复制 → 改进循环无法自举；不可逆 → 失败不能回滚；需签字 → 频次被人的吞吐封顶。三条同时成立的场景，<strong>天然不适合做自进化的试验田</strong>，只适合做被约束的部署场。</li>
-      <li><strong>这三条恰好就是车端的画像。</strong>物理试验不可高并发复制、底盘与电机动作不可逆、安全发布需签字——所以车端对自进化既是最难的地方，也是<strong>唯一必须可证明</strong>的地方。这是 2127 与通用 Agent 研究的分水岭：别人可以靠更便宜的算力绕开，车端绕不开。</li>
-      <li><strong>「空白」与「不可达」是两个命题。</strong>RSI 把具身 L5 记为理论空白，读法通常是「抢先机」；但若可复制性门槛成立，具身 L5 可能不是<strong>暂时没做到</strong>，而是<strong>结构上不该做</strong>——真答案是把自进化限制在仿真与影子层，物理层只保留刚性出口。</li>
-      <li><strong>便宜 ≠ 可获得。</strong>算力在单价上持续变便宜，但万卡集群是资本门槛。CED 式收益（省 HBM、省带宽）属于<strong>把已有算力用得更狠</strong>，对算力稀缺方是杠杆；而算力丰沛方拿到的是<strong>更宽的路</strong>。同一份技术红利，对两种组织的含义相反。</li>
-    </ul>
-  </section>
+  <h3>主线③：交换律被两篇独立重述，判据再次稳定</h3>
+  <ul>
+    <li>存储篇的算账方式最直白：算力在小尺寸矩阵乘上<strong>持续变便宜</strong>，而 HBM 带宽与显存容量<strong>极其昂贵</strong>，于是「能不存就不存、能共享就共享、能重算就重算」，用 Compute 换 Memory。</li>
+    <li>Dream-RSI 的算账同构：真实环境试错<strong>昂贵、危险且不可逆</strong>（智驾实车接管、万卡集群算子调试、长链 Tool 试错），于是换成离线、轻量、可反复重入的策略对战。</li>
+    <li>合起来仍是昨日那条判据：<strong>凡不可并行复制、不可逆、需签字的环节</strong>，一律挤出闭环。关键在于，这条判据这次是由两篇<strong>从未被回顾过的新笔记独立指向的</strong>——同一结论被不同素材再次命中，稳定性上升。</li>
+  </ul>
 
-  <section>
-    <h2 class="sec">四、关键张力（只留未收敛）</h2>
-    <table>
-      <tr><th>张力</th><th>A 端</th><th>B 端</th><th>收敛所需信号</th></tr>
-      <tr>
-        <td>确定性位置 vs 覆盖面<strong>（本轮新）</strong></td>
-        <td>下游出口<strong>可证明</strong></td>
-        <td>上游设计期<strong>覆盖面最大</strong></td>
-        <td>是否出现「跨层单证」——同一条不变式在预训练偏置与出口断言里被同时表达</td>
-      </tr>
-      <tr>
-        <td>签字吞吐 vs 交互频次<strong>（本轮新）</strong></td>
-        <td>每秒多轮 tool call 成为常态</td>
-        <td>责任不可外包、<strong>须人签</strong></td>
-        <td>签字上移到边界级后是否仍保有拦截力（边界粒度能多粗）</td>
-      </tr>
-      <tr>
-        <td>可复制成本 vs 不可逆成本<strong>（本轮新，承明日仿真线）</strong></td>
-        <td>软件崩溃<strong>可重启容器</strong></td>
-        <td>底盘突变、电机超载<strong>不可挽回</strong></td>
-        <td>具身 L5 被证明为「结构不可达」还是「延迟可达」</td>
-      </tr>
-      <tr>
-        <td>便宜 vs 可获得<strong>（本轮新）</strong></td>
-        <td>单位算力持续变便宜</td>
-        <td>万卡与数据是<strong>资本门槛</strong></td>
-        <td>能否找到算力可获得性的可观测代理量</td>
-      </tr>
-      <tr>
-        <td>仿真保真 vs 协同演进成本<strong>（承昨日，未收敛）</strong></td>
-        <td>Trace 驱动的分级沙箱</td>
-        <td>环境工程量<strong>远超策略模型</strong></td>
-        <td>Sim-to-Real 信息塌陷可否量化</td>
-      </tr>
-      <tr>
-        <td>标尺篡改 vs 真实攻坚<strong>（承昨日，未收敛）</strong></td>
-        <td>L5 元改进可改评估器</td>
-        <td>降低标准<strong>便宜千百倍</strong></td>
-        <td>形式化不变式能否替代可自举的标量 Reward</td>
-      </tr>
-    </table>
-    <p>本轮新增的四条里，有三条<strong>不是文档之间矛盾，而是架构内部反向</strong>——它们不靠新证据收敛，只能靠<strong>定边界</strong>收敛。这张表里「等证据」的条目正在变少，「定边界」的条目正在变多。</p>
-    <div class="note">
-      <strong>无新证据的存量条目</strong>：循环剂量（判决性实验仍未出现）、NBER「顶尖员工提升≈0」（仍停在官方摘要级）。两条<strong>原地保持</strong>，不做任何「看起来有进展」的润色。
-    </div>
-  </section>
+  <div class="note"><strong>存量对照（不重述）</strong>：CED 篇仍提供变化的经济学底座（890 bytes/token、输入 8B／输出 16B），算子篇仍提供物理出口的刚性兜底（非图灵完备、ASIL-D 监控）。昨日「落点三分」的结论今天无需改动，只是被新素材在<strong>同一判据上再次验证</strong>。</div>
+</section>
 
-  <section>
-    <h2 class="sec">五、认知变化</h2>
-    <div class="pull">昨日把「<strong>约束前置到设计期</strong>」当成三篇共识，本轮核实后<strong>降级为其中一种落点</strong>——共识是假的，分歧是真的。</div>
-    <ul>
-      <li><strong>修正一：共识不成立。</strong>只有 CED 把约束放进预训练第一天；RSI 放在运行期验证层，算子文放在物理出口。「前置」是三种落点里最上游的一种，<strong>不是共同结论</strong>。</li>
-      <li><strong>收紧二：从「有解」到「要选解」。</strong>昨日把「监督失去工作面」降级为有候选解的工程问题；本轮发现候选解有三个，且<strong>不能免费叠加</strong>——三层同时布防等于三层成本同时付。问题因此从「有没有解」变成<strong>「选哪个落点做主场」</strong>。</li>
-      <li><strong>新读出：签字是一种吞吐量资源。</strong>此前把责任边界当成静态划分（哪归人、哪归机）；本轮发现它受<strong>人的签字速率</strong>约束，于是边界必须做成可签一次的粗粒度，而不是逐动作审批。</li>
-      <li><strong>静默回落为记账项。</strong>零新增连续 2 天，「静默」不再承担论证功能，只记进台账；本轮的价值全部来自<strong>换轴重读</strong>，而非新素材。</li>
-    </ul>
-  </section>
+<section>
+  <h2 class="sec">三、核心认知（本轮跨篇提炼）</h2>
+  <ul>
+    <li><strong>存储从附属外挂变为控制变量</strong>。状态是可被预付、可被复用的资产，存储通过控制状态驻留层级、搬运距离与复用率，直接决定算力的有效利用率。</li>
+    <li><strong>「外壳」已经填实</strong>：状态制品＋搜索策略。自进化被拆成两件事——把经验沉淀为可重入的状态资产，以及在资产之上优化产生答案的过程。两者都不动权重。</li>
+    <li><strong>环境可重入性</strong>决定自进化速率的上限，而非模型聪明程度。Replay Simulator 的价值就在把不可逆的真实试错，换成可无限重唱的推演；环境工程量的量级远超策略模型本身。</li>
+    <li>控制权的性质<strong>从算力走向语义</strong>。六维控制平面（Compute→State→Data→Space→Time→Semantic）顶端是「为什么这个状态有价值」，这一层不可形式化，也不可能靠增加算力获得。</li>
+  </ul>
+</section>
 
-  <section>
-    <h2 class="sec">六、待思考问题</h2>
-    <ul class="qa">
-      <li><b>① 2127 harness 的约束主场放哪一层？</b>三个落点的判据排序是什么（可证明性优先，还是覆盖面优先）？若只能押一个，押<strong>验证层</strong>是否正确——因为它既是组织级解耦的产物，又是出口断言的上游供给方？</li>
-      <li><b>② 能否把选场判据写成三条硬门槛？</b>「不可并行复制 / 不可逆 / 需签字」三问做成 fail-fast 清单，任一条为否则该场景<strong>不进自进化闭环</strong>。这样一份清单，够不够挡住「看起来很先进的具身自进化」这类选题？</li>
-      <li><b>③ 签字吞吐的瓶颈怎么量化？</b>单车每秒可接受的人工介入上限是多少？超过该上限就必须上移到边界级签字——那么<strong>边界级签字的最低充分粒度</strong>是什么（速度-距离包络线？转向角速度上限？）？</li>
-      <li><b>④ 便宜但不获得，护城河在算法还是在算力所有权？</b>若 CED 式红利对算力稀缺方是杠杆、对丰沛方是加宽道路，那「<strong>责任边界＝市场壁垒</strong>」是否需要一条补充：壁垒也可能是<strong>算力+数据所有权</strong>而非责任本身？</li>
-      <li><b>⑤ 具身 L5 是空白还是结构不可达？</b>两者的工程含义相反：前者是抢时间的窗口，后者是应当<strong>换命题</strong>（把自进化限制在仿真与影子层，物理层只留刚性出口）。判定它的第一条证据会是什么？</li>
-      <li><b>⑥ 若三层必须并存，哪一层可以最薄？</b>成本最小化的落点组合是否存在默认解——上游做偏置、中游做断言、下游做熔断，而<strong>只在安全攸关处加厚</strong>？</li>
-    </ul>
-    <div class="note">
-      <strong>本轮明确不做的事</strong>：不扩大扫描范围（仍限 daily/）；不联网补新证据；不新建定时任务；不把任何未收敛项写进对外材料；不因零新增而放宽入库标准。
-    </div>
-  </section>
+<section>
+  <h2 class="sec">四、关键张力（只留未收敛）</h2>
 
-  <footer>
-    知识库回顾 · 生成于 2026-09-17 13:10<br>
-    数据源：D:/个人知识库/daily/2026-09-15（3 篇，md5 校验未变）· 零新增连续 <strong>2 天</strong> · 本轮新增笔记 <strong>0</strong> 篇 · 主题聚合 <strong>3</strong> 条主线 · 仅供内部回顾使用
-  </footer>
+  <h3>张力①：同一批状态，一篇判为可重算的缓存，一篇判为不能丢的资产</h3>
+  <ul>
+    <li>CED 侧主张<strong>「能不存就不存」</strong>：SWA Bounded Replay 直接丢弃长尾局部 KV，按需重算，赚的就是省下的显存。</li>
+    <li>存储侧主张相反：长生命周期 Agent 的状态<strong>「不再是丢了能重算的 Cache」</strong>，而是沉淀上百步轨迹的资产，须 Checkpoint、版本化、复制，考核指标直接上到 RTO／RPO。</li>
+    <li>两者不矛盾于事实，矛盾于<strong>分界线在哪</strong>：同一个状态对象，重建成本低于责任代价时是缓存，高于时是资产。今天两篇各给了半个判据，谁都没给完整的分级规则。</li>
+  </ul>
+  <div class="pull">决定一个状态该存还是该重算的，<strong>不是体积，而是重建代价与丢失后果之比</strong>。</div>
+
+  <h3>张力②：最需要离线加压的场景，恰恰拿不到喂养它的样本</h3>
+  <ul>
+    <li>Dream-RSI 自带明确边界：梦境回放<strong>只能利用已探索并记录过的分支</strong>，无法自主预测从未涉足的未知分支（Unseen State Collapse）——它是插值器，不是先知。</li>
+    <li>闭环的前提是<strong>双轮驱动</strong>：白天在真实世界审慎探索、采掘高价值长尾样本扩充 Discovery Tree，夜间在模拟器中自我对弈修补 Search Policy。</li>
+    <li>但车端的画像刚好是最贵的试验场：物理试验<strong>不可高并发复制、代价不可逆</strong>。危险长尾无法「白天真实探索」采集，白天那一轮在车端根本不成立。<strong>需要离线加压的理由最强</strong>，而启动它的样本最缺。</li>
+  </ul>
+
+  <h3>张力③：模拟器是策略自己的产物，评价标准被被评价者参与生成</h3>
+  <ul>
+    <li>Discovery Tree 由 Agent 自己的探索产生，Simulator 又以它为底座——也就是说，用来评判策略优劣的那套环境，<strong>本身就是策略的产物</strong>。</li>
+    <li>存量 RSI 综述里记过的风险是「AI 篡改外部标尺」（评估器自举崩溃）；这里更进一层：<strong>标尺由 AI 生成，而非被 AI 篡改</strong>，属于 Goodhart 的自我指涉版本。</li>
+    <li>未收敛：既然 V/L7 验证层必须与编排层组织级解耦，那这种自建模拟器<strong>是否也须接受一个独立于策略的验证器</strong>？解耦原则需要往上一层再推一遍。</li>
+  </ul>
+
+  <h3>张力④：可证明的层没有裁决权，有裁决权的层不可证明</h3>
+  <ul>
+    <li>非图灵完备刚性基座之所以能证明，靠的是<strong>剥离通用计算自由度</strong>：无循环递归、状态空间封闭、有限步可判定。</li>
+    <li>而六维控制平面的顶端 Semantic Control（为什么这个状态有价值）本质是价值判断，<strong>恰恰不可形式化</strong>，它离形式化证明最远。</li>
+    <li>这是昨日「落点越下游越可证明、覆盖面越窄」的升级版：把「覆盖面」换成「裁决权」后，张力反而更尖锐——<strong>最硬的那层管得最窄，管得最宽的那层最软</strong>。昨日「签字上移到策略级」的出路在语义层可能失效：语义价值判断本身就是需要被签的那一次。</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="sec">五、认知变化</h2>
+  <ul>
+    <li><strong>从抽象断言变成可指认载体</strong>。「自进化对象是外壳」上一轮只能说这一句；本轮两篇新笔记把外壳填成两件具体东西——状态制品（Discovery Tree、Working Memory、Checkpoint）与搜索策略（Search Policy）。</li>
+    <li><strong>评价对象从结果转向过程</strong>，被确认是一条单向路径。Peak FLOPS→Effective Compute→Bytes Moved／Token→状态经济回报比；Outcome-based→Process-level。两条线并行推进，说明这不是某一派的偏好，而是自进化可工程化的必要条件。</li>
+    <li><strong>自我修正</strong>：「零新增」不能推断行为节律。昨日凭连续两天零新增记账，今天下午两篇紧接落盘。修正为：<strong>零新增只说明素材未到</strong>，与产能、兴趣、制度无关；写入节律是素材驱动的。</li>
+    <li><strong>判据稳定性上升，但新增了一条边界条件。</strong>「不可并行/不可逆/需签字者挤出闭环」这条判据，已由新素材独立命中；同时 Dream-RSI 自己交出了它的失效边界（只能插值），说明这条判据在<strong>样本不可采集的场景里需要补充机制</strong>。</li>
+  </ul>
+</section>
+
+<section>
+  <h2 class="sec">六、待思考问题</h2>
+  <ol class="qa">
+    <li><b>状态分级判据能否写成可测输入？</b>给定一个状态对象，用哪三个量判定它属于「可重算缓存」还是「不可丢资产」——<strong>重建算力成本、搬运成本、错误后果不可逆性</strong>？三者是否需要加权，权重由谁定？</li>
+    <li><b>车端的 Discovery Tree，第一批节点从哪来？</b>既然白天真实探索在车端不成立，能否只靠事故库、影子模式回放、他人失败样本起步？若如此，这类样本的<strong>数据主权与责任归属</strong>如何界定——贡献样本者是否为下游策略的后果分担责任？</li>
+    <li><b>自建模拟器要不要独立验证器？</b>V/L7 与编排层解耦的原则若往上推一层，那个验证器能否也做成<strong>非图灵完备的固定断言回归集</strong>？还是说过程评价天然只能靠 LLM 打分，从而必然引入标尺漂移？</li>
+    <li><b>Process-level 评价会不会制造新的 Reward Hacking？</b>只要过程指标可测，策略就会<strong>优化指标而非目标</strong>——例如以疯狂分支探索去换「搜索充分」的高分，而不是更快命中答案。过程指标需要怎样的反投机设计（如按算力预算归一化）？</li>
+    <li><b>语义裁决权是否只能由人持有？</b>若 Semantic Control 天然不可形式化，车端最后一层「这个状态值不值得留、这个目标值不值得追」是否只能由人签署？那么昨日「签字上移到策略级」的结论在语义层是否<strong>需要停在动作级与语义级之间再分一层</strong>？</li>
+  </ol>
+</section>
+
+<footer>
+  知识库回顾 · 2026年9月18日 · 扫描 daily/ 近三天（命中 2026-09-15 共 5 篇）<br>
+  本轮新增 2 篇（智算存储 / Dream-RSI）· 存量 3 篇 md5 未变，仅作对照 · 单一数据源，未合并时事与调研类内容
+</footer>
+
 </div>
 </body>
 </html>
