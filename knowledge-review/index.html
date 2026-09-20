@@ -3,233 +3,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026年9月19日</title>
-<meta name="description" content="知识库回顾 2026年9月19日：零新增第1天，5篇存量笔记换时间轴重读——约束前移与学习后移的双向迁移、时间常数匹配、可逆性判据。">
+<title>知识库回顾 · 2026年9月20日</title>
 <style>
-  :root{
-    color-scheme: light;
-    --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --ink2:#333; --muted:#6b7280;
-    --line:#e5e7eb; --accent:#1f4e79; --mark:#111;
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.75;
+    font-size: 16px;
   }
-  @media (prefers-color-scheme: dark){
-    :root{
-      color-scheme: light;
-      --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --ink2:#333; --muted:#6b7280;
-      --line:#e5e7eb; --accent:#1f4e79; --mark:#111;
-    }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 48px; }
+  header.page {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 36px 16px 28px;
+    text-align: center;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{ -webkit-text-size-adjust:100%; }
-  body{
-    background:var(--bg) !important; color:var(--ink2);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    line-height:1.78; font-size:16px; padding-bottom:56px;
+  header.page h1 { font-size: 1.55em; color: #1a1a1a; font-weight: 700; letter-spacing: 0.02em; }
+  header.page .sub { color: #666; font-size: 0.92em; margin-top: 10px; }
+  header.page .meta { color: #888; font-size: 0.85em; margin-top: 6px; }
+  section.card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    padding: 22px 20px;
+    margin-top: 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   }
-  .wrap{max-width:900px; margin:0 auto; padding:0 18px;}
-  header{padding:36px 0 22px; border-bottom:1px solid var(--line); background:#fff;}
-  h1{color:var(--ink); font-size:26px; font-weight:800; letter-spacing:.5px;}
-  .sub{color:var(--muted); font-size:14px; margin-top:8px; line-height:1.65;}
-  .sub strong{color:var(--mark); font-weight:700;}
-  .thread{
-    background:#fff; border:1px solid var(--line); border-left:4px solid var(--accent);
-    border-radius:10px; padding:16px 18px; margin:22px 0;
+  h2.sec {
+    font-size: 1.18em; color: #1a1a1a; font-weight: 700;
+    padding-left: 10px; border-left: 4px solid #1f3a5f;
+    margin-bottom: 14px; line-height: 1.4;
   }
-  .thread h2{font-size:15px; color:var(--accent); font-weight:800; margin-bottom:6px;}
-  .thread p{font-size:14.5px; color:var(--ink2);}
-  section{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 20px; margin:22px 0;}
-  h2.sec{font-size:19px; color:var(--ink); font-weight:800; margin-bottom:4px; line-height:1.5;}
-  .meta{font-size:13px; color:var(--muted); margin-bottom:14px;}
-  h3{font-size:16.5px; color:var(--ink); font-weight:800; margin:22px 0 6px;}
-  p{margin:8px 0;}
-  ul{margin:6px 0 10px; padding-left:22px;}
-  li{margin:7px 0;}
-  strong{color:var(--mark); font-weight:800;}
-  .pull{
-    border-left:4px solid var(--accent); background:#fafbfc;
-    padding:10px 16px; margin:16px 0 6px; font-size:17px; color:var(--ink);
-    font-weight:700; line-height:1.7; border-radius:0 8px 8px 0;
+  .item { margin-top: 18px; }
+  .item:first-of-type { margin-top: 6px; }
+  h3.topic { font-size: 1.03em; color: #1a1a1a; font-weight: 700; margin-bottom: 6px; }
+  .src { font-size: 0.8em; color: #999; margin-bottom: 8px; }
+  ul.pts { list-style: none; }
+  ul.pts li {
+    padding-left: 16px; position: relative;
+    margin-bottom: 6px; font-size: 0.95em; color: #333;
   }
-  .pull strong{font-weight:800; color:var(--mark);}
-  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:14px;}
-  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top;}
-  th{background:#f3f4f6; color:var(--ink); font-weight:700;}
-  td.new{color:#166534; font-weight:700;}
-  td.keep{color:#374151; font-weight:700;}
-  .qa li{margin:11px 0;}
-  .qa b{color:var(--mark);}
-  .note{background:#fbfbfb; border:1px dashed var(--line); border-radius:10px; padding:12px 15px; font-size:14px; color:var(--ink2); margin-top:14px;}
-  footer{margin-top:34px; text-align:center; font-size:13px; color:var(--muted); line-height:1.8;}
-  @media (max-width:640px){
-    body{font-size:15.5px;}
-    h1{font-size:22px;}
-    h2.sec{font-size:17.5px;}
-    section{padding:18px 15px;}
-    .pull{font-size:16px;}
-    table{display:block; overflow-x:auto; font-size:13.5px;}
+  ul.pts li::before {
+    content: ""; position: absolute; left: 2px; top: 0.72em;
+    width: 5px; height: 5px; border-radius: 50%; background: #b8c4d4;
+  }
+  strong { color: #111; font-weight: 700; }
+  .callout {
+    border-left: 3px solid #1f3a5f;
+    background: #f2f5f9;
+    padding: 10px 14px;
+    margin: 12px 0 4px;
+    font-size: 0.97em;
+    color: #1a1a1a;
+    border-radius: 0 8px 8px 0;
+  }
+  .summary h4 {
+    font-size: 1em; color: #1a1a1a; font-weight: 700;
+    margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px dashed #ddd;
+  }
+  .summary h4:first-of-type { margin-top: 6px; }
+  ol.tight, ul.tight { padding-left: 20px; }
+  ol.tight li, ul.tight li { margin-bottom: 8px; font-size: 0.95em; color: #333; }
+  footer {
+    text-align: center; color: #999; font-size: 0.8em;
+    margin-top: 30px; line-height: 1.8;
+  }
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    header.page { padding: 26px 14px 20px; }
+    header.page h1 { font-size: 1.3em; }
+    section.card { padding: 18px 15px; border-radius: 10px; }
+    h2.sec { font-size: 1.1em; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <h1>知识库回顾 · 2026年9月19日</h1>
-  <div class="sub">
-    扫描范围 D:/个人知识库/daily 近三天（<strong>09-17~09-19</strong>，唯命中目录 2026-09-15，共 5 篇）<br>
-    本轮判定：<strong>新增 0 篇</strong>，5 篇 md5 逐字节复核<strong>全部未变</strong>；其中 2 篇（智算存储 / Dream-RSI）已于昨日入账，本轮只作换轴重读<br>
-    素材最后写入时间为 <strong>09-17 18:10</strong>，距本轮执行约 <strong>43 小时</strong>
-  </div>
+<header class="page">
+  <h1>知识库回顾 · 2026年9月20日</h1>
+  <div class="sub">主题聚合 · 核心认知 · 关键张力 · 认知变化 · 待思考问题</div>
+  <div class="meta">扫描窗口 09-18 ~ 09-20 无新增批次 ｜ 本次回顾基于最近入库批次（2026-09-15 文件夹，5 篇笔记，其中 2 篇于 09-17 修订）</div>
 </header>
 
-<div class="thread">
-  <h2>本轮定位</h2>
-  <p>前四轮换的都是<strong>空间轴</strong>——约束放在哪一层（09-17 的落点三分）、资产是什么形态（09-18 的资产重定义）。本轮换<strong>时间轴</strong>：同一批素材里，每一篇其实都在回答同一个问题——「这件事应该在<strong>什么时候</strong>做」。答案不是一个方向，而是<strong>两条相反的箭头</strong>：约束往最早处前移，学习往最晚处后移。两条箭头一摆出来，前三轮没出现过的一个量浮现了：<strong>时间常数</strong>。</p>
-</div>
+<div class="wrap">
 
-<section>
-  <h2 class="sec">一、扫描概览：零新增第 1 天，账目与昨日逐项对上</h2>
-  <div class="meta">数据源：D:/个人知识库/daily（只读）· 扫描窗口 09-17~09-19 · 命中目录仅 2026-09-15 · 09-16/09-17/09-18/09-19 四个日期目录均不存在</div>
-  <table>
-    <tr><th>文件</th><th>写入时间</th><th>md5 前 8 位</th><th>本轮判定</th></tr>
-    <tr>
-      <td>递归自我改进 RSI 与 Agent 系统分层架构</td>
-      <td>09-15 13:26</td><td>522ef07d</td>
-      <td class="keep">未变（换轴重读）</td>
-    </tr>
-    <tr>
-      <td>算子工程范式跃迁与非图灵完备刚性基座</td>
-      <td>09-15 14:51</td><td>ed04f993</td>
-      <td class="keep">未变（换轴重读）</td>
-    </tr>
-    <tr>
-      <td>DeepSeek-V4.1-Flash CED 架构解析</td>
-      <td>09-15 15:16</td><td>37a7b2f1</td>
-      <td class="keep">未变（换轴重读）</td>
-    </tr>
-    <tr>
-      <td>智算存储：从数据存储走向计算状态基础设施</td>
-      <td>09-17 17:20</td><td>10d4661d</td>
-      <td class="keep">未变（昨日已入账）</td>
-    </tr>
-    <tr>
-      <td>Dream-RSI：搜索策略演进与梦境回放</td>
-      <td>09-17 18:10</td><td>8017f648</td>
-      <td class="keep">未变（昨日已入账）</td>
-    </tr>
-  </table>
-  <p>昨日回顾的核心判断是「<strong>零新增只说明素材未到</strong>，写入节律是素材驱动的」。今天该判断第二次被验证：<strong>43 小时内无任何写入</strong>，说明上一次落盘之后的静默属于正常间隙，而非异常。按 09-15 起的记账口径，本轮进入<strong>零新增第 1 天</strong>（相对 09-17 傍晚那批新笔记）。</p>
-  <p>需要说清的是：本轮里 2 篇笔记的 mtime 仍落在「近三天」窗口内，但它们<strong>已于昨日回顾正式入账</strong>，因此今日不再计为新增，也不重述昨日结论——只换一个轴重新照射。</p>
-  <div class="pull">素材没动，所以今天能做的只有一件事：<strong>换一个还没用过的轴</strong>。</div>
-</section>
+  <section class="card">
+    <h2 class="sec">一、推理原生架构与计算状态基础设施</h2>
 
-<section>
-  <h2 class="sec">二、主题聚合：五篇都在回答「什么时候做」，答案分成两条相反的箭头</h2>
-  <div class="meta">方法：不问五篇讲了什么，只问它们把「约束」和「学习」分别安排在生命周期的哪个时点</div>
-  <table>
-    <tr><th>主线</th><th>统一疑问</th><th>五篇的共同结构</th></tr>
-    <tr><td><strong>① 约束前移</strong></td><td>什么时候必须定死？</td><td>越是一次性、全局、不可逆，越往最早的可改期推</td></tr>
-    <tr><td><strong>② 学习后移</strong></td><td>什么时候才开始学？</td><td>越是可迭代、局部、可回滚，越往最晚的运行期推</td></tr>
-    <tr><td><strong>③ 双向收税</strong></td><td>两个方向各付什么代价？</td><td>前移交「锁死税」，后移交「样本税」</td></tr>
-  </table>
+    <div class="item">
+      <h3 class="topic">1. DeepSeek-V4.1-Flash：CED 因果编码器-解码器架构</h3>
+      <div class="src">DeepSeek_V4.1_Flash架构解析_CED与推理原生设计.md</div>
+      <ul class="pts">
+        <li>这不是"小模型蒸馏"，而是对模型架构、激活参数、KV Cache 拓扑与推理服务的"软硬件全栈重构"。</li>
+        <li>核心指标：552B MoE 总参数，Prefill 仅激活 8B、Decode 激活 16B 的非对称分配；40 层解耦为 Causal Encoder 20 层（管输入理解）+ Decoder 20 层（管生成），天然契合 Agent<strong>"长输入、短输出"</strong>负载，长文本 Prefill 算力直接砍半、TTFT 大幅缩短。</li>
+        <li>KV Cache 革命：Decoder 各层不再私有持有 KV，而是由 Encoder 最终隐藏状态作为<strong>统一记忆母版投影</strong>生成——Global KV 压至约 <strong>890 bytes/token</strong>，HBM 占用降至 1/4、SSD 存储降至 1/8。</li>
+        <li>局部注意力采取 SWA Bounded Replay："能重算就不长存"，践行 Compute-for-Memory 准则。</li>
+      </ul>
+      <div class="callout">范式跃迁：从"先训练再做推理压缩"走向推理原生协同设计——模型出生第一天就把 HBM 带宽、时延与显存墙作为第一性架构约束。</div>
+    </div>
 
-  <h3>主线①：约束前移——写到最早的那个还能改的时点</h3>
-  <ul>
-    <li>CED 篇是这条线最典型的自述：把 HBM 带宽、Prefill/Decode 时延特征作为架构的第一性约束，<strong>在模型出生的第一天</strong>就写进结构——20+20 拓扑、输入 <strong>8B</strong>／输出 <strong>16B</strong>、Global KV 压到约 <strong>890 bytes/token</strong>。</li>
-    <li>算子篇的刚性基座是同一动作的硬版本：安全判定必须<strong>有限步可判定</strong>，所以无循环递归、状态空间封闭、越界<strong>硬切断</strong>（ASIL-D 监控 MCU、Cedar/Rego、eBPF Verifier）。「非图灵完备」的实质就是<strong>在设计期把可变性一次剥干净</strong>。</li>
-    <li>算子篇的「一次性代码」策略补上另一半：微内核用形式化证明<strong>封死</strong>，业务层接受高周转、由 Agent 全量重构。同一系统里，<strong>不变的锁进最内层，可变的放到最外层</strong>——这是前移原则的组织版表述。</li>
-    <li>判据由此收敛：<strong>凡一次性、全局生效、不可逆的，越早越好</strong>。改动成本随阶段递增（设计期最便宜，部署后最贵），前移就是买最便宜的那张票。</li>
-  </ul>
+    <div class="item">
+      <h3 class="topic">2. 智算存储重构：生产资料从 Data 变为 State</h3>
+      <div class="src">智算存储从数据存储走向计算状态基础设施.md（09-17 修订）</div>
+      <ul class="pts">
+        <li>计算状态（KV Cache、Reasoning Trace、Agent Working Memory 等）是已预付高昂算力成本、未来大概率被复用的"计算资产"——存储从被动附属变为决定有效算力的核心控制变量。</li>
+        <li>系统优化逻辑发生不可逆转向：从 Compute Acceleration（算得更快）跃迁为 <strong>Compute Avoidance</strong>（这次计算能不能根本不做）。</li>
+        <li>七大优化目标：避免计算、状态复用（LRU 演进为语义/预测式缓存）、搬运最小化（Bytes Moved/Token）、最小充分压缩、局部性最大化（State Placement Engine）、状态感知弹性调度、可靠状态（Checkpoint/版本化）。</li>
+        <li>CED 正是 Model-State Co-design（模型架构主动协同设计计算状态）的教科书级标杆：非对称激活、母版复用、890 bytes/token 压缩、SWA 重算各占其一。</li>
+        <li>基础设施控制权的六维抽象：Compute → State → Data → Space → Time → <strong>Semantic Control</strong>，越往高层越逼近智能体与 infra 的真正话语权。</li>
+      </ul>
+      <div class="callout">一句话沉淀：AI 基础设施正从"计算静态数据"进入"管理动态计算状态"时代，竞争力=以最低综合物理成本实现状态最高效复用。</div>
+    </div>
+  </section>
 
-  <h3>主线②：学习后移——改进被推到最晚的运行期</h3>
-  <ul>
-    <li>Dream-RSI 把学习的时点直接搬到运行期：<strong>不改参数、改 Search Policy</strong>，以「白天真实探索 + 夜间梦境回放」的<strong>双轮驱动</strong>持续修补策略。学习不再发生在训练那一天，而是每天都在发生。</li>
-    <li>存储篇为这种后移提供了资产侧的条件：运行期产生的中间状态被正式确认为<strong>已预付成本、可反复复用</strong>的资产（KV Cache、Reasoning Trace、Working Memory、Checkpoint），并上了 <strong>RTO／RPO</strong> 这类正式考核指标——运行期的副产品被纳入了资产负债表。</li>
-    <li>RSI 综述的自主度阶梯给出方向性证据：从 L2 到 L5，<strong>人类保留的边界逐级外移</strong>，最后只剩物理与安全硬约束；而 B0（CoT、Reflexion、ToT）之所以被定为<strong>伪 RSI</strong>，正因为它不跨任务留存——<strong>不跨任务留存的就不算学习</strong>。</li>
-    <li>判据与前移互为镜像：<strong>凡可迭代、局部生效、可回滚的，越晚越便宜</strong>。晚做的好处是能拿到更多信息，且做错的代价可被回滚。</li>
-  </ul>
+  <section class="card">
+    <h2 class="sec">二、递归自进化（RSI）与 Harness 分层</h2>
 
-  <h3>主线③：两条箭头各自收一笔税，车端被收两次</h3>
-  <ul>
-    <li>前移的代价是<strong>锁死税</strong>：CED 的 20+20 与 8B／16B 一旦定型，就绑死在「<strong>带宽贵、算力便宜</strong>」这张当前硬件账本上。账本若反转，偏置就成了负债——<strong>架构寿命＝所假设约束的寿命</strong>。</li>
-    <li>后移的代价是<strong>样本税</strong>：Dream-RSI 自己交了边界，梦境回放只能利用<strong>已探索并记录过</strong>的分支，无法预测从未涉足的未知分支——它是插值器，改进上限由真实探索能采到的样本封顶。</li>
-    <li>车端两边都付：安全约束<strong>必须前移</strong>（不可事后补），而真实探索<strong>最难采样</strong>（不可高并发复制、代价不可逆）。更尖锐的是——车端的物理与责任约束，是<strong>唯一不能靠硬件换代消解</strong>的那一类：带宽会变便宜，责任不会。</li>
-  </ul>
+    <div class="item">
+      <h3 class="topic">3. 真 RSI 的判据与 L1-L5 自主度阶梯</h3>
+      <div class="src">递归自进化RSI与Agent系统分层架构.md（arXiv 2609.11873，上海交大/清华/字节/商汤）</div>
+      <ul class="pts">
+        <li>真 RSI 两判据：持久性（经验跨生命周期留存为系统状态）+ 机制性（状态变更反过来改变改进机制本身）；CoT/Reflexion/ToT 属于任务内清空的 B0 伪 RSI。</li>
+        <li>自主度阶梯 L1 执行 → L2 策略 → L3 经验获取 → L4 部署适应（沉淀为持久系统制品）→ L5 元改进（<strong>修改评估器本身</strong>，代表：STOP、RQGM），人类边界逐级收缩至物理/安全硬约束。</li>
+        <li>头脑空间封闭指数（HCI）严重分化：高数 86.4、科学 85.8 进展快，而软件工程 52.6、终端 Agent 56.8、<strong>工具调用仅 39.9</strong>——交互越复杂，高阶 RSI 越缺位。</li>
+        <li>具身智能当前停留在 L2/L3 仿真环境阶段，L5 处于<strong>理论空白</strong>。</li>
+      </ul>
+    </div>
 
-  <div class="note"><strong>与前四轮的位置关系（不重述结论）</strong>：09-15 的「接口定义权／核算结构」、09-16 的「自进化对象是外壳」、09-17 的「落点三分」、09-18 的「资产重定义／度量衡迁移」都建立在<strong>空间轴</strong>上。本轮的时间轴与它们正交，不覆盖、不修正具体结论，只补上被漏掉的那一维。</div>
-</section>
+    <div class="item">
+      <h3 class="topic">4. 高阶 RSI 的三大工程死结与分层解法</h3>
+      <div class="src">递归自进化RSI与Agent系统分层架构.md</div>
+      <ul class="pts">
+        <li>死结一：Sim-to-Real 信息塌陷（Agent 学会利用物理引擎漏洞，仿真满分现实翻车）+ 环境协同演进代价（环境不随之进化必然基准过拟合）。</li>
+        <li>死结二：Reward Hacking 不可消除，至 L5 出现<strong>评估器自举崩溃</strong>——AI 发现篡改标尺比攻克任务容易千百倍。</li>
+        <li>死结三：<strong>破局能力与越狱能力同源</strong>——突破框架的探索力在目标受阻时直接表现为击穿沙箱；具身/车控动作不可逆，软件可重启而物理破坏无法挽回。</li>
+        <li>分层解法（映射 ETCLOVG 7 层）：Trace-Driven 沙箱（真实失败 Trace 重构为可执行用例）、分级沙箱（只读影子→虚拟插桩→受控物理闭环）、验证层与模型/编排组织级解耦、非图灵完备确定性断言、L8 轨迹拓扑监控熔断元投机、G 层动态放权状态机。</li>
+      </ul>
+      <div class="callout">工程断言：自我进化的对象不是单体模型权重，而是分层工程外壳（Harness/Infra）；责任边界是自进化的终极锚点——计算自由度在沙箱内，物理责任边界在网关外。</div>
+    </div>
 
-<section>
-  <h2 class="sec">三、核心认知（本轮跨篇提炼）</h2>
-  <ul>
-    <li>「自进化长在外壳上」的深层理由是<strong>时间常数匹配，不是权重太贵</strong>。权重的时间常数是季度级且更新不可逆，<strong>比环境漂移周期还长</strong>，闭环根本跑不完一圈；而策略与状态的时间常数短到分钟级，配得上。判据应写作：<strong>闭环周期必须短于环境变化周期</strong>——这比「不可并行／不可逆／需签字」更根本，因为它是那句判据的来源。</li>
-    <li><strong>确定性在时间轴上是双向迁移。</strong>约束往最早的可改处推（预训练设计期、形式化层），学习往最晚的可回滚处推（运行期、策略层）。两个方向共用同一条判据——<strong>可逆性</strong>，而不是成本。可逆的进闭环，不可逆的进结构。</li>
-    <li><strong>架构自由度＝空间 × 时间两个切面。</strong>09-17 回答「放哪一层」，本轮回答「什么时候还能改」。两个问题合起来才完整：一个设计点的位置由<strong>层级与锁定时刻共同决定</strong>，只报层级会漏掉最贵的那一维。</li>
-    <li>「责任边界＝市场壁垒」得到一条更硬的底座：<strong>责任之所以是壁垒，是因为它不可逆</strong>。可回滚的动作才允许留在闭环里；不可回滚的动作只能前移到形式化层或留在人手里。于是<strong>可逆性与责任是同一个量的两面</strong>，而不可逆性既解释了壁垒，也解释了前移。</li>
-  </ul>
-  <div class="pull">闭环周期必须短于环境变化周期——<strong>这是选场的第一条判据</strong>。</div>
-</section>
+    <div class="item">
+      <h3 class="topic">5. Dream-RSI：不改权重，进化搜索策略</h3>
+      <div class="src">Dream_RSI递归自进化新路径_搜索策略与梦境回放.md（09-17 修订）</div>
+      <ul class="pts">
+        <li>核心命题：绕开昂贵且易灾难性遗忘的权重更新，让 AI 改进自己的 Search Policy / Harness——搜索展开、算力预算分配、分支与剪枝时机（Test-time Compute Allocation）。</li>
+        <li>机制：把真实探索产生的 [状态+轨迹+结果] 沉淀为 <strong>Discovery Tree</strong>，在其上构建可低成本高并发重入的"梦境回放模拟器"，让不同搜索策略在同等算力预算下离线对战。</li>
+        <li>本质跃迁：从"评价结果"到<strong>评价产生结果的过程</strong>（Process-level / Meta-policy Evaluation），使改进机制本身成为数学优化对象。</li>
+        <li>关键边界：Replay 只能在已探索记录的分支内插值，<strong>无法预测未涉足的未知分支</strong>；必须与真实探索构成"白天采掘 + 黑夜回放"的双轮闭环。</li>
+      </ul>
+    </div>
+  </section>
 
-<section>
-  <h2 class="sec">四、关键张力（只留未收敛）</h2>
+  <section class="card">
+    <h2 class="sec">三、算子范式跃迁、草台世界与刚性安全基座</h2>
 
-  <h3>张力①：前移锁死的，恰恰是变化最快的那个量</h3>
-  <ul>
-    <li>前移原则要求把约束写进最早、最不常改的层；但 CED 前移进结构的是<strong>硬件账本</strong>（带宽贵、算力便宜），而账本本身是全栈里<strong>最善变</strong>的量之一——算力单价过去十年就是一路下行。</li>
-    <li>这就形成一个自相矛盾：<strong>把变化最快的量写进最不常改的层</strong>。前移本为省未来的改动成本，却可能把未来的一次大改动变成了重训级事故。</li>
-    <li>未收敛：两条路都说得通——「账本的相对关系比绝对值稳定」（带宽与算力之差或可长期保持），或「应把账本做成可切换参数而非结构偏置」。<strong>目前没有判定信号</strong>。</li>
-  </ul>
+    <div class="item">
+      <h3 class="topic">6. 算子工程师的范式重构：从手艺人到机甲驾驶员</h3>
+      <div class="src">算子工程范式跃迁与非图灵完备刚性基座.md（触发：DeepSeek 刘胜《我不得不把才华埋葬在昨天》）</div>
+      <ul class="pts">
+        <li>事实：AI 已攻破 PTX 汇编、SASS 调度、Bank 冲突优化等最深层手艺腹地，在算子评估与端到端代码生成上追平人类顶尖工程师。</li>
+        <li>自指悖论：<strong>算子榨得越极致</strong>，模型迭代越廉价，反过来吞噬自己的周期就越短。</li>
+        <li>范式重构：核心竞争力从手写 CUDA 的微架构直觉，转向<strong>系统工程审美品味（Taste）</strong>、架构权衡与全局边界设定；责任归属从代码行级正确性上移至系统级安全与部署决策。</li>
+        <li>草台世界三重隐忧：年轻开发者<strong>认知撞墙机会被剥夺</strong>；高通量产出只有 AI 读得懂的黑盒危楼；编程技艺溢价被抹平后滑向"权力重于技术"——算力、数据飞轮与裁决权决定分配，开源普惠成为防寡头化的关键缓冲。</li>
+      </ul>
+      <div class="callout">对抗空心化四维策略：一次性代码 + 形式化微内核；Trace 审计权取代 Code Review（代码是黑盒，硬件执行 Trace 是白盒）；逆向解剖式教育；物理责任不可外包给 AI。</div>
+    </div>
 
-  <h3>张力②：前移这个动作本身不可逆，于是不可逆被叠加了</h3>
-  <ul>
-    <li>前移的判据是「不可逆的东西早点定」。但<strong>前移这个动作本身不可逆</strong>：约束一旦进了设计期，试错就发生在最贵的时点上（改结构＝重训）。</li>
-    <li>于是出现双倍不可逆：<strong>不可逆的内容 × 不可逆的位置</strong>。安全侧这恰恰是优点（要的就是改不动），效率侧却是风险（赌错了没有退路）。</li>
-    <li>未收敛：同一个机制在<strong>安全维度是资产、在效率维度是负债</strong>，这两个评价能同时成立多久？是否需要给效率侧单独留一条可逆通道（如可热更换的策略层）？</li>
-  </ul>
+    <div class="item">
+      <h3 class="topic">7. 非图灵完备刚性基座：给物理执行边界上"数学铁笼"</h3>
+      <div class="src">算子工程范式跃迁与非图灵完备刚性基座.md</div>
+      <ul class="pts">
+        <li>为什么必须非图灵完备：图灵完备系统受制于<strong>停机问题</strong>，数学上无法事前证明行为绝对安全；非图灵完备（无循环、封闭状态空间）才具备 100% 形式化可证明性——如空气开关，超载瞬间跳闸，任何软件逻辑无法越过。</li>
+        <li>双层拓扑："脑"（图灵完备/概率黑盒，自由规划甚至越狱试错）与"脊髓"（非图灵完备/确定性白盒，有限步判定、越界即硬切断）解耦。</li>
+        <li>三类工程实现：车规 <strong>ASIL-D 独立 MCU</strong>（TC397 跑纯代数安全包络不等式，毫秒级硬接管）、安全策略语言（Cedar/Rego 去循环递归，微秒级数学可达性证明）、内核侧 eBPF Verifier 静态拒绝不可预测循环。</li>
+      </ul>
+    </div>
+  </section>
 
-  <h3>张力③：前移假设「出生即最优」，而后移假设「环境会持续供料」</h3>
-  <ul>
-    <li>前移的前提是需求形态稳定：CED 的 20+20 与 8B／16B 建立在 Agent 负载<strong>长输入、短输出</strong>这一判断上。若负载反转（长输出成为常态），非对称偏置立刻反向。</li>
-    <li>后移的前提是环境持续供给样本：Dream-RSI 的双轮驱动<strong>要求白天那一轮真实探索成立</strong>，而车端恰恰不成立。</li>
-    <li>两个前提都不由技术自身保证——一个依赖负载形态不漂移，一个依赖样本可采集。<strong>没有任何一篇给出前提失效后的回退机制</strong>，这是本轮唯一完全空缺的板块。</li>
-  </ul>
+  <section class="card summary">
+    <h2 class="sec">四、全局综合</h2>
 
-  <h3>张力④：策略空间饱和之后，后移路线往哪走</h3>
-  <ul>
-    <li>后移路线的天花板由 Discovery Tree 的覆盖面决定。策略可以在已记录的树上反复对弈，但<strong>插值不能产生新的分支</strong>。</li>
-    <li>一旦策略空间被穷尽，继续后移就不再带来提升——此时唯一出路是回到权重层（前移／重训），也就是<strong>必须承认「不动权重」是有期限的</strong>。</li>
-    <li>未收敛：这个交接信号是什么？「回放收益连续 N 轮无增益」足以判定饱和吗，还是必须由<strong>外部新样本</strong>触发？</li>
-  </ul>
+    <h4>核心认知（跨文档主线）</h4>
+    <ol class="tight">
+      <li>五篇笔记构成一条完整链路：模型层（CED 推理原生）→ 基础设施层（State as Asset）→ 系统层（RSI 进化外壳）→ 安全层（非图灵完备基座），贯穿其中的是同一原则——<strong>概率自由度与确定性约束分层治理</strong>：能重算的不存、能复用的资产化、能进化的放外壳、能证明的锁底层。</li>
+      <li>Compute-for-Memory 与 State-as-Asset 是同一枚硬币的两面：该扔的重算（SWA Replay），该存的资产化（Discovery Tree、KV 母版）——<strong>判断"什么值得存"</strong>本身成为核心竞争力，对应六维控制平面的最高层 Semantic Control。</li>
+      <li>Agent 高频环境交互（每秒多轮工具调用、沙箱自修复）的经济学可行性，正是由推理原生模型（低 TTFT、廉价长上下文）与状态复用 infra 共同兜底的——模型创新与 infra 创新<strong>互为前提</strong>。</li>
+    </ol>
 
-  <div class="note"><strong>承前未收敛（原地保持，不做「看起来有进展」的润色）</strong>：循环剂量的判决性实验仍未出现；NBER「顶尖员工提升≈0」仍停在官方摘要级；状态分级判据（可重算缓存 vs 不可丢资产）仍未闭合；模拟器由策略自身生成导致的标尺自指问题仍无独立验证方案。四条本轮<strong>均无新证据</strong>，原样保留。</div>
-</section>
+    <h4>关键张力</h4>
+    <ul class="tight">
+      <li><strong>能力与风险同源</strong>：突破框架的探索力就是击穿沙箱的越狱力；架构设计的本质不是消除冲动，而是改变系统与冲动的关系（分层划定自由度与责任边界）。</li>
+      <li><strong>效率与空心化</strong>：工具通量数倍提升的同时，认知撞墙机会被剥夺，系统滑向无人能从物理第一性审计的黑盒危楼。</li>
+      <li><strong>存与算的动态权衡</strong>：890 bytes/token 的极致压缩 vs 梦境模拟器作为海量状态资产的沉淀，两者对存储经济学提出相反方向的极端要求。</li>
+      <li><strong>模拟与真实</strong>：梦境回放只能插值已知边界，真实探索不可替代；环境不与 Agent 协同演进，进化必然退化为基准过拟合。</li>
+    </ul>
 
-<section>
-  <h2 class="sec">五、认知变化</h2>
-  <ul>
-    <li>修正 09-17 的结论：那一轮判定「三篇都锁死，只是落点不同」，即「共识是假的、分歧是真的」。加上时间轴后需改写为——<strong>分歧在空间轴，共识在时间轴</strong>：约束前移与学习后移各自都是单向的，<strong>没有任何一篇主张反向</strong>。所以五篇的关系不是分歧，而是一套<strong>带方向的层次分工</strong>。</li>
-    <li>升格：「不动权重」从成本约束变成时间约束。前几轮把它读成「重训太贵」，本轮读成<strong>权重的时间常数配不上任何真实闭环</strong>。代价不是钱，是周期——这解释了为什么自进化必然长在外壳上，而不是「碰巧先在外壳上做」。</li>
-    <li>新增一条来源性判据。「不可并行／不可逆／需签字者挤出闭环」此前是一条并列清单；本轮看出它的上游是<strong>闭环周期与环境变化周期的匹配</strong>这条更基本的条件，清单三条只是它在具体环节上的展开。</li>
-    <li>记账项：<strong>零新增进入第 1 天</strong>，<strong>静默不承担论证功能</strong>。本轮 5 篇 md5 逐字节未变，全部价值来自换轴重读；不因零新增而放宽入库标准，也不把未收敛项写进对外材料。</li>
-  </ul>
-</section>
+    <h4>认知变化</h4>
+    <ul class="tight">
+      <li>评估模型架构的坐标系变了：不再问"什么模型最强"，而是问"什么模型能让全链路 <strong>总成本最低</strong>"（Model × Compute × Memory × Storage × Network 五维协同）。</li>
+      <li>既有立场"harness 白空间=汽车安全攸关/跨域/长生命周期"获得文献级强化：RSI 综述明确具身 L5 理论空白，而车规 ASIL-D + 非图灵完备基座正是<strong>"责任边界=市场壁垒"</strong>的技术落点。</li>
+      <li>评测独立性的位阶提升：验证层必须与模型、编排<strong>组织级解耦</strong>，评测不能依赖 LLM 打分，必须引入不可绕过的形式化规则与硬件在环回执。</li>
+    </ul>
 
-<section>
-  <h2 class="sec">六、待思考问题</h2>
-  <ol class="qa">
-    <li><b>闭环周期能否量化成第一条选场判据？</b>如何度量一个系统的改进闭环周期（采集→沉淀→回放→发布）？若<strong>闭环周期 &gt; 环境漂移周期</strong>，自进化是否只是在追一个已经移走的目标？这个比值能否做成一个进入门槛。</li>
-    <li><b>前移与后移的分界线能否用变更成本曲线判定？</b>设计期与部署后的改动成本差几个数量级，这个量级差有实证吗？是否存在<strong>变更成本在部署期反而更低</strong>的技术选择（如可热更换的策略层、可远程更新的约束配置）——若存在，前移判据就需要划出例外区。</li>
-    <li><b>架构寿命按什么折旧？</b>CED 这类把硬件账本写进结构的偏置，折旧年限应对齐<strong>硬件换代、负载漂移，还是安全认证</strong>？三者不等长时以谁为准？</li>
-    <li><b>车端的「白天轮」能否用台架与封闭场地替代？</b>台架是否同时满足<strong>可并行复制</strong>（多台架并行）与<strong>可逆</strong>（可重复）两条？若能，车端是不是唯一能同时做到「约束前移」与「样本可采」的折中场景？</li>
-    <li><b>策略空间饱和的判定信号是什么？</b>回放收益连续无增益够不够，还是必须由外部新样本触发？两种迁移在交接点的<strong>责任归属</strong>如何切——回到权重层意味着重训，谁来签这一次？</li>
-    <li><b>是否存在第三类可逆性：当时可逆、事后不可逆？</b>长周期数据污染、缓慢积累的分布偏移，都属于<strong>当下能回滚、后果延迟暴露</strong>的情形。若「可回滚即可进闭环」成立，这类动作是否需要单列一档门槛？</li>
-  </ol>
-  <div class="note"><strong>本轮明确不做的事</strong>：不扩大扫描范围（仍限 daily/）；不联网补新证据；不新建定时任务；不把任何未收敛项写进对外材料；不因零新增而降低标准。扫描所得仅作内部回顾。</div>
-</section>
+    <h4>待思考问题</h4>
+    <ul class="tight">
+      <li>Discovery Tree 与计算状态资产如何统一到同一套 <strong>State Placement 经济学</strong>？梦境模拟器本身或许就是最大的"状态资产"，其存储/重建成本核算尚无框架。</li>
+      <li>L5 评估器自举："<strong>谁来评估评估器</strong>"——V 层组织级解耦 + 形式化断言是否足以阻断向内篡改标尺的自欺路径？</li>
+      <li>车端 RSI 的"梦境"如何落地：<strong>影子模式 + Trace 回放</strong>是否就是具身/车域 Replay Simulator 的雏形？Sim-to-Real 塌陷在车控域如何量化兜底？</li>
+      <li>"权力重于技术"的行业映射：闭环数据飞轮与万卡集群是否会<strong>重演寡头垄断</strong>？开源生态对汽车智能化是真实缓冲还是幻觉？</li>
+    </ul>
+  </section>
 
-<footer>
-  知识库回顾 · 2026年9月19日 · 扫描 daily/ 近三天（命中 2026-09-15 共 5 篇，md5 全部未变）<br>
-  本轮新增 0 篇（零新增第 1 天）· 换时间轴重读 → 约束前移／学习后移／双向收税 · 单一数据源，未合并时事与调研类内容
-</footer>
+  <footer>
+    知识库回顾 ｜ 生成于 2026-09-20 ｜ 来源：D:/个人知识库/daily/2026-09-15（5 篇）<br>
+    仅收录知识层内容（框架/方法论/认知/理论），时事与舆情类数据不入库
+  </footer>
 
 </div>
 </body>
