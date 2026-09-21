@@ -3,230 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库周报 · 2026-09-14</title>
-<meta name="description" content="知识库周报（复习 2026-09-07 ~ 2026-09-13）：GEO 分发层的答案位与接口税权 × Looped Transformer 第三根 scaling 轴与监控悖论——两条笔记各自独立到达同一结构：过程对监督者不透明">
+<title>知识库周报 · 2026-09-21</title>
 <style>
-  :root{
-    color-scheme: light;
-    --bg:#f7f7f5; --card:#ffffff; --ink:#1f1f1f; --ink-2:#444444; --ink-3:#6b6b6b;
-    --line:#e6e6e2; --accent:#2f5d3a; --accent-soft:#e8f0ea; --accent-2:#7a4a1f; --accent-2-soft:#f6eee2;
-    --quote-bg:#f4f6f4; --code-bg:#f0f0ed;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #f7f7f8;
+    color: #2a2a2a;
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+    line-height: 1.78;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
   }
-  @media (prefers-color-scheme: dark){
-    :root{ /* 显式覆盖为浅色，禁止深色主题 */
-      color-scheme: light;
-      --bg:#f7f7f5; --card:#ffffff; --ink:#1f1f1f; --ink-2:#444444; --ink-3:#6b6b6b;
-      --line:#e6e6e2; --accent:#2f5d3a; --accent-soft:#e8f0ea; --accent-2:#7a4a1f; --accent-2-soft:#f6eee2;
-      --quote-bg:#f4f6f4; --code-bg:#f0f0ed;
-    }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 26px 16px 56px; }
+  header h1 { font-size: 1.52rem; color: #1a1a1a; font-weight: 800; letter-spacing: .5px; }
+  .meta { color: #777; font-size: .86rem; margin-top: 6px; }
+  .meta span { white-space: nowrap; }
+  .intro {
+    background: #ffffff; border: 1px solid #e8e8e8; border-radius: 10px;
+    padding: 16px 18px; margin-top: 18px; font-size: .95rem; color: #333;
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg); color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased;
+  section {
+    background: #ffffff; border: 1px solid #e8e8e8; border-radius: 10px;
+    padding: 20px 18px 14px; margin-top: 18px;
   }
-  strong{color:#111; font-weight:700; font-weight:750;}
-  b{color:#111; font-weight:700;}
-  .wrap{max-width:760px; margin:0 auto; padding:28px 18px 64px;}
-  header.head{padding:36px 24px 26px; background:linear-gradient(135deg,#ffffff 0%,#f0f5f1 100%); border:1px solid var(--line); border-radius:16px; margin-bottom:26px;}
-  .kicker{font-size:12.5px; letter-spacing:.14em; color:var(--accent); font-weight:700; margin-bottom:10px;}
-  h1{font-size:26px; line-height:1.35; font-weight:800; letter-spacing:.01em;}
-  .sub{color:var(--ink-2); font-size:14.5px; margin-top:10px;}
-  .sub b{color:var(--ink);}
-  .meta-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
-  .tag{background:var(--accent-soft); color:var(--accent); font-size:12.5px; font-weight:600; padding:4px 12px; border-radius:999px;}
-  .lead{margin-top:18px; font-size:15.5px; color:var(--ink-2); border-left:3px solid var(--accent); padding-left:14px;}
-  section{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:26px 24px; margin-bottom:22px;}
-  h2{font-size:19px; font-weight:800; margin-bottom:6px; display:flex; align-items:baseline; gap:10px;}
-  h2 .no{color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.06em;}
-  .sec-sub{font-size:13px; color:var(--ink-3); margin-bottom:18px;}
-  h3{font-size:15.5px; font-weight:700; margin:22px 0 8px; color:var(--ink);}
-  section h3:first-of-type{margin-top:14px;}
-  p{margin:0 0 10px; color:var(--ink-2); font-size:15px;}
-  p strong, li strong{color:#111; font-weight:750;}
-  ul,ol{margin:0 0 12px; padding-left:22px;}
-  li{margin-bottom:7px; color:var(--ink-2); font-size:15px;}
-  .stand{
-    background:var(--quote-bg); border-left:3px solid var(--accent-2);
-    padding:12px 16px; margin:12px 0; border-radius:0 10px 10px 0;
-    color:var(--ink); font-size:15px; font-weight:600;
+  h2 {
+    font-size: 1.13rem; color: #1a1a1a; font-weight: 800;
+    border-bottom: 1px solid #eee; padding-bottom: 9px; margin-bottom: 12px;
   }
-  .stand .who{display:block; margin-top:6px; font-size:12.5px; color:var(--ink-3); font-weight:400;}
-  .quote{
-    background:var(--quote-bg); border-left:3px solid var(--accent);
-    padding:12px 16px; margin:12px 0; border-radius:0 10px 10px 0;
-    color:var(--ink); font-size:15px;
+  .src { font-size: .78rem; color: #999; margin-bottom: 12px; word-break: break-all; }
+  ul { padding-left: 1.25em; }
+  li { margin-bottom: 10px; }
+  li::marker { color: #b5b5b5; }
+  strong { font-weight: 700; color: #111; }
+  .quote {
+    border-left: 3px solid #bdbdbd; background: #fafafa;
+    padding: 8px 14px; margin: 12px 0 12px 2px; border-radius: 0 6px 6px 0;
+    color: #222; font-size: 1.02rem; font-weight: 500;
   }
-  .quote .src{display:block; margin-top:6px; font-size:12.5px; color:var(--ink-3);}
-  .flow{
-    display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:12px 0;
-    font-size:13.5px; color:var(--ink-2);
-  }
-  .flow .node{background:var(--accent-soft); color:var(--accent); font-weight:700; padding:5px 12px; border-radius:8px;}
-  .flow .node.late{background:var(--accent-2-soft); color:var(--accent-2);}
-  .flow .arrow{color:var(--ink-3); font-weight:700;}
-  .warn{background:#fdf6ec; border:1px solid #ecd9b8; border-radius:10px; padding:12px 16px; margin:10px 0; font-size:14px; color:#5c4630;}
-  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;}
-  .card-mini{background:var(--quote-bg); border:1px solid var(--line); border-radius:10px; padding:12px 14px;}
-  .card-mini .t{font-weight:700; font-size:14px; color:var(--ink); margin-bottom:4px;}
-  .card-mini .d{font-size:13.5px; color:var(--ink-2);}
-  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:13.5px;}
-  th,td{border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top;}
-  th{background:var(--accent-soft); color:var(--accent); font-weight:700; white-space:nowrap;}
-  td{color:var(--ink-2);}
-  td strong{color:#111;}
-  .src-list{list-style:none; padding:0;}
-  .src-list li{font-size:12.5px; color:var(--ink-3); padding:5px 0; border-bottom:1px dashed var(--line); word-break:break-all;}
-  .src-list li:last-child{border-bottom:none;}
-  footer{color:var(--ink-3); font-size:12.5px; text-align:center; margin-top:6px; line-height:1.9;}
-  .open{font-weight:800; color:var(--accent-2);}
-  @media (max-width:560px){
-    body{font-size:15px;}
-    .wrap{padding:16px 12px 48px;}
-    header.head{padding:26px 18px 22px;}
-    h1{font-size:22px;}
-    section{padding:22px 18px;}
-    .grid2{grid-template-columns:1fr;}
-    table{font-size:12.5px;}
-    th,td{padding:6px 8px;}
+  .paths { font-size: .78rem; color: #777; line-height: 1.9; word-break: break-all; background: #fafafa; border-radius: 6px; padding: 10px 12px; }
+  footer { color: #999; font-size: .78rem; margin-top: 22px; text-align: center; }
+  @media (max-width: 480px) {
+    body { font-size: 15px; }
+    header h1 { font-size: 1.3rem; }
+    section { padding: 16px 14px 10px; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="head">
-  <div class="kicker">KNOWLEDGE REVIEW · WEEKLY</div>
-  <h1>知识库周报 · 2026-09-14</h1>
-  <div class="sub">复习区间：<b>2026-09-07（周一）～ 2026-09-13（周日）</b> · 全量递归扫描 7 个日期目录</div>
-  <div class="meta-row">
-    <span class="tag">2 篇记录</span>
-    <span class="tag">2 个记录日：09-07 / 09-08</span>
-    <span class="tag">主题：AI 分发层的语义权力 × 模型内循环</span>
+<header>
+  <h1>知识库周报 · 2026-09-21</h1>
+  <div class="meta">
+    回顾周期：<span>2026-09-14（周一）— 09-20（周日）</span><br>
+    扫描：<span>D:\个人知识库\daily\</span> 递归扫描全部 .md ｜ 有效记录日：09-15（1 天，5 篇）
   </div>
-  <p class="lead">本周只有两天留下记录，但两篇都很重：一篇在<b>分发层</b>（GEO——谁定义“被 AI 引用”的接口），一篇在<b>架构层</b>（Looped Transformer——推理搬进潜空间）。两条线没打过招呼，却各自到达同一个结构：<strong>过程对监督者不透明</strong>。前者是“答案位是黑盒，得分只是抽样估计”，后者是“能力藏在不可观测的 R 圈里”。本周最大的知识增量不在任何单篇，而在<b>这个收敛本身</b>。</p>
 </header>
 
+<div class="intro">
+  本周回顾期内仅 <strong>单日 5 篇</strong>（09-15），但为一次高密度体系化学习：五篇笔记互引成链——目标态是递归自进化（RSI），向下依次追问元改进如何落地（Dream-RSI 梦境回放）、物理边界如何锁死（非图灵完备刚性基座）、推理经济学如何重构（DeepSeek CED 与计算状态存储）、工程师角色如何迁移（机甲驾驶员）。全部笔记均挂接既有的 ETCLOVG 7 层 Harness 与 AI Infra 9 层框架，是"一套框架吃下多个领域"的收敛周。
+</div>
+
 <section>
-  <h2><span class="no">01</span>GEO：分发层从“链接位”挪到“答案位”</h2>
-  <div class="sec-sub">来源：《GEO（生成式引擎优化）知识框架｜腾讯 Answerbit 与实现方法》（2026-09-07 · daily/2026-09-07/ · Answerbit 官网 + 普林斯顿 arXiv 2311.09735 + 产业实践文）</div>
-  <p>笔记先给出一句定义：GEO 的目标是<strong>让品牌被 AI 写进答案正文并被引用</strong>，而不只是在搜索结果列表里排名。竞争位从“链接位”移到“答案位”，并造了一个可运算的指标——<strong>答案份额</strong>＝被提及概率 × 被引用权重（顺带一提 vs 核心证据）× 追问留存率。数据侧：微软广告团队 2025-10 披露 AI 搜索推荐流量同比 <strong>+357%</strong>；AI 搜索来的用户转化率约传统 organic 的 <strong>4.4×</strong>（SaaS 面板聚合，属商业口径，须打折看）。</p>
-  <h3>腾讯 Answerbit：本周最锋利的事实锚点</h3>
-  <p>Answerbit 是 AI 搜索可见度监控平台（interest 注册阶段）：每日并行问 DeepSeek、豆包、元宝、Kimi、通义千问 <strong>5 家</strong>，抓取回答存结构化数据，产出 Visibility Score + 平均位次 + 引用来源分布，闭环四步 Monitor → Analyze → Optimize → Collaborate，首批客户即腾讯系自用。</p>
-  <div class="stand">“腾讯自己有元宝，却建平台监测豆包/Kimi——说明在腾讯的判断里，<strong>分发层的价值高于自家模型输赢</strong>。”<span class="who">—— 09-07 笔记 · 身份微妙处</span></div>
-  <h3>实现五层（笔记的可操作部分）</h3>
+  <h2>一、递归自进化（RSI）：从"改权重"到"改外壳"</h2>
+  <div class="src">来源：递归自进化RSI与Agent系统分层架构.md ｜ Dream_RSI递归自进化新路径_搜索策略与梦境回放.md</div>
   <ul>
-    <li><b>原理层——闯三道门</b>：被抓到（爬虫收录）→ 被选中（检索进 top-k）→ 被写进答案（生成时被引用）。<strong>SEO 只管前两道，GEO 全管</strong>。</li>
-    <li><b>技术层</b>：robots.txt 放行 AI 爬虫（<strong>训练与检索访问分开配</strong>，很多品牌被墙而不自知，是最高杠杆的 5 分钟修复）；llms.txt 属低成本先占位（<strong>无任何大模型厂商承诺固定权重</strong>）；JSON-LD Schema.org 降幻觉、强实体识别；SSR/保留 HTML 结构利于 RAG。</li>
-    <li><b>内容层</b>：普林斯顿论文实证的三大模型无关策略——<strong>加统计数字、加权威引用、加专家引述</strong>，单项最高提升来源可见度 <strong>+40%</strong>，对原本排名差的页面最猛；再加 answer-first、FAQ 化、原子化事实句（“销量3.2万辆”优于“销量遥遥领先”）。</li>
-    <li><b>权威层</b>：Wikidata/百科实体登记 + 作者档案，社区实测完整作者信息使引用率 <strong>+47%</strong>；模型“信谁”靠跨源一致性。</li>
-    <li><b>测量层</b>：Answerbit 卖的就是这层——品类 prompt 集 → 每日多模型并行 → 可见度/位次/引用源统计 → 反推引用偏好 → 定制内容 → 发布回测（类 A/B）。</li>
-    <li><b>边界与代价</b>：效果 domain-dependent（优化对象是“模型群交集”，本质讨好统计偏好）；可验证性弱于 SEO；军备竞赛已在发生（FAQ 农场、伪造统计），模型厂商反制＝GEO 的 <strong>alpha 窗口会关</strong>。</li>
+    <li>真假 RSI 之辨：CoT / Reflexion / ToT 这类 B0 任务内改进，任务结束经验即清空，不构成系统积累；真 RSI 须同时满足<strong>持久性 + 机制性</strong>——经验跨生命周期留存，且状态变更能反过来改变"改进机制"本身。</li>
+    <li>自主度阶梯 B0→L5：L3 是"自主决定学什么"（AZR / VOYAGER），L4 把踩坑经验沉淀为持久系统制品（Dynamic Cheatsheet），L5 修改评估器本身（STOP / RQGM）。综述的 HCI 指数严重分化：高数 86.4，而<strong>工具调用仅 39.9</strong>——交互越复杂，高阶 RSI 越稀缺；具身智能主要停在 L2/L3，L5 是理论空白。</li>
+    <li>Dream-RSI 给出元改进的工程支点：<strong>不改权重，改搜索策略</strong>——把 [状态+轨迹+结果] 沉淀为 Discovery Tree，再建可反复重入的"梦境回放模拟器"，让不同搜索策略（贪婪 vs MCTS vs 反思回退）在同等算力预算下离线对战。评价单位随之从"结果对不对"变为"产生结果的搜索过程是否最优"。</li>
+    <li>边界保持清醒：回放只能在已探索分支内插值，无法预测从未涉足的未知状态——真实探索（白天）与梦境回放（黑夜）双轮缺一不可。</li>
   </ul>
-  <h3>本次讨论的原创提炼</h3>
-  <div class="stand">GEO 技术层的本质是<strong>“把人类内容编译成模型信任的格式”</strong>；而定义这套格式的不是内容方，是模型厂商——<strong>接口标准的制定权 = 答案位的税权</strong>。<span class="who">—— 09-07 笔记 · 核心判断 1、2</span></div>
-  <p>第二个原创观察是<b>跨域同构</b>：华为把能力绑硬件、按 SKU 说清责任边界；GEO 把“被推荐”拆成三道门逐门定价——两者都是把黑盒能力拆成<strong>可核对承诺</strong>的产业化动作，语义权力的争夺最后都落到“谁来定义可验证的接口”。第三个是<b>产业平移</b>：用户问“XX 品牌的车怎么样”时 AI 引了谁，GEO 监测+优化逻辑可整体平移到汽车分发层。</p>
+  <div class="quote">自我进化的对象根本不是"单体模型权重"，而是"分层工程外壳（Harness）"。</div>
+  <div class="quote">RSI 的关键不是让 AI 改自己的代码或权重，而是让它改进"产生改进的过程本身"。</div>
 </section>
 
 <section>
-  <h2><span class="no">02</span>Looped Transformer：第三根 scaling 轴与监控悖论</h2>
-  <div class="sec-sub">来源：《Looped Transformer / Recurrent Depth 技术路线：第三根 scaling 轴的诞生史》（2026-09-08 · daily/2026-09-08/ · PaperAgent《GPT-6 Astra 背后》→ 五篇论文时间轴深挖，提交日期已核 arXiv 原文）</div>
-  <p>第一性问题：当堆参数的边际收益变贵之后，<strong>“计算深度”还能从哪里买</strong>？标准 Transformer 的隐含契约是“深度＝层数＝参数（每层权重用一次）”；recurrent depth 的破法是把同一组权重<strong>循环 R 次，用迭代次数接管深度</strong>——在参数轴、输出 token 轴之外长出第三根 test-time 计算轴。关键差别：它把思考搬进<b>潜空间</b>，不占输出带宽、不需要 CoT 训练数据、不占长上下文。</p>
-  <h3>五篇论文的辩证链</h3>
-  <table>
-    <tr><th>论文</th><th>时间</th><th>角色</th><th>核心贡献 / 残留问题</th></tr>
-    <tr><td>Universal Transformer</td><td>2018.7</td><td>正题</td><td>首个系统化“同参数反复应用”+ 发明 ACT；<b>被堆参数军备竞赛否决</b>，死于容量质疑</td></tr>
-    <tr><td>Recurrent Depth (Geiping)</td><td>2025.2</td><td>复辟</td><td>定名 recurrent depth；<strong>3.5B 打 50B 等效</strong>（ARC-E 69.9 vs 46.4、GSM8K ≈0→34.8）；须从头训练，未测“循环过量”毒性</td></tr>
-    <tr><td>Training-Free Looped</td><td>2026.5</td><td>扩散</td><td><strong>pre-norm 块</strong>＝ODE 前向欧拉步，循环是数值精化；7 家族零调参 MMLU-Pro <strong>+2.64pp</strong>；配方 n=4 甜点、n≥6 悬崖</td></tr>
-    <tr><td>LoopCoder-v2</td><td>2026.6</td><td>反题</td><td>PLT 把圈数变成自由变量；18T token 受控实验：<strong>循环 1 次最优、3 次以上回退</strong>（非单调）</td></tr>
-    <tr><td>Loop the Loopies</td><td>2026.7</td><td>合题</td><td><strong>layer-loop 扩展性更优</strong>；循环×MoE 可叠加，同算力预算击败 vanilla 30B-A3B</td></tr>
-  </table>
-  <p>链条拉直：UT 提出免费深度 → 被年代否决 → test-time compute 共识让“免费深度”突然值钱 → 民主化（TrainFree）→ 科学化（LoopCoder 敢报负面）→ 资本合法性（Loopie 与堆参数正面对账并赢）。</p>
-  <h3>时间结构里的两个深观察</h3>
+  <h2>二、安全边界：非图灵完备的"数学铁笼"</h2>
+  <div class="src">来源：算子工程范式跃迁与非图灵完备刚性基座.md（与 RSI 篇三大工程死结互证）</div>
   <ul>
-    <li><b>七年等一扇门，一年走完十年路</b>：2018→2025 沉寂七年，不是思想变快，是外部条件（test-time compute 共识 + MoE 改算力核算 + 大厂撞算力墙）同时满足。</li>
-    <li><b>Astra 是路线没走完就进场采买的人</b>：LoopCoder“三次回退”警告（6/16）三个月后 GPT-6 Astra 发布（9/4），Loopie 合题后 49 天——要么独立解决了剂量问题，要么赌其他增益更大。</li>
+    <li>为什么必须非图灵完备：图灵完备系统受<strong>停机问题</strong>制约，数学上无法事前 100% 证明其行为安全；非图灵完备 = 有限步判定 + 封闭状态空间 + 形式化可证明，不可被 AI 的概率推理"说服"或篡改。</li>
+    <li>架构形态是<strong>脑/脊髓解耦</strong>：上层图灵完备的概率黑盒自由规划甚至越狱试错；下层确定性白盒（ASIL-D 规则监控、静态安全策略语言）在指令越界瞬间毫秒级硬切断、熔断回退。</li>
+    <li>三类已落地实现：车规独立 MCU（TC397 跑纯代数安全包络，位于 Orin/Thor 与底盘之间）、AWS Cedar / Rego（去循环递归，微秒级可达性证明）、Linux eBPF Verifier（加载前静态拒载）。</li>
+    <li>与既有框架的强共振：①RSI 篇"计算自由度在沙箱内、物理责任在网关外"＋算子篇"<strong>物理责任不可外包</strong>"，与"责任边界=市场壁垒"同构闭环——只要责任甩不到 AI 头上，组织就必须养得住底层真懂的架构师；②车规 ASIL-D 实现直接支撑"自进化 harness 空白在车用靶点"的既有判断。</li>
   </ul>
-  <div class="stand">“<strong>范式复活靠核算体系变了</strong>，不是论文变好了。”<span class="who">—— 09-08 笔记 · 时间结构观察一</span></div>
-  <h3>证据分层（明确标注，勿混）</h3>
-  <ul>
-    <li>已确认：Astra <strong>9/4 发布全量上线</strong>；五篇论文数据均可查。</li>
-    <li>报道级：The Information（9/2 独家）称其“<b>很可能</b>”用 recurrent depth——信源判断，非 OpenAI 官宣。</li>
-    <li>行为指纹交叉证据（独立来源）：OpenAI 自述 Astra 在 V8 基准成功率大幅高于 GPT-5.6 Sol 而<strong>输出 token 显著更少</strong>——少 token 换强推理正是 latent reasoning 的指纹。</li>
-    <li>推断级（零证据）：若 Astra 真用此技术，必然已绕过两次饱和墙。</li>
-  </ul>
-  <h3>监控悖论：本路线最硬的安全学含义</h3>
-  <p>OpenAI 对 Astra 的安全措施之一是 <b>expanded CoT monitoring</b>（可实时中断）。但 latent reasoning 的定义就是推理发生在<strong>隐状态循环里，不在 token 序列上</strong>——CoT 监控看到的只是“说话草稿”，而非思考过程。</p>
-  <div class="stand">“安全防线审计的只是最后一层投影，<strong>能力藏在不可观测的 R 圈里</strong>。”一般化：当推理不再外化为符号序列，外部监督与 reward hacking 检测<strong>失去工作面</strong>——不是没人愿意看，是<b>没有东西可看</b>。<span class="who">—— 09-08 笔记 · 第五节</span></div>
+  <div class="quote">剥夺底座的通用计算自由度，用非图灵完备的数学铁笼锁死物理执行边界。</div>
+  <div class="quote">代码是黑盒，但物理硬件的执行 Trace 是白盒——治理从 Code Review 转向 Trace 审计权。</div>
 </section>
 
 <section>
-  <h2><span class="no">03</span>跨主题收敛：过程不可观测，是结构而非缺陷</h2>
-  <div class="sec-sub">本周两条笔记各自独立到达的同一结构（笔记原文已自行指出同型）</div>
-  <div class="flow">
-    <span class="node">GEO 答案位</span><span class="arrow">＝</span>
-    <span class="node">潜空间隐状态循环</span><span class="arrow">＝</span>
-    <span class="node late">比昂的 O（不可知的真实）</span>
+  <h2>三、推理原生与状态经济学：CED 与"存力即算力"</h2>
+  <div class="src">来源：DeepSeek_V4.1_Flash架构解析_CED与推理原生设计.md ｜ 智算存储从数据存储走向计算状态基础设施.md</div>
+  <ul>
+    <li>CED 架构要点：552B MoE 拆为 20 层 Causal Encoder + 20 层 Decoder，<strong>8B / 16B 非对称激活</strong>精准契合 Agent"长输入、短输出"负载；Decoder 的 KV 不再逐层私有，而由 Encoder 最终表示统一<strong>母版投影</strong>，Global KV 压至 <strong>890 bytes/token</strong>（HBM 降至 1/4、SSD 1/8）；SWA 局部注意"能重算就不长存"。</li>
+    <li>范式判断：从"先训大模型、部署时再痛苦压缩"转向推理原生协同设计——HBM 带宽、并发显存墙等硬件物理约束，在预训练设计第一天就成为第一性约束。</li>
+    <li>存储篇把它抽象到经济学层：生产资料从 Data 变为 State——已支付高昂算力成本、未来大概率被复用的"计算资产"；优化逻辑从 Compute Acceleration 转向 <strong>Compute Avoidance</strong>（能不能根本不做这次计算），State Cache 也从 LRU/LFU 进化为语义与预测缓存。</li>
+    <li>六维控制平面层层递进：算多少（Compute）→ 存什么（State）→ 搬什么（Data）→ 放哪（Space）→ 何时（Time）→ 为何有价值（Semantic）——越往顶层，越逼近 AI 基础设施的真正话语权。</li>
+  </ul>
+  <div class="quote">AI 基础设施正从"计算静态数据"时代，进入"管理动态计算状态"时代。</div>
+  <div class="quote">未来 AI 的核心竞争力不是峰值 FLOPS，而是已付成本状态的复用效率。</div>
+</section>
+
+<section>
+  <h2>四、工程师角色重构与"草台世界"隐忧</h2>
+  <div class="src">来源：算子工程范式跃迁与非图灵完备刚性基座.md 前半（触发文献：刘胜《我不得不把才华埋葬在昨天》，2026-09）</div>
+  <ul>
+    <li>事件锚点：DeepSeek 算子主力（DeepGEMM、DeepEP V2、head dim=512 MQA）自述 AI 已攻破 PTX / SASS 级最深层手艺腹地——亲手造地基的人，最先被地基的进步替代。</li>
+    <li>范式重构：<strong>手艺人 → 机甲驾驶员</strong>；核心竞争力从微架构直觉转向系统工程 Taste、架构权衡与全局边界设定；责任归属从代码行级正确性，上移到系统级安全与部署决策。</li>
+    <li><strong>草台世界</strong>三重隐忧：认知撞墙机会被剥夺（跳过建立底层心智模型的过程）；高通量产出只有 AI 读得懂的黑盒危楼；<strong>权力重于技术</strong>——决定技术力量分配的是算力、数据飞轮与裁决权，开源与普惠是防寡头化的关键缓冲。</li>
+    <li>四维对策中最有新意的是教育层：从"砌砖训练"转向"逆向解剖与对抗训练"——直接给一个 AI 拼出的草台系统，训练定位深层并发死锁与架构权衡。</li>
+  </ul>
+  <div class="quote">"如果非被革命不可的话，我希望革我自己命的人是我自己。"</div>
+  <div class="quote">只要责任无法甩锅给 AI，组织就必须永久维持底层真懂的精英架构师防线。</div>
+</section>
+
+<section>
+  <h2>五、纵向串联：一条论证链与一次跨层映射</h2>
+  <ul>
+    <li>五篇互引成链：RSI 定目标态 → Dream-RSI 给方法 → 非图灵完备基座给边界 → CED 给推理经济学实证 → 存储篇升华为 State 中心世界观。学习顺序即论证顺序，单日内完成了从机制到哲学的闭环。</li>
+    <li>本周最漂亮的一次跨层映射是 <strong>Compute-for-Memory</strong>：从 CED 的"SWA 重算替代长存"，到存储篇的"最小充分状态"，再到 Dream-RSI 的"回放替代真实试错"——同一条准则从硬件层语义扩展到学习层语义。</li>
+    <li>责任边界三度现身：RSI 篇末"自由度在沙箱内、责任在网关外"、算子篇"物理责任不可外包"、既有命题"责任边界=市场壁垒"——安全治理与商业壁垒在本周材料里完成闭环。</li>
+  </ul>
+  <div class="quote">"重算换存储"从硬件语义扩展为学习语义，是本周认知增量的枢纽。</div>
+</section>
+
+<section>
+  <h2>六、未解问题与追问方向</h2>
+  <ul>
+    <li><strong>评估器自举崩溃</strong>：L5 允许 AI 修改评估器，"篡改标尺"永远比"攻克难题"容易——V 层组织级解耦＋非图灵完备断言是当前解，但 RQGM 式"评估器协同进化"与防篡改如何并存，仍开放。</li>
+    <li>Discovery Tree 的覆盖率从何而来：梦境回放只能插值已知分支，"白天探索"的采掘策略本身能否被优化（探索的元策略），文中未展开。</li>
+    <li>具身 / 车用 RSI 停在 L2/L3、L5 理论空白——与"空白在车用靶点"的既有判断互证，可作为下一步深挖选题。</li>
+    <li>非图灵完备基座的能力代价：剥夺通用计算自由度，同时封死了哪些合法探索？这条边界如何量化，文中未展开。</li>
+  </ul>
+</section>
+
+<section>
+  <h2>附：本周来源文件清单</h2>
+  <div class="paths">
+    D:\个人知识库\daily\2026-09-15\递归自进化RSI与Agent系统分层架构.md<br>
+    D:\个人知识库\daily\2026-09-15\Dream_RSI递归自进化新路径_搜索策略与梦境回放.md<br>
+    D:\个人知识库\daily\2026-09-15\算子工程范式跃迁与非图灵完备刚性基座.md<br>
+    D:\个人知识库\daily\2026-09-15\DeepSeek_V4.1_Flash架构解析_CED与推理原生设计.md<br>
+    D:\个人知识库\daily\2026-09-15\智算存储从数据存储走向计算状态基础设施.md
   </div>
-  <p>三者被用户并置为<b>同型</b>：GEO 的“答案位次”是黑盒，得分只是抽样估计；latent reasoning 的 R 圈不可读；比昂的 O 是认知上不可抵达的真实。共同点不是“技术不成熟”，而是<strong>过程对监督者不透明，是新范式的结构性特征</strong>。这条收敛把过去分散在营销、架构、临床三条线上的直觉压成了一条判断。</p>
-  <p>它同时改写了一个更早的前提：09-02 网安笔记里“可验证的强验证场”（漏洞可利用/补丁可验证）之所以成立，是因为<b>信号在外部世界可核对</b>；而本周两条线展示的是相反方向——<strong>能力越往架构内部下沉，可核对的面就越窄</strong>。对“可验证环境”这条主线而言，这是第一次看到它的<b>失效边界</b>。</p>
 </section>
 
-<section>
-  <h2><span class="no">04</span>纵向串联：本周如何推进既有框架</h2>
-  <div class="sec-sub">与 08-17 ~ 09-02 已立框架的关系</div>
-  <ul>
-    <li><b>“语义权力平面”从抽象落地到营销分发侧（09-07）</b>：08-21 白空间判断把语义权力平面定位在车的治理层；本周 GEO 给出<b>同一权力分析框架在营销侧的实例</b>，并把“标准制定权”变成可检验命题——llms.txt 至今无厂商背书就是明证。框架由此获得一个<b>非汽车域的验证样本</b>。</li>
-    <li><b>“责任边界 = 市场壁垒”再添一维（09-07）</b>：08-25 Token 终局说“卖 Token 是中间态，终局卖被信任的智能调度权”；GEO 的“答案份额”正是这层权力在分发侧的镜像——<strong>谁承诺接口，谁收租</strong>。</li>
-    <li><b>监督问题从环境层下沉到架构层（09-08）</b>：09-01 组织变革与 09-02 网安都落在“可验证环境/直接信号”；本周监控悖论把同一问题下沉一级——不是环境设计不够好，而是<strong>模型内部没有可观测面</strong>。</li>
-    <li><b>harness 论证前提被自家笔记修订（09-08）</b>：开放问题“内部循环吃掉外部循环吗？”直接指向 2127 的资格——若模型内循环能接管 test-time 深度，<b>harness 只做外部循环编排（反思/重试/多轮）的增量价值边界必须重估</b>。</li>
-  </ul>
-  <table>
-    <tr><th>本周观点</th><th>已有框架</th><th>连接性质</th></tr>
-    <tr><td>答案位=新分发权力、接口税权</td><td><strong>语义权力平面 / 白空间立场</strong></td><td>同一权力框架的<b>营销侧实例</b>，非汽车域首个验证样本</td></tr>
-    <tr><td>GEO 刷量/FAQ 农场</td><td><strong>Agent 长期自进化</strong>（信号构造与 reward hacking）</td><td>对“被引用”代理指标的 hacking，同构于代理奖励捷径风险</td></tr>
-    <tr><td>监控悖论（潜空间不可读）</td><td><strong>可验证环境 / 责任边界</strong></td><td>问题从“环境设计层”<b>下沉到“模型架构层”</b></td></tr>
-    <tr><td>七年沉寂、一年走完</td><td>汽车长生命周期“设计期封死 vs 机器速度”</td><td>路线价值判定<b>依赖当时的成本/算力核算结构</b></td></tr>
-  </table>
-</section>
-
-<section>
-  <h2><span class="no">05</span>尚未解决 &amp; 值得继续追问</h2>
-  <div class="sec-sub">笔记中明确标注的开放项，按“可被下一周推进”排序</div>
-  <h3>判据级（影响结论成立与否）</h3>
-  <ul>
-    <li><span class="open">“两次饱和”是墙还是伪影？</span>用户的反方推测：LoopCoder 的结论在“代码域 + 从头预训练 + 固定 R”下测得；若叠加深度随机采样 + PLT 并行化 + 按输入条件化的 R 决策（ACT 回魂），非单调可能只是“固定剂量对变难度题目”的伪影。<strong>“循环三次有害”</strong> vs <strong>“对同一题固定循环三次有害”</strong>——两命题之差就是“想多久算多久”能否成立。伪影若被社区确认，自适应深度还差什么？</li>
-    <li><span class="open">内部循环会吃掉外部循环吗？</span>若成立，直接修订“自进化 harness”论证的前提——这是本周对自身立场最不客气的一刀。</li>
-    <li><b>第三轴的 scaling law 长什么样</b>：参数 × token × 迭代三维算力分配的最优曲面，目前只有离散点证据。</li>
-  </ul>
-  <h3>观察级（低成本的行业变量）</h3>
-  <ul>
-    <li><b>引用接口会不会被官方化</b>：国内模型厂商（元宝/豆包/DeepSeek）谁先做“Bing 站长工具式的引用接口”，谁拿标准权——这是“接口税权”命题的直接检验点。</li>
-    <li><b>GEO 监测数据本身的去向</b>：Answerbit 们积累的高被引源图谱，会不会反哺腾讯自家搜索/推荐权重设计？（利益冲突问题，与“观点正确性 ÷ 利益自洽性”同一套拆分口径。）</li>
-    <li><b>汽车 AI 答案位监测</b>：成本极低（5 平台每日提问），但行业几乎无人做——已列为 <b>2127 前瞻视角的候选观察项</b>。</li>
-  </ul>
-  <div class="warn"><b>需保持的谨慎</b>：GEO 的流量/转化数字（+357%、4.4×、+40%、+47%）分别来自厂商披露、SaaS 面板聚合与社区实测，<strong>口径不一，不可当作同一层级的证据</strong>；Astra 采用 recurrent depth 仍属<b>报道级</b>，行为指纹只是交叉证据，不是确认。</div>
-</section>
-
-<section>
-  <h2><span class="no">06</span>扫描范围与文件来源</h2>
-  <div class="sec-sub">全量递归扫描，未按文件名筛选，未遗漏无 summary 的记录</div>
-  <ul class="src-list">
-    <li>扫描根目录：D:\个人知识库\daily\；日期区间：<strong>09-07 ～ 09-13</strong>（共 7 个日期目录，递归查找全部 *.md，<strong>未按文件名筛选</strong>）</li>
-    <li>09-09 / 09-10 / 09-11 / 09-12 / 09-13：<b>目录不存在，无任何 Markdown 文件</b>（非“没有新增知识”，而是该日无记录）</li>
-    <li>daily/2026-09-07/GEO生成式引擎优化_腾讯Answerbit与实现方法.md</li>
-    <li>daily/2026-09-08/LoopedTransformer循环深度技术路线_第三scaling轴.md</li>
-    <li>纵向串联引用（本周之前）：08-21 白空间判断 / 08-25 Token 终局 / 08-27 ROSS Harness 五层 / 09-01 AI 组织变革 / 09-02 网安攻防逻辑</li>
-    <li>旁注（不计入本周主题聚合，非 daily 日期目录）：D:\西方哲学学习\学习指导.md 于 09-07 10:28 更新，内容为亚里士多德专题（第4次学习）与体系全景补录——属学习轨，故仅记录进度，未纳入知识增量。</li>
-  </ul>
-</section>
-
-<footer>
-  本页由定时任务自动生成 · 只读知识库，未修改任何原始文件 · 生成时间 2026-09-14<br>
-  页面：knowledge-review-weekly · 部署：GitHub Pages
-</footer>
+<footer>生成于 2026-09-21 ｜ 回顾 2026-09-14 ~ 09-20 ｜ 扫描路径：D:\个人知识库\daily\（递归全部 .md）</footer>
 
 </div>
 </body>
