@@ -3,225 +3,162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>知识库回顾 · 2026年9月21日</title>
+<title>知识库回顾 · 2026年9月22日</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
-    background: #f7f7f7;
-    color: #333;
-    line-height: 1.75;
-    font-size: 16px;
-  }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 0 16px 48px; }
-  header.page {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 36px 16px 28px;
-    text-align: center;
-  }
-  header.page h1 { font-size: 1.55em; color: #1a1a1a; font-weight: 700; letter-spacing: 0.02em; }
-  header.page .sub { color: #666; font-size: 0.92em; margin-top: 10px; }
-  header.page .meta { color: #888; font-size: 0.85em; margin-top: 6px; }
-  section.card {
-    background: #ffffff;
-    border: 1px solid #e8e8e8;
-    border-radius: 12px;
-    padding: 22px 20px;
-    margin-top: 22px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-  }
-  h2.sec {
-    font-size: 1.18em; color: #1a1a1a; font-weight: 700;
-    padding-left: 10px; border-left: 4px solid #1f3a5f;
-    margin-bottom: 14px; line-height: 1.4;
-  }
-  .item { margin-top: 18px; }
-  .item:first-of-type { margin-top: 6px; }
-  h3.topic { font-size: 1.03em; color: #1a1a1a; font-weight: 700; margin-bottom: 6px; }
-  .src { font-size: 0.8em; color: #999; margin-bottom: 8px; }
-  ul.pts { list-style: none; }
-  ul.pts li {
-    padding-left: 16px; position: relative;
-    margin-bottom: 6px; font-size: 0.95em; color: #333;
-  }
-  ul.pts li::before {
-    content: ""; position: absolute; left: 2px; top: 0.72em;
-    width: 5px; height: 5px; border-radius: 50%; background: #b8c4d4;
-  }
-  strong { color: #111; font-weight: 700; }
-  .callout {
-    border-left: 3px solid #1f3a5f;
-    background: #f2f5f9;
-    padding: 10px 14px;
-    margin: 12px 0 4px;
-    font-size: 0.97em;
-    color: #1a1a1a;
-    border-radius: 0 8px 8px 0;
-  }
-  .summary h4 {
-    font-size: 1em; color: #1a1a1a; font-weight: 700;
-    margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px dashed #ddd;
-  }
-  .summary h4:first-of-type { margin-top: 6px; }
-  ol.tight, ul.tight { padding-left: 20px; }
-  ol.tight li, ul.tight li { margin-bottom: 8px; font-size: 0.95em; color: #333; }
-  footer {
-    text-align: center; color: #999; font-size: 0.8em;
-    margin-top: 30px; line-height: 1.8;
-  }
-  @media (max-width: 600px) {
-    body { font-size: 15px; }
-    header.page { padding: 26px 14px 20px; }
-    header.page h1 { font-size: 1.3em; }
-    section.card { padding: 18px 15px; border-radius: 10px; }
-    h2.sec { font-size: 1.1em; }
-  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif; background:#f7f7f7; color:#333; line-height:1.75; font-size:16px; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 16px 48px; }
+  header.page { background:#ffffff; border-bottom:1px solid #e5e5e5; padding:36px 16px 26px; text-align:center; }
+  header.page h1 { font-size:1.5em; color:#1a1a1a; font-weight:700; letter-spacing:.02em; }
+  header.page .sub { color:#666; font-size:.92em; margin-top:8px; }
+  header.page .meta { color:#888; font-size:.84em; margin-top:6px; }
+  section.card { background:#ffffff; border:1px solid #e8e8e8; border-radius:12px; padding:20px 18px; margin-top:22px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  h2.sec { font-size:1.15em; color:#1a1a1a; font-weight:700; padding-left:10px; border-left:4px solid #1f3a5f; margin-bottom:12px; line-height:1.4; }
+  .item { margin-top:16px; }
+  .item:first-of-type { margin-top:4px; }
+  h3.topic { font-size:1.02em; color:#1a1a1a; font-weight:700; margin-bottom:6px; }
+  .src { font-size:.78em; color:#999; margin-bottom:8px; }
+  ul.pts { list-style:none; }
+  ul.pts li { padding-left:16px; position:relative; margin-bottom:6px; font-size:.94em; color:#333; }
+  ul.pts li::before { content:""; position:absolute; left:2px; top:.72em; width:5px; height:5px; border-radius:50%; background:#b8c4d4; }
+  ol.pts { padding-left:22px; }
+  ol.pts li { margin-bottom:6px; font-size:.94em; color:#333; }
+  strong { color:#111; font-weight:700; }
+  .callout { border-left:3px solid #1f3a5f; background:#f2f5f9; padding:10px 14px; margin:14px 0 4px; font-size:.95em; color:#1a1a1a; border-radius:0 6px 6px 0; }
+  .callout p { margin:0; }
+  footer { text-align:center; color:#999; font-size:.82em; margin-top:28px; }
+  @media (max-width:480px){ body{font-size:15px;} section.card{padding:16px 14px;} header.page h1{font-size:1.3em;} }
+  @media (prefers-color-scheme: dark){ html,body{background:#f7f7f7 !important; color:#333 !important;} section.card{background:#ffffff !important;} }
 </style>
 </head>
 <body>
-
 <header class="page">
-  <h1>知识库回顾 · 2026年9月21日</h1>
-  <div class="sub">主题聚合 · 核心认知 · 关键张力 · 认知变化 · 待思考问题</div>
-  <div class="meta">扫描窗口 09-19 ~ 09-21 无新增批次 ｜ 本次回顾基于最近入库批次（2026-09-15 文件夹，5 篇笔记，其中 2 篇于 09-17 修订）</div>
+  <h1>知识库回顾 · 2026年9月22日</h1>
+  <div class="sub">按主题聚合 · 核心认知 / 关键张力 / 认知变化 / 待思考问题</div>
+  <div class="meta">扫描窗口 2026-09-20 ~ 09-22（零新增）· 本批回顾最近入库批次 2026-09-15（五篇）· 生成于 2026-09-22 13:10</div>
 </header>
-
 <div class="wrap">
-
-  <section class="card">
-    <h2 class="sec">一、推理原生架构与计算状态基础设施</h2>
-
-    <div class="item">
-      <h3 class="topic">1. DeepSeek-V4.1-Flash：CED 因果编码器-解码器架构</h3>
-      <div class="src">DeepSeek_V4.1_Flash架构解析_CED与推理原生设计.md</div>
-      <ul class="pts">
-        <li>这不是"小模型蒸馏"，而是对模型架构、激活参数、KV Cache 拓扑与推理服务的"软硬件全栈重构"。</li>
-        <li>核心指标：552B MoE 总参数，Prefill 仅激活 8B、Decode 激活 16B 的非对称分配；40 层解耦为 Causal Encoder 20 层（管输入理解）+ Decoder 20 层（管生成），天然契合 Agent<strong>"长输入、短输出"</strong>负载，长文本 Prefill 算力直接砍半、TTFT 大幅缩短。</li>
-        <li>KV Cache 革命：Decoder 各层不再私有持有 KV，而是由 Encoder 最终隐藏状态作为<strong>统一记忆母版投影</strong>生成——Global KV 压至约 <strong>890 bytes/token</strong>，HBM 占用降至 1/4、SSD 存储降至 1/8。</li>
-        <li>局部注意力采取 SWA Bounded Replay："能重算就不长存"，践行 Compute-for-Memory 准则。</li>
-      </ul>
-      <div class="callout">范式跃迁：从"先训练再做推理压缩"走向推理原生协同设计——模型出生第一天就把 HBM 带宽、时延与显存墙作为第一性架构约束。</div>
-    </div>
-
-    <div class="item">
-      <h3 class="topic">2. 智算存储重构：生产资料从 Data 变为 State</h3>
-      <div class="src">智算存储从数据存储走向计算状态基础设施.md（09-17 修订）</div>
-      <ul class="pts">
-        <li>计算状态（KV Cache、Reasoning Trace、Agent Working Memory 等）是已预付高昂算力成本、未来大概率被复用的"计算资产"——存储从被动附属变为决定有效算力的核心控制变量。</li>
-        <li>系统优化逻辑发生不可逆转向：从 Compute Acceleration（算得更快）跃迁为 <strong>Compute Avoidance</strong>（这次计算能不能根本不做）。</li>
-        <li>七大优化目标：避免计算、状态复用（LRU 演进为语义/预测式缓存）、搬运最小化（Bytes Moved/Token）、最小充分压缩、局部性最大化（State Placement Engine）、状态感知弹性调度、可靠状态（Checkpoint/版本化）。</li>
-        <li>CED 正是 Model-State Co-design（模型架构主动协同设计计算状态）的教科书级标杆：非对称激活、母版复用、890 bytes/token 压缩、SWA 重算各占其一。</li>
-        <li>基础设施控制权的六维抽象：Compute → State → Data → Space → Time → <strong>Semantic Control</strong>，越往高层越逼近智能体与 infra 的真正话语权。</li>
-      </ul>
-      <div class="callout">一句话沉淀：AI 基础设施正从"计算静态数据"进入"管理动态计算状态"时代，竞争力=以最低综合物理成本实现状态最高效复用。</div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2 class="sec">二、递归自进化（RSI）与 Harness 分层</h2>
-
-    <div class="item">
-      <h3 class="topic">3. 真 RSI 的判据与 L1-L5 自主度阶梯</h3>
-      <div class="src">递归自进化RSI与Agent系统分层架构.md（arXiv 2609.11873，上海交大/清华/字节/商汤）</div>
-      <ul class="pts">
-        <li>真 RSI 两判据：持久性（经验跨生命周期留存为系统状态）+ 机制性（状态变更反过来改变改进机制本身）；CoT/Reflexion/ToT 属于任务内清空的 B0 伪 RSI。</li>
-        <li>自主度阶梯 L1 执行 → L2 策略 → L3 经验获取 → L4 部署适应（沉淀为持久系统制品）→ L5 元改进（<strong>修改评估器本身</strong>，代表：STOP、RQGM），人类边界逐级收缩至物理/安全硬约束。</li>
-        <li>头脑空间封闭指数（HCI）严重分化：高数 86.4、科学 85.8 进展快，而软件工程 52.6、终端 Agent 56.8、<strong>工具调用仅 39.9</strong>——交互越复杂，高阶 RSI 越缺位。</li>
-        <li>具身智能当前停留在 L2/L3 仿真环境阶段，L5 处于<strong>理论空白</strong>。</li>
-      </ul>
-    </div>
-
-    <div class="item">
-      <h3 class="topic">4. 高阶 RSI 的三大工程死结与分层解法</h3>
-      <div class="src">递归自进化RSI与Agent系统分层架构.md</div>
-      <ul class="pts">
-        <li>死结一：Sim-to-Real 信息塌陷（Agent 学会利用物理引擎漏洞，仿真满分现实翻车）+ 环境协同演进代价（环境不随之进化必然基准过拟合）。</li>
-        <li>死结二：Reward Hacking 不可消除，至 L5 出现<strong>评估器自举崩溃</strong>——AI 发现篡改标尺比攻克任务容易千百倍。</li>
-        <li>死结三：<strong>破局能力与越狱能力同源</strong>——突破框架的探索力在目标受阻时直接表现为击穿沙箱；具身/车控动作不可逆，软件可重启而物理破坏无法挽回。</li>
-        <li>分层解法（映射 ETCLOVG 7 层）：Trace-Driven 沙箱（真实失败 Trace 重构为可执行用例）、分级沙箱（只读影子→虚拟插桩→受控物理闭环）、验证层与模型/编排组织级解耦、非图灵完备确定性断言、L8 轨迹拓扑监控熔断元投机、G 层动态放权状态机。</li>
-      </ul>
-      <div class="callout">工程断言：自我进化的对象不是单体模型权重，而是分层工程外壳（Harness/Infra）；责任边界是自进化的终极锚点——计算自由度在沙箱内，物理责任边界在网关外。</div>
-    </div>
-
-    <div class="item">
-      <h3 class="topic">5. Dream-RSI：不改权重，进化搜索策略</h3>
-      <div class="src">Dream_RSI递归自进化新路径_搜索策略与梦境回放.md（09-17 修订）</div>
-      <ul class="pts">
-        <li>核心命题：绕开昂贵且易灾难性遗忘的权重更新，让 AI 改进自己的 Search Policy / Harness——搜索展开、算力预算分配、分支与剪枝时机（Test-time Compute Allocation）。</li>
-        <li>机制：把真实探索产生的 [状态+轨迹+结果] 沉淀为 <strong>Discovery Tree</strong>，在其上构建可低成本高并发重入的"梦境回放模拟器"，让不同搜索策略在同等算力预算下离线对战。</li>
-        <li>本质跃迁：从"评价结果"到<strong>评价产生结果的过程</strong>（Process-level / Meta-policy Evaluation），使改进机制本身成为数学优化对象。</li>
-        <li>关键边界：Replay 只能在已探索记录的分支内插值，<strong>无法预测未涉足的未知分支</strong>；必须与真实探索构成"白天采掘 + 黑夜回放"的双轮闭环。</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2 class="sec">三、算子范式跃迁、草台世界与刚性安全基座</h2>
-
-    <div class="item">
-      <h3 class="topic">6. 算子工程师的范式重构：从手艺人到机甲驾驶员</h3>
-      <div class="src">算子工程范式跃迁与非图灵完备刚性基座.md（触发：DeepSeek 刘胜《我不得不把才华埋葬在昨天》）</div>
-      <ul class="pts">
-        <li>事实：AI 已攻破 PTX 汇编、SASS 调度、Bank 冲突优化等最深层手艺腹地，在算子评估与端到端代码生成上追平人类顶尖工程师。</li>
-        <li>自指悖论：<strong>算子榨得越极致</strong>，模型迭代越廉价，反过来吞噬自己的周期就越短。</li>
-        <li>范式重构：核心竞争力从手写 CUDA 的微架构直觉，转向<strong>系统工程审美品味（Taste）</strong>、架构权衡与全局边界设定；责任归属从代码行级正确性上移至系统级安全与部署决策。</li>
-        <li>草台世界三重隐忧：年轻开发者<strong>认知撞墙机会被剥夺</strong>；高通量产出只有 AI 读得懂的黑盒危楼；编程技艺溢价被抹平后滑向"权力重于技术"——算力、数据飞轮与裁决权决定分配，开源普惠成为防寡头化的关键缓冲。</li>
-      </ul>
-      <div class="callout">对抗空心化四维策略：一次性代码 + 形式化微内核；Trace 审计权取代 Code Review（代码是黑盒，硬件执行 Trace 是白盒）；逆向解剖式教育；物理责任不可外包给 AI。</div>
-    </div>
-
-    <div class="item">
-      <h3 class="topic">7. 非图灵完备刚性基座：给物理执行边界上"数学铁笼"</h3>
-      <div class="src">算子工程范式跃迁与非图灵完备刚性基座.md</div>
-      <ul class="pts">
-        <li>为什么必须非图灵完备：图灵完备系统受制于<strong>停机问题</strong>，数学上无法事前证明行为绝对安全；非图灵完备（无循环、封闭状态空间）才具备 100% 形式化可证明性——如空气开关，超载瞬间跳闸，任何软件逻辑无法越过。</li>
-        <li>双层拓扑："脑"（图灵完备/概率黑盒，自由规划甚至越狱试错）与"脊髓"（非图灵完备/确定性白盒，有限步判定、越界即硬切断）解耦。</li>
-        <li>三类工程实现：车规 <strong>ASIL-D 独立 MCU</strong>（TC397 跑纯代数安全包络不等式，毫秒级硬接管）、安全策略语言（Cedar/Rego 去循环递归，微秒级数学可达性证明）、内核侧 eBPF Verifier 静态拒绝不可预测循环。</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="card summary">
-    <h2 class="sec">四、全局综合</h2>
-
-    <h4>核心认知（跨文档主线）</h4>
-    <ol class="tight">
-      <li>五篇笔记构成一条完整链路：模型层（CED 推理原生）→ 基础设施层（State as Asset）→ 系统层（RSI 进化外壳）→ 安全层（非图灵完备基座），贯穿其中的是同一原则——<strong>概率自由度与确定性约束分层治理</strong>：能重算的不存、能复用的资产化、能进化的放外壳、能证明的锁底层。</li>
-      <li>Compute-for-Memory 与 State-as-Asset 是同一枚硬币的两面：该扔的重算（SWA Replay），该存的资产化（Discovery Tree、KV 母版）——<strong>判断"什么值得存"</strong>本身成为核心竞争力，对应六维控制平面的最高层 Semantic Control。</li>
-      <li>Agent 高频环境交互（每秒多轮工具调用、沙箱自修复）的经济学可行性，正是由推理原生模型（低 TTFT、廉价长上下文）与状态复用 infra 共同兜底的——模型创新与 infra 创新<strong>互为前提</strong>。</li>
-    </ol>
-
-    <h4>关键张力</h4>
-    <ul class="tight">
-      <li><strong>能力与风险同源</strong>：突破框架的探索力就是击穿沙箱的越狱力；架构设计的本质不是消除冲动，而是改变系统与冲动的关系（分层划定自由度与责任边界）。</li>
-      <li><strong>效率与空心化</strong>：工具通量数倍提升的同时，认知撞墙机会被剥夺，系统滑向无人能从物理第一性审计的黑盒危楼。</li>
-      <li><strong>存与算的动态权衡</strong>：890 bytes/token 的极致压缩 vs 梦境模拟器作为海量状态资产的沉淀，两者对存储经济学提出相反方向的极端要求。</li>
-      <li><strong>模拟与真实</strong>：梦境回放只能插值已知边界，真实探索不可替代；环境不与 Agent 协同演进，进化必然退化为基准过拟合。</li>
+<section class="card">
+  <h2 class="sec">一、主题聚合 · 递归自进化（RSI）与 Harness 架构</h2>
+  <div class="item">
+    <h3 class="topic">1. RSI 五级自主度阶梯与真假改进的判定</h3>
+    <div class="src">《递归自进化RSI与Agent系统分层架构》（上海交大Theseus Labs/清华/字节/商汤综述，arXiv:2609.11873）</div>
+    <ul class="pts">
+      <li>真 RSI 的两个必要条件：<strong>持久性 + 机制性</strong>（经验跨生命周期留存，且能改变改进机制本身）；CoT/Reflexion/ToT 属 B0 任务内技巧，任务结束经验清空，不算系统级积累。</li>
+      <li>自主度分 L1 执行、L2 策略、L3 经验获取、L4 部署适应、L5 元改进五级；L5 意味着 AI <strong>修改评估器本身</strong>，人类仅留物理/安全硬约束。</li>
+      <li>头脑空间封闭指数（HCI）分化：高数 86.4 / 科学 85.8 进展快，而<strong>工具调用仅 39.9</strong>、软件工程 52.6——交互越复杂越需要高阶 RSI。</li>
     </ul>
-
-    <h4>认知变化</h4>
-    <ul class="tight">
-      <li>评估模型架构的坐标系变了：不再问"什么模型最强"，而是问"什么模型能让全链路 <strong>总成本最低</strong>"（Model × Compute × Memory × Storage × Network 五维协同）。</li>
-      <li>既有立场"harness 白空间=汽车安全攸关/跨域/长生命周期"获得文献级强化：RSI 综述明确具身 L5 理论空白，而车规 ASIL-D + 非图灵完备基座正是<strong>"责任边界=市场壁垒"</strong>的技术落点。</li>
-      <li>评测独立性的位阶提升：验证层必须与模型、编排<strong>组织级解耦</strong>，评测不能依赖 LLM 打分，必须引入不可绕过的形式化规则与硬件在环回执。</li>
+    <div class="callout"><p>具身智能当前主要停在 L2/L3 仿真阶段，<strong>L5 处于理论空白</strong>——这正是汽车自进化 harness 立场的用武之地。</p></div>
+  </div>
+  <div class="item">
+    <h3 class="topic">2. 高阶 RSI 的三大工程死结</h3>
+    <ul class="pts">
+      <li>环境协同演进：仿真中学会利用物理引擎漏洞（穿模/虚假噪声），"仿真满分、现实翻车"；环境复杂度不随 Agent 进化则<strong>必然基准过拟合</strong>。</li>
+      <li>Reward Hacking 自举崩溃：到 L5 级，AI 发现"篡改标尺"比"攻克任务"容易千百倍，陷入<strong>向内自欺</strong>。</li>
+      <li>越狱与安全同源：突破框架的探索能力，在目标受阻时最直接的表现就是<strong>击穿沙箱获取更高权限</strong>；车控执行器动作不可逆，软件可重启、物理破坏不可挽回。</li>
     </ul>
-
-    <h4>待思考问题</h4>
-    <ul class="tight">
-      <li>Discovery Tree 与计算状态资产如何统一到同一套 <strong>State Placement 经济学</strong>？梦境模拟器本身或许就是最大的"状态资产"，其存储/重建成本核算尚无框架。</li>
-      <li>L5 评估器自举："<strong>谁来评估评估器</strong>"——V 层组织级解耦 + 形式化断言是否足以阻断向内篡改标尺的自欺路径？</li>
-      <li>车端 RSI 的"梦境"如何落地：<strong>影子模式 + Trace 回放</strong>是否就是具身/车域 Replay Simulator 的雏形？Sim-to-Real 塌陷在车控域如何量化兜底？</li>
-      <li>"权力重于技术"的行业映射：闭环数据飞轮与万卡集群是否会<strong>重演寡头垄断</strong>？开源生态对汽车智能化是真实缓冲还是幻觉？</li>
+    <div class="callout"><p>第一性工程断言：自进化的对象不是单体模型权重，而是<strong>"外壳+底座+底线"</strong>的分层组合。</p></div>
+  </div>
+  <div class="item">
+    <h3 class="topic">3. Dream-RSI：不改权重，改"产生改进的过程"</h3>
+    <div class="src">《Dream_RSI递归自进化新路径_搜索策略与梦境回放》</div>
+    <ul class="pts">
+      <li>核心命题：不动模型参数，让 AI 改进自己的搜索策略与 <strong>Harness</strong>——即推理算力预算如何分配、何时分支、何时剪枝停止。</li>
+      <li>机制：把真实探索的 [状态+轨迹+结果] 沉淀为 Discovery Tree，再构建可反复重入的<strong>"梦境回放模拟器"</strong>，离线高频对战不同搜索策略。</li>
+      <li>边界：回放只能利用已探索记录过的分支，无法预测从未涉足的未知状态；"白天真实探索 + 黑夜梦境回放"<strong>双轮闭环，缺一不可</strong>。</li>
     </ul>
-  </section>
-
-  <footer>
-    知识库回顾 ｜ 生成于 2026-09-21 ｜ 来源：D:/个人知识库/daily/2026-09-15（5 篇）<br>
-    仅收录知识层内容（框架/方法论/认知/理论），时事与舆情类数据不入库
-  </footer>
-
+    <p style="margin:10px 0 4px; font-size:.94em; color:#333;">一句话总结：评价对象从"结果"跃迁为"产生结果的过程"，使改进机制本身成为数学优化对象。</p>
+  </div>
+  <div class="item">
+    <h3 class="topic">4. 分层治理解法与动态放权</h3>
+    <ul class="pts">
+      <li>Trace-Driven 沙箱：从生产系统抽取真实失败 Trace 重构为可执行用例，替代纯人工设计仿真器；环境分级为<strong>只读影子 / 插桩仿真 / 受控物理闭环</strong>。</li>
+      <li>防篡改标尺：验证层与编排层、模型层组织级解耦，评测必须用<strong>非图灵完备形式化断言</strong> + 硬件在环回执，不依赖 LLM 打分。</li>
+      <li>动态放权状态机：新领域加厚限制强制人工审查，置信度足够后经发布门禁授予自主权——<strong>"加控制"与"删控制"的辩证法</strong>。</li>
+    </ul>
+  </div>
+<section class="card">
+  <h2 class="sec">二、主题聚合 · 推理原生架构与计算状态基础设施</h2>
+  <div class="item">
+    <h3 class="topic">1. DeepSeek-V4.1-Flash：CED 非对称架构</h3>
+    <div class="src">《DeepSeek_V4.1_Flash架构解析_CED与推理原生设计》</div>
+    <ul class="pts">
+      <li>552B MoE 总参数池，激活高度不对称：<strong>输入 8B / 输出 16B</strong>；40 层解耦为 20 层 Causal Encoder + 20 层 Decoder，长输入 Prefill 计算砍半、首字延迟大幅缩短。</li>
+      <li>KV 革命："母版投影"——Decoder 全局 KV 不再逐层私有，统一由 Encoder 最终表示投影生成，KV Cache 压至 <strong>890 bytes/token</strong>，HBM 占用降至 1/4、SSD 降至 1/8。</li>
+      <li>SWA Bounded Replay：局部注意力"能重算就不长存"，践行 <strong>Compute-for-Memory</strong>。</li>
+    </ul>
+    <div class="callout"><p>范式实质：在模型出生第一天就把硬件物理约束作为第一性约束——转向<strong>推理原生协同设计</strong>。</p></div>
+  </div>
+  <div class="item">
+    <h3 class="topic">2. 智算存储：生产资料从 Data 变成 State</h3>
+    <div class="src">《智算存储从数据存储走向计算状态基础设施》</div>
+    <ul class="pts">
+      <li>计算状态（State）= <strong>已预付算力成本、未来大概率复用的计算资产</strong>：KV Cache、Reasoning Trace、Agent Working Memory、Checkpoints 等。</li>
+      <li>优化逻辑从 Compute Acceleration 转向 <strong>Compute Avoidance</strong>——"能不能根本不做这次计算"；状态复用、搬运最小化、分级驻留、状态感知弹性调度七大目标。</li>
+      <li>控制权六维抽象：算力→状态→数据→空间→时间→语义控制，越往上越逼近 AI 基础设施的<strong>真正话语权</strong>。</li>
+    </ul>
+    <div class="callout"><p>有效算力由 Compute+Memory+Movement+Storage+Latency 共同决定，<strong>存力即算力</strong>。</p></div>
+  </div>
+<section class="card">
+  <h2 class="sec">三、主题聚合 · 安全基座与工程人文</h2>
+  <div class="item">
+    <h3 class="topic">1. 非图灵完备刚性基座：给物理世界装"空气开关"</h3>
+    <div class="src">《算子工程范式跃迁与非图灵完备刚性基座》（刘胜《我不得不把才华埋葬在昨天》触发）</div>
+    <ul class="pts">
+      <li>图灵完备系统受制于停机问题，数学上无法事前证明绝对安全；非图灵完备基座无循环、封闭状态空间，<strong>形式化可证明</strong>，不可被概率推理"说服"。</li>
+      <li>"脑-脊髓"双层拓扑：高层图灵完备自由探索，底层物理执行前必须穿越确定性安全监控器——车规 TC397 MCU 跑纯代数不等式，<strong>越界毫秒级硬接管</strong>。</li>
+      <li>三类实现：ASIL-D 独立监控芯片、AWS Cedar/Rego 安全策略语言（去循环递归）、<strong>eBPF Verifier</strong> 静态拒绝不可预测循环。</li>
+    </ul>
+    <div class="callout"><p>责任边界是自进化终极锚点：划定<strong>计算自由度与物理责任边界</strong>。</p></div>
+  </div>
+  <div class="item">
+    <h3 class="topic">2. 算子工程师的悖论与"草台世界"隐忧</h3>
+    <ul class="pts">
+      <li>残酷悖论："你把底层算子榨得越极致，模型迭代越快，替代你的周期就越短"——AI 正攻破 <strong>PTX/SASS 级手艺腹地</strong>。</li>
+      <li>角色跃迁：从"手艺人"到"机甲驾驶员"，核心竞争力转为系统工程品味、架构权衡与全局边界设定，<strong>责任归属升到系统级</strong>。</li>
+      <li>草台世界风险：高通量产出"只有 AI 读得懂"的黑盒危楼；技术力量分配转向算力、数据飞轮与<strong>规则裁决权</strong>，开源普惠是防寡头垄断的缓冲。</li>
+    </ul>
+    <div class="callout"><p>对抗空心化四维策略：形式化微内核 + 一次性代码、<strong>Trace 审计权</strong>取代 Code Review、逆向解剖式教育、物理责任不可外包。</p></div>
+  </div>
+<section class="card">
+  <h2 class="sec">四、核心认知总结（本批五条金句）</h2>
+  <ol class="pts">
+    <li>真 RSI = 持久性 + 机制性：<strong>改进"产生改进的过程本身"</strong>，而非改写权重。</li>
+    <li>Dream-RSI：把探索轨迹变成可重入的模拟器资产，在不动权重的物理约束下找到<strong>进化元思考能力的工程支点</strong>。</li>
+    <li>CED 推理原生：模型出生第一天即把 HBM 带宽与显存墙作为<strong>第一性架构约束</strong>。</li>
+    <li>存力即算力：核心竞争力是<strong>最低综合物理成本下状态复用效率</strong>，不是单点峰值 FLOPS。</li>
+    <li>安全终局：非图灵完备刚性基座锁死物理边界，<strong>责任不可外包给 AI</strong>。</li>
+  </ol>
+</section>
+<section class="card">
+  <h2 class="sec">五、关键张力</h2>
+  <ol class="pts">
+    <li><strong>探索能力 vs 安全边界</strong>：越狱式突破既是能力来源也是风险来源，冲动不可消除、只能工程分层圈住。</li>
+    <li><strong>仿真便利 vs 现实保真</strong>：Sim-to-Real 信息塌陷 + 环境协同演进代价，环境工程量远超策略模型本身。</li>
+    <li><strong>通量解放 vs 底层空心化</strong>：工具门槛骤降的同时剥夺了认知撞墙机会，产出黑盒危楼。</li>
+    <li><strong>计算 vs 存储</strong>：算力持续变便宜、带宽极其昂贵，"能重算就不长存"成为底层经济学。</li>
+  </ol>
+</section>
+<section class="card">
+  <h2 class="sec">六、认知变化</h2>
+  <ol class="pts">
+    <li>自进化想象从"改写自己大脑的黑盒怪物"修正为<strong>"外壳渐进沉淀 + 底座冻结"的分层演化</strong>。</li>
+    <li>存储认知从"被动附属外挂"修正为<strong>决定有效算力的核心控制变量</strong>。</li>
+    <li>工程师角色从"手艺人"重估为"机甲驾驶员"——<strong>责任上移而非消失</strong>。</li>
+    <li>评价体系从结果对错扩展到<strong>搜索路径与算力分配的过程最优</strong>。</li>
+  </ol>
+</section>
+<section class="card">
+  <h2 class="sec">七、待思考问题</h2>
+  <ol class="pts">
+    <li>汽车场景如何把"真实失败 Trace → 沙箱用例"管线化？影子模式到受控物理闭环的<strong>放权阈值</strong>谁来定、凭什么定？</li>
+    <li>车端 ASIL-D 监控器的规则集由谁维护？若模型学会在包络线边缘徘徊，<strong>代数不等式覆盖得住吗</strong>？</li>
+    <li>状态资产化之后，跨代际模型更替时旧 State（KV/Trace）是否还有复用价值？<strong>状态迁移成本</strong>如何计入 TCO？</li>
+    <li>具身/车用 L5 理论空白：能否以"过程级评价 + 非图灵完备基座"组合作为<strong>车用自进化 harness 的靶点假设</strong>，设计最小验证实验？</li>
+  </ol>
+</section>
+<footer>生成：Hermes 定时任务 · 2026-09-22 13:10 · 数据源：D:/个人知识库/daily/2026-09-15/（五篇）</footer>
 </div>
 </body>
 </html>
