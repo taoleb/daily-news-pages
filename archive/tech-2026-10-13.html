@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>科技早报 · 2026年10月13日（星期二）</title>
+<style>
+  :root{
+    --bg:#f7f7f7; --card:#ffffff; --ink:#1a1a1a; --sub:#555; --line:#e6e6e6;
+    --accent:#0b5cad; --strong:#111;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{-webkit-text-size-adjust:100%;}
+  body{background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    line-height:1.75; font-size:16px;}
+  .wrap{max-width:820px; margin:0 auto; padding:16px 14px 48px;}
+  header.hero{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 18px; margin-bottom:18px;}
+  header.hero h1{font-size:24px; font-weight:800; letter-spacing:.5px;}
+  header.hero .date{color:var(--sub); font-size:14px; margin-top:4px;}
+  .meta{margin-top:12px; background:#eef5fb; border-radius:10px; padding:12px 14px; font-size:14px; color:#234;}
+  .meta b{color:#111; font-weight:700;}
+  .badge{display:inline-block; background:#fff; border:1px solid #cfe0ee; border-radius:999px; padding:2px 10px; margin:3px 4px 0 0; font-size:12.5px; color:#0b5cad; font-weight:600;}
+  section{margin-top:26px;}
+  h2.sec{font-size:19px; font-weight:800; padding-left:10px; border-left:4px solid var(--accent); margin-bottom:4px;}
+  .sec-note{font-size:13px; color:var(--sub); margin-bottom:12px; padding-left:14px;}
+  article.item{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 16px 14px; margin-bottom:14px;}
+  article.item h3{font-size:17px; font-weight:750; line-height:1.5;}
+  .tags{margin:6px 0 8px;}
+  .tag{display:inline-block; font-size:12px; border-radius:6px; padding:1px 8px; margin-right:6px; font-weight:600;}
+  .t-official{background:#e8f5ec; color:#1a7f3c; border:1px solid #bfe3cb;}
+  .t-media{background:#fff4e5; color:#9a6400; border:1px solid #f0d9b0;}
+  .t-community{background:#f0f0f0; color:#666; border:1px solid #ddd;}
+  .t-domestic{background:#eef3ff; color:#2b52a0; border:1px solid #d3defa;}
+  .t-global{background:#f7eefe; color:#7b3ba6; border:1px solid #e5d0f2;}
+  .fact{font-size:14.5px; background:#fafafa; border:1px dashed #ddd; border-radius:8px; padding:8px 12px; margin:8px 0;}
+  .fact b{color:#111; font-weight:800;}
+  .detail{font-size:15px; color:#2a2a2a; margin-top:6px;}
+  .detail strong, b{color:var(--strong); font-weight:800;}
+  .quote{margin:10px 0 4px; padding:8px 14px; border-left:3px solid var(--accent); background:#f4f8fc; font-size:15px; font-weight:700; color:#111; border-radius:0 8px 8px 0;}
+  .src{margin-top:10px; font-size:13px; color:var(--sub); word-break:break-all;}
+  .src a{color:var(--accent); text-decoration:none; border-bottom:1px solid #bcd6ea;}
+  footer{margin-top:28px; font-size:12.5px; color:#888; text-align:center; line-height:1.8;}
+  @media (max-width:480px){
+    body{font-size:15.5px;}
+    header.hero h1{font-size:21px;}
+    article.item h3{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>📡 科技早报</h1>
+  <div class="date">2026年10月13日（星期二）· 覆盖最近24小时（10月12日—10月13日晨）</div>
+  <div class="meta">
+    今日共收录 <b>12 条独立事件</b>：国内来源 6 条 / 国际来源 6 条
+    <br><span class="badge">模型发布</span><span class="badge">Agent 与编程</span><span class="badge">AI 安全</span><span class="badge">具身智能</span><span class="badge">投融资</span>
+  </div>
+</header>
+
+<section>
+  <h2 class="sec">① 模型与 Agent</h2>
+  <div class="sec-note">大模型发布 · 开源框架 · 编程工具</div>
+
+  <article class="item">
+    <h3>Meta 发布 Muse Wonder 1.0，称多项基准超越 GPT 与 Claude</h3>
+    <div class="tags"><span class="tag t-global">国际</span><span class="tag t-official">官方</span></div>
+    <div class="fact"><b>核心事实：</b>10月12日，Meta 正式推出 <b>Muse Wonder 1.0</b>（另含 Full 版本），成为本周最新发布的 LLM；官方称其在多项基准测试中挑战 [OI] 与 Anthropic 的旗舰模型。</div>
+    <div class="detail">据 LLM Gateway 统计，近 7 天全球共发布 7 个新模型，Muse Wonder 1.0 为最新。同周发布的还有 Reka Edge 2603、Microsoft-Decision-1、Qwen Image 2.1 Turbo 等，模型迭代节奏持续加快。</div>
+    <div class="src">来源：<a href="https://llmgateway.io/timeline">LLM Gateway</a> · <a href="https://mexicobusiness.news/cloudanddata/news/meta-launches-muse-wonder-challenge-openai-anthropic">Mexico Business News</a></div>
+  </article>
+
+  <article class="item">
+    <h3>字节 Seed 团队揭示 DeepSeek「时神时鬼」根因：KV Cache 压缩的位置周期效应</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-media">媒体</span></div>
+    <div class="fact"><b>核心事实：</b>字节 Seed 团队发现 DeepSeek-V4 表现随输入位置<b>每 4 个 Token 周期性波动</b>，在 128K 长上下文检索测试中，同一条信息换位置可使准确率差距达 <b>40.2 个百分点</b>。</div>
+    <div class="detail">根因指向 DeepSeek 采用的「分 KV Cache 压缩」长上下文优化技术：压缩提升效率的同时引入位置敏感的检索不稳定。该发现对长上下文系统的评测方法与工程实现均有参考意义。</div>
+    <div class="src">来源：<a href="http://k.sina.com.cn/article_5952915720_162d2490806704yzgs.html">量子位（新浪转载）</a></div>
+  </article>
+
+  <article class="item">
+    <h3>DeepSeek 开源 Agent 框架 Harness v0.1</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-community">社区</span></div>
+    <div class="fact"><b>核心事实：</b>DeepSeek 发布开源 Agent 框架 <b>Harness v0.1</b>，面向 Agent 应用开发，为其开源生态再添一环。</div>
+    <div class="detail">当前开源 Agent 框架竞争激烈（LangChain、AG2 等），DeepSeek 以模型+框架组合切入，值得关注与 Qwen、Kimi 系生态的差异化路线。</div>
+    <div class="src">来源：<a href="https://theneuralfeed.com/article/deepseek-harness-v0-1-released-as-op">The Neural Feed</a></div>
+  </article>
+
+  <article class="item">
+    <h3>字节 TRAE 完成 Code 与 Work 双端融合，统一为单一 IDE</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-official">官方</span></div>
+    <div class="fact"><b>核心事实：</b>10月9日，字节 AI 编程工具 TRAE 将 TraeCode 与 TraeWork 合并升级为新 TRAE，提供 <b>Agent 模式</b>（全局工作台，多 Agent 协作）与 <b>IDE 模式</b>两种形态。</div>
+    <div class="detail">实测显示：三个 Agent 可接力完成「开发→测试→修复→交付」全流程，测试与交付产物自动归档且可分享。这一整合反映 AI 编程工具正从单点编码走向全流程项目管理。</div>
+    <div class="src">来源：<a href="https://news.qq.com/rain/a/20261009A09PJ000">量子位（腾讯新闻）</a></div>
+  </article>
+</section>
+
+<section>
+  <h2 class="sec">② AI 安全与治理</h2>
+  <div class="sec-note">前沿实验室协作 · 行业压力</div>
+
+  <article class="item">
+    <h3>[OI]、Anthropic、Google DeepMind 就 AI 安全措施展开协作</h3>
+    <div class="tags"><span class="tag t-global">国际</span><span class="tag t-media">媒体</span></div>
+    <div class="fact"><b>核心事实：</b>路透社与彭博社报道，三大前沿实验室已就 AI 安全措施进行数周协调会谈，[OI] 确认正与 Anthropic、Google 合作推进安全实践。</div>
+    <div class="detail">此举发生在行业面临监管与公众压力加大的背景下，三大实验室罕见地公开协作框架，或为后续行业安全标准的雏形。</div>
+    <div class="src">来源：<a href="https://www.reuters.com/technology/openai-is-working-with-anthropic-go">Reuters</a> · <a href="https://www.bloomberg.com/news/articles/2026-09-15/openai-says-it-s-working-with-anthropic-google-on-ai-safety">Bloomberg</a></div>
+  </article>
+</section>
+
+<section>
+  <h2 class="sec">③ 具身智能与物理 AI</h2>
+  <div class="sec-note">机器人 · 融资 · 产业落地</div>
+
+  <article class="item">
+    <h3>2026 年前 9 个月全球物理 AI 融资近 480 亿美元，超去年全年</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-media">媒体</span></div>
+    <div class="fact"><b>核心事实：</b>《金融时报》援引 PitchBook 数据：截至 10 月 8 日，全球机器人和物理 AI 企业今年累计融资近 <b>480 亿美元</b>（约 3400 亿元人民币），日均流入超 1.6 亿美元。</div>
+    <div class="detail">资本布局覆盖机器人本体制造、通用智能系统、训练设施与应用探索全链条；英伟达、软银、红杉等持续加码，十亿美元级融资接连出现，围绕物理 AI 的产业链加速成形。</div>
+    <div class="src">来源：<a href="https://www.36kr.com/p/4022522991480963">36氪·智能车参考</a></div>
+  </article>
+
+  <article class="item">
+    <h3>优必选入选 2026《财富》全球未来成长 120 强：全球第 11、中国企业第一</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-official">官方</span></div>
+    <div class="fact"><b>核心事实：</b>优必选以总分 <b>115</b> 位列 2026 年《财富》Future 120 全球第 <b>11</b> 名，为排名最高的中国企业。</div>
+    <div class="detail">人形机器人企业首次在权威成长榜上取得中国企业头名，反映其核心技术商业化进程获得国际认可。</div>
+    <div class="src">来源：<a href="https://www.163.com/dy/article/L92D7U090519WCJG.html">网易科技</a></div>
+  </article>
+</section>
+
+<section>
+  <h2 class="sec">④ 前沿研究</h2>
+  <div class="sec-note">模型能力边界 · 学术交叉</div>
+
+  <article class="item">
+    <h3>GPT-6 Astra 联手非职业数学家，证明 57 年「摆圆」难题</h3>
+    <div class="tags"><span class="tag t-global">国际</span><span class="tag t-media">媒体</span></div>
+    <div class="fact"><b>核心事实：</b>量子位报道，[OI] GPT-6 Astra 与业余数学家合作，证明了悬置 57 年的「摆圆」问题。</div>
+    <div class="detail">同期社区测试呈现分化：Reddit 用户称其在 FrontierMath Erdős 子集上仅得 3%，论文复现率亦被质疑（约 13.98%）。AI 数学能力「竞赛级强、工程级弱」的落差仍是待解课题。</div>
+    <div class="src">来源：<a href="https://www.qbitai.com">量子位</a> · <a href="https://www.reddit.com/r/singularity/comments/1w79wvx/">Reddit r/singularity</a></div>
+  </article>
+
+  <article class="item">
+    <h3>ChatGPT 能破解千禧数学难题，但论文复现率仅 13.98%</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-media">媒体</span></div>
+    <div class="fact"><b>核心事实：</b>量子位报道，ChatGPT 在千禧年数学难题上取得突破，但科研任务中论文复现率低至 <b>13.98%</b>，推理能力与科研实操可靠性差距显著。</div>
+    <div class="detail">「AI 科学家」叙事需区分：难题求解（一次性深度推理）与日常科研辅助（长流程、强格式约束）对模型能力要求不同。</div>
+    <div class="src">来源：<a href="https://www.qbitai.com">量子位</a></div>
+  </article>
+</section>
+
+<section>
+  <h2 class="sec">⑤ 产业与算力</h2>
+  <div class="sec-note">基础设施 · 行业动态</div>
+
+  <article class="item">
+    <h3>中国 AI 大模型词元调用量连续稳居全球首位</h3>
+    <div class="tags"><span class="tag t-domestic">国内</span><span class="tag t-official">官方</span></div>
+    <div class="fact"><b>核心事实：</b>世界互联网大会与人民网数据显示，中国 AI 大模型日均 Token 调用量连续位居全球第一，开源生态加速爆发。</div>
+    <div class="src">来源：<a href="https://cn.wicinternet.org/2026-06/24/content_38846771.htm">世界互联网大会</a> · <a href="http://finance.people.com.cn/n1/2026/0624/c1004-40746405.html">人民网</a></div>
+  </article>
+
+  <article class="item">
+    <h3>英伟达推出 LLM 云服务，加码 AI 基础设施</h3>
+    <div class="tags"><span class="tag t-global">国际</span><span class="tag t-official">官方</span></div>
+    <div class="fact"><b>核心事实：</b>英伟达发布大语言模型云服务，进一步向 AI 基础设施上游延伸，将 GPU 算力与托管推理服务捆绑输出。</div>
+    <div class="src">来源：<a href="https://finance.yahoo.com/news/nvidia-launches-large-language-model-16">Yahoo Finance</a></div>
+  </article>
+</section>
+
+<footer>
+  赛博涛 · 每日科技早报 · 2026-10-13<br>
+  资讯来源：Tavily 搜索聚合（量子位 / 36氪 / Reuters / Bloomberg / LLM Gateway 等）· 由 AI 策展生成，观点请以原始来源为准
+</footer>
+
+</div>
+</body>
+</html>
