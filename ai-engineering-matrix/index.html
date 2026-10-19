@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="智能网联汽车五大技术域与四个研发阶段的 AI 能力矩阵，探索工程任务、能力载体与优先布局方向。">
+<meta name="theme-color" content="#2359dc"><meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>AI for Engineering · 智能网联汽车能力矩阵</title>
+<link rel="stylesheet" href="styles.css">
+<script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#workspace">跳至能力矩阵</a>
+<header class="topbar">
+  <a href="#matrix" class="brand" aria-label="AI for Engineering 首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>AI for Engineering<small>智能网联汽车 · 工程能力研究</small></span></a>
+  <nav class="main-nav" aria-label="主导航"><button data-view="matrix" class="nav-item active">能力矩阵</button><button data-view="priority" class="nav-item">优先布局</button><button data-view="method" class="nav-item">案例与方法</button></nav>
+  <div class="header-actions"><span class="private-tag" title="AI for Engineering 研究讨论版"><span data-icon="file"></span>研究讨论版</span><button class="icon-button presentation" id="present" aria-label="进入演示模式" title="演示模式"><span data-icon="present"></span></button></div>
+</header>
+<main>
+<section class="hero">
+ <div class="hero-copy"><div class="eyebrow"><span class="blue-dot"></span> ENGINEERING INTELLIGENCE <span class="eyebrow-line"></span> 研究工作台</div><h1>智能网联汽车<span>能力矩阵</span></h1><p>以工程任务为起点，连接 AI 能力与落地载体，发现值得优先布局的方向。</p><div class="hero-meta"><span>5 大技术域 × 4 个研发阶段</span><span>可检查 · 可验证 · 可追溯</span><span>研究初评 · 2026.10</span></div></div>
+ <div class="hero-diagram" aria-hidden="true"><div class="diagram-label">FROM INSIGHT TO VALIDATION</div><div class="diagram-grid"><div>认知</div><div>设计</div><div>实现</div><div>验证</div><div></div><div class="solid"></div><div></div><div></div><div class="solid"></div><div></div><div></div><div class="solid"></div><div></div><div></div><div class="solid"></div><div></div><div></div><div class="solid"></div><div></div><div></div></div><span class="diagram-foot">一张图谱，连接工程全生命周期</span></div>
+</section>
+<section class="stats" aria-label="矩阵概览">
+ <div class="stat"><span class="stat-icon" data-icon="grid"></span><div><span class="stat-label">工程能力单元</span><strong>20<small>五域四阶段，全景覆盖</small></strong></div></div>
+ <div class="stat"><span class="stat-icon" data-icon="target"></span><div><span class="stat-label">建议优先试点</span><strong id="priority-count">—<small>价值 × 准备度 × 可验证性</small></strong></div></div>
+ <div class="stat"><span class="stat-icon" data-icon="layers"></span><div><span class="stat-label">能力落地载体</span><strong>5<small>规划 / 规范 / 工具 / 数据 / 平台</small></strong></div></div>
+ <button class="stat saved-stat" id="saved-overview"><span class="stat-icon" data-icon="bookmark"></span><div><span class="stat-label">我的布局清单</span><strong><span id="saved-count">0</span><small>收藏方向，形成讨论议题 <span class="inline-arrow">↗</span></small></strong></div></button>
+</section>
+<section class="workspace" id="workspace" tabindex="-1">
+ <aside class="sidebar" id="filters">
+  <div class="filter-title"><h2><span data-icon="sliders"></span>筛选能力</h2><button id="reset" class="text-button">重置</button></div>
+  <label class="search-box"><span data-icon="search"></span><input id="search" type="search" placeholder="搜索任务、载体、案例…" aria-label="搜索能力矩阵"><kbd>/</kbd></label>
+  <fieldset class="filter-group"><legend>技术域 <span>TECHNOLOGY</span></legend><div id="domain-filters"></div></fieldset>
+  <fieldset class="filter-group"><legend>研发阶段 <span>LIFECYCLE</span></legend><div id="stage-filters"></div></fieldset>
+  <fieldset class="filter-group"><legend>应用成熟度 <button class="help-button" id="maturity-help" type="button" aria-label="查看成熟度说明">?</button></legend><div id="maturity-filters"></div></fieldset>
+  <label class="saved-filter"><input type="checkbox" id="saved-only"><span data-icon="bookmark"></span>仅看我的布局清单</label>
+  <div class="sidebar-note"><span data-icon="info"></span><p>成熟度为场景迁移初评，<br>需结合内部数据与工具校准。</p></div>
+ </aside>
+ <div class="workspace-main">
+  <div class="workspace-heading"><div><div class="section-kicker" id="section-kicker">CAPABILITY LANDSCAPE</div><h2 id="view-title">AI 工程能力全景<span id="result-count">20 个能力单元</span></h2></div><div class="workspace-actions"><button class="button mobile-filter" id="toggle-filters"><span data-icon="sliders"></span>筛选</button><button class="button" id="export"><span data-icon="download"></span><span class="export-label">导出当前视图</span></button></div></div>
+  <div class="active-filters" id="active-filters" aria-live="polite"></div>
+  <div class="view-note" id="view-note"><span data-icon="pointer"></span><span>点击能力单元，展开工程任务、五类载体与试点建议。</span><div class="legend"><span><i class="dot pilot"></i>可试点</span><span><i class="dot verify"></i>需验证</span><span><i class="dot frontier"></i>前沿探索</span></div></div>
+  <div id="content"></div>
+  <div class="workspace-footer"><span><span data-icon="shield"></span> 工程成果必须可检查、可验证、可追溯</span><button class="text-button" data-view="method">查看评估方法与证据边界 <span aria-hidden="true">↗</span></button></div>
+ </div>
+</section>
+<section class="next-step"><div class="next-step-icon" data-icon="compass"></div><div><span class="section-kicker">从图谱到行动</span><h2>把潜在机会，转化为可验证的工程项目。</h2><p>围绕“一张图谱、三大清单、一个数智底座”，选择有真实需求、有数据、有验证条件的场景先行。</p></div><button class="button primary" data-view="priority">识别优先布局 <span data-icon="arrow"></span></button></section>
+</main>
+<footer class="site-footer"><span>AI for Engineering <span class="footer-divider">/</span> 智能网联汽车能力研究</span><span>研究讨论版 v1.0 · 2026.10.19</span></footer>
+<div class="modal-backdrop" id="detail-backdrop" hidden><section class="detail-panel" id="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1"></section></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<button class="exit-present button" id="exit-present" hidden><span data-icon="present"></span>退出演示 <kbd>Esc</kbd></button>
+<noscript><p class="noscript">请启用 JavaScript 以使用能力筛选与详情交互。</p></noscript>
+</body></html>
